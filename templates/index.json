@@ -1,0 +1,321 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "section-slideshow",
+      "blocks": {
+        "slideshow-0": {
+          "type": "image",
+          "settings": {
+            "title": "Broadcast theme",
+            "description": "A full featured Shopify theme built for modern commerce"
+          }
+        },
+        "slideshow-1": {
+          "type": "image",
+          "settings": {
+            "title": "Broadcast theme",
+            "description": "It's like your last theme, except it's faster and better"
+          }
+        }
+      },
+      "block_order": [
+        "slideshow-0",
+        "slideshow-1"
+      ],
+      "settings": {
+        "height": "screen-height-two-thirds",
+        "transition": "slide",
+        "arrows_style": false,
+        "dots_style": "line",
+        "autoplay": false
+      }
+    },
+    "image-with-text": {
+      "type": "section-custom-content",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "overlay_color": "#000",
+            "title": "",
+            "description": "",
+            "flex_align": "align--middle-left",
+            "text_color": "text-light",
+            "transparent": true,
+            "link_text": "",
+            "link": "\/collections\/all",
+            "button_color": "btn--white",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "subheading": "Delete your apps",
+            "title": "Broadcast has that feature",
+            "text": "<p>Upsells, promos, shipping info in the cart<\/p>",
+            "text_size": 2,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "text_color": "text-dark",
+            "bg_color": "#ffffff",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
+          }
+        }
+      },
+      "block_order": [
+        "image",
+        "text"
+      ],
+      "settings": {
+        "height": "screen-height-one-half",
+        "padding": true,
+        "borders": false,
+        "wrapper": false
+      }
+    },
+    "product-with-image": {
+      "type": "section-custom-content",
+      "disabled": true,
+      "blocks": {
+        "product": {
+          "type": "product",
+          "settings": {
+            "title": "Sell with style",
+            "product": "",
+            "text_color": "text-dark",
+            "bg_color": "#ffffff"
+          }
+        },
+        "image": {
+          "type": "image",
+          "settings": {
+            "title": "Commerce first",
+            "description": "Focus on your products with innovative sections focused on selling",
+            "link_text": "",
+            "link": "\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "product",
+        "image"
+      ],
+      "settings": {
+        "padding": true
+      }
+    },
+    "tabs": {
+      "type": "section-tab-collections",
+      "blocks": {
+        "tabs-0": {
+          "type": "collection",
+          "settings": {
+            "title": ""
+          }
+        },
+        "tabs-1": {
+          "type": "collection",
+          "settings": {
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "tabs-0",
+        "tabs-1"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "rich-text": {
+      "type": "section-rich-text",
+      "settings": {
+        "subheading": "Time is money",
+        "title": "Built for speed",
+        "text": "<p>Broadcast was built from the ground up to take advantage of modern development techniques that make your site run as fast as possible.  Using progressive technique like image lazy-loading, code splitting, and preloading, Broadcast is the fast and nimble platform your store needs to level up.  Customers are not patient, and you should not be settling for less.<\/p>",
+        "text_size": 2,
+        "text_columns": 2,
+        "align_text": "text-left",
+        "button_text": "Ready set go",
+        "button_color": "btn--neutral",
+        "button_style": "caps--large",
+        "height": "margin--medium",
+        "width": "wrapper",
+        "text_color": "text-dark",
+        "bg_color": "#ffffff"
+      }
+    },
+    "lookbook": {
+      "type": "section-look",
+      "blocks": {
+        "lookbook-0": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "position_x": 18,
+            "position_y": 50
+          }
+        },
+        "lookbook-1": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "position_x": 41,
+            "position_y": 7
+          }
+        }
+      },
+      "block_order": [
+        "lookbook-0",
+        "lookbook-1"
+      ],
+      "settings": {
+        "bg_position": "left-center",
+        "title": "Shop the look",
+        "section_bg": "#fafafa",
+        "dot_color": "#FFFFFF"
+      }
+    },
+    "featured-collection": {
+      "type": "section-collection",
+      "settings": {
+        "heading": "Featured Collection",
+        "description": "",
+        "text_alignment": "center",
+        "grid": 4,
+        "rows": 2
+      }
+    },
+    "newsletter": {
+      "type": "section-newsletter",
+      "settings": {
+        "title": "Newsletter",
+        "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+        "enable_name": true,
+        "flex_align": "align--middle-stacked",
+        "height": "three-fifty-height-hero"
+      }
+    },
+    "hero": {
+      "type": "section-hero",
+      "settings": {
+        "bg_position": "center-center",
+        "height": "screen-height-three-quarters",
+        "overlay_opacity": 0,
+        "overlay_color": "#000",
+        "title": "Broadcast theme",
+        "description": "Modern commerce built for speed",
+        "flex_align": "align--middle-left",
+        "text_color": "text-dark",
+        "transparent": false,
+        "link_text": "View products",
+        "link": "",
+        "button_color": "btn--black",
+        "button_style": "hero__btn btn btn--input caps"
+      }
+    },
+    "logos": {
+      "type": "section-press",
+      "blocks": {
+        "logos-0": {
+          "type": "logo-item",
+          "settings": {
+            "description": "<p>Include a brief quote from a brand that loves your products<\/p>",
+            "logo_width": 100
+          }
+        },
+        "logos-1": {
+          "type": "logo-item",
+          "settings": {
+            "description": "<p>Include a brief quote from a brand that loves your products<\/p>",
+            "logo_width": 100
+          }
+        },
+        "logos-2": {
+          "type": "logo-item",
+          "settings": {
+            "description": "<p>Include a brief quote from a brand that loves your products<\/p>",
+            "logo_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "logos-0",
+        "logos-1",
+        "logos-2"
+      ],
+      "settings": {
+        "title": "Press",
+        "logo_opacity": 60,
+        "text_color": "text-dark",
+        "bg_color": "#ffffff"
+      }
+    },
+    "icons": {
+      "type": "section-text-row",
+      "blocks": {
+        "icon-0": {
+          "type": "text-item",
+          "settings": {
+            "icon_name": "icon-lock-card",
+            "icon_color": "#545454",
+            "title": "Secure transactions",
+            "text": "Transactions are handled with bank-grade security."
+          }
+        },
+        "icon-1": {
+          "type": "text-item",
+          "settings": {
+            "icon_name": "icon-basket-like",
+            "icon_color": "#545454",
+            "title": "Simple checkout",
+            "text": "Our secure checkout is quick and easy to use."
+          }
+        },
+        "icon-2": {
+          "type": "text-item",
+          "settings": {
+            "icon_name": "icon-chat",
+            "icon_color": "#545454",
+            "title": "Get in touch",
+            "text": "Have questions? Get in touch with us at any time."
+          }
+        }
+      },
+      "block_order": [
+        "icon-0",
+        "icon-1",
+        "icon-2"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "icon_size": "icon--small",
+        "icon_alignment": "icon--top",
+        "text_color": "text-dark",
+        "heading_size": "h6",
+        "height": "margin--medium",
+        "bg_color": "#fafafa"
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "image-with-text",
+    "product-with-image",
+    "tabs",
+    "rich-text",
+    "lookbook",
+    "featured-collection",
+    "newsletter",
+    "hero",
+    "logos",
+    "icons"
+  ]
+}
