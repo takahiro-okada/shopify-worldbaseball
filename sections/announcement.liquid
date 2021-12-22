@@ -2,51 +2,51 @@
 
 {% schema %}
 {
-  "name": "Announcement bar",
+  "name": "アナウンスバー",
   "settings": [
     {
       "type": "header",
-      "content": "Colors"
+      "content": "色"
     },
     {
       "type": "color",
       "id": "bg_color",
-      "label": "Background",
+      "label": "背景色",
       "default": "#f7f7f7"
     },
     {
       "type": "color",
       "id": "color",
-      "label": "Text",
+      "label": "文字の色",
       "default": "#545454"
     },
     {
       "type": "header",
-      "content": "Layout"
+      "content": "レイアウト"
     },
     {
       "type": "select",
       "id": "layout",
-      "label": "Layout",
+      "label": "レイアウト",
       "options": [
         {
           "value": "slider",
-          "label": "Slider"
+          "label": "スライダー"
         },
         {
           "value": "marquee",
-          "label": "Marquee"
+          "label": "マーキー"
         }
       ]
     },
     {
       "type": "header",
-      "content": "Slider"
+      "content": "スライダー"
     },
     {
       "type": "range",
       "id": "speed",
-      "label": "Autoplay speed",
+      "label": "自動再生の速度",
       "unit": "sec",
       "min": 5,
       "max": 20,
@@ -57,50 +57,50 @@
   "blocks" : [
     {
       "type": "text",
-      "name": "Text announcement",
+      "name": "テキストアナウンス",
       "settings": [
         {
           "type": "richtext",
           "id": "text",
-          "label": "Text",
-          "default": "<p><strong>Make an announcement</strong> | More info</p>"
+          "label": "テキスト",
+          "default": "<p><strong>アナウンスを行う</strong> | 詳しく見る</p>"
         },
         {
           "type": "header",
-          "content": "Target page"
+          "content": "対象のページ"
         },
         {
           "id": "target_url_enabled",
           "type": "checkbox",
-          "label": "Limit to specific page"
+          "label": "特定のページに限定する"
         },
         {
           "id": "target_url",
           "type": "url",
-          "label": "Targeted page"
+          "label": "対象のページ"
         },
         {
           "type": "header",
-          "content": "Target referrer"
+          "content": "対象リファラー"
         },
         {
           "id": "target_referrer_enabled",
           "type": "checkbox",
-          "label": "Limit to specific referrer path"
+          "label": "特定のリファラーパスに限定する"
         },
         {
           "id": "target_referrer",
           "type": "text",
-          "label": "Targeted referrer"
+          "label": "対象リファラー"
         },
         {
           "type": "header",
-          "content": "Target device"
+          "content": "対象デバイス"
         },
         {
           "id": "target_device_enabled",
           "type": "checkbox",
-          "label": "Limit to desktop or mobile"
+          "label": "デスクトップまたはモバイルに限定する"
         },
         {
           "type": "select",
@@ -108,29 +108,29 @@
           "label": "Device ",
           "default": "mobile",
           "options": [
-            {"value": "mobile", "label": "Only show on mobile"},
-            {"value": "desktop", "label": "Only show on desktop"}
+            {"value": "mobile", "label": "モバイルのみ"},
+            {"value": "desktop", "label": "デスクトップのみ"}
           ]
         }
       ]
     },
     {
       "type": "message",
-      "name": "Free shipping message",
+      "name": "無料配送のメッセージ",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "show_wheel",
-          "label": "Show progress wheel",
+          "label": "プログレスホイールの表示",
           "default": true
         },
         {
           "type": "textarea",
           "id": "message",
-          "label": "Message",
-          "info": "Use ||amount|| to display progress towards free shipping.",
-          "default": "Spend ||amount|| more for free shipping."
+          "label": "メッセージ",
+          "info": "||amount||を使うことで無料配送までの金額を表示することができます",
+          "default": "無料配送まで残り ||amount|| です。"
         },
         {
           "type": "paragraph",
@@ -138,108 +138,108 @@
         },
         {
           "type": "header",
-          "content": "Target page"
+          "content": "対象のページ"
         },
         {
           "id": "target_url_enabled",
           "type": "checkbox",
-          "label": "Limit to specific page"
+          "label": "特定のページに限定する"
         },
         {
           "id": "target_url",
           "type": "url",
-          "label": "Targeted page"
+          "label": "対象のページ"
         },
         {
           "type": "header",
-          "content": "Target referrer"
+          "content": "対象リファラー"
         },
         {
           "id": "target_referrer_enabled",
           "type": "checkbox",
-          "label": "Limit to specific referrer path"
+          "label": "特定のリファラーパスに限定する"
         },
         {
           "id": "target_referrer",
           "type": "text",
-          "label": "Targeted referrer"
+          "label": "対象リファラー"
         },
         {
           "type": "header",
-          "content": "Target device"
+          "content": "対象デバイス"
         },
         {
           "id": "target_device_enabled",
           "type": "checkbox",
-          "label": "Limit to desktop or mobile"
+          "label": "デスクトップまたはモバイルに限定する"
         },
         {
           "type": "select",
           "id": "target_device",
-          "label": "Device ",
+          "label": "デバイス",
           "default": "mobile",
           "options": [
-            {"value": "mobile", "label": "Only show on mobile"},
-            {"value": "desktop", "label": "Only show on desktop"}
+            {"value": "mobile", "label": "モバイルのみ"},
+            {"value": "desktop", "label": "デスクトップのみ"}
           ]
         }
       ]
     },
     {
       "type": "custom",
-      "name": "Custom HTML",
+      "name": "カスタムHTML",
       "settings": [
         {
           "type": "html",
           "id": "text",
-          "label": "Text",
-          "default": "<p>Custom HTML</p>"
+          "label": "テキスト",
+          "default": "<p>カスタムHTML</p>"
         },
         {
           "type": "header",
-          "content": "Target page"
+          "content": "対象のページ"
         },
         {
           "id": "target_url_enabled",
           "type": "checkbox",
-          "label": "Limit to specific page"
+          "label": "特定のページに限定する"
         },
         {
           "id": "target_url",
           "type": "url",
-          "label": "Targeted page"
+          "label": "対象のページ"
         },
         {
           "type": "header",
-          "content": "Target referrer"
+          "content": "対象のリファラー"
         },
         {
           "id": "target_referrer_enabled",
           "type": "checkbox",
-          "label": "Limit to specific referrer path"
+          "label": "特定のリファラーパスに限定する"
         },
         {
           "id": "target_referrer",
           "type": "text",
-          "label": "Targeted referrer"
+          "label": "対象リファラー"
         },
         {
           "type": "header",
-          "content": "Target device"
+          "content": "対象デバイス"
         },
         {
           "id": "target_device_enabled",
           "type": "checkbox",
-          "label": "Limit to desktop or mobile"
+          "label": "デスクトップまたはモバイルに限定する"
         },
         {
           "type": "select",
           "id": "target_device",
-          "label": "Device ",
+          "label": "デバイス ",
           "default": "mobile",
           "options": [
-            {"value": "mobile", "label": "Only show on mobile"},
-            {"value": "desktop", "label": "Only show on desktop"}
+            {"value": "mobile", "label": "モバイルのみ"},
+            {"value": "desktop", "label": "デスクトップのみ"}
           ]
         }
       ]

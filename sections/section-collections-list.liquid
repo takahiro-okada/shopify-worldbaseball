@@ -35,7 +35,7 @@
 
 <section class="index-collections-list {{ section_modifier }}"
   id="collections-list--{{ section.id }}"
-  data-section-id="{{ section.id }}" 
+  data-section-id="{{ section.id }}"
   data-section-type="list-collections">
   <div class="grid-container">
     {% if section.settings.title != blank or section.settings.description != blank %}
@@ -48,7 +48,7 @@
         {%- if section.settings.title != blank -%}
           <h2 class="grid__heading {{ text_alignment_class }}">{{ section.settings.title }}</h2>
         {%- endif -%}
-  
+
         {%- if section.settings.description != blank -%}
           <div class="grid__description {{ text_alignment_class }}">
             {{ section.settings.description }}
@@ -56,7 +56,7 @@
         {%- endif -%}
       </div>
     {% endif %}
-    
+
     <div class="container">
       <div class="product-grid-outer collection-list-outer">
         <div class="collection-list product-grid {{ mobile_slider }} {{ layout_grid }}{% unless settings.product_grid_outline %} product-grid--borderless{% endunless %}" {{ layout_grid_attributes }} {{ block_scroll_attr }}>
@@ -82,31 +82,31 @@
 
 {% schema %}
 {
-  "name": "Collection list",
+  "name": "コレクションリスト",
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
-      "default": "Collection list"
+      "label": "見出し",
+      "default": "コレクションリスト"
     },
     {
       "type": "richtext",
       "id": "description",
-      "label": "Description"
+      "label": "説明"
     },
     {
       "type": "select",
       "id": "layout",
-      "label": "Layout",
+      "label": "レイアウト",
       "options": [
         {
           "value": "grid",
-          "label": "Grid"
+          "label": "グリッド"
         },
         {
           "value": "slider",
-          "label": "Slider"
+          "label": "スライダー"
         }
       ],
       "default": "grid"
@@ -118,35 +118,35 @@
       "max": 1.5,
       "step": 0.1,
       "unit": ":1",
-      "label": "Photo aspect ratio",
-      "info": "Wide to tall",
+      "label": "画像比率",
+      "info": "横長 ⇔ 縦長",
       "default": 1
     },
     {
       "type": "header",
-      "content": "Mobile"
+      "content": "モバイル"
     },
     {
       "type": "checkbox",
       "id": "enable_slider",
-      "label": "Enable slider",
+      "label": "スライダーを有効にする",
       "default": true,
-      "info": "Horizontal slider in mobile layout."
+      "info": "モバイルレイアウトの横長スライダー"
     }
   ],
   "blocks": [
     {
       "type": "collection",
-      "name": "Collection",
+      "name": "コレクション",
       "limit": 8,
       "settings": [
         {
-          "label": "Collection",
+          "label": "コレクション",
           "id": "collection",
           "type": "collection"
         },
         {
-          "label": "Heading",
+          "label": "見出し",
           "id": "title",
           "type": "text"
         }
@@ -155,8 +155,8 @@
   ],
   "presets": [
     {
-      "category": "Collection",
-      "name": "Collection list",
+      "category": "コレクション",
+      "name": "コレクションリスト",
       "blocks": [
         {
           "type": "collection"

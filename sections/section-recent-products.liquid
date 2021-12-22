@@ -12,16 +12,16 @@
             {%- endif -%}
           </li>
         </ul>
-  
+
         <button type="button" class="tabs__arrow tabs__arrow--prev is-hidden" data-scrollbar-arrow-prev>
           <span class="visually-hidden">{{ 'products.general.see_all' | t }}</span>
         </button>
-  
+
         <button type="button" class="tabs__arrow tabs__arrow--next is-hidden" data-scrollbar-arrow-next>
           <span class="visually-hidden">{{ 'products.general.see_all' | t }}</span>
         </button>
       </div>
-  
+
       <div class="tab-content tab-content-0 tabs__recently-viewed current" data-tab-index="1">
         {%- render 'products-recently-viewed', product: product, limit: section.settings.product_recently_limit, product_recently_minimum: section.settings.product_recently_minimum -%}
       </div>
@@ -31,12 +31,12 @@
 
 {% schema %}
 {
-  "name": "Recently viewed products",
+  "name": "最近見た商品",
   "settings": [
     {
       "type": "text",
       "id": "product_recently_heading",
-      "label": "Heading",
+      "label": "見出し",
       "default": "Recently viewed"
     },
     {
@@ -45,7 +45,7 @@
       "min": 1,
       "max": 6,
       "step": 1,
-      "label": "Product limit",
+      "label": "商品数",
       "default": 6
     },
     {
@@ -54,15 +54,15 @@
       "min": 1,
       "max": 6,
       "step": 1,
-      "label": "Display threshold",
-      "info": "Hide section until a minimum of products can be shown.",
+      "label": "表示閾値",
+      "info": "最小限の製品を表示できるようになるまでセクションを隠す",
       "default": 4
     }
   ],
   "presets": [
     {
       "category": "Collection",
-      "name":"Recently viewed products"
+      "name":"最近見た商品"
     }
   ]
 }

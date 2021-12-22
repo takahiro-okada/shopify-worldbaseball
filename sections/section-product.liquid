@@ -113,7 +113,7 @@
                 {%- when '@app' -%}
                   {% render block %}
                 {%- when 'price_and_title' -%}
-                  
+
 {%- case block.settings.subheading_option -%}
   {%- when 'vendor' -%}
     {%- if product.vendor -%}
@@ -147,13 +147,13 @@
       <button type="button" class="product__badge-link" data-scroll-to="#reviews-{{ product.id }}">
         <div class="rating-container product__rating">
           {% liquid
-          assign rating_decimal = 0 
-          assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1 
+          assign rating_decimal = 0
+          assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
           if decimal >= 0.3 and decimal <= 0.7
             assign rating_decimal = 0.5
           elsif decimal > 0.7
             assign rating_decimal = 1
-          endif 
+          endif
           %}
           {%- if block.settings.enable_star_rating -%}
             <div class="rating" role="img" aria-label="{{ 'general.accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
@@ -199,7 +199,7 @@
           assign has_units = true
         else
           assign has_units = false
-        endif 
+        endif
       %}
       {% if has_units %}
         {% capture show_units %}
@@ -326,7 +326,7 @@
   {%- if request.design_mode -%}
     {%- assign upsell_error = false -%}
   {%- endif -%}
-  
+
   {%- unless upsell_error -%}
     {%- if request.design_mode and upsell_product.title == '' or upsell_variant == nil -%}
       {%- assign upsell_error = true -%}
@@ -336,10 +336,10 @@
       <h2 class="product-upsell-holder__title small">{{ 'products.general.upsell_title' | t }}</h2>
 
       <div data-cart-errors-container class="product-upsell__errors small"></div>
-    
+
       <div class="product-upsell">
         {%- assign upsell_variant_image = upsell_variant.featured_media | default: upsell_product.media[0] -%}
-    
+
         <div class="product-upsell__image">
           {%- if upsell_error -%}
             <div class="product-upsell__image-inner" style="background-image: url({{ 'blank.svg' | asset_url }});"></div>
@@ -354,27 +354,27 @@
               {%- else -%}
                 <div class="product-upsell__image-inner" aria-label="{{ upsell_product.title | strip_html | escape }}" role="img" style="background-image: url({{ 'blank.svg' | asset_url }});">
                   <noscript>
-                    <img src="{{ 'blank.svg' | asset_url }}" width="300" height="300" alt="{{ upsell_product.title | strip_html | escape }}">        
+                    <img src="{{ 'blank.svg' | asset_url }}" width="300" height="300" alt="{{ upsell_product.title | strip_html | escape }}">
                   </noscript>
-                </div>      
+                </div>
               {%- endif -%}
             </a>
           {%- endif -%}
         </div>
-    
+
         <div class="product-upsell__content">
           {%- if upsell_error -%}
             <h3 class="product-upsell__title small">{{ 'products.general.upsell_error_title' | t }}</h3>
-    
-            <h4 class="product-upsell__variant-title small">{{ 'products.general.upsell_error_info' | t }}</h4> 
-          {%- else -%}  
+
+            <h4 class="product-upsell__variant-title small">{{ 'products.general.upsell_error_info' | t }}</h4>
+          {%- else -%}
             <a href="{{ upsell_product.url }}">
               <h3 class="product-upsell__title small">{{ upsell_product.title | strip_html }}</h3>
-    
+
               {%- unless upsell_product.has_only_default_variant -%}
-                <h4 class="product-upsell__variant-title small">{{ upsell_variant.title | replace: '/', '<span>&nbsp;</span>' }}</h4> 
+                <h4 class="product-upsell__variant-title small">{{ upsell_variant.title | replace: '/', '<span>&nbsp;</span>' }}</h4>
               {%- endunless -%}
-    
+
               <p class="product-upsell__price small {% if upsell_variant.compare_at_price > upsell_variant.price %} sale{% endif %}">
                 <span class="new-price">
                   {%- if upsell_variant.price == 0 -%}
@@ -382,56 +382,56 @@
                   {%- else -%}
                     {{ upsell_variant.price | money }}
                   {%- endif -%}
-                </span>  
-                
+                </span>
+
                 {%- if upsell_variant.compare_at_price > upsell_variant.price -%}
                   <span class="old-price">{{ upsell_variant.compare_at_price | money }}</span>
                 {%- endif -%}
-                
+
                 {%- if upsell_variant.unit_price -%}
                   {%- capture unit_price_separator -%}
                     <span aria-hidden="true">/</span>
                     <span class="visually-hidden">{{ 'general.accessibility.unit_price_separator' | t }}&nbsp;</span>
                   {%- endcapture -%}
-    
+
                   {%- capture unit_price_base_unit -%}
                     {%- if upsell_variant.unit_price_measurement.reference_value != 1 -%}
                       {{ upsell_variant.unit_price_measurement.reference_value }}
                     {%- endif -%}
                     {{ upsell_variant.unit_price_measurement.reference_unit }}
                   {%- endcapture -%}
-                  
+
                 <br />
-  
+
                 <span class="visually-hidden visually-hidden--inline">{{ 'products.product.unit_price_label' | t }}</span>
-  
+
                 <span class="unit">{{ upsell_variant.unit_price | money }}{{ unit_price_separator }}{{ unit_price_base_unit }}</span>
               {% endif -%}
-            </p>  
+            </p>
           </a>
-          
+
           {%- form 'product', upsell_product -%}
             <input type="hidden" name="id" value="{{ upsell_variant.id }}">
-  
+
             <button type="submit" name="add" data-add-to-cart
             data-focus-element data-upsell-btn class="product-upsell__btn {% unless upsell_variant.available %} is-hidden {% endunless %}">
               <span class="product-upsell__btn-hidden" data-upsell-btn-text>{{ 'products.general.upsell_add_to_cart' | t }}</span>
-  
+
               <span class="product-upsell__btn-text">{{ 'products.general.upsell_add_to_cart' | t }}</span>
-  
+
               <span class="product-upsell__btn-plus" aria-label="+">
                 <svg width="10px" height="10px" viewBox="0 0 10 10" class="product-upsell__icon-plus">
                   <path d="M5,0.5 C5.27614237,0.5 5.5,0.723857625 5.5,1 L5.5,5 L9.5,5 C9.77614237,5 10,5.22385763 10,5.5 C10,5.77614237 9.77614237,6 9.5,6 L5.5,6 L5.5,10 C5.5,10.2761424 5.27614237,10.5 5,10.5 C4.72385763,10.5 4.5,10.2761424 4.5,10 L4.5,6 L0.5,6 C0.223857625,6 3.38176876e-17,5.77614237 0,5.5 C-3.38176876e-17,5.22385763 0.223857625,5 0.5,5 L4.5,5 L4.5,1 C4.5,0.723857625 4.72385763,0.5 5,0.5 Z" fill-rule="nonzero"></path>
                 </svg>
               </span>
-  
+
               <span class="product-upsell__btn-progress">
                 <svg height="18" width="18" class="svg-loader">
                   <circle r="7" cx="9" cy="9" />
                   <circle stroke-dasharray="87.96459430051421 87.96459430051421" r="7" cx="9" cy="9" />
                 </svg>
               </span>
-  
+
               <span class="product-upsell__btn-check">&nbsp;</span>
             </button>
 
@@ -457,7 +457,7 @@
                   </div>
                 {%- when 'pickup' -%}
                   <div class="product__pickup" data-store-availability-container {{ block.shopify_attributes }}></div>
-                {% when 'liquid' %} 
+                {% when 'liquid' %}
                   {{ block.settings.custom_liquid }}
                 {%- when 'text' -%}
                   <div class="product__subheading" {{ block.shopify_attributes }}>
@@ -488,42 +488,42 @@
 
 {% schema %}
   {
-    "name": "Featured product",
+    "name": "特集商品",
     "settings": [
       {
         "type": "product",
         "id": "home_product",
-        "label": "Product"
+        "label": "商品"
       },
       {
         "type": "header",
-        "content": "Layout"
+        "content": "レイアウト"
       },
       {
         "type": "select",
         "id": "image_layout",
-        "label": "Image display",
+        "label": "画像の表示",
         "default": "thumbnails",
         "options": [
-          { "value": "thumbnails", "label": "Thumbnails - Bottom" },
-          { "value": "thumbnails-left", "label": "Thumbnails - Left" }
+          { "value": "thumbnails", "label": "サムネイル - 下" },
+          { "value": "thumbnails-left", "label": "サムネイル - 左" }
         ]
       },
       {
         "type": "header",
-        "content": "Media",
-        "info": "Learn more about [media types](https://help.shopify.com/manual/products/product-media)"
+        "content": "メディア",
+        "info": "メディアについて[詳しく見る](https://help.shopify.com/manual/products/product-media)"
       },
       {
         "type": "checkbox",
         "id": "enable_zoom",
-        "label": "Enable zoom",
+        "label": "ズームを有効にする",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "enable_video_looping",
-        "label": "Enable video looping",
+        "label": "ビデオの繰り返しを有効にする",
         "default": false
       }
     ],
@@ -533,75 +533,75 @@
       },
       {
         "type": "price_and_title",
-        "name": "Price and title",
+        "name": "価格と商品名",
         "limit": 1,
         "settings": [
           {
             "type": "select",
             "id": "subheading_option",
-            "label": "Navigation",
+            "label": "ナビゲーション",
             "default": "none",
             "options": [
-              { "value": "none", "label": "None" },
-              { "value": "collection", "label": "Collection" },
-              { "value": "vendor", "label": "Vendor" }
+              { "value": "none", "label": "なし" },
+              { "value": "collection", "label": "コレクション" },
+              { "value": "vendor", "label": "ベンダー" }
             ]
           },
           {
             "type": "checkbox",
             "id": "show_rating",
-            "label": "Show ratings",
+            "label": "評価の表示を有効にする",
             "default": true,
             "info": "Requires an app to set the metafield value for reviews.rating"
           },
           {
             "type": "checkbox",
             "id": "enable_star_rating",
-            "label": "Enable star rating",
+            "label": "レビューを有効にする",
             "default": true
           },
           {
             "type": "checkbox",
             "id": "show_rating_count",
-            "label": "Show rating count",
+            "label": "レビュー数を表示する",
             "default": false
           }
         ]
       },
       {
         "type": "form",
-        "name": "Form",
+        "name": "フォーム",
         "limit": 1,
         "settings": [
           {
             "type": "header",
-            "content": "Size chart"
+            "content": "サイズチャート"
           },
           {
             "type": "page",
             "id": "info_page",
-            "label": "Page"
+            "label": "ページ"
           },
           {
             "type": "header",
-            "content": "Form elements"
+            "content": "フォーム要素"
           },
           {
             "type": "checkbox",
             "id": "show_labels",
-            "label": "Show variant labels",
+            "label": "バリアントのラベルを表示する",
             "default": false
           },
           {
             "type": "checkbox",
             "id": "show_quantity",
-            "label": "Show quantity selector",
+            "label": "数量セレクターを表示する",
             "default": true
           },
           {
             "type": "checkbox",
             "id": "show_payment_button",
-            "label": "Show dynamic checkout buttons",
+            "label": "今すぐ購入ボタン",
             "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/en/manual/online-store/os/dynamic-checkout)",
             "default": true
           },
@@ -613,117 +613,117 @@
           {
             "type": "checkbox",
             "id": "subscriptions_enable_selectors",
-            "label": "Enable subscription selectors",
-            "info": "Shown on products with subscription options",
+            "label": "サブスクセレクターを表示する",
+            "info": "サブスクオプションを表示する",
             "default": true
           }
         ]
       },
       {
         "type": "tab_richtext",
-        "name": "Product description",
+        "name": "商品説明",
         "limit": 1,
         "settings": [
           {
             "type": "checkbox",
             "id": "show_read_more",
-            "label": "Show read more button",
+            "label": "もっと見るボタンを有効にする",
             "default": true
           },
           {
             "type": "select",
             "id": "style",
-            "label": "Tab style",
+            "label": "タブのスタイル",
             "default": "tabs",
             "options": [
-              { "value": "inline", "label": "Disable tabs" },
-              { "value": "tabs", "label": "Tabs" },
-              { "value": "accordions", "label": "Accordions" }
+              { "value": "inline", "label": "タブを使用しない" },
+              { "value": "tabs", "label": "タブ" },
+              { "value": "accordions", "label": "アコーディオン" }
             ]
           },
           {
             "type": "text",
             "id": "title_1",
-            "label": "Tab heading",
+            "label": "タブの見出し",
             "default": "Tab"
           },
           {
             "type": "richtext",
             "id": "raw_content_1",
-            "label": "Tab text",
-            "default": "<p>This content type will accept <strong>rich text</strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.</p>"
+            "label": "タブのテキスト",
+            "default": "<p>テキストが入ります。</p>"
           },
           {
             "type": "text",
             "id": "title_2",
-            "label": "Tab heading",
+            "label": "タブの見出し",
             "default": "Info"
           },
           {
             "type": "richtext",
             "id": "raw_content_2",
-            "label": "Tab text",
-            "default": "<p>You can use product metafields to assign content to this tab that is unique to an individual product.  Use tabs to highlight unique features, sizing information, or other sales information.</p>"
+            "label": "タブのテキスト",
+            "default": "<p>テキストが入ります。</p>"
           },
           {
             "type": "text",
             "id": "title_3",
-            "label": "Tab heading"
+            "label": "タブの見出し"
           },
           {
             "type": "richtext",
             "id": "raw_content_3",
-            "label": "Tab text"
+            "label": "タブのテキスト"
           },
           {
             "type": "text",
             "id": "title_4",
-            "label": "Tab heading"
+            "label": "タブの見出し"
           },
           {
             "type": "richtext",
             "id": "raw_content_4",
-            "label": "Tab text"
+            "label": "タブのテキスト"
           },
           {
             "type": "text",
             "id": "title_5",
-            "label": "Tab heading"
+            "label": "タブの見出し"
           },
           {
             "type": "richtext",
             "id": "raw_content_5",
-            "label": "Tab text"
+            "label": "タブのテキスト"
           }
         ]
       },
       {
         "type": "text",
-        "name": "Text",
+        "name": "テキスト",
         "settings": [
           {
             "type": "richtext",
             "id": "title",
-            "label": "Text"
+            "label": "テキスト"
           }
         ]
       },
       {
         "type": "liquid",
-        "name": "Liquid",
+        "name": "リキッド",
         "settings": [
           {
             "type": "liquid",
             "id": "custom_liquid",
-            "label": "Custom Liquid",
-            "info": "Add app snippets or other Liquid code to create advanced customizations."
+            "label": "カスタムリキッド",
+            "info": "Liquidコードを埋め込めます"
           }
         ]
       }
     ],
     "presets": [
       {
-        "name": "Featured product",
+        "name": "特集商品",
         "category": "Collection",
         "blocks": [
           {

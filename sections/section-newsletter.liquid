@@ -75,56 +75,56 @@
 
 {% schema %}
 {
-  "name": "Newsletter",
+  "name": "ニュースレター",
   "settings": [
     {
       "type": "header",
-      "content": "Content"
+      "content": "コンテンツ"
     },
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
-      "default": "Newsletter"
+      "label": "見出し",
+      "default": "ニュースレター"
     },
     {
       "id": "richtext",
       "type": "richtext",
-      "label": "Subheading",
-      "default": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
+      "label": "サブ見出し",
+      "default": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます</p>"
     },
     {
       "type": "paragraph",
-      "content": "Subscribers are under 'Accepts Marketing' in your [customer admin](/admin/customers)."
+      "content": "購読者は、[顧客管理画面](/admin/customers)の「Accepts Marketing」の下に表示されます。"
     },
     {
       "type": "checkbox",
       "id": "enable_name",
-      "label": "Show name field",
+      "label": "名前フィールドを有効にする",
       "default": false
     },
-    
+
     {
       "type": "select",
       "id": "flex_align",
-      "label": "Position",
+      "label": "位置",
       "default": "align--middle-left",
       "options": [
-        { "value": "align--middle-left", "label": "Left" },
-        { "value": "align--middle-center", "label": "Center" },
-        { "value": "align--middle-right", "label": "Right" },
-        { "value": "align--middle-stacked", "label": "Stacked" }
+        { "value": "align--middle-left", "label": "左" },
+        { "value": "align--middle-center", "label": "中央" },
+        { "value": "align--middle-right", "label": "右" },
+        { "value": "align--middle-stacked", "label": "スタック" }
       ]
     },
-    
+
     {
       "type": "select",
       "id": "text_color",
-      "label": "Text color",
+      "label": "文字の色",
       "default": "dark",
       "options": [
-        { "value": "dark", "label": "Dark" },
-        { "value": "white", "label": "White" }
+        { "value": "dark", "label": "ダーク" },
+        { "value": "white", "label": "白" }
       ]
     },
     {
@@ -133,70 +133,70 @@
       "label": "Button color",
       "default": "btn--neutral",
       "options": [
-        {"value": "btn--primary", "label": "Bright accent"},
-        {"value": "btn--secondary", "label": "Secondary accent"},
-        {"value": "btn--link", "label": "Link color"},
-        {"value": "btn--neutral", "label": "Text color"},
-        {"value": "btn--black", "label": "Black"},
-        {"value": "btn--white", "label": "White"}
+        {"value": "btn--primary", "label": "メインアクセント色"},
+        {"value": "btn--secondary", "label": "サブアクセント色"},
+        {"value": "btn--link", "label": "リンクの色"},
+        {"value": "btn--neutral", "label": "文字の色"},
+        {"value": "btn--black", "label": "黒色"},
+        {"value": "btn--white", "label": "白色"}
       ]
     },
     {
       "type": "select",
       "id": "height",
-      "label": "Height",
+      "label": "高さ",
       "default": "three-fifty-height-hero",
       "options": [
-        { "value": "screen-height-one-half", "label": "1/2 of screen"},
-        { "value": "screen-height-one-third", "label": "1/3 of screen"},
+        { "value": "screen-height-one-half", "label": "画面の1/2"},
+        { "value": "screen-height-one-third", "label": "画面の1/3"},
         { "value": "five-fifty-height-hero ", "label": "550px" },
         { "value": "four-fifty-height-hero", "label": "450px" },
         { "value": "three-fifty-height-hero", "label": "350px" },
         { "value": "two-fifty-height-hero", "label": "250px" },
-        { "value": "image-height", "label": "Image height" }
+        { "value": "image-height", "label": "オリジナル画像" }
       ]
     },
     {
       "type": "select",
       "id": "width",
-      "label": "Width",
+      "label": "幅",
       "default": "default",
       "options": [
-        { "value": "full", "label": "Full" },
-        { "value": "default", "label": "Default" }
+        { "value": "full", "label": "フル" },
+        { "value": "default", "label": "デフォルト" }
       ]
     },
     {
       "type": "header",
-      "content": "Background"
+      "content": "背景"
     },
     {
       "type": "image_picker",
       "id": "bg_image",
-      "label": "Image"
+      "label": "画像"
     },
     {
       "type": "select",
       "id": "bg_position",
-      "label": "Position",
+      "label": "位置",
       "default": "center-center",
       "options": [
-        { "label": "Top", "value": "center-top" },
-        { "label": "Right", "value": "right-center" },
-        { "label": "Center", "value": "center-center" },
-        { "label": "Left", "value": "left-center" },
-        { "label": "Bottom", "value": "center-bottom" }
+        { "label": "上", "value": "center-top" },
+        { "label": "右", "value": "right-center" },
+        { "label": "中央", "value": "center-center" },
+        { "label": "左", "value": "left-center" },
+        { "label": "下", "value": "center-bottom" }
       ]
     },
     {
       "type": "header",
-      "content": "Opacity"
+      "content": "透過"
     },
     {
       "type": "range",
       "id": "overlay_opacity",
-      "label": "Opacity",
-      "info": "Increase contrast for legible text.",
+      "label": "透過",
+      "info": "文字を読みやすくするために、コントラストを上げる",
       "unit": "%",
       "min": 0,
       "max": 100,
@@ -206,7 +206,7 @@
     {
       "type": "color",
       "id": "overlay_color",
-      "label": "Overlay color",
+      "label": "オーバーレイの色",
       "default": "#000"
     }
   ],
@@ -218,7 +218,7 @@
   "presets": [
     {
       "category": "Text",
-      "name": "Newsletter"
+      "name": "ニュースレター"
     }
   ]
 }

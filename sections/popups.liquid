@@ -8,12 +8,12 @@
       {%- if block.type == 'text' or block.type == 'cookie' -%}
         {%- assign classes = 'popup-cookies ' | append: block.settings.position -%}
       {%- endif -%}
-      
+
       {%- if block.settings.target_device_enabled -%}
         {%- if block.settings.target_device == 'mobile' -%}
           {%- assign classes = classes | append: ' mobile' -%}
         {%- endif -%}
-      
+
         {%- if block.settings.target_device == 'desktop' -%}
           {%- assign classes = classes | append: ' desktop' -%}
         {%- endif -%}
@@ -25,17 +25,17 @@
         {%- assign show_popup = false -%}
       {%- endif -%}
 
-      {%- if block.settings.target_url_enabled and block.settings.target_url != blank -%}  
+      {%- if block.settings.target_url_enabled and block.settings.target_url != blank -%}
         {%- if block.settings.target_url == request.path -%}
           {%- assign show_popup = true -%}
         {%- endif -%}
       {%- endif -%}
-      
+
       {%- if block.settings.target_referrer_enabled and block.settings.target_referrer != blank -%}
         {%- capture target_refferer_attribute -%}
           data-target-referrer="{{ block.settings.target_referrer }}"
         {%- endcapture -%}
-        
+
         {%- assign show_popup = true -%}
       {%- endif -%}
 
@@ -71,11 +71,11 @@
                               {%- unless block.settings.title == '' -%}
                                 <h2 class="modal__title">{{ block.settings.title | strip_html | escape }}</h2>
                               {%- endunless -%}
-                              
+
                               {%- unless block.settings.text == '' -%}
                                 <div class="modal__description rte">{{ block.settings.text }}</div>
                               {%- endunless -%}
-                              
+
                               {%- if block.settings.newsletter_enable -%}
                                 {%- assign button_text = block.settings.button_text -%}
 
@@ -189,16 +189,16 @@
           {%- when 'cookie' -%}
             <div data-tracking-consent {{ block_attributes }}>
               {%- assign markup = 'general.cookies.cookies_link' | t -%}
-              
+
               {%- if shop.privacy_policy -%}
                 {%- capture markup -%}
-                  <a href="{{ shop.privacy_policy.url }}">{{ 'general.cookies.cookies_link' | t }}</a> 
+                  <a href="{{ shop.privacy_policy.url }}">{{ 'general.cookies.cookies_link' | t }}</a>
                 {%- endcapture -%}
               {%- endif -%}
 
               <div data-tracking-consent-inner class="popup__tracking">
                 <p class="popup__title--cookies">{{- 'general.cookies.title' | t -}}</p>
-                
+
                 <p>{{- 'general.cookies.text_html' | t: cookies: markup -}}</p>
 
                 <button data-confirm-cookies>{{- 'general.cookies.access' | t -}}</button>
@@ -216,59 +216,59 @@
 
 {% schema %}
 {
-  "name": "Popups",
+  "name": "ポップアップ",
   "settings": [],
   "blocks" : [
     {
       "type": "popup",
-      "name": "Large newsletter",
+      "name": "大きいポップアップ",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image",
-          "info": "Optional"
+          "label": "画像",
+          "info": "オプション"
         },
         {
           "type": "text",
           "id": "subheading",
-          "label": "Subheading",
-          "default": "Broadcast"
+          "label": "サブ見出し",
+          "default": "ブロードキャスト"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Heading",
-          "default": "Newsletter"
+          "label": "見出し",
+          "default": "ニュースレター"
         },
         {
           "id": "text",
           "type": "richtext",
-          "label": "Description",
-          "default": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
+          "label": "説明",
+          "default": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。</p>"
         },
         {
           "type": "header",
-          "content": "Button"
+          "content": "ボタン"
         },
         {
           "type": "text",
           "id": "button_text",
-          "label": "Button text",
-          "default": "Join"
+          "label": "テキスト",
+          "default": "参加する"
         },
         {
           "type": "select",
           "id": "button_color",
-          "label": "Color",
+          "label": "色",
           "default": "btn--neutral",
           "options": [
-            {"value": "btn--primary", "label": "Bright accent"},
-            {"value": "btn--secondary", "label": "Secondary accent"},
-            {"value": "btn--link", "label": "Link color"},
-            {"value": "btn--neutral", "label": "Text color"},
-            {"value": "btn--black", "label": "Black"},
-            {"value": "btn--white", "label": "White"}
+            {"value": "btn--primary", "label": "メインアクセント色"},
+            {"value": "btn--secondary", "label": "サブアクセント色"},
+            {"value": "btn--link", "label": "リンクの色"},
+            {"value": "btn--neutral", "label": "文字の色"},
+            {"value": "btn--black", "label": "黒色"},
+            {"value": "btn--white", "label": "白色"}
           ]
         },
         {
@@ -278,73 +278,73 @@
         {
           "type": "color",
           "id": "bg_color",
-          "label": "Background",
+          "label": "背景色",
           "default": "#fff"
         },
         {
           "type": "select",
           "id": "text_color",
-          "label": "Text",
+          "label": "文字の色",
           "default": "dark",
           "options": [
-            { "value": "light", "label": "Light" },
-            { "value": "dark", "label": "Dark" }
+            { "value": "light", "label": "ライト" },
+            { "value": "dark", "label": "ダーク" }
           ]
         },
         {
           "type": "header",
-          "content": "Newsletter form"
+          "content": "ニュースレターのフォーム"
         },
         {
           "type": "checkbox",
           "id": "newsletter_enable",
-          "label": "Enable newsletter form",
+          "label": "ニュースレターのフォームを有効にする",
           "default": true
         },
         {
           "type": "checkbox",
           "id": "enable_name",
-          "label": "Show name field",
+          "label": "ネームフィールドを有効にする",
           "default": false
         },
         {
           "type": "header",
-          "content": "Popup behavior"
+          "content": "ポップアップの動き"
         },
         {
           "type": "select",
           "id": "trigger",
-          "label": "Delay appearance",
+          "label": "表示について",
           "default": "always",
           "options": [
-            {"value": "always", "label": "Show immediately"},
-            {"value": "delayed_10", "label": "Show 10 seconds after page load"},
-            {"value": "bottom", "label": "Show after user scrolls to page bottom"},
-            {"value": "idle", "label": "Show after user has been idle for 1 minute"}
+            {"value": "always", "label": "すぐ表示する"},
+            {"value": "delayed_10", "label": "10秒後に表示する"},
+            {"value": "bottom", "label": "下にスクロールした時に表示する"},
+            {"value": "idle", "label": "ユーザーが1分間アイドル状態であった場合に表示"}
           ]
         },
         {
           "type": "header",
-          "content": "Target page"
+          "content": "対象のページ"
         },
         {
           "id": "target_url_enabled",
           "type": "checkbox",
-          "label": "Limit to specific page"
+          "label": "特定のページに限定する"
         },
         {
           "id": "target_url",
           "type": "url",
-          "label": "Targeted page"
+          "label": "対象のページ"
         },
         {
           "type": "header",
-          "content": "Target referrer"
+          "content": "対象リファラー"
         },
         {
           "id": "target_referrer_enabled",
           "type": "checkbox",
-          "label": "Limit to specific referrer path"
+          "label": "特定のリファラーパスに限定する"
         },
         {
           "id": "target_referrer",
@@ -353,20 +353,20 @@
         },
         {
           "type": "header",
-          "content": "Target device"
+          "content": "対象のデバイス"
         },
         {
           "id": "target_device_enabled",
           "type": "checkbox",
-          "label": "Limit to desktop or mobile"
+          "label": "デスクトップまたはモバイルに限定する"
         },
         {
           "type": "select",
           "id": "target_device",
-          "label": "Device ",
+          "label": "デバイス ",
           "default": "mobile",
           "options": [
-            {"value": "mobile", "label": "Only show on mobile"},
+            {"value": "mobile", "label": "モバイルのみ"},
             {"value": "desktop", "label": "Only show on desktop"}
           ]
         }
@@ -429,12 +429,12 @@
           "label": "Color",
           "default": "btn--neutral",
           "options": [
-            {"value": "btn--primary", "label": "Bright accent"},
-            {"value": "btn--secondary", "label": "Secondary accent"},
-            {"value": "btn--link", "label": "Link color"},
-            {"value": "btn--neutral", "label": "Text color"},
-            {"value": "btn--black", "label": "Black"},
-            {"value": "btn--white", "label": "White"}
+            {"value": "btn--primary", "label": "メインアクセント色"},
+            {"value": "btn--secondary", "label": "サブアクセント色"},
+            {"value": "btn--link", "label": "リンクの色"},
+            {"value": "btn--neutral", "label": "文字の色"},
+            {"value": "btn--black", "label": "黒色"},
+            {"value": "btn--white", "label": "白色"}
           ]
         },
         {
@@ -443,46 +443,46 @@
           "label": "Style",
           "default": "hero__btn btn btn--large btn--outline caps",
           "options": [
-            {"value": "caps--large", "label": "Capitalized text"},
-            {"value": "hero__btn btn btn--input caps", "label": "Small button"},
-            {"value": "hero__btn btn btn--large caps", "label": "Large button"},
-            {"value": "hero__btn btn btn--input btn--outline caps", "label": "Small outline button"},
-            {"value": "hero__btn btn btn--large btn--outline caps", "label": "Large outline button"}
+            {"value": "caps--large", "label": "文字のみを表示"},
+            {"value": "hero__btn btn btn--input caps", "label": "小さいボタン"},
+            {"value": "hero__btn btn btn--large caps", "label": "大きいボタン"},
+            {"value": "hero__btn btn btn--input btn--outline caps", "label": "小さいボタン（枠あり）"},
+            {"value": "hero__btn btn btn--large btn--outline caps", "label": "大きいボタン（枠あり）"}
           ]
         },
         {
           "type": "header",
-          "content": "Popup behavior"
+          "content": "ポップアップの動き"
         },
         {
           "type": "select",
           "id": "position",
-          "label": "Position",
+          "label": "位置",
           "options": [
             {
               "value": "popup-cookies--left",
-              "label": "Left"
+              "label": "左"
             },
             {
               "value": "popup-cookies--right",
-              "label": "Right"
+              "label": "右"
             },
             {
               "value": "popup-cookies--center",
-              "label": "Center"
+              "label": "中央"
             }
           ]
         },
         {
           "type": "select",
           "id": "trigger",
-          "label": "Delay appearance",
+          "label": "表示について",
           "default": "always",
           "options": [
-            {"value": "always", "label": "Show immediately"},
-            {"value": "delayed_10", "label": "Show 10 seconds after page load"},
-            {"value": "bottom", "label": "Show after user scrolls to page bottom"},
-            {"value": "idle", "label": "Show after user has been idle for 1 minute"}
+            {"value": "always", "label": "すぐ表示する"},
+            {"value": "delayed_10", "label": "10秒後に表示する"},
+            {"value": "bottom", "label": "下にスクロールした時に表示する"},
+            {"value": "idle", "label": "ユーザーが1分間アイドル状態であった場合に表示"}
           ]
         },
         {
@@ -492,44 +492,44 @@
         {
           "id": "target_url_enabled",
           "type": "checkbox",
-          "label": "Limit to specific page"
+          "label": "特定のページに限定する"
         },
         {
           "id": "target_url",
           "type": "url",
-          "label": "Targeted page"
+          "label": "対象のページ"
         },
         {
           "type": "header",
-          "content": "Target referrer"
+          "content": "対象リファラー"
         },
         {
           "id": "target_referrer_enabled",
           "type": "checkbox",
-          "label": "Limit to specific referrer path"
+          "label": "特定のリファラーパスに限定する"
         },
         {
           "id": "target_referrer",
           "type": "text",
-          "label": "Targeted referrer"
+          "label": "対象のリファラー"
         },
         {
           "type": "header",
-          "content": "Target device"
+          "content": "対象のデバイス"
         },
         {
           "id": "target_device_enabled",
           "type": "checkbox",
-          "label": "Limit to desktop or mobile"
+          "label": "デスクトップまたはモバイルに限定する"
         },
         {
           "type": "select",
           "id": "target_device",
-          "label": "Device ",
+          "label": "デバイス",
           "default": "mobile",
           "options": [
-            {"value": "mobile", "label": "Only show on mobile"},
-            {"value": "desktop", "label": "Only show on desktop"}
+            {"value": "mobile", "label": "モバイルのみ"},
+            {"value": "desktop", "label": "デスクトップのみ"}
           ]
         }
       ]
@@ -552,138 +552,138 @@
         },
         {
           "type": "header",
-          "content": "Colors"
+          "content": "色"
         },
         {
           "type": "color",
           "id": "bg_color",
-          "label": "Background",
+          "label": "背景色",
           "default": "#B79352"
         },
         {
           "type": "color",
           "id": "text",
-          "label": "Text",
+          "label": "文字の色",
           "default": "#fff"
         },
         {
           "type": "header",
-          "content": "Popup behavior"
+          "content": "ポップアップの動き"
         },
         {
           "type": "select",
           "id": "position",
-          "label": "Position",
+          "label": "位置",
           "default": "newsletter--top-right",
           "options": [
             {
               "value": "newsletter--top-left",
-              "label": "Top left"
+              "label": "上-左"
             },
             {
               "value": "newsletter--top-right",
-              "label": "Top right"
+              "label": "上-右"
             },
             {
               "value": "newsletter--bottom-left",
-              "label": "Bottom left"
+              "label": "下-左"
             },
             {
               "value": "newsletter--bottom-right",
-              "label": "Bottom right"
+              "label": "下-右"
             }
           ]
         },
         {
           "type": "select",
           "id": "trigger",
-          "label": "Delay appearance",
+          "label": "表示について",
           "default": "always",
           "options": [
-            {"value": "always", "label": "Show immediately"},
-            {"value": "delayed_3", "label": "Show 3 seconds after page load"},
-            {"value": "delayed_10", "label": "Show 10 seconds after page load"},
-            {"value": "bottom", "label": "Show after user scrolls to page bottom"},
-            {"value": "idle", "label": "Show after user has been idle for 1 minute"}
+            {"value": "always", "label": "すぐ表示する"},
+            {"value": "delayed_3", "label": "3秒後に表示する"},
+            {"value": "delayed_10", "label": "10秒後に表示する"},
+            {"value": "bottom", "label": "下にスクロールした時に表示する"},
+            {"value": "idle", "label": "ユーザーが1分間アイドル状態であった場合に表示"}
           ]
         },
         {
           "type": "header",
-          "content": "Target page"
+          "content": "対象のページ"
         },
         {
           "id": "target_url_enabled",
           "type": "checkbox",
-          "label": "Limit to specific page"
+          "label": "特定のページに限定する"
         },
         {
           "id": "target_url",
           "type": "url",
-          "label": "Targeted page"
+          "label": "対象のページ"
         },
         {
           "type": "header",
-          "content": "Target referrer"
+          "content": "対象リファラー"
         },
         {
           "id": "target_referrer_enabled",
           "type": "checkbox",
-          "label": "Limit to specific referrer path"
+          "label": "特定のリファラーパスに限定する"
         },
         {
           "id": "target_referrer",
           "type": "text",
-          "label": "Targeted referrer"
+          "label": "対象のリファラー"
         },
         {
           "type": "header",
-          "content": "Target device"
+          "content": "対象のデバイス"
         },
         {
           "id": "target_device_enabled",
           "type": "checkbox",
-          "label": "Limit to desktop or mobile"
+          "label": "デスクトップまたはモバイルに限定する"
         },
         {
           "type": "select",
           "id": "target_device",
-          "label": "Device ",
+          "label": "デバイス ",
           "default": "mobile",
           "options": [
-            {"value": "mobile", "label": "Only show on mobile"},
-            {"value": "desktop", "label": "Only show on desktop"}
+            {"value": "mobile", "label": "モバイルのみ"},
+            {"value": "desktop", "label": "デスクトップのみ"}
           ]
         }
       ]
     },
     {
       "type": "cookie",
-      "name": "Cookie consent",
+      "name": "クッキーに同意",
       "limit": 1,
       "settings": [
         {
           "type": "select",
           "id": "position",
-          "label": "Position",
+          "label": "位置",
           "options": [
             {
               "value": "popup-cookies--left",
-              "label": "Left"
+              "label": "左"
             },
             {
               "value": "popup-cookies--right",
-              "label": "Right"
+              "label": "右"
             },
             {
               "value": "popup-cookies--bottom",
-              "label": "Bottom"
+              "label": "下"
             }
           ]
         },
         {
           "type": "checkbox",
           "id": "show_cookies_popup",
-          "label": "Enable cookie tracking popup",
+          "label": "クッキーのポップアップを表示する",
           "info": "This feature uses the Shopify [consent tracking API](https://help.shopify.com/en/manual/your-account/privacy/cookies) and will not show in all regions.  Customer privacy tracking limits must be enabled in your [online store settings](/admin/online_store/preferences).  [Learn More](https://invisiblethemes.com/link/broadcast/docs/cookies)",
           "default": true
         }

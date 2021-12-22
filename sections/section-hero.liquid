@@ -51,7 +51,7 @@
   {%- assign mobile_image = '' -%}
   {%- if section.settings.mobile_image != blank -%}
     {%- assign desktop_image_modifier = 'desktop' -%}
-    
+
     {%- capture mobile_image -%}
       {% render 'image-background', img_object: section.settings.mobile_image, frame_height_class: section.settings.height, bg_position: section.settings.bg_position, modifier: 'mobile' %}
     {%- endcapture -%}
@@ -64,59 +64,59 @@
 
 {% schema %}
 {
-  "name": "Image with text overlay",
+  "name": "テキスト付き画像",
   "class": "section-fullscreen",
   "settings": [
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "画像"
     },
     {
       "type": "image_picker",
       "id": "mobile_image",
-      "label": "Mobile image"
+      "label": "モバイル用画像"
     },
     {
       "type": "select",
       "id": "bg_position",
-      "label": "Position",
+      "label": "位置",
       "default": "center-center",
       "options": [
-        { "label": "Top", "value": "center-top" },
-        { "label": "Right", "value": "right-center" },
-        { "label": "Center", "value": "center-center" },
-        { "label": "Left", "value": "left-center" },
-        { "label": "Bottom", "value": "center-bottom" }
+        { "label": "上", "value": "center-top" },
+        { "label": "右", "value": "right-center" },
+        { "label": "中央", "value": "center-center" },
+        { "label": "左", "value": "left-center" },
+        { "label": "下", "value": "center-bottom" }
       ]
     },
     {
       "type": "select",
       "id": "height",
-      "label": "Height",
+      "label": "高さ",
       "default": "screen-height-three-quarters",
       "options": [
-        { "value": "screen-height-full", "label": "Full screen height"},
-        { "value": "screen-height-three-quarters", "label": "3/4 of screen"},
-        { "value": "screen-height-two-thirds", "label": "2/3 of screen"},
-        { "value": "screen-height-one-half", "label": "1/2 of screen"},
-        { "value": "screen-height-one-third", "label": "1/3 of screen"},
+        { "value": "screen-height-full", "label": "画面いっぱい"},
+        { "value": "screen-height-three-quarters", "label": "画面の3/4"},
+        { "value": "screen-height-two-thirds", "label": "画面の2/3"},
+        { "value": "screen-height-one-half", "label": "画面の1/2"},
+        { "value": "screen-height-one-third", "label": "画面の1/3"},
         { "value": "seven-fifty-height-hero", "label": "750px" },
         { "value": "sixty-fifty-height-hero", "label": "650px" },
         { "value": "five-fifty-height-hero ", "label": "550px" },
         { "value": "four-fifty-height-hero", "label": "450px" },
-        { "value": "image-height", "label": "Image height" }
+        { "value": "image-height", "label": "オリジナル画像" }
       ]
     },
     {
       "type": "header",
-      "content": "Overlay"
+      "content": "オーバーレイ"
     },
     {
       "type": "range",
       "id": "overlay_opacity",
-      "label": "Opacity",
-      "info": "Increase contrast for legible text.",
+      "label": "透過",
+      "info": "文字を読みやすくするために、コントラストを上げる",
       "min": 0,
       "max": 100,
       "step": 5,
@@ -126,105 +126,105 @@
     {
       "type": "color",
       "id": "overlay_color",
-      "label": "Overlay color",
+      "label": "オーバーレイの色",
       "default": "#000"
     },
     {
       "type": "header",
-      "content": "Text"
+      "content": "テキスト"
     },
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
-      "default": "Image with text overlay"
+      "label": "見出し",
+      "default": "テキスト付き画像"
     },
     {
       "type": "textarea",
       "id": "description",
-      "label": "Subheading",
-      "default": "Tell your brand's story through images."
+      "label": "サブ見出し",
+      "default": "画像でブランドのストーリーを伝える。"
     },
     {
       "type": "select",
       "id": "flex_align",
-      "label": "Block alignment",
+      "label": "ブロックの位置",
       "default": "align--middle-center",
       "options": [
-        { "value": "align--top-left", "label": "Top left"},
-        { "value": "align--top-center", "label": "Top center"},
-        { "value": "align--top-right", "label": "Top right"},
-        { "value": "align--middle-left", "label": "Middle left"},
-        { "value": "align--middle-center", "label": "Absolute center"},
-        { "value": "align--middle-right", "label": "Middle right"},
-        { "value": "align--bottom-left", "label": "Bottom left"},
-        { "value": "align--bottom-center", "label": "Bottom center"},
-        { "value": "align--bottom-right", "label": "Bottom right"}
+        { "value": "align--top-left", "label": "上-左"},
+        { "value": "align--top-center", "label": "上-中央"},
+        { "value": "align--top-right", "label": "上-右"},
+        { "value": "align--middle-left", "label": "中央-左"},
+        { "value": "align--middle-center", "label": "中央-中央"},
+        { "value": "align--middle-right", "label": "中央-右"},
+        { "value": "align--bottom-left", "label": "下-左"},
+        { "value": "align--bottom-center", "label": "下-中央"},
+        { "value": "align--bottom-right", "label": "下-右"}
       ]
     },
     {
       "type": "select",
       "id": "text_color",
-      "label": "Text color",
+      "label": "テキストの色",
       "default": "text-light",
       "options": [
-        { "value": "text-light", "label": "White"},
-        { "value": "text-dark", "label": "Dark"}
+        { "value": "text-light", "label": "白"},
+        { "value": "text-dark", "label": "ダーク"}
       ]
     },
     {
       "type": "checkbox",
       "id": "transparent",
-      "label": "Transparent background",
+      "label": "背景を透過する",
       "default": true
     },
     {
       "type": "header",
-      "content": "Button"
+      "content": "ボタン"
     },
     {
       "type": "text",
       "id": "link_text",
-      "label": "Text",
+      "label": "テキスト",
       "default": "View products",
-      "info": "Leave blank to link entire image"
+      "info": "画像全体をリンクする場合は空白にする"
     },
     {
       "type": "url",
       "id": "link",
-      "label": "Link"
+      "label": "リンク"
     },
     {
       "type": "select",
       "id": "button_color",
-      "label": "Color",
+      "label": "色",
       "default": "btn--white",
       "options": [
-        {"value": "btn--primary", "label": "Bright accent"},
-        {"value": "btn--secondary", "label": "Secondary accent"},
-        {"value": "btn--link", "label": "Link color"},
-        {"value": "btn--neutral", "label": "Text color"},
-        {"value": "btn--black", "label": "Black"},
-        {"value": "btn--white", "label": "White"}
+        {"value": "btn--primary", "label": "メインアクセント色"},
+        {"value": "btn--secondary", "label": "サブアクセント色"},
+        {"value": "btn--link", "label": "リンクの色"},
+        {"value": "btn--neutral", "label": "文字の色"},
+        {"value": "btn--black", "label": "黒色"},
+        {"value": "btn--white", "label": "白色"}
       ]
     },
     {
       "type": "select",
       "id": "button_style",
-      "label": "Style",
+      "label": "スタイル",
       "default": "hero__btn btn btn--large btn--outline caps",
       "options": [
-        {"value": "caps--large", "label": "Capitalized text"},
-        {"value": "hero__btn btn btn--input caps", "label": "Small button"},
-        {"value": "hero__btn btn btn--large caps", "label": "Large button"},
-        {"value": "hero__btn btn btn--input btn--outline caps", "label": "Small outline button"},
-        {"value": "hero__btn btn btn--large btn--outline caps", "label": "Large outline button"}
+        {"value": "caps--large", "label": "文字のみを表示"},
+        {"value": "hero__btn btn btn--input caps", "label": "小さいボタン"},
+        {"value": "hero__btn btn btn--large caps", "label": "大きいボタン"},
+        {"value": "hero__btn btn btn--input btn--outline caps", "label": "小さいボタン（枠あり）"},
+        {"value": "hero__btn btn btn--large btn--outline caps", "label": "大きいボタン（枠あり）"}
       ]
     }
   ],
   "presets": [
     {
-      "name": "Image with text overlay",
+      "name": "テキスト付き画像",
       "category": "Image"
     }
   ]

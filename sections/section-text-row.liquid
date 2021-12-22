@@ -72,85 +72,85 @@
 
 {% schema %}
 {
-  "name": "Text columns with icons",
+  "name": "テキストカラム（アイコン）",
   "max_blocks": 4,
   "settings": [
     {
       "type": "select",
       "id": "text_alignment",
-      "label": "Text alignment",
+      "label": "文字の位置",
       "default": "left",
       "options": [
-        { "label": "Left", "value": "left" },
-        { "label": "Center", "value": "center" }
+        { "label": "左", "value": "left" },
+        { "label": "中央", "value": "center" }
       ]
     },
     {
       "type": "select",
       "id": "icon_size",
-      "label": "Icon size",
+      "label": "アイコンサイズ",
       "default": "icon--small",
       "options": [
-        { "value": "icon--small", "label": "Small" },
-        { "value": "icon--large", "label": "Large" }
+        { "value": "icon--small", "label": "スモール" },
+        { "value": "icon--large", "label": "ラージ" }
       ]
     },
     {
       "type": "select",
       "id": "icon_alignment",
-      "label": "Icon placement",
+      "label": "アイコンの位置",
       "default": "icon--top",
       "options": [
-        { "value": "icon--top", "label": "Top" },
-        { "value": "icon--left", "label": "Left" }
+        { "value": "icon--top", "label": "上" },
+        { "value": "icon--left", "label": "左" }
       ]
     },
     {
       "type": "select",
       "id": "text_color",
-      "label": "Text color",
+      "label": "文字の色",
       "default": "text-dark",
       "options": [
-        { "value": "text-light", "label": "White"},
-        { "value": "text-dark", "label": "Dark"}
+        { "value": "text-light", "label": "白"},
+        { "value": "text-dark", "label": "ダーク"}
       ]
     },
     {
       "type": "select",
       "id": "heading_size",
-      "label": "Heading size",
+      "label": "見出しの文字サイズ",
       "default": "h6",
       "options": [
-        { "value": "h6", "label": "Normal" },
-        { "value": "h5", "label": "Large" }
+        { "value": "h6", "label": "普通" },
+        { "value": "h5", "label": "大きい" }
       ]
     },
     {
       "type": "select",
       "id": "height",
-      "label": "Height",
+      "label": "高さ",
       "default": "margin--medium",
       "options": [
-        {"value": "margin--small", "label": "Small"},
-        {"value": "margin--medium", "label": "Medium"}
+        {"value": "margin--small", "label": "スモール"},
+        {"value": "margin--medium", "label": "ミディアムZZ"}
       ]
     },
     {
       "type": "color",
       "id": "bg_color",
-      "label": "Background color",
+      "label": "背景の色",
       "default": "#fafafa"
     }
   ],
   "blocks": [
     {
       "type": "text-item",
-      "name": "Icon column",
+      "name": "アイコンカラム",
       "settings": [
       {
           "type": "select",
           "id": "icon_name",
-          "label": "Icon",
+          "label": "アイコン",
           "default": "icon-award",
           "options": [
             { "value": "icon-animal", "label": "Animal" },
@@ -182,56 +182,56 @@
         {
           "type": "image_picker",
           "id": "icon_alt",
-          "label": "Alternative icon/image"
+          "label": "代わりのアイコン/画像"
         },
         {
           "type": "color",
           "id": "icon_color",
-          "label": "Icon color",
+          "label": "アイコンの色",
           "default": "#545454"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Heading",
+          "label": "見出し",
           "default": "Title"
         },
         {
           "type": "textarea",
           "id": "text",
-          "label": "Text",
-          "default": "Share details about your shipping policies, item returns, or customer service."
+          "label": "テキスト",
+          "default": "配送ポリシー、返品、カスタマーサービスについて詳細を共有する。"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Text columns with icons",
+      "name": "テキストカラム（アイコン）",
       "category": "Text",
       "blocks": [
         {
           "type": "text-item",
           "settings": {
-            "title": "Secure transactions",
+            "title": "安全な取引",
             "icon_name": "icon-lock-card",
-            "text": "Transactions are handled with bank-grade security."
+            "text": "取引は銀行レベルのセキュリティで処理されます。"
           }
         },
         {
           "type": "text-item",
           "settings": {
-            "title": "Simple checkout",
+            "title": "簡易チェックアウト",
             "icon_name": "icon-basket-like",
-            "text": "Our secure checkout is quick and easy to use."
+            "text": "安全なチェックアウトは、迅速かつ簡単にご利用いただけます。"
           }
         },
         {
           "type": "text-item",
           "settings": {
-            "title": "Get in touch",
+            "title": "連絡を取る",
             "icon_name": "icon-chat",
-            "text": "Have questions? Get in touch with us at any time."
+            "text": "ご質問はありませんか？いつでもご連絡ください。"
           }
         }
       ]

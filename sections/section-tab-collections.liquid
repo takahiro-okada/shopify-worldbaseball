@@ -205,10 +205,10 @@
 
 {% schema %}
 {
-  "name": "Tab collections",
+  "name": "タブコレクション",
   "settings": [
     {
-      "label": "Heading",
+      "label": "見出し",
       "id": "title",
       "type": "text"
     }
@@ -216,47 +216,47 @@
   "blocks":[
     {
       "type": "collection",
-      "name": "Collection",
+      "name": "コレクション",
       "limit": 3,
       "settings": [
         {
           "type": "header",
-          "content": "Collection"
+          "content": "コレクション"
         },
         {
-          "label": "Tab heading",
+          "label": "タブの見出し",
           "id": "title",
           "type": "text"
         },
         {
           "type": "collection",
           "id": "featured_collection",
-          "label": "Collection"
+          "label": "コレクション"
         },
         {
           "type": "header",
-          "content": "Image"
+          "content": "画像"
         },
         {
           "type": "checkbox",
           "id": "show_image",
-          "label": "Show image",
+          "label": "画像を表示する",
           "default": false
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "画像"
         },
         {
           "type": "header",
-          "content": "Overlay"
+          "content": "オーバーレイ"
         },
         {
           "type": "range",
           "id": "overlay_opacity",
-          "label": "Opacity",
-          "info": "Increase contrast for legible text.",
+          "label": "透過",
+          "info": "文字を読みやすくするために、コントラストを上げる",
           "min": 0,
           "max": 100,
           "step": 5,
@@ -266,69 +266,69 @@
         {
           "type": "color",
           "id": "overlay_color",
-          "label": "Overlay color",
+          "label": "オーバーレイの色",
           "default": "#000"
         },
         {
           "type": "header",
-          "content": "Content"
+          "content": "コンテンツ"
         },
         {
           "type": "richtext",
           "id": "description",
-          "label": "Description"
+          "label": "説明"
         },
         {
           "type": "select",
           "id": "text_color",
-          "label": "Text color",
+          "label": "文字の色",
           "default": "text-light",
           "options": [
-            { "value": "text-light", "label": "White"},
-            { "value": "text-dark", "label": "Dark"}
+            { "value": "text-light", "label": "ホワイト"},
+            { "value": "text-dark", "label": "ダーク"}
           ]
         },
         {
           "type": "header",
-          "content": "Button"
+          "content": "ボタン"
         },
         {
           "type": "text",
           "id": "link_text",
-          "label": "Text",
+          "label": "テキスト",
           "default": "View products",
-          "info": "Leave blank to link entire image"
+          "info": "画像全体をリンクする場合は空白にする"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "Link"
+          "label": "リンク"
         },
         {
           "type": "select",
           "id": "button_color",
-          "label": "Color",
+          "label": "色",
           "default": "btn--white",
           "options": [
-            {"value": "btn--primary", "label": "Bright accent"},
-            {"value": "btn--secondary", "label": "Secondary accent"},
-            {"value": "btn--link", "label": "Link color"},
-            {"value": "btn--neutral", "label": "Text color"},
-            {"value": "btn--black", "label": "Black"},
-            {"value": "btn--white", "label": "White"}
+            {"value": "btn--primary", "label": "メインアクセント色"},
+            {"value": "btn--secondary", "label": "サブアクセント色"},
+            {"value": "btn--link", "label": "リンクの色"},
+            {"value": "btn--neutral", "label": "文字の色"},
+            {"value": "btn--black", "label": "黒色"},
+            {"value": "btn--white", "label": "白色"}
           ]
         },
         {
           "type": "select",
           "id": "button_style",
-          "label": "Style",
+          "label": "スタイル",
           "default": "hero__btn btn btn--large btn--outline caps",
           "options": [
-            {"value": "caps--large", "label": "Capitalized text"},
-            {"value": "hero__btn btn btn--input caps", "label": "Small button"},
-            {"value": "hero__btn btn btn--large caps", "label": "Large button"},
-            {"value": "hero__btn btn btn--input btn--outline caps", "label": "Small outline button"},
-            {"value": "hero__btn btn btn--large btn--outline caps", "label": "Large outline button"}
+            {"value": "caps--large", "label": "文字のみを表示"},
+            {"value": "hero__btn btn btn--input caps", "label": "小さいボタン"},
+            {"value": "hero__btn btn btn--large caps", "label": "大きいボタン"},
+            {"value": "hero__btn btn btn--input btn--outline caps", "label": "小さいボタン（枠あり）"},
+            {"value": "hero__btn btn btn--large btn--outline caps", "label": "大きいボタン（枠あり）"}
           ]
         }
       ]
@@ -337,18 +337,18 @@
   "presets": [
     {
       "category": "Collection",
-      "name": "Tab collections",
+      "name": "タブコレクション",
       "blocks": [
         {
           "type": "collection",
           "settings": {
-            "title": "First collection"
+            "title": "1つめのコレクション"
           }
         },
         {
           "type": "collection",
           "settings": {
-            "title": "Second collection"
+            "title": "2つめのコレクション"
           }
         }
       ]

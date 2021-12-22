@@ -410,38 +410,38 @@
 
 {% schema %}
 {
-  "name": "Header",
+  "name": "ヘッダー",
   "settings": [
     {
       "type": "select",
       "id": "header_style",
-      "label": "Header style",
+      "label": "ヘッダーのスタイル",
       "default": "logo_beside",
       "options": [
-        { "value": "logo_above", "label": "Logo above menu"},
-        { "value": "logo_beside", "label": "Logo beside menu"},
-        { "value": "drawer", "label": "Mobile drawer menu"}
+        { "value": "logo_above", "label": "メニューの上にロゴ"},
+        { "value": "logo_beside", "label": "メニューの下にロゴ"},
+        { "value": "drawer", "label": "ハンバーガーメニュー"}
       ]
     },
     {
       "type": "select",
       "id": "icon_family",
-      "label": "Header style",
+      "label": "ヘッダースタイル",
       "default": "clean",
       "options": [
-        { "value": "clean", "label": "Clean"},
-        { "value": "modern", "label": "Modern"},
-        { "value": "bold", "label": "Bold"}
+        { "value": "clean", "label": "クリーン"},
+        { "value": "modern", "label": "モダン"},
+        { "value": "bold", "label": "ボールド"}
       ]
     },
     {
       "type": "header",
-      "content": "Logo"
+      "content": "ロゴ"
     },
     {
       "type": "image_picker",
       "id": "logo",
-      "label": "Image"
+      "label": "画像"
     },
     {
       "type":    "range",
@@ -450,109 +450,108 @@
       "max":     495,
       "step":    5,
       "unit":    "px",
-      "label":   "Width",
+      "label":   "幅",
       "default": 120
     },
     {
       "type": "header",
-      "content": "Links"
+      "content": "リンク"
     },
     {
       "type": "link_list",
-      "label": "Main menu",
+      "label": "メインメニュー",
       "id": "main_menu_linklist"
     },
     {
       "type": "checkbox",
       "id": "enable_search",
       "default": true,
-      "label": "Show search"
+      "label": "検索を有効にする"
     },
     {
       "type": "checkbox",
       "id": "enable_account",
       "default": true,
-      "label": "Show account link in header",
-      "info": "Accounts must be optional or required in your [checkout settings](/admin/settings/checkout)"
+      "label": "アカウントリンクを有効にする"
     },
     {
       "type": "header",
-      "content": "Sticky header"
+      "content": "追跡するヘッダー"
     },
     {
       "type": "select",
       "id": "header_sticky",
-      "label": "Header scroll behavior",
+      "label": "スクロールしたときのヘッダーの動き",
       "default": "static",
       "options": [
-        { "value": "static", "label": "Default"},
-        { "value": "sticky", "label": "Sticky header"}
+        { "value": "static", "label": "デフォルト"},
+        { "value": "sticky", "label": "追跡するヘッダー"}
       ]
     },
     {
       "type": "header",
-      "content": "Transparent header"
+      "content": "透過するヘッダー"
     },
     {
       "type": "checkbox",
       "id": "transparent_home",
-      "label": "Enable on Home page",
+      "label": "トップページで有効にする",
       "default": false
     },
     {
       "type": "checkbox",
       "id": "transparent_collection",
-      "label": "Enable on Collection pages",
+      "label": "コレクションページで有効にする",
       "default": false
     },
     {
       "type": "checkbox",
       "id": "transparent_article",
-      "label": "Enable on Article pages",
+      "label": "投稿記事で有効にする",
       "default": false
     },
     {
       "type": "image_picker",
       "id": "transparent_logo",
-      "label": "Alternate logo"
+      "label": "透過時のロゴ"
     },
     {
       "type": "header",
-      "content": "Mobile menu"
+      "content": "モバイル時のヘッダー"
     },
     {
       "type": "link_list",
       "id": "secondary_menu_linklist",
-      "label": "Secondary menu"
+      "label": "サブメニュー"
     }
   ],
   "blocks": [
     {
-      "name": "Image",
+      "name": "画像",
       "type": "image",
       "settings": [
         {
           "type": "select",
           "id": "position",
-          "label": "Link position in main menu",
+          "label": "メインメニューのリンク位置",
           "default": "1",
           "options": [
-            { "value": "1", "label": "Item 1"},
-            { "value": "2", "label": "Item 2"},
-            { "value": "3", "label": "Item 3"},
-            { "value": "4", "label": "Item 4"},
-            { "value": "5", "label": "Item 5"},
-            { "value": "6", "label": "Item 6"},
-            { "value": "7", "label": "Item 7"},
-            { "value": "8", "label": "Item 8"},
-            { "value": "9", "label": "Item 9"},
-            { "value": "10", "label": "Item 10"}
+            { "value": "1", "label": "アイテム1"},
+            { "value": "2", "label": "アイテム2"},
+            { "value": "3", "label": "アイテム3"},
+            { "value": "4", "label": "アイテム4"},
+            { "value": "5", "label": "アイテム5"},
+            { "value": "6", "label": "アイテム6"},
+            { "value": "7", "label": "アイテム7"},
+            { "value": "8", "label": "アイテム8"},
+            { "value": "9", "label": "アイテム9"},
+            { "value": "10", "label": "アイテム10"}
           ]
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "画像"
         },
         {
           "type": "range",
@@ -561,43 +560,43 @@
           "max": 1.5,
           "step": 0.1,
           "unit": ":1",
-          "label": "Image scaling ratio",
-          "info": "Wide to tall",
+          "label": "画像比率",
+          "info": "横長 ⇔ 縦長",
           "default": 0.5
         },
         {
           "type": "checkbox",
           "id": "wide_image",
-          "label": "Wide image",
+          "label": "画像の幅を広くする",
           "default": true
         },
         {
           "type": "select",
           "id": "bg_position",
-          "label": "Position",
+          "label": "位置",
           "default": "center-center",
           "options": [
-            { "label": "Top", "value": "center-top" },
-            { "label": "Right", "value": "right-center" },
-            { "label": "Center", "value": "center-center" },
-            { "label": "Left", "value": "left-center" },
-            { "label": "Bottom", "value": "center-bottom" }
+            { "label": "上", "value": "center-top" },
+            { "label": "右", "value": "right-center" },
+            { "label": "中央", "value": "center-center" },
+            { "label": "左", "value": "left-center" },
+            { "label": "下", "value": "center-bottom" }
           ]
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Heading"
+          "label": "見出し"
         },
         {
           "type": "text",
           "id": "link_text",
-          "label": "Text"
+          "label": "テキスト"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "Link"
+          "label": "リンク"
         }
       ]
     }

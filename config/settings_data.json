@@ -58,11 +58,38 @@
         "type": "header",
         "settings": {
           "header_style": "logo_beside",
-          "icon_family": "clean"
+          "icon_family": "clean",
+          "logo_max_limit": 120,
+          "main_menu_linklist": "",
+          "enable_search": true,
+          "enable_account": true,
+          "header_sticky": "static",
+          "transparent_home": false,
+          "transparent_collection": false,
+          "transparent_article": false,
+          "secondary_menu_linklist": ""
         }
       },
       "announcement": {
         "type": "announcement",
+        "blocks": {
+          "38e76b45-d08a-42c9-8032-5e384fb8408c": {
+            "type": "message",
+            "settings": {
+              "show_wheel": true,
+              "message": "Spend ||amount|| more for free shipping.",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          }
+        },
+        "block_order": [
+          "38e76b45-d08a-42c9-8032-5e384fb8408c"
+        ],
         "settings": {
           "bg_color": "#f7f7f7",
           "color": "#545454",
@@ -128,7 +155,8 @@
         ],
         "settings": {}
       }
-    }
+    },
+    "content_for_index": []
   },
   "presets": {
     "Clean": {

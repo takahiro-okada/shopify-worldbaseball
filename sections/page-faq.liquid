@@ -24,83 +24,83 @@
 
 {% schema %}
   {
-    "name": "Accordion group",
+    "name": "アコーディオングループ",
     "settings": [
       {
         "type": "select",
         "id": "width",
-        "label": "Width",
+        "label": "幅",
         "default": "wrapper--narrow",
         "options": [
-          {"value": "wrapper", "label": "Normal"},
-          {"value": "wrapper--narrow", "label": "Narrow"},
-          {"value": "wrapper--full", "label": "Wide"}
+          {"value": "wrapper", "label": "ノーマル"},
+          {"value": "wrapper--narrow", "label": "普通"},
+          {"value": "wrapper--full", "label": "広い"}
         ]
       },
       {
         "type": "select",
         "id": "height",
-        "label": "Height",
+        "label": "高さ",
         "default": "margin--medium",
         "options": [
-          {"value": "margin--small", "label": "Small"},
-          {"value": "margin--medium", "label": "Medium"},
-          {"value": "margin--large", "label": "Large"},
-          {"value": "margin--zero", "label": "Zero"}
+          {"value": "margin--small", "label": "スモール"},
+          {"value": "margin--medium", "label": "ミディアム"},
+          {"value": "margin--large", "label": "ラージ"},
+          {"value": "margin--zero", "label": "ゼロ"}
         ]
       },
       {
         "type": "select",
         "id": "text_color",
-        "label": "Text color",
+        "label": "文字の色",
         "default": "text-dark",
         "options": [
-          { "value": "text-light", "label": "White"},
-          { "value": "text-dark", "label": "Dark"}
+          { "value": "text-light", "label": "白"},
+          { "value": "text-dark", "label": "ダーク"}
         ]
       },
       {
         "type": "color",
         "id": "bg_color",
-        "label": "Background",
+        "label": "背景色",
         "default": "#ffffff"
       }
     ],
     "blocks": [
       {
-        "name": "Heading",
+        "name": "見出し",
         "type": "heading",
         "settings": [
           {
             "type": "text",
             "id": "title",
-            "label": "Heading",
+            "label": "見出し",
             "default": "FAQ"
           }
         ]
       },
       {
-        "name": "Question",
+        "name": "質問",
         "type": "question",
         "settings": [
           {
             "type": "text",
             "id": "title",
-            "label": "Question",
-            "default": "Frequently asked question"
+            "label": "質問",
+            "default": "よくある質問"
           },
           {
             "type": "richtext",
             "id": "content",
-            "label": "Answer",
-            "default": "<p>Share details about your shipping policies, item returns, or customer service.<\/p>"
+            "label": "回答",
+            "default": "<p>配送ポリシー、返品、カスタマーサービスについて詳細を共有する。<\/p>"
           }
         ]
       }
     ],
     "presets": [
       {
-        "name": "Accordion group",
+        "name": "アコーディオングループ",
         "category": "Text",
         "blocks": [
           {

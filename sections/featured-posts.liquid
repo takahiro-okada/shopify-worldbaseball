@@ -66,60 +66,60 @@
 
 {% schema %}
   {
-    "name": "Featured blog posts",
+    "name": "特集ブログ記事",
     "settings": [
       {
         "type": "checkbox",
         "id": "show_author",
-        "label": "Show author",
+        "label": "著者を表示する",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_date",
-        "label": "Show date",
+        "label": "日付を表示する",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_button",
-        "label": "Show 'Read more' button",
+        "label": "もっと見るボタンを表示する",
         "default": true
       }
     ],
     "blocks": [
       {
         "type": "featured_post",
-        "name": "Featured post",
+        "name": "特集記事",
         "settings": [
           {
             "type": "article",
             "id": "featured_post",
-            "label": "Featured post"
+            "label": "特集記事"
           },
           {
             "type": "text",
             "id": "subheading",
-            "label": "Subheading",
+            "label": "サブ見出し",
             "default": "Featured post"
           },
           {
             "type": "image_picker",
             "id": "image",
-            "label": "Image",
-            "info": "Optional: replace the article featured image."
+            "label": "画像",
+            "info": "オプション：記事の特集画像を差し替えます。"
           },
           {
             "type": "select",
             "id": "bg_position",
-            "label": "Position",
+            "label": "位置",
             "default": "center-center",
             "options": [
-              { "label": "Top", "value": "center-top" },
-              { "label": "Right", "value": "right-center" },
-              { "label": "Center", "value": "center-center" },
-              { "label": "Left", "value": "left-center" },
-              { "label": "Bottom", "value": "center-bottom" }
+              { "label": "上", "value": "center-top" },
+              { "label": "右", "value": "right-center" },
+              { "label": "中央", "value": "center-center" },
+              { "label": "左", "value": "left-center" },
+              { "label": "下", "value": "center-bottom" }
             ]
           }
         ]
@@ -127,8 +127,8 @@
     ],
     "presets": [
       {
-        "name": "Featured blog posts",
-        "category": "Text",
+        "name": "特集ブログ記事",
+        "category": "テキスト",
         "blocks": [
           {
             "type": "featured_post"

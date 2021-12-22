@@ -14,15 +14,15 @@
     </style>
     <a href="{{ routes.root_url }}" class="footer__logo">
       {% assign logo_url = section.settings.footer_logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
-      <img 
-        class="lazyload" 
+      <img
+        class="lazyload"
         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-        data-src="{{ logo_url }}" 
+        data-src="{{ logo_url }}"
         data-widths="[{{ section.settings.logo_image_width }}, {{ retina_size }}]"
         data-sizes="auto"
         data-aspectratio="{{ section.settings.footer_logo.aspect_ratio }}"
         data-parent-fit="contain"
-        alt="{{ section.settings.footer_logo.alt | default: shop.name | strip_html | escape }}" 
+        alt="{{ section.settings.footer_logo.alt | default: shop.name | strip_html | escape }}"
         id="footerLogoImg-{{ section.id }}"/>
     </a>
     {% endif %}
@@ -147,7 +147,7 @@
       </h2>
 
       <div class="popout" data-popout>
-        {% if section.settings.type == 'currency' %}  
+        {% if section.settings.type == 'currency' %}
           <button type="button" class="popout__toggle" aria-expanded="false" aria-controls="currency-list" aria-describedby="currency-heading" data-popout-toggle>
             {{ form.current_currency.iso_code }} {%- if form.current_currency.symbol -%}{{ form.current_currency.symbol }}{%- endif -%}
           </button>
@@ -161,7 +161,7 @@
               </li>
             {%- endfor -%}
           </ul>
-          
+
           <input type="hidden" name="currency_code" id="CurrencySelector" value="{{ form.current_currency.iso_code }}" data-popout-input/>
         {% endif %}
 
@@ -240,19 +240,19 @@
 
 {% schema %}
 {
-  "name": "Footer",
+  "name": "フッター",
   "max_blocks": 4,
   "settings": [
     {
-      "label": "Logo",
+      "label": "ロゴ",
       "type": "image_picker",
       "id": "footer_logo",
-      "info": "400 x 200px .png"
+      "info": "推奨サイズ：400 x 200px .png"
     },
     {
       "type": "range",
       "id": "logo_image_width",
-      "label": "Logo width (in pixels)",
+      "label": "ロゴの幅 (px)",
       "min": 50,
       "max": 400,
       "step": 5,
@@ -261,25 +261,25 @@
     },
     {
       "type": "header",
-      "content": "Optional background image"
+      "content": "背景画像（オプション）"
     },
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "画像"
     },
     {
       "type": "select",
       "id": "bg_position",
-      "label": "Position",
+      "label": "位置",
       "default": "center-center",
-      "info": "Requires the 'Image parallax' setting to be disabled",
+      "info": "画像の視差を無効にする必要があります",
       "options": [
-        { "label": "Top", "value": "center-top" },
-        { "label": "Right", "value": "right-center" },
-        { "label": "Center", "value": "center-center" },
-        { "label": "Left", "value": "left-center" },
-        { "label": "Bottom", "value": "center-bottom" }
+        { "label": "上", "value": "center-top" },
+        { "label": "右", "value": "right-center" },
+        { "label": "中央", "value": "center-center" },
+        { "label": "左", "value": "left-center" },
+        { "label": "下", "value": "center-bottom" }
       ]
     },
     {
@@ -295,59 +295,59 @@
     {
       "type": "color",
       "id": "overlay_color",
-      "label": "Overlay color",
+      "label": "オーバーレイの色",
       "default": "#fff"
     },
     {
       "type": "header",
-      "content": "Bottom bar"
+      "content": "ボトムバー"
     },
     {
       "type": "link_list",
       "id": "footer_secondary_linklist",
-      "label": "Link List",
-      "info": "This menu won't show dropdown items."
+      "label": "リンクリスト",
+      "info": "このメニューには、ドロップダウンメニューは表示されません"
     },
     {
       "type": "checkbox",
       "id": "footer_payment_enable",
-      "label": "Show payment types",
+      "label": "支払い情報を表示する",
       "default": true
     },
     {
       "type": "header",
-      "content": "language selector",
-      "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+      "content": "言語セレクター",
+      "info": "[言語設定](/admin/settings/languages)から言語を追加する必要があります"
     },
     {
       "type": "checkbox",
       "id": "show_locale_selector",
-      "label": "Show language selector",
+      "label": "言語セレクターを有効にする",
       "default": true
     },
     {
       "type": "header",
-      "content": "Currency selector",
-      "info": "To add a currency, go to your [payment settings.](/admin/settings/payments)"
+      "content": "通貨セレクター",
+      "info": "[支払い情報](/admin/settings/payments)から通貨を追加する必要があります"
     },
     {
       "type": "checkbox",
       "id": "show_currency_selector",
-      "label": "Show currency selector",
+      "label": "通貨セレクターを有効にする",
       "default": true
     },
     {
       "type": "select",
       "id": "type",
-      "label": "Type",
+      "label": "タイプ",
       "options": [
         {
           "value": "currency",
-          "label": "Currency"
+          "label": "通貨"
         },
         {
           "value": "country",
-          "label": "Country"
+          "label": "国"
         }
       ]
     }
@@ -355,78 +355,78 @@
   "blocks" : [
     {
       "type": "linklist",
-      "name": "Link list",
+      "name": "リンク",
       "settings": [
         {
            "type": "link_list",
            "id": "linklist",
-           "label": "Link list",
+           "label": "リンク",
            "default": "footer",
-           "info": "This menu won't show dropdown items."
+           "info": "このメニューには、ドロップダウンメニューは表示されません"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Title"
+          "label": "タイトル"
         }
       ]
     },
     {
       "type": "newsletter",
-      "name": "Newsletter",
+      "name": "ニュースレター",
       "limit": 1,
       "settings": [
         {
           "type": "paragraph",
-          "content": "Subscribers are under 'Accepts Marketing' in your [customer admin](/admin/customers)."
+          "content": "[customer admin](/admin/customers)からAccepts Marketingを有効にする必要があります"
         },
         {
           "id": "richtext",
           "type": "richtext",
-          "label": "Description",
-          "default": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
+          "label": "説明",
+          "default": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。</p>"
         },
         {
           "type": "checkbox",
           "id": "enable_name",
-          "label": "Show name field",
+          "label": "ネームフィールドを有効にする",
           "default": false
         }
       ]
     },
     {
       "type": "social",
-      "name": "Social",
+      "name": "SNS",
       "settings": [
         {
           "type": "text",
           "id": "title",
-          "label": "Heading",
+          "label": "見出し",
           "default": "Social"
         },
         {
           "type": "richtext",
           "id": "richtext",
-          "label": "Text",
+          "label": "テキスト",
           "default": "<p></p>"
         }
       ]
     },
     {
       "type": "text",
-      "name": "Text",
+      "name": "テキスト",
       "settings": [
         {
           "type": "text",
           "id": "title",
-          "label": "Heading",
+          "label": "見出し",
           "default": "Text"
         },
         {
           "type": "richtext",
           "id": "text",
-          "label": "Text",
-          "default": "<p>Share store details, promotions, or brand content with your customers.</p>"
+          "label": "テキスト",
+          "default": "<p>店舗の詳細、キャンペーン、ブランドコンテンツなどをお客様と共有できます</p>"
         }
       ]
     },

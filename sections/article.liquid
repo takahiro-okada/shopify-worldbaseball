@@ -213,11 +213,11 @@
                         {%- if block.settings.title != blank -%}
                           <h3 class="widget__title">{{ block.settings.title }}</h3>
                         {%- endif -%}
-                        
+
                         <div class="widget__products">
                           {%- for handle in handles_arr limit: 20 -%}
                             {%- assign product = all_products[handle] -%}
-  
+
                             {%- if product.id != '' -%}
                               {%- render 'product-column-item', product: product -%}
                             {%- endif -%}
@@ -235,7 +235,7 @@
                       {%- if recent_article.handle == article.handle -%}
                         {%- continue -%}
                       {%- endif -%}
-                      
+
                       {%- capture recent_markup -%}
                         <a href="{{ recent_article.url }}" class="article__column">
                           {%- if recent_article.image -%}
@@ -243,7 +243,7 @@
                               <div class="article__column__image lazyload"  data-bgset="{%- render 'bgset', image: recent_article.image -%}"></div>
 
                               <noscript>
-                                <div class="article__column__image" 
+                                <div class="article__column__image"
                                   style="background-image:url('{{ recent_article.image | img_url: '300x' }}'); background-size: cover; background-position: center center; background-repeat: no-repeat;"
                                   role="img"
                                   aria-label="{{ recent_article.image.alt | strip_html | escape }}"></div>
@@ -261,22 +261,22 @@
                           </div>
                         </a>
                       {%- endcapture -%}
-                      
+
                       {%- assign recent_articles = recent_articles | append: recent_markup -%}
 
                       {%- assign counter = counter | plus: 1 -%}
 
                       {%- if counter == article_limit -%}
                         {%- break -%}
-                      {%- endif -%}                      
+                      {%- endif -%}
                     {%- endfor -%}
-                    
+
                     <div class="widget" {{ block.shopify_attributes }}>
                       {%- if recent_articles != '' -%}
                         {%- if block.settings.title != blank -%}
                           <h3 class="widget__title">{{ block.settings.title }}</h3>
                         {%- endif -%}
-                      
+
                         <div class="widget__recent">
                           {{ recent_articles }}
                         </div>
@@ -305,7 +305,7 @@
                           </noscript>
                         </div>
                       </div>
-                    {%- endif -%}    
+                    {%- endif -%}
                 {%- endcase -%}
               {%- endfor -%}
             </div>
@@ -499,11 +499,11 @@
         "label": "Position",
         "default": "center-center",
         "options": [
-          { "label": "Top", "value": "center-top" },
-          { "label": "Right", "value": "right-center" },
-          { "label": "Center", "value": "center-center" },
-          { "label": "Left", "value": "left-center" },
-          { "label": "Bottom", "value": "center-bottom" }
+          { "label": "上", "value": "center-top" },
+          { "label": "右", "value": "right-center" },
+          { "label": "中央", "value": "center-center" },
+          { "label": "左", "value": "left-center" },
+          { "label": "下", "value": "center-bottom" }
         ]
       },
       {
@@ -532,7 +532,7 @@
         "type": "range",
         "id": "overlay_opacity",
         "label": "Opacity",
-        "info": "Increase contrast for legible text.",
+        "info": "文字を読みやすくするために、コントラストを上げる",
         "min": 0,
         "max": 100,
         "step": 5,

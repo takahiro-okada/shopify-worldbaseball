@@ -54,106 +54,106 @@
 
 {% schema %}
 {
-  "name": "Testimonials",
+  "name": "お客様の声",
   "settings": [
     {
       "type": "select",
       "id": "text_align",
-      "label": "Text alignment",
+      "label": "文字の位置",
       "default": "text-left",
       "options": [
         {
           "value": "text-left",
-          "label": "Left"
+          "label": "左"
         },
         {
           "value": "text-center",
-          "label": "Centered"
+          "label": "中央"
         }
       ]
     },
     {
       "type": "select",
       "id": "text_color",
-      "label": "Text color",
+      "label": "文字の色",
       "default": "text-dark",
       "options": [
-        { "value": "text-light", "label": "White"},
-        { "value": "text-dark", "label": "Dark"}
+        { "value": "text-light", "label": "白"},
+        { "value": "text-dark", "label": "ダーク"}
       ]
     },
     {
       "type": "color",
       "id": "bg_color",
-      "label": "Background color",
+      "label": "背景の色",
       "default": "#fafafa"
     }
   ],
   "blocks": [
     {
       "type": "review",
-      "name": "Testimonial",
+      "name": "お客様の声",
       "limit": 3,
       "settings": [
         {
           "type": "header",
-          "content":"Testimonial"
+          "content":"お客様の声"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Customer name",
-          "default": "Example Customer"
+          "label": "名前",
+          "default": "山田 太郎"
         },
         {
           "type": "text",
           "id": "subheading",
-          "label": "Subheading",
-          "default":"Industry Expert"
+          "label": "サブ見出し",
+          "default":"30代 男性"
         },
         {
           "type": "richtext",
           "id": "review_text",
-          "label": "Testimonial",
-          "default": "<p>Use this text to showcase a review from one of your customers.  A great review is honest and speaks to the concerns of your customers.</p>"
+          "label": "コメント",
+          "default": "<p>このテキストは、お客様のレビューを紹介するために使用します。 優れたレビューは、正直で、顧客の悩みを代弁してくれます。</p>"
         },
         {
           "type": "image_picker",
           "id": "bio_image",
-          "label": "Bio image"
+          "label": "画像"
         },
         {
           "type": "header",
-          "content": "Review link"
+          "content": "レビューリンク"
         },
         {
           "type": "url",
           "id": "review_url",
-          "label": "Link"
+          "label": "リンク"
         },
         {
           "type": "text",
           "id": "review_link_name",
-          "label": "Link name"
+          "label": "リンクの名前"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Testimonials",
+      "name": "お客様の声",
       "category": "Text",
       "blocks": [
         {
           "type": "review",
           "settings": {
-            "title":"Jeremy Usborne"
+            "title":"山田 太郎"
           }
         },
         {
           "type": "review",
           "settings": {
-            "title":"Willy Bridge"
+            "title":"山田 花子"
           }
         }
       ]

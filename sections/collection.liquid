@@ -5,7 +5,7 @@
   assign filter_layout = section.settings.filter_layout
 
   assign show_group_filters = false
-  
+
   if filter_layout == 'inline-open'
     assign show_group_filters = true
   endif
@@ -95,11 +95,11 @@
                   {%- assign filter_active_count = filter_active_count | plus: filter.active_values.size -%}
                 {%- endfor -%}
               {%- endif -%}
-              
+
               {%- if show_group_filter and current_tags.size > 0 -%}
                 {%- assign filter_active_count = current_tags.size -%}
               {%- endif -%}
-              
+
               <span{% if filter_active_count < 1 %} class="hidden"{% endif %} data-active-filters>{{filter_active_count}}</span>
 
               {%- render 'icon-filter' -%}
@@ -119,7 +119,7 @@
             <div class="collection__sidebar__head">
               {%- assign products_count = search.results_count | default: collection.products_count -%}
               <h3>{{ 'collections.general.items_with_count' | t: count: products_count }}</h3>
-          
+
               <a href="#filters-group" class="collection__sidebar__close" data-collection-sidebar-close aria-label="{{ 'general.accessibility.close' | t }} {{ 'collections.general.filter' | t }}">
                 {%- render 'icon-close' -%}
               </a>
@@ -156,7 +156,7 @@
                   assign featured_color_overlay = block.settings.featured_color_overlay
                   assign featured_overlay_opacity = block.settings.featured_overlay_opacity | times: 0.01
                 -%}
-              
+
                 {%- style -%}
                   .product-item__image-overlay { color: {{ featured_color_text }}; }
                   .product-item__image-overlay::before { opacity: {{ featured_overlay_opacity }}; background-color: {{ featured_color_overlay }}; }
@@ -329,11 +329,11 @@
             "label": "Position",
             "default": "center-center",
             "options": [
-              { "label": "Top", "value": "center-top" },
-              { "label": "Right", "value": "right-center" },
-              { "label": "Center", "value": "center-center" },
-              { "label": "Left", "value": "left-center" },
-              { "label": "Bottom", "value": "center-bottom" }
+              { "label": "上", "value": "center-top" },
+              { "label": "右", "value": "right-center" },
+              { "label": "中央", "value": "center-center" },
+              { "label": "左", "value": "left-center" },
+              { "label": "下", "value": "center-bottom" }
             ]
           },
           {

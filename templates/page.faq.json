@@ -112,24 +112,24 @@
           "type": "text-item",
           "settings": {
             "icon_name": "icon-lock-card",
-            "title": "Secure transactions",
-            "text": "Transactions are handled with bank-grade security."
+            "title": "安全な取引",
+            "text": "取引は銀行レベルのセキュリティで処理されます。"
           }
         },
         "icon-1": {
           "type": "text-item",
           "settings": {
             "icon_name": "icon-basket-like",
-            "title": "Simple checkout",
-            "text": "Our secure checkout is quick and easy to use."
+            "title": "簡易チェックアウト",
+            "text": "安全なチェックアウトは、迅速かつ簡単にご利用いただけます。"
           }
         },
         "icon-2": {
           "type": "text-item",
           "settings": {
             "icon_name": "icon-chat",
-            "title": "Get in touch",
-            "text": "Have questions? Get in touch with us at any time."
+            "title": "お問い合わせはこちら",
+            "text": "ご質問はありませんか？いつでもご連絡ください。"
           }
         }
       },

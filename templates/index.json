@@ -227,21 +227,21 @@
         "logos-0": {
           "type": "logo-item",
           "settings": {
-            "description": "<p>Include a brief quote from a brand that loves your products<\/p>",
+            "description": "<p>あなたの製品を愛用しているブランドからの簡単な引用を掲載する<\/p>",
             "logo_width": 100
           }
         },
         "logos-1": {
           "type": "logo-item",
           "settings": {
-            "description": "<p>Include a brief quote from a brand that loves your products<\/p>",
+            "description": "<p>あなたの製品を愛用しているブランドからの簡単な引用を掲載する<\/p>",
             "logo_width": 100
           }
         },
         "logos-2": {
           "type": "logo-item",
           "settings": {
-            "description": "<p>Include a brief quote from a brand that loves your products<\/p>",
+            "description": "<p>あなたの製品を愛用しているブランドからの簡単な引用を掲載する<\/p>",
             "logo_width": 100
           }
         }

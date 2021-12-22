@@ -185,18 +185,18 @@
 
 {% schema %}
   {
-    "name": "Blog posts",
+    "name": "ブログ",
     "settings": [
       {
         "type": "blog",
         "id": "blog_name",
-        "label": "Blog"
+        "label": "ブログ"
       },
       {
         "type": "text",
         "id": "title",
-        "label": "Heading",
-        "default": "Blog posts"
+        "label": "見出し",
+        "default": "ブログ投稿"
       },
       {
         "type":    "range",
@@ -204,7 +204,7 @@
         "min":     1,
         "max":     4,
         "step":    1,
-        "label":   "Articles per row",
+        "label":   "1行あたりの記事の数",
         "default": 4
       },
       {
@@ -213,12 +213,12 @@
         "min":     1,
         "max":     10,
         "step":    1,
-        "label":   "Number of rows",
+        "label":   "行の数",
         "default": 1
       },
       {
         "type": "header",
-        "content": "Articles"
+        "content": "記事"
       },
       {
         "type": "range",
@@ -227,44 +227,44 @@
         "max": 1.5,
         "step": 0.1,
         "unit": ":1",
-        "label": "Article image aspect ratio",
-        "info": "Wide to tall",
+        "label": "画像比率",
+        "info": "横長 ⇔ 縦長",
         "default": 1
       },
       {
         "type": "checkbox",
         "id": "show_tags",
-        "label": "Show tags",
+        "label": "タグを表示する",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_author",
-        "label": "Show author",
+        "label": "著者を表示する",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_date",
-        "label": "Show date",
+        "label": "日付を表示する",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_button",
-        "label": "Show 'Read more' button",
+        "label": "もっと読むボタンを表示する",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_comments",
-        "label": "Show comment count",
+        "label": "コメントを表示する",
         "default": false
       }
     ],
     "presets": [
       {
-        "name": "Blog posts",
+        "name": "ブログ",
         "category": "Text"
       }
     ]

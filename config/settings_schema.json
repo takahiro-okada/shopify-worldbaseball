@@ -8,196 +8,196 @@
     "theme_documentation_url": "https:\/\/invisiblethemes.com\/link\/broadcast\/docs"
   },
   {
-    "name": "Colors",
+    "name": "色",
     "settings": [
       {
         "type": "header",
-        "content": "General"
+        "content": "一般"
       },
       {
         "type": "color",
         "id": "text_color",
-        "label": "Text",
+        "label": "文字色",
         "default": "#282C2E"
       },
       {
         "type": "color",
         "id": "bg_color",
-        "label": "Background",
+        "label": "メイン背景色",
         "default": "#FFFFFF"
       },
       {
         "type": "color",
         "id": "secondary_bg_color",
-        "label": "Light background",
+        "label": "サブ背景色",
         "default": "#F7F9FA",
-        "info": "Used for background accents on the home page"
+        "info": "ストアの一部に適用"
       },
       {
         "type": "color",
         "id": "accent_bright",
-        "label": "Bright accent",
+        "label": "メインアクセント色",
         "default": "#E03386",
-        "info": "Used to for bright highlights"
+        "info": "アクセントとして使用"
       },
       {
         "type": "color",
         "id": "accent_secondary",
-        "label": "Secondary accent",
+        "label": "サブアクセント色",
         "default": "#42C844",
-        "info": "Used for secondary highlights"
+        "info": "サブアクセント色として使用"
       },
       {
         "type": "color",
         "id": "site_border_color",
-        "label": "Lines and borders",
+        "label": "サイトのボーダー色",
         "default": "#F3F3F3"
       },
       {
         "type": "color",
         "id": "link_color",
-        "label": "Links",
+        "label": "リンクの色",
         "default": "#282C2E"
       },
       {
         "type": "color",
         "id": "link_hover_color",
-        "label": "Links - hover",
+        "label": "リンクの色（ホバー時）",
         "default": "#326077"
       },
       {
         "type": "checkbox",
         "id": "high_contrast",
-        "label": "Increase contrast",
+        "label": "コントラストを高くする",
         "default": false
       },
       {
         "type": "header",
-        "content": "Header bar"
+        "content": "ヘッダーバー"
       },
       {
         "type": "color",
         "id": "header_bg",
-        "label": "Background",
+        "label": "背景色",
         "default": "#ffffff"
       },
       {
         "type": "color",
         "id": "header_link",
-        "label": "Links",
+        "label": "リンクの色",
         "default": "#282C2E"
       },
       {
         "type": "color",
         "id": "header_link_hover",
-        "label": "Links - hover",
+        "label": "リンクの色（ホバー時）",
         "default": "#326077"
       },
       {
         "type": "checkbox",
         "id": "show_logo_bg",
-        "label": "Show logo background",
+        "label": "ロゴの背景を表示",
         "default": true
       },
       {
         "type": "header",
-        "content": "Header navigation"
+        "content": "ヘッダーナビゲーション"
       },
       {
         "type": "color",
         "id": "menu_bg_color",
-        "label": "Background",
+        "label": "背景色",
         "default": "#ffffff"
       },
       {
         "type": "color",
         "id": "menu_border_color",
-        "label": "Borders",
+        "label": "ボーダーの色",
         "default": "#F3F3F3"
       },
       {
         "type": "color",
         "id": "menu_link_color",
-        "label": "Links",
+        "label": "リンクの色",
         "default": "#282C2E"
       },
       {
         "type": "color",
         "id": "menu_link_hover_color",
-        "label": "Links - hover",
+        "label": "リンクの色（ホバー時）",
         "default": "#326077"
       },
       {
         "type": "color",
         "id": "submenu_bg_color",
-        "label": "Dropdown background",
+        "label": "サブメニューの背景色",
         "default": "#ffffff"
       },
       {
         "type": "color",
         "id": "submenu_link_color",
-        "label": "Dropdown links",
+        "label": "サブメニューのリンクの色",
         "default": "#282C2E"
       },
       {
         "type": "color",
         "id": "submenu_link_hover_color",
-        "label": "Dropdown links - hover",
+        "label": "サブメニューのリンクの色（ホバー時）",
         "default": "#326077"
       },
       {
         "type": "color",
         "id": "menu_transparent_color",
-        "label": "Transparent header text",
+        "label": "透過文字の色",
         "default": "#ffffff"
       },
       {
         "type": "header",
-        "content": "Footer"
+        "content": "フッター"
       },
       {
         "type": "color",
         "id": "footer_bg",
-        "label": "Background",
+        "label": "背景色",
         "default": "#ffffff"
       },
       {
         "type": "color",
         "id": "footer_border",
-        "label": "Borders",
+        "label": "ボーダーの色",
         "default": "#F3F3F3"
       },
       {
         "type": "color",
         "id": "footer_text",
-        "label": "Text",
+        "label": "文字の色",
         "default": "#333333"
       },
       {
         "type": "color",
         "id": "footer_link",
-        "label": "Links",
+        "label": "リンクの色",
         "default": "#c0c0c0"
       },
       {
         "type": "color",
         "id": "footer_link_hover",
-        "label": "Links - hover",
+        "label": "リンクの色（ホバー時）",
         "default": "#808080"
       }
     ]
   },
   {
-    "name": "Typography",
+    "name": "文字フォント",
     "settings": [
       {
         "type": "header",
-        "content": "Headings and buttons"
+        "content": "見出しとボタン"
       },
       {
         "type": "font_picker",
         "id": "type_heading_font",
-        "label": "Font",
+        "label": "フォント",
         "default": "poppins_n5"
       },
       {
@@ -207,17 +207,17 @@
         "max": 150,
         "step": 5,
         "unit": "%",
-        "label": "Font size",
+        "label": "文字サイズ",
         "default": 100
       },
       {
         "type": "header",
-        "content": "Body text"
+        "content": "メインの文字サイズ"
       },
       {
         "type": "font_picker",
         "id": "type_base_font",
-        "label": "Font",
+        "label": "フォント",
         "default": "poppins_n4"
       },
       {
@@ -227,25 +227,25 @@
         "max": 150,
         "step": 5,
         "unit": "%",
-        "label": "Font size",
+        "label": "フォントサイズ",
         "default": 100
       },
       {
         "type": "header",
-        "content": "Navigation"
+        "content": "ナビゲーション"
       },
       {
         "type": "select",
         "id": "type_nav_font",
-        "label": "Font",
+        "label": "フォント",
         "default": "body",
         "options": [
           {
-            "label": "Body",
+            "label": "ボディ",
             "value": "body"
           },
           {
-            "label": "Heading",
+            "label": "見出し",
             "value": "heading"
           }
         ]
@@ -257,35 +257,35 @@
         "max": 150,
         "step": 5,
         "unit": "%",
-        "label": "Font size",
+        "label": "文字サイズ",
         "default": 100
       },
       {
         "type": "checkbox",
         "id": "type_nav_caps",
-        "label": "Capitalize",
+        "label": "大文字にする",
         "default": false
       }
     ]
   },
   {
-    "name": "Layout",
+    "name": "レイアウト",
     "settings": [
       {
         "type": "header",
-        "content": "Animations"
+        "content": "アニメーション"
       },
       {
         "type": "checkbox",
         "id": "animations_enable",
-        "label": "Enable animations",
+        "label": "アニメーションを有効にする",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "parallax_enable",
-        "label": "Enable image parallax",
-        "info": "Some large images will animate movement opposite to the scroll direction.",
+        "label": "パララックス効果を有効にする",
+        "info": "一部の大きな画像では、スクロール方向と逆の動きをするアニメーションが表示されます。",
         "default": true
       },
       {
@@ -294,41 +294,41 @@
         "min": 0,
         "max": 100,
         "step": 5,
-        "label": "Parallax strength",
+        "label": "パララックスの強さ",
         "default": 20,
-        "info": "Strong parallax will result in image zooming. Lower strength is recommended."
+        "info": "パララックスが強いと、画像がズームアップしてしまいます。低めの強度を推奨します。"
       },
       {
         "type": "header",
-        "content": "Outlines"
+        "content": "アウトライン"
       },
       {
         "type": "checkbox",
         "id": "product_grid_outline",
-        "label": "Show outlines",
+        "label": "アウトラインを表示する",
         "default": true,
-        "info": "For Featured collection, Collection list, Collection carousel and Blog posts."
+        "info": "注目のコレクション、コレクションリスト、コレクションカルーセル、ブログ投稿の場合。"
       },
       {
         "type": "header",
-        "content": "Buttons"
+        "content": "ボタン"
       },
       {
         "type": "select",
         "id": "button_radius_style",
-        "label": "Button style",
+        "label": "ボタンのスタイル",
         "default": "square",
         "options": [
           {
-            "label": "Square",
+            "label": "四角",
             "value": "square"
           },
           {
-            "label": "Rounded",
+            "label": "丸角",
             "value": "rounded"
           },
           {
-            "label": "Pill",
+            "label": "丸い",
             "value": "pill"
           }
         ]
@@ -336,8 +336,8 @@
       {
         "type": "checkbox",
         "id": "show_button_animation",
-        "label": "Show button animation",
-        "info": "Product and cart buttons only",
+        "label": "ボタンにアニメーションを有効にする",
+        "info": "商品とカートのボタンにのみ適用されます",
         "default": true
       },
       {
@@ -353,13 +353,13 @@
     "settings": [
       {
         "type": "header",
-        "content": "Articles"
+        "content": "記事"
       },
       {
         "type": "checkbox",
         "id": "enable_disqus",
         "label": "Enable Disqus",
-        "info": "If enabled Disqus comments will be shown on blog posts.",
+        "info": "Disqusコメントを有効にすると、ブログ記事に表示されるようになります。",
         "default": false
       },
       {
@@ -370,11 +370,11 @@
     ]
   },
   {
-    "name": "Social media",
+    "name": "SNS",
     "settings": [
       {
         "type": "header",
-        "content": "Social links"
+        "content": "SNSのリンク"
       },
       {
         "type": "text",
@@ -437,48 +437,48 @@
       },
       {
         "type": "header",
-        "content": "Sharing options"
+        "content": "共有するオプション"
       },
       {
         "type": "checkbox",
         "id": "share_facebook",
-        "label": "Share on Facebook",
+        "label": "Facebookで共有する",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "share_twitter",
-        "label": "Tweet on Twitter",
+        "label": "Twitterで共有する",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "share_pinterest",
-        "label": "Pin on Pinterest",
+        "label": "Pinterestで共有する",
         "default": true
       }
     ]
   },
   {
-    "name": "Product grid",
+    "name": "商品カードのレイアウト",
     "settings": [
       {
         "type": "paragraph",
-        "content": "For collections, search results, and product forms."
+        "content": "コレクション、検索結果、商品フォームに対応"
       },
       {
         "type": "checkbox",
         "id": "product_grid_center",
-        "label": "Center text",
+        "label": "文字を中央寄せにする",
         "default": true
       },
       {
         "type": "header",
-        "content": "Product grid images"
+        "content": "商品カードの画像について"
       },
       {
         "type": "checkbox",
-        "label": "Show second image on hover",
+        "label": "ホバー時に2枚目の画像を表示する",
         "id": "image_hover_enable",
         "default": true
       },
@@ -489,41 +489,41 @@
         "max": 1.5,
         "step": 0.1,
         "unit": ":1",
-        "label": "Product photo aspect ratio",
-        "info": "Wide to tall",
+        "label": "商品画像の画像比率",
+        "info": "横長 ⇔ 縦長",
         "default": 1
       },
       {
         "type": "header",
-        "content": "Sale badges"
+        "content": "セール時のバッジについて"
       },
       {
         "type": "checkbox",
         "id": "sale_tags_enable",
-        "label": "Show sale badges",
+        "label": "セール時のバッジを表示する",
         "default": true
       },
       {
         "type": "color",
         "id": "sale_bg_color",
-        "label": "Background",
+        "label": "背景色",
         "default": "#c84242"
       },
       {
         "type": "color",
         "id": "sale_text_color",
-        "label": "Text",
+        "label": "文字の色",
         "default": "#ffffff"
       },
       {
         "type": "header",
-        "content": "Product badges",
-        "info": "Add tag '_preorder' or '_badge_with_custom_text' to a product in order to show the badge"
+        "content": "商品バッジ",
+        "info": "バッジを表示するために、タグ '_preorder' または '_badge_with_custom_text' を商品に追加する "
       },
       {
         "type": "color",
         "id": "badge_bg_color",
-        "label": "Background",
+        "label": "背景色",
         "default": "#444444"
       },
       {
@@ -534,114 +534,114 @@
       },
       {
         "type": "header",
-        "content": "Quick add"
+        "content": "今すぐカートに追加する"
       },
       {
         "type": "checkbox",
         "id": "quickview_enable",
-        "label": "Enable [quick add](https:\/\/invisiblethemes.com\/link\/broadcast\/docs\/quickadd)",
+        "label": "すぐカートに追加するを有効にする(https:\/\/invisiblethemes.com\/link\/broadcast\/docs\/quickadd)",
         "default": true
       },
       {
         "type": "header",
-        "content": "Product form"
+        "content": "商品フォーム"
       },
       {
         "type": "checkbox",
         "id": "variant_lines",
-        "label": "Show variants as boxes",
+        "label": "バリアントを箱で表示する",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "color_swatches",
-        "label": "Enable color swatches",
+        "label": "色見本を有効化する",
         "default": true
       },
       {
         "type": "header",
-        "content": "Star rating",
-        "info": "Requires a product review app like [Shopify Product Reviews](https:\/\/apps.shopify.com\/product-reviews) to create [standard metafields](https:\/\/shopify.dev\/apps\/metafields\/definitions\/standard-definitions) for star ratings."
+        "content": "商品レビュー",
+        "info": "[Shopify Product Reviews]アプリをインストールする必要があります。"
       },
       {
         "type": "checkbox",
         "id": "product_grid_show_rating",
-        "label": "Enable star rating",
+        "label": "商品レビューを有効化する",
         "default": false
       }
     ]
   },
   {
-    "name": "Favicon",
+    "name": "ファビコン",
     "settings": [
       {
         "type": "image_picker",
         "id": "favicon",
-        "label": "Favicon image",
-        "info": "Will be scaled down to 32 x 32px"
+        "label": "ファビコン用画像",
+        "info": "32 x 32px に縮小されます。"
       }
     ]
   },
   {
-    "name": "Cart",
+    "name": "カート",
     "settings": [
       {
         "type": "header",
-        "content": "Cart drawer"
+        "content": "カートドロワー"
       },
       {
         "type": "checkbox",
         "id": "enable_cart_dropdown",
-        "label": "Enable cart drawer",
+        "label": "カートドロワーを有効にする",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "enable_order_notes",
-        "label": "Enable order notes",
+        "label": "オーダーノートを有効にする",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "enable_gift_notes",
-        "label": "Enable gift notes",
+        "label": "ギフトノートを有効にする",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "enable_estimate_shipping",
-        "label": "Enable shipping estimates",
+        "label": "配送の見積もりを有効にする",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "enable_additional_buttons",
-        "label": "Enable additional checkout buttons",
+        "label": "追加の決済ボタンを有効にする",
         "default": false
       },
       {
         "type": "header",
-        "content": "Free shipping message"
+        "content": "無料配送のメッセージ"
       },
       {
         "type": "checkbox",
         "id": "show_free_shipping_message",
-        "label": "Show free shipping message",
+        "label": "無料配送のメッセージを表示する",
         "default": false
       },
       {
         "type": "textarea",
         "id": "message",
-        "label": "Message",
-        "info": "Use ||amount|| to display progress towards free shipping.",
-        "default": "Spend ||amount|| more for free shipping."
+        "label": "メッセージ",
+        "info": "送料無料への進捗を表示するには、||amount|| を使用します",
+        "default": "配送料を ||amount|| を追加することで無料になります。"
       },
       {
         "type": "text",
         "id": "free_shipping_limit",
-        "label": "Minimum spend for free shipping",
+        "label": "送料無料にするための最低購入金額",
         "default": "100",
-        "info": "Use round numbers. Exclude currency, symbols, and letters. [More info](https:\/\/help.shopify.com\/en\/manual\/shipping\/setting-up-and-managing-your-shipping\/free-shipping-rates#free-shipping-over-a-certain-value)"
+        "info": "整数を使用します[More info](https:\/\/help.shopify.com\/en\/manual\/shipping\/setting-up-and-managing-your-shipping\/free-shipping-rates#free-shipping-over-a-certain-value)"
       }
     ]
   }

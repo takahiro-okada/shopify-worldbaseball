@@ -4,14 +4,14 @@
 
 {% schema %}
   {
-      "name": "Collection carousel",
+      "name": "コレクションカルーセル",
       "settings": [
         {
           "type": "header",
-          "content": "Content"
+          "content": "コンテンツ"
         },
         {
-          "label": "Heading",
+          "label": "見出し",
           "id": "heading",
           "type": "text",
           "default": "Collection"
@@ -19,84 +19,84 @@
         {
           "type": "richtext",
           "id": "description",
-          "label": "Text"
+          "label": "テキスト"
         },
         {
           "type": "select",
           "id": "text_alignment",
-          "label": "Text alignment",
+          "label": "テキスト位置",
           "options": [
             {
               "value": "inline",
-              "label": "In-line"
+              "label": "インライン"
             },
             {
               "value": "center",
-              "label": "Center"
+              "label": "センター"
             },
             {
               "value": "left",
-              "label": "Left"
+              "label": "左"
             }
           ],
           "default": "inline"
         },
         {
           "type": "header",
-          "content": "Button"
+          "content": "ボタン"
         },
         {
           "type": "text",
           "id": "link_text",
-          "label": "Text",
+          "label": "テキスト",
           "default": "Shop All"
         },
         {
           "type": "url",
           "id": "link_url",
-          "label": "Link"
+          "label": "リンク先"
         },
         {
           "type": "select",
           "id": "button_color",
-          "label": "Color",
+          "label": "色",
           "default": "btn--black",
           "options": [
-            {"value": "btn--primary", "label": "Bright accent"},
-            {"value": "btn--secondary", "label": "Secondary accent"},
-            {"value": "btn--link", "label": "Link color"},
-            {"value": "btn--neutral", "label": "Text color"},
-            {"value": "btn--black", "label": "Black"},
-            {"value": "btn--white", "label": "White"}
+            {"value": "btn--primary", "label": "メインアクセント色"},
+            {"value": "btn--secondary", "label": "サブアクセント色"},
+            {"value": "btn--link", "label": "リンクの色"},
+            {"value": "btn--neutral", "label": "文字の色"},
+            {"value": "btn--black", "label": "黒色"},
+            {"value": "btn--white", "label": "白色"}
           ]
         },
         {
           "type": "select",
           "id": "button_style",
-          "label": "Style",
+          "label": "スタイル",
           "default": "hero__btn btn btn--input btn--outline caps",
           "options": [
-            {"value": "caps--large", "label": "Capitalized text"},
-            {"value": "hero__btn btn btn--input caps", "label": "Small button"},
-            {"value": "hero__btn btn btn--large caps", "label": "Large button"},
-            {"value": "hero__btn btn btn--input btn--outline caps", "label": "Small outline button"},
-            {"value": "hero__btn btn btn--large btn--outline caps", "label": "Large outline button"}
+            {"value": "caps--large", "label": "文字のみを表示"},
+            {"value": "hero__btn btn btn--input caps", "label": "小さいボタン"},
+            {"value": "hero__btn btn btn--large caps", "label": "大きいボタン"},
+            {"value": "hero__btn btn btn--input btn--outline caps", "label": "小さいボタン（枠あり）"},
+            {"value": "hero__btn btn btn--large btn--outline caps", "label": "大きいボタン（枠あり）"}
           ]
         },
         {
           "type": "header",
-          "content": "Products"
+          "content": "商品"
         },
         {
           "type": "collection",
           "id": "featured_collection",
-          "label": "Collection"
+          "label": "コレクション"
         }
       ],
       "presets": [
         {
           "category": "Collection",
-          "name": "Collection carousel"
+          "name": "コレクションカルーセル"
         }
       ]
   }

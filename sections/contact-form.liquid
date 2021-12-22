@@ -191,61 +191,61 @@
 
 {% schema %}
   {
-    "name": "Contact form",
+    "name": "コンタクトフォーム",
     "settings": [
       {
         "type": "text",
         "id": "title",
-        "label": "Heading",
-        "default": "Contact us"
+        "label": "見出し",
+        "default": "お問い合わせをする"
       },
       {
         "type": "checkbox",
         "id": "terms",
-        "label": "Show reCAPTCHA terms",
+        "label": "reCAPTCHAを表示する",
         "default": true,
-        "info": "Reccomended if your online store preferences have spam protection enabled."
+        "info": "オンラインショップの設定で迷惑メール対策が有効になっている場合に推奨されます"
       },
       {
         "type": "header",
-        "content": "Style"
+        "content": "スタイル"
       },
       {
         "type": "select",
         "id": "height",
-        "label": "Height",
+        "label": "高さ",
         "default": "margin--medium",
         "options": [
-          {"value": "margin--small", "label": "Small"},
-          {"value": "margin--medium", "label": "Medium"},
-          {"value": "margin--large", "label": "Large"}
+          {"value": "margin--small", "label": "スモール"},
+          {"value": "margin--medium", "label": "ミディアム"},
+          {"value": "margin--large", "label": "ラージ"}
         ]
       },
       {
         "type": "select",
         "id": "width",
-        "label": "Width",
+        "label": "幅",
         "default": "wrapper--narrow",
         "options": [
-          {"value": "wrapper", "label": "Normal"},
-          {"value": "wrapper--narrow", "label": "Narrow"},
-          {"value": "wrapper--full", "label": "Wide"}
+          {"value": "wrapper", "label": "ノーマル"},
+          {"value": "wrapper--narrow", "label": "狭い"},
+          {"value": "wrapper--full", "label": "広い"}
         ]
       },
       {
         "type": "select",
         "id": "text_color",
-        "label": "Text color",
+        "label": "文字の色",
         "default": "text-dark",
         "options": [
-          { "value": "text-light", "label": "White"},
-          { "value": "text-dark", "label": "Dark"}
+          { "value": "text-light", "label": "白"},
+          { "value": "text-dark", "label": "ダーク"}
         ]
       },
       {
         "type": "color",
         "id": "bg_color",
-        "label": "Background",
+        "label": "背景色",
         "default": "#ffffff"
       }
     ],
@@ -258,51 +258,51 @@
           {
             "type": "text",
             "id": "title",
-            "label": "Label",
+            "label": "ラベル",
             "default": "Email"
           },
           {
             "type": "checkbox",
             "id": "required",
-            "label": "Required",
+            "label": "必須にする",
             "default": true
           }
         ]
       },
       {
         "type": "body",
-        "name": "Message",
+        "name": "メッセージ",
         "limit": 1,
         "settings": [
           {
             "type": "textarea",
             "id": "title",
-            "label": "Label",
-            "default": "Message"
+            "label": "ラベル",
+            "default": "メッセージ"
           },
           {
             "type": "checkbox",
             "id": "required",
-            "label": "Required",
+            "label": "必須にする",
             "default": true
           }
         ]
       },
       {
         "type": "text",
-        "name": "Text line",
+        "name": "テキスト",
         "settings": [
           {
             "type": "text",
             "id": "title",
-            "label": "Label",
-            "default": "Full Name",
-            "info": "Example: Full Name"
+            "label": "ラベル",
+            "default": "フルネーム",
+            "info": "Example: 山田 太郎"
           },
           {
             "type": "checkbox",
             "id": "required",
-            "label": "Required",
+            "label": "必須にする",
             "default": false
           }
         ]
@@ -314,14 +314,14 @@
           {
             "type": "textarea",
             "id": "title",
-            "label": "Label",
+            "label": "ラベル",
             "default": "Enter your message",
             "info": "Example: Enter your message"
           },
           {
             "type": "checkbox",
             "id": "required",
-            "label": "Required",
+            "label": "必須にする",
             "default": false
           }
         ]
@@ -333,26 +333,26 @@
           {
             "type": "text",
             "id": "title",
-            "label": "Label",
+            "label": "ラベル",
             "default": "Phone Number",
             "info": "Example: Phone Number"
           },
           {
             "type": "checkbox",
             "id": "required",
-            "label": "Required",
+            "label": "必須にする",
             "default": false
           }
         ]
       },
       {
         "type": "formHeading",
-        "name": "Heading",
+        "name": "見出し",
         "settings": [
           {
             "type": "text",
             "id": "title",
-            "label": "Heading",
+            "label": "見出し",
             "default": "Heading",
             "info": "Use to break up longer forms"
           }
@@ -360,12 +360,12 @@
       },
       {
         "type": "spacer",
-        "name": "Spacer",
+        "name": "スペーサー",
         "settings": [
           {
             "type": "checkbox",
             "id": "line",
-            "label": "Show line",
+            "label": "ラインを表示する",
             "default": false
           }
         ]
@@ -377,14 +377,14 @@
           {
             "type": "text",
             "id": "title",
-            "label": "Label",
-            "default": "Checkbox option",
-            "info": "Example: Subscribe to newsletter"
+            "label": "ラベル",
+            "default": "オプションをチェックする",
+            "info": "例: ニュースレターを購読する"
           },
           {
             "type": "checkbox",
             "id": "required",
-            "label": "Required",
+            "label": "必須にする",
             "default": false
           }
         ]
@@ -396,105 +396,105 @@
           {
             "type": "text",
             "id": "title",
-            "label": "Heading",
+            "label": "見出し",
             "default": "Select an option",
             "info": "Example: Choose a delivery location"
           },
           {
             "type": "header",
-            "content": "Include up to six options",
+            "content": "最大6つのオプションが含まれます",
             "info":  "Options with blank text will not appear."
           },
           {
             "type": "text",
             "id": "label-one",
-            "default": "Option one",
-            "label": "Option one"
+            "default": "オプション1",
+            "label": "オプション1"
           },
           {
             "type": "text",
             "id": "label-two",
-            "default": "Option two",
-            "label": "Option two"
+            "default": "オプション2",
+            "label": "オプション2"
           },
           {
             "type": "text",
             "id": "label-three",
-            "default": "Option three",
-            "label": "Option three"
+            "default": "オプション3",
+            "label": "オプション3"
           },
           {
             "type": "text",
             "id": "label-four",
-            "default": "Option four",
-            "label": "Option four"
+            "default": "オプション4",
+            "label": "オプション4"
           },
           {
             "type": "text",
             "id": "label-five",
-            "default": "Option five",
-            "label": "Option five"
+            "default": "オプション5",
+            "label": "オプション5"
           },
           {
             "type": "text",
             "id": "label-six",
-            "default": "Option six",
-            "label": "Option six"
+            "default": "オプション6",
+            "label": "オプション6"
           }
         ]
       },
       {
         "type": "radio",
-        "name": "Radio buttons",
+        "name": "ラジオボタン",
         "settings": [
           {
             "type": "text",
             "id": "title",
-            "label": "Heading",
+            "label": "見出し",
             "default": "Pick an option"
           },
           {
             "type": "checkbox",
             "id": "required",
-            "label": "Required",
+            "label": "必須にする",
             "default": false
           },
           {
             "type": "header",
-            "content": "Include up to six options",
-            "info":  "Leave option text blank to exclude"
+            "content": "最大6つのオプションが含まれます",
+            "info":  "オプションのテキストを空白にして、除外する"
           },
           {
             "type": "text",
             "id": "label-one",
-            "default": "Option one",
-            "label": "Option one"
+            "default": "オプション1",
+            "label": "オプション1"
           },
           {
             "type": "text",
             "id": "label-two",
-            "default": "Option two",
-            "label": "Option two"
+            "default": "オプション2",
+            "label": "オプション2"
           },
           {
             "type": "text",
             "id": "label-three",
-            "label": "Option three"
+            "label": "オプション3"
           },
           {
             "type": "text",
             "id": "label-four",
-            "label": "Option four"
+            "label": "オプション4"
           },
           {
             "type": "text",
             "id": "label-five",
-            "label": "Option five"
+            "label": "オプション5"
           },
           {
             "type": "text",
             "id": "label-six",
-            "label": "Option six"
+            "label": "オプション6"
           }
         ]
       }
@@ -502,7 +502,7 @@
     "presets": [
       {
         "category": "Text",
-        "name": "Contact form",
+        "name": "コンタクトフォーム",
         "blocks": [
           {
             "type": "text",

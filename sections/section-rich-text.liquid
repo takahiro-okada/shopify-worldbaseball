@@ -31,7 +31,7 @@
         </div>
       {% endif %}
       {% if section.settings.button_text != blank %}
-        <a href="{{ section.settings.button_url }}" 
+        <a href="{{ section.settings.button_url }}"
           class="standard__cta {{ section.settings.button_style }} {{ section.settings.button_color }}"
           data-aos="hero"
           data-aos-anchor="{{ animation_anchor }}"
@@ -45,30 +45,30 @@
 
 {% schema %}
 {
-  "name": "Rich text",
+  "name": "リッチテキスト",
   "settings": [
     {
       "type": "text",
       "id": "subheading",
-      "label": "Subheading",
+      "label": "サブ見出し",
       "default": "Introducing"
     },
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
+      "label": "見出し",
       "default": "Rich text"
     },
     {
       "type": "richtext",
       "id": "text",
-      "label": "Text",
-      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      "label": "テキスト",
+      "default": "<p>ブランドに関する情報をお客様と共有するためのテキストです。商品の説明、お知らせ、来店されたお客様の歓迎など。</p>"
     },
     {
       "type":  "range",
       "id":    "text_size",
-      "label": "Text size",
+      "label": "文字サイズ",
       "min":    1,
       "max":    5,
       "step":   1,
@@ -77,111 +77,111 @@
     {
       "type":  "range",
       "id":    "text_columns",
-      "label": "Columns",
+      "label": "カラム",
       "min":    1,
       "max":    3,
       "step":   1,
       "default":1,
-      "info": "Desktop only"
+      "info": "デスクトップにのみ適用"
     },
     {
       "type": "select",
       "id": "align_text",
-      "label": "Text alignment",
+      "label": "文字の位置",
       "default": "text-left",
       "options": [
-        {"value": "text-left","label": "Left"},
-        {"value": "text-center","label": "Centered"}
+        {"value": "text-left","label": "左"},
+        {"value": "text-center","label": "中央"}
       ]
     },
     {
       "type": "header",
-      "content": "Button"
+      "content": "ボタン"
     },
     {
       "type":"text",
       "id":"button_text",
-      "label":"Text",
+      "label":"テキスト",
       "default":"Learn more"
     },
     {
       "type":"url",
       "id":"button_url",
-      "label":"Link"
+      "label":"リンク"
     },
     {
       "type": "select",
       "id": "button_color",
-      "label": "Color",
+      "label": "色",
       "default": "btn--neutral",
       "options": [
-        {"value": "btn--primary", "label": "Bright accent"},
-        {"value": "btn--secondary", "label": "Secondary accent"},
-        {"value": "btn--link", "label": "Link color"},
-        {"value": "btn--neutral", "label": "Text color"},
-        {"value": "btn--black", "label": "Black"},
-        {"value": "btn--white", "label": "White"}
+        {"value": "btn--primary", "label": "メインアクセント色"},
+        {"value": "btn--secondary", "label": "サブアクセント色"},
+        {"value": "btn--link", "label": "リンクの色"},
+        {"value": "btn--neutral", "label": "文字の色"},
+        {"value": "btn--black", "label": "黒色"},
+        {"value": "btn--white", "label": "白色"}
       ]
     },
     {
       "type": "select",
       "id": "button_style",
-      "label": "Style",
+      "label": "スタイル",
       "default": "caps--large",
       "options": [
-        {"value": "caps--large", "label": "Capitalized text"},
-        {"value": "hero__btn btn btn--input caps", "label": "Small button"},
-        {"value": "hero__btn btn btn--large caps", "label": "Large button"},
-        {"value": "hero__btn btn btn--input btn--outline caps", "label": "Small outline button"},
-        {"value": "hero__btn btn btn--large btn--outline caps", "label": "Large outline button"}
+            {"value": "caps--large", "label": "文字のみを表示"},
+            {"value": "hero__btn btn btn--input caps", "label": "小さいボタン"},
+            {"value": "hero__btn btn btn--large caps", "label": "大きいボタン"},
+            {"value": "hero__btn btn btn--input btn--outline caps", "label": "小さいボタン（枠あり）"},
+            {"value": "hero__btn btn btn--large btn--outline caps", "label": "大きいボタン（枠あり）"}
       ]
     },
     {
       "type": "header",
-      "content": "Style"
+      "content": "スタイル"
     },
     {
       "type": "select",
       "id": "height",
-      "label": "Height",
+      "label": "高さ",
       "default": "margin--medium",
       "options": [
-        {"value": "margin--small", "label": "Small"},
-        {"value": "margin--medium", "label": "Medium"},
-        {"value": "margin--large", "label": "Large"}
+        {"value": "margin--small", "label": "スモール"},
+        {"value": "margin--medium", "label": "ミディアム"},
+        {"value": "margin--large", "label": "ラージ"}
       ]
     },
     {
       "type": "select",
       "id": "width",
-      "label": "Width",
+      "label": "幅",
       "default": "wrapper",
       "options": [
-        {"value": "wrapper", "label": "Normal"},
-        {"value": "wrapper--narrow", "label": "Narrow"},
-        {"value": "wrapper--full", "label": "Wide"}
+        {"value": "wrapper", "label": "ノーマル"},
+        {"value": "wrapper--narrow", "label": "狭い"},
+        {"value": "wrapper--full", "label": "広い"}
       ]
     },
     {
       "type": "select",
       "id": "text_color",
-      "label": "Text color",
+      "label": "文字の色",
       "default": "text-dark",
       "options": [
-        { "value": "text-light", "label": "White"},
-        { "value": "text-dark", "label": "Dark"}
+        { "value": "text-light", "label": "白"},
+        { "value": "text-dark", "label": "ダーク"}
       ]
     },
     {
       "type": "color",
       "id": "bg_color",
-      "label": "Background",
+      "label": "背景色",
       "default": "#ffffff"
     }
   ],
   "presets": [
     {
-      "name": "Rich text",
+      "name": "リッチテキスト",
       "category": "Text"
     }
   ]

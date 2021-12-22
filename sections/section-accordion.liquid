@@ -6,13 +6,13 @@
 
 {% schema %}
 {
-  "name": "Accordion",
+  "name": "アコーディオン",
   "class": "accordions-holder",
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
+      "label": "見出し",
       "default": "FAQ"
     }
   ],
@@ -21,55 +21,55 @@
       "type": "@app"
     },
     {
-      "name": "Text column",
+      "name": "テキストカラム",
       "type": "text",
       "settings": [
         {
           "type": "text",
           "id": "title",
-          "label": "Heading",
+          "label": "見出し",
           "default": "Frequently asked question"
         },
         {
           "type": "richtext",
           "id": "text",
-          "label": "Text",
-          "default": "<p>Use this to answer some common questions you hear from your customers. You could discuss product details, size fit, shipping policies, or anything you think would help merchants make an informed decision about your products. This section will appear across all products.</p>" 
+          "label": "テキスト",
+          "default": "<p>Use this to answer some common questions you hear from your customers. You could discuss product details, size fit, shipping policies, or anything you think would help merchants make an informed decision about your products. This section will appear across all products.</p>"
         }
       ]
     },
     {
-      "name": "Image column",
+      "name": "画像カラム",
       "type": "image",
       "settings": [
         {
           "type": "text",
           "id": "title",
-          "label": "Heading",
-          "default": "Image heading"
+          "label": "見出し",
+          "default": "画像の見出し"
         },
         {
           "type": "richtext",
           "id": "text",
-          "label": "Text",
+          "label": "テキスト",
           "default": "<p>Use this to answer some common questions you hear from your customers. You could discuss product details, size fit, shipping policies, or anything you think would help merchants make an informed decision about your products. This section will appear across all products.</p>"
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "画像"
         },
         {
           "type": "select",
           "id": "bg_position",
-          "label": "Position",
+          "label": "位置",
           "default": "center-center",
           "options": [
-            { "label": "Top", "value": "center-top" },
-            { "label": "Right", "value": "right-center" },
-            { "label": "Center", "value": "center-center" },
-            { "label": "Left", "value": "left-center" },
-            { "label": "Bottom", "value": "center-bottom" }
+            { "label": "上", "value": "center-top" },
+            { "label": "右", "value": "right-center" },
+            { "label": "中央", "value": "center-center" },
+            { "label": "左", "value": "left-center" },
+            { "label": "下", "value": "center-bottom" }
           ]
         },
         {
@@ -79,20 +79,20 @@
           "max": 1.5,
           "step": 0.1,
           "unit": ":1",
-          "label": "Photo aspect ratio",
-          "info": "Wide to tall",
+          "label": "画像比率",
+          "info": "横長 ⇔ 縦長",
           "default": 0.6
         }
       ]
     },
     {
       "type": "icon",
-      "name": "Icon column",
+      "name": "アイコンカラム",
       "settings": [
       {
           "type": "select",
           "id": "icon_name",
-          "label": "Icon",
+          "label": "アイコン",
           "default": "icon-award",
           "options": [
             { "value": "icon-award", "label": "Award" },
@@ -120,40 +120,40 @@
         {
           "type": "color",
           "id": "icon_color",
-          "label": "Icon color",
+          "label": "アイコンの色",
           "default": "#AAAAAA"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Heading",
-          "default": "Icon heading"
+          "label": "見出し",
+          "default": "アイコン見出し"
         },
         {
           "type": "richtext",
           "id": "text",
-          "label": "Text",
-          "default": "<p>Use this to answer some common questions you hear from your customers. You could discuss product details, size fit, shipping policies, or anything you think would help merchants make an informed decision about your products. This section will appear across all products.</p>"
+          "label": "テキスト",
+          "default": "<p>お客様からよく聞かれる質問に答えるためにご利用ください。製品の詳細、サイズの適合性、配送ポリシーなど、販売者が製品について十分な情報を得た上で決断するのに役立つと思われることを何でも説明できます。このセクションは、すべての製品に表示されます。</p>"
         }
       ]
     },
     {
       "type": "html",
-      "name": "Custom HTML",
+      "name": "カスタムHTML",
       "settings": [
         {
           "type": "html",
           "id": "html",
-          "label": "Custom HTML",
-          "default": "<p>Once you write some HTML, it will render right here.</p>"
+          "label": "カスタムHTML",
+          "default": "<p>HTMLを追加できます。</p>"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Accordion",
-      "category": "Text",
+      "name": "アコーディオン",
+      "category": "テキスト",
       "blocks": [
         {
           "type": "text"
