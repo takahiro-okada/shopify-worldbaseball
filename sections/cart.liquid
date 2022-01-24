@@ -96,7 +96,7 @@
   {% endif %}
 
   <p class="cart-dropdown__message cart__message {{ class_message }}" {{ block_attibutes }} data-cart-message="{% if qualified_shipping_message != blank %}true{% else %}false{% endif %}" data-limit="{{ limit }}">
-    {% if show_wheel %}  
+    {% if show_wheel %}
       {% assign percent = limit | minus: subtotal_without_currency | times: 100 | divided_by: limit %}
       {% assign percent = 100 | minus: percent %}
 
@@ -111,7 +111,7 @@
         <small class="cart__graph-dot cart__graph-dot--4"></small>
         <small class="cart__graph-dot cart__graph-dot--5"></small>
         <small class="cart__graph-dot cart__graph-dot--6"></small>
-        
+
         <svg height="18" width="18">
           <circle r="7" cx="9" cy="9" />
           <circle class="cart__graph-progress" stroke-dasharray="87.96459430051421 87.96459430051421" style="stroke-dashoffset: 87.96459430051421" data-cart-progress data-percent="{{- percent -}}" r="7" cx="9" cy="9" />
@@ -192,11 +192,11 @@
               <a href="#gift-notes" data-expand-button>
                 {{- 'cart.general.gift_notes_label' | t -}}
               </a>
-    
+
               <div class="cart__widget-content" id="gift-notes">
                 {%- assign gift_note_attribute = 'cart.general.gift_note_attribute' | t -%}
                 <label for="gift-note">{{ 'cart.general.customer_note' | t }}</label>
-    
+
                 <textarea id="gift-note" name="attributes[{{ gift_note_attribute }}]" class="cart__field cart__field--textarea" aria-label="{{ 'cart.general.customer_note' | t }}">{{ cart.attributes[gift_note_attribute] }}</textarea>
               </div>
             </div>
@@ -264,7 +264,7 @@
       <input type="tel" id="AddressPhone" name="address[phone]" value="{{ form.phone }}">
     </div>
   </div>
-  
+
   <div id="wrapper-response"></div>
 
   <input type="button" class="get-rates{% if cart.item_count > 0 %} get-rates--trigger{% endif %} btn btn--outline btn--input btn--full" value="{{ calculate_shipping_btn }}" />
@@ -320,7 +320,7 @@
 
 {% schema %}
 {
-  "name": "Cart",
+  "name": "カート",
   "blocks": [
     {
       "type": "@app"

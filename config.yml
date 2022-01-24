@@ -1,8 +1,9 @@
-development:
-  password: shptka_2305df32d299e6a03dc0ab779f3dd8d7
-  theme_id: "129466106115"
-  store: baseball-shop-world.myshopify.com
 production:
   password: shptka_2305df32d299e6a03dc0ab779f3dd8d7
-  theme_id: "129464893699"
+  theme_id: "130352054531"
   store: baseball-shop-world.myshopify.com
+
+development:
+  password: shptka_2a3f1530a647f89b22025618c118ee6b
+  theme_id: "127369609365"
+  store: shop-jumboworld.myshopify.com

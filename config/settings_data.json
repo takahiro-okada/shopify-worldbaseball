@@ -110,14 +110,14 @@
           "footer-1": {
             "type": "social",
             "settings": {
-              "title": "Social",
-              "richtext": "<p>Stay current with updates from our social channels.<\/p>"
+              "title": "SNS",
+              "richtext": "<p>SNSで最新情報をお届けします。<\/p>"
             }
           },
           "footer-2": {
             "type": "newsletter",
             "settings": {
-              "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+              "richtext": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。<\/p>",
               "enable_name": false
             }
           }
@@ -243,14 +243,14 @@
             "footer-1": {
               "type": "social",
               "settings": {
-                "title": "Social",
-                "richtext": "<p>Stay current with updates from our social channels.<\/p>"
+                "title": "SNS",
+                "richtext": "<p>SNSで最新情報をお届けします。<\/p>"
               }
             },
             "footer-2": {
               "type": "newsletter",
               "settings": {
-                "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+                "richtext": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。<\/p>",
                 "enable_name": false
               }
             }
@@ -371,14 +371,14 @@
             "footer-1": {
               "type": "social",
               "settings": {
-                "title": "Social",
-                "richtext": "<p>Stay current with updates from our social channels.<\/p>"
+                "title": "SNS",
+                "richtext": "<p>SNSで最新情報をお届けします。<\/p>"
               }
             },
             "footer-2": {
               "type": "newsletter",
               "settings": {
-                "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+                "richtext": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。<\/p>",
                 "enable_name": false
               }
             }
@@ -494,14 +494,14 @@
             "footer-1": {
               "type": "social",
               "settings": {
-                "title": "Social",
-                "richtext": "<p>Stay current with updates from our social channels.<\/p>"
+                "title": "SNS",
+                "richtext": "<p>SNSで最新情報をお届けします。<\/p>"
               }
             },
             "footer-2": {
               "type": "newsletter",
               "settings": {
-                "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+                "richtext": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。<\/p>",
                 "enable_name": false
               }
             }

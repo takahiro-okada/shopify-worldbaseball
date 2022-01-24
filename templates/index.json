@@ -6,15 +6,15 @@
         "slideshow-0": {
           "type": "image",
           "settings": {
-            "title": "Broadcast theme",
-            "description": "A full featured Shopify theme built for modern commerce"
+            "title": "見出し",
+            "description": "ここに説明が入ります。"
           }
         },
         "slideshow-1": {
           "type": "image",
           "settings": {
-            "title": "Broadcast theme",
-            "description": "It's like your last theme, except it's faster and better"
+            "title": "見出し",
+            "description": "ここにテキストが入ります。"
           }
         }
       },
@@ -53,9 +53,9 @@
         "text": {
           "type": "text",
           "settings": {
-            "subheading": "Delete your apps",
-            "title": "Broadcast has that feature",
-            "text": "<p>Upsells, promos, shipping info in the cart<\/p>",
+            "subheading": "サブ見出し",
+            "title": "ここに見出しが入ります。",
+            "text": "<p>ここに説明が入ります。<\/p>",
             "text_size": 2,
             "text_columns": 1,
             "align_text": "text-left",
@@ -96,7 +96,7 @@
           "type": "image",
           "settings": {
             "title": "Commerce first",
-            "description": "Focus on your products with innovative sections focused on selling",
+            "description": "販売に特化した斬新なセクションで、製品にフォーカスする。",
             "link_text": "",
             "link": "\/collections\/all"
           }
@@ -137,13 +137,13 @@
     "rich-text": {
       "type": "section-rich-text",
       "settings": {
-        "subheading": "Time is money",
-        "title": "Built for speed",
-        "text": "<p>Broadcast was built from the ground up to take advantage of modern development techniques that make your site run as fast as possible.  Using progressive technique like image lazy-loading, code splitting, and preloading, Broadcast is the fast and nimble platform your store needs to level up.  Customers are not patient, and you should not be settling for less.<\/p>",
+        "subheading": "サブ見出し",
+        "title": "見出し",
+        "text": "<p>ここに説明が入ります。<\/p>",
         "text_size": 2,
         "text_columns": 2,
         "align_text": "text-left",
-        "button_text": "Ready set go",
+        "button_text": "ボタン",
         "button_color": "btn--neutral",
         "button_style": "caps--large",
         "height": "margin--medium",
@@ -186,7 +186,7 @@
     "featured-collection": {
       "type": "section-collection",
       "settings": {
-        "heading": "Featured Collection",
+        "heading": "特集コレクション",
         "description": "",
         "text_alignment": "center",
         "grid": 4,
@@ -196,8 +196,8 @@
     "newsletter": {
       "type": "section-newsletter",
       "settings": {
-        "title": "Newsletter",
-        "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+        "title": "メール配信",
+        "richtext": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。<\/p>",
         "enable_name": true,
         "flex_align": "align--middle-stacked",
         "height": "three-fifty-height-hero"
@@ -210,12 +210,12 @@
         "height": "screen-height-three-quarters",
         "overlay_opacity": 0,
         "overlay_color": "#000",
-        "title": "Broadcast theme",
-        "description": "Modern commerce built for speed",
+        "title": "見出し",
+        "description": "ここに説明が入ります。",
         "flex_align": "align--middle-left",
         "text_color": "text-dark",
         "transparent": false,
-        "link_text": "View products",
+        "link_text": "商品について",
         "link": "",
         "button_color": "btn--black",
         "button_style": "hero__btn btn btn--input caps"
@@ -266,8 +266,8 @@
           "settings": {
             "icon_name": "icon-lock-card",
             "icon_color": "#545454",
-            "title": "Secure transactions",
-            "text": "Transactions are handled with bank-grade security."
+            "title": "安全な取引",
+            "text": "取引は銀行レベルのセキュリティで処理される。"
           }
         },
         "icon-1": {
@@ -275,8 +275,8 @@
           "settings": {
             "icon_name": "icon-basket-like",
             "icon_color": "#545454",
-            "title": "Simple checkout",
-            "text": "Our secure checkout is quick and easy to use."
+            "title": "簡単なチェックアウト",
+            "text": "安全なチェックアウトは、迅速かつ簡単にご利用いただけます。"
           }
         },
         "icon-2": {
@@ -284,8 +284,8 @@
           "settings": {
             "icon_name": "icon-chat",
             "icon_color": "#545454",
-            "title": "Get in touch",
-            "text": "Have questions? Get in touch with us at any time."
+            "title": "お問い合わせはこちら",
+            "text": "ご質問はありませんか？いつでもご連絡ください。"
           }
         }
       },

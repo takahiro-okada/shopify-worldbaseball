@@ -25,13 +25,13 @@
 
         {%- capture sub_collection_html -%}
           {{ sub_collection_html }}
-          
+
           <div class="subcollection__item" data-slide="{{ forloop.index0 }}" data-slide-index="{{ forloop.index0 }}">
             <div class="subcollection__inner">
               <a class="subcollection__link" href="{{ sub_collection.url }}">
                 <div class="subcollection__image">
                   {%- assign image = sub_collection.image -%}
-                  
+
                   {%- if section.settings.select_image == 'product' or image == blank -%}
                     {%- assign image = sub_collection.products.first.featured_media.preview_image -%}
                   {%- endif -%}
@@ -41,7 +41,7 @@
                   {%- else -%}
                     {%- comment -%} Show "No image"{%- endcomment -%}
                     {%- assign img_api = image | img_url: '540x' | replace: '_540x.', '_{width}x.' -%}
-                    <img 
+                    <img
                       class="lazyload"
                       src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                       data-src="{{ img_api }}"
@@ -97,25 +97,25 @@
 
 {% schema %}
 {
-  "name": "Subcollections",
+  "name": "サブコレクション",
   "templates": ["collection"],
   "settings": [
     {
       "type": "paragraph",
-      "content": "Create a [navigation list](/admin/menus) with the same name as this collection and link to other collections. [Learn more](https://invisiblethemes.com/link/broadcast/docs/subcollection)"
+      "content": "このコレクションと同じ名前の[ナビゲーションリスト](/admin/menus)を作成し、他のコレクションにリンクする。[詳しく見る](https://invisiblethemes.com/link/broadcast/docs/subcollection)"
     },
     {
       "type": "select",
       "id": "subcollection_layout",
-      "label": "Layout",
+      "label": "レイアウト",
       "options": [
         {
           "value": "grid",
-          "label": "Grid"
+          "label": "グリッド"
         },
         {
           "value": "carousel",
-          "label": "Carousel"
+          "label": "カルーセル"
         }
       ],
       "default": "grid"
@@ -123,21 +123,21 @@
     {
       "type": "checkbox",
       "id": "subcollection_description",
-      "label": "Show description",
+      "label": "説明を表示する",
       "default": false
     },
     {
       "type": "select",
       "id": "select_image",
-      "label": "Select a photo to display",
+      "label": "表示する画像を選択する",
       "options": [
         {
           "value": "collection",
-          "label": "Collection image"
+          "label": "コレクション画像"
         },
         {
           "value": "product",
-          "label": "Product image"
+          "label": "商品画像"
         }
       ]
     }

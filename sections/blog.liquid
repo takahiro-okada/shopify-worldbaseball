@@ -61,6 +61,7 @@
 {%- assign showButton = section.settings.show_button | default: false -%}
 {%- assign showTags = section.settings.show_tags | default: false -%}
 {%- assign showComments = section.settings.show_comments | default: false -%}
+{%- assign showContent = section.settings.show_content | default: false -%}
 {%- assign onboarding = false -%}
 {%- assign animation_anchor = '#blog--' | append: section.id -%}
 
@@ -72,7 +73,7 @@
   {%- endif -%}
 {%- endif -%}
 
-<div class="blog-listing-outer">
+<div class="blog-listing-outer wrapper">
   <div class="blog-listing grid grid--uniform {{ grid_list_strings }}{% if settings.product_grid_outline %} blog-listing--bordered{% endif %}">
    {% if onboarding %}
       {% for i in (1..article_limit) %}
@@ -181,7 +182,7 @@
             {% if showDate or showAuthor or showComments %}
               <h3 class="article__meta">
                 {% if showDate %}
-                  {% assign published_at = article.published_at | date: format: 'full_date' %}
+                  {% assign published_at = article.published_at | date: '%Y年 %-m月 %d日' %}
                   <time datetime="{{ published_at }}">{{ published_at }}</time>
                 {% endif %}
 
@@ -201,7 +202,9 @@
               </h3>
             {% endif %}
 
-            <p class="article__excerpt">{{ article.excerpt_or_content | strip_html | truncatewords: 30 }}</p>
+            {% if showContent %}
+              <p class="article__excerpt">{{ article.excerpt_or_content | strip_html | truncatewords: 30 }}</p>
+            {% endif %}
 
             {% if showButton %}
               <p class="article__link"><a href="{{ article.url }}" class="standard__cta caps--large">{{ 'blogs.article.read_more' | t }}</a></p>
@@ -225,28 +228,28 @@
 
 {% schema %}
   {
-    "name": "Blog pages",
+    "name": "記事一覧",
     "settings": [
       {
         "type": "header",
-        "content": "Layout"
+        "content": "レイアウト"
       },
       {
         "type": "checkbox",
         "id": "show_title",
-        "label": "Show title",
+        "label": "タイトルを表示する",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "show_rss",
-        "label": "Show RSS icon",
+        "label": "RSSを表示する",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_tag_nav",
-        "label": "Show tag navigation",
+        "label": "タグナビゲーションを表示する",
         "default": false
       },
       {
@@ -255,7 +258,7 @@
         "min":     1,
         "max":     4,
         "step":    1,
-        "label":   "Articles per row",
+        "label":   "1行あたりの記事数",
         "default": 4
       },
       {
@@ -264,12 +267,12 @@
         "min":     1,
         "max":     5,
         "step":    1,
-        "label":   "Number of rows",
+        "label":   "行数",
         "default": 4
       },
       {
         "type": "header",
-        "content": "Articles"
+        "content": "記事"
       },
       {
         "type": "range",
@@ -284,32 +287,38 @@
       },
       {
         "type": "checkbox",
+        "id": "show_content",
+        "label": "本文を表示する",
+        "default": false
+      },
+      {
+        "type": "checkbox",
         "id": "show_tags",
-        "label": "Show tags",
+        "label": "タグを表示する",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_author",
-        "label": "Show author",
+        "label": "著者を表示する",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_date",
-        "label": "Show date",
+        "label": "日付を表示する",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_button",
-        "label": "Show 'Read more' button",
+        "label": "もっと見るボタンを表示する",
         "default": false
       },
       {
         "type": "checkbox",
         "id": "show_comments",
-        "label": "Show comment count",
+        "label": "コメント数を表示する",
         "default": false
       }
     ]

@@ -10,7 +10,9 @@
 
         {%- if block.type == 'question' and current_block.title != blank and current_block.content != blank -%}
           <div class="accordion" data-accordion {{ block.shopify_attributes }}>
-            <h4 class="accordion__title" data-focus-element tabindex="0" data-accordion-toggle data-block-id="{{ block.id }}">{{ current_block.title }}</h4>
+              <h4 class="accordion__title" data-focus-element tabindex="0" data-accordion-toggle data-block-id="{{ block.id }}">
+              <div class="accordion__question"></div>
+              {{ current_block.title }}</h4>
 
             <div class="rte accordion__body" data-accordion-body>
               {{ current_block.content }}
