@@ -19,14 +19,14 @@
               </h2>
             {%- endif -%}
           </li>
-
+  
           <li class="tab-link tab-link-1 tab-link__recent hide" data-tab="1" tabindex="0"></li>
         </ul>
 
         <button type="button" class="tabs__arrow tabs__arrow--prev is-hidden" data-scrollbar-arrow-prev>
           <span class="visually-hidden">{{ 'products.general.see_all' | t }}</span>
         </button>
-
+  
         <button type="button" class="tabs__arrow tabs__arrow--next is-hidden" data-scrollbar-arrow-next>
           <span class="visually-hidden">{{ 'products.general.see_all' | t }}</span>
         </button>
@@ -46,7 +46,7 @@
       <div class="tabs__head">
         <ul class="tabs tabs--center" data-scrollbar data-scrollbar-slider>
           <li class="tab-link tab-link-0 hide" data-tab="0" tabindex="0"></li>
-
+  
           <li class="tab-link tab-link-1 tab-link__recent current hide" data-tab="1" tabindex="0">
             {%- if section.settings.product_recently_heading != blank -%}
               <h2 class="recent__title">
@@ -59,7 +59,7 @@
         <button type="button" class="tabs__arrow tabs__arrow--prev is-hidden" data-scrollbar-arrow-prev>
           <span class="visually-hidden">{{ 'products.general.see_all' | t }}</span>
         </button>
-
+  
         <button type="button" class="tabs__arrow tabs__arrow--next is-hidden" data-scrollbar-arrow-next>
           <span class="visually-hidden">{{ 'products.general.see_all' | t }}</span>
         </button>
@@ -83,7 +83,7 @@
               </h2>
             {%- endif -%}
           </li>
-
+  
           {%- if section.settings.show_recently_viewed -%}
             <li class="tab-link tab-link-1 tab-link__recent hide" data-tab="1" tabindex="0">
               {%- if section.settings.product_recently_heading != blank -%}
@@ -98,7 +98,7 @@
         <button type="button" class="tabs__arrow tabs__arrow--prev is-hidden" data-scrollbar-arrow-prev>
           <span class="visually-hidden">{{ 'products.general.see_all' | t }}</span>
         </button>
-
+  
         <button type="button" class="tabs__arrow tabs__arrow--next is-hidden" data-scrollbar-arrow-next>
           <span class="visually-hidden">{{ 'products.general.see_all' | t }}</span>
         </button>
@@ -119,17 +119,17 @@
 
 {% schema %}
 {
-  "name": "オススメ商品",
+  "name": "Product recommendations",
   "settings": [
     {
       "type": "header",
-      "content": "オススメ商品"
+      "content": "Related products"
     },
     {
       "type": "checkbox",
       "id": "related_products_enable",
-      "label": "オススメ商品を有効にする",
-      "info": "ダイナミックレコメンデーションは、時間とともに変化し、改善されます。[もっとみる](https://help.shopify.com/en/themes/development/recommended-products)",
+      "label": "Show related products",
+      "info": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)",
       "default": true
     },
     {
@@ -138,23 +138,23 @@
       "min": 1,
       "max": 6,
       "step": 1,
-      "label": "商品数",
+      "label": "Product limit",
       "default": 4
     },
     {
       "type": "text",
       "id": "product_recommendations_heading",
-      "label": "見出し",
-      "default": "オススメ商品"
+      "label": "Heading",
+      "default": "Related products"
     },
     {
       "type": "header",
-      "content": "最近見た商品"
+      "content": "Recently viewed products"
     },
     {
       "type": "checkbox",
       "id": "show_recently_viewed",
-      "label": "最近見た商品を有効にする",
+      "label": "Show recently viewed products",
       "default": true
     },
     {
@@ -163,14 +163,14 @@
       "min": 1,
       "max": 6,
       "step": 1,
-      "label": "商品数",
+      "label": "Product limit",
       "default": 4
     },
     {
       "type": "text",
       "id": "product_recently_heading",
-      "label": "見出し",
-      "default": "最近見た商品"
+      "label": "Heading",
+      "default": "Recently viewed"
     }
   ]
 }

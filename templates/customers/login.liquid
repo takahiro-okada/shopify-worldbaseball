@@ -10,7 +10,7 @@
 	<section class="col">
       <div data-login-form class="animates login{% if shop.checkout.guest_login %} align-left{% endif %}">
           <h2 class="theme">{{ 'customer.login.title' | t }}</h2>
-          <p>{{ 'customer.login.create_account_prompt' | t }} <span class="text-link"><a href="{{ routes.account_register_url }}">{{ 'customer.login.create_account_cta' | t }}</a></span>.</p>
+          <p>{{ 'customer.login.create_account_prompt' | t }} <span class="text-link"><br><a href="{{ routes.account_register_url }}">{{ 'customer.login.create_account_cta' | t }}</a></span>.</p>
           {% form 'customer_login' %}
           <div class="form-field">
           {{ form.errors | default_errors }}
@@ -57,7 +57,7 @@
           <div class="form-field action-bottom">
               <input class="btn" type="submit" value="{{ 'customer.recover_password.submit' | t }}" />
               <span class="note">
-                {{ 'cart.general.or' | t }} 
+                {{ 'cart.general.or' | t }}
                 <button class="text-link small" data-hide-reset>{{ 'customer.recover_password.cancel' | t }}</button>
               </span>
           </div>

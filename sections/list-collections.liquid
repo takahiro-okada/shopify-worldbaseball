@@ -57,37 +57,37 @@
 
 {% schema %}
 {
-  "name": "商品一覧",
+  "name": "Collection list",
   "settings": [
     {
       "type": "paragraph",
-      "content": "デフォルトでは、すべてのコレクションが表示されます。リストをカスタマイズするには、「選択済み」を選択し、コレクションを追加してください。"
+      "content": "All of your collections are listed by default. To customize your list, choose 'Selected' and add collections."
     },
     {
       "type": "radio",
       "id": "display_type",
-      "label": "表示するコレクションを選択する",
+      "label": "Select collections to show",
       "default": "all",
       "options": [
         {
           "value": "all",
-          "label": "全て"
+          "label": "All"
         },
         {
           "value": "selected",
-          "label": "選択する"
+          "label": "Selected"
         }
       ]
     },
     {
       "type": "text",
       "id": "title",
-      "label": "見出し",
-      "default": "コレクション"
+      "label": "Heading",
+      "default": "Collections"
     },
     {
       "type": "header",
-      "content": "商品グリッド"
+      "content": "Product grid"
     },
     {
       "type":    "range",
@@ -95,7 +95,7 @@
       "min":     1,
       "max":     6,
       "step":    1,
-      "label":   "1行あたりの商品数",
+      "label":   "Products per row",
       "default": 4
     },
     {
@@ -104,29 +104,29 @@
       "min":     1,
       "max":     8,
       "step":    1,
-      "label":   "行数",
+      "label":   "Number of rows",
       "default": 1
     },
     {
       "type": "header",
-      "content": "モバイル"
+      "content": "Mobile"
     },
     {
       "type": "select",
       "id": "layout_mobile",
-      "label": "レイアウト",
+      "label": "Layout",
       "options": [
         {
           "value": "1",
-          "label": "1商品（1行）"
+          "label": "1 product per row"
         },
         {
           "value": "2",
-          "label": "2商品（1行）"
+          "label": "2 products per row"
         },
         {
           "value": "carousel",
-          "label": "カルーセル"
+          "label": "Carousel"
         }
       ],
       "default": "carousel"
@@ -135,29 +135,29 @@
   "blocks": [
     {
       "type": "collection",
-      "name": "コレクション",
+      "name": "Collection",
       "settings": [
         {
-          "label": "コレクション",
+          "label": "Collection",
           "id": "collection",
           "type": "collection"
         },
         {
-          "label": "コレクションの名前",
+          "label": "Collection name",
           "id": "collection_name",
           "type": "text",
-          "info": "コレクション名をカスタムテキストに置き換える"
+          "info": "Replace the collection name with custom text"
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "画像",
-          "info": "コレクション画像をカスタム画像に置き換える"
+          "label": "Image",
+          "info": "Replace the collection image with a custom image"
         },
         {
           "type": "select",
           "id": "bg_position",
-          "label": "位置",
+          "label": "Position",
           "default": "center-center",
           "options": [
             { "label": "上", "value": "center-top" },

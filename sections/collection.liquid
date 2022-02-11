@@ -247,35 +247,35 @@
 
 {% schema %}
   {
-    "name": "コレクション商品",
+    "name": "Collection products",
     "templates": ["collection"],
     "settings": [
       {
         "type": "checkbox",
         "id": "enable_sort",
-        "label": "並び替えを有効にする",
+        "label": "Show sorting",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "enable_filters",
-        "label": "フィルターを有効にする",
+        "label": "Enable filters",
         "default": true
       },
       {
         "type": "select",
         "id": "filter_layout",
-        "label": "フィルターのレイアウト",
+        "label": "Filter layout",
         "default": "inline-open",
         "options": [
-          { "label": "スライド", "value": "slide-out" },
-          { "label": "インライン(クローズ)", "value": "inline-closed" },
-          { "label": "インライン(オープン)", "value": "inline-open" }
+          { "label": "Slide out", "value": "slide-out" },
+          { "label": "Inline (closed)", "value": "inline-closed" },
+          { "label": "Inline (open)", "value": "inline-open" }
         ]
       },
       {
         "type": "header",
-        "content": "商品グリッド"
+        "content": "Product grid"
       },
       {
         "type":    "range",
@@ -283,21 +283,21 @@
         "min":     2,
         "max":     6,
         "step":    1,
-        "label":   "1行あたりの商品数（デスクトップ）",
+        "label":   "Products per row on desktop",
         "default": 4
       },
       {
         "type": "select",
         "id": "grid_mobile",
-        "label": "1行あたりの商品数（モバイル）",
+        "label": "Products per row on mobile",
         "options": [
           {
             "value": "1",
-            "label": "1"
+            "label": "One"
           },
           {
             "value": "2",
-            "label": "2"
+            "label": "Two"
           }
         ],
         "default": "2"
@@ -316,17 +316,17 @@
       {
         "type": "featured_image",
         "limit": 1,
-        "name": "特集画像",
+        "name": "Featured image",
         "settings": [
           {
             "type": "image_picker",
             "id": "featured_image",
-            "label": "画像"
+            "label": "Image"
           },
           {
             "type": "select",
             "id": "featured_image_bg_position",
-            "label": "位置",
+            "label": "Position",
             "default": "center-center",
             "options": [
               { "label": "上", "value": "center-top" },
@@ -339,42 +339,42 @@
           {
             "type": "text",
             "id": "featured_heading",
-            "label": "見出し",
-            "default":"特集リンク"
+            "label": "Heading",
+            "default":"Featured link"
           },
           {
             "type": "richtext",
             "id": "featured_text",
-            "label": "テキスト",
-            "default":"<p>商品またはコレクションのプロモーション<p>"
+            "label": "Text",
+            "default":"<p>Promote products or collections<p>"
           },
           {
             "type": "text",
             "id": "featured_button_text",
-            "label": "ボタンラベル",
-            "default":"もっと見る"
+            "label": "Button label",
+            "default":"Learn more"
           },
           {
             "type": "url",
             "id": "featured_button_link",
-            "label": "ボタンのリンク"
+            "label": "Button link"
           },
           {
             "type": "color",
             "id": "featured_color_text",
-            "label": "文字の色",
+            "label": "Text",
             "default": "#ffffff"
           },
           {
             "type": "color",
             "id": "featured_color_overlay",
-            "label": "オーバーレイの色",
+            "label": "Overlay",
             "default": "#222222"
           },
           {
             "type": "range",
             "id": "featured_overlay_opacity",
-            "label": "オーバーレイの透過",
+            "label": "Overlay opacity",
             "step": 5,
             "max": 100,
             "min": 0,
@@ -385,28 +385,28 @@
       },
       {
         "type": "group",
-        "name": "レガシー: タググループ",
+        "name": "Legacy: Tag group",
         "settings": [
           {
             "type": "header",
-            "content": "レガシー機能: タグのグループ化"
+            "content": "Legacy feature: tag grouping"
           },
           {
             "type": "paragraph",
-            "content": "これは、大規模なカタログを持つマーチャントのOS2.0への移行を支援することを目的としたレガシー機能です。タグによるフィルタリングは、0S2.0フィルターがその機能を完全に代替できるようになった時点で、Broadcastから削除される予定です。このタグによる製品フィルタリングの方法は、[OS2.0フィルタ](/admin/menus)と組み合わせることができません。"
+            "content": "This is a legacy feature that is intended to help merchants with large catalogs transition to OS2.0. Filtering by tag will be removed from Broadcast when 0S2.0 filters can fully replace their functionality. This method of tag-based product filtering cannot be combined with [OS2.0 filters](/admin/menus)."
           },
           {
             "type": "text",
             "id": "title",
-            "label": "グループの名前",
-            "default": "サイズ別フィルター"
+            "label": "Group name",
+            "default": "Filter by size"
           },
           {
             "type": "text",
             "id": "group_tags",
-            "label": "タグリスト",
+            "label": "Tag list",
             "default": "Small, Medium, Large",
-            "info": "カンマで区切られたタグのグループ"
+            "info": "Comma separated group of tags"
           }
         ]
       }

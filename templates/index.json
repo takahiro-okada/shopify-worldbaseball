@@ -6,15 +6,39 @@
         "slideshow-0": {
           "type": "image",
           "settings": {
-            "title": "見出し",
-            "description": "ここに説明が入ります。"
+            "bg_position": "center-center",
+            "image": "shopify:\/\/shop_images\/sample-mv1-pc.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/sample-mv1-sp.jpg",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "title": "",
+            "description": "",
+            "flex_align": "align--middle-center",
+            "text_color": "text-light",
+            "transparent": true,
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
           }
         },
         "slideshow-1": {
           "type": "image",
           "settings": {
-            "title": "見出し",
-            "description": "ここにテキストが入ります。"
+            "bg_position": "center-center",
+            "image": "shopify:\/\/shop_images\/sample-mv2-pc.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/sample-mv2-sp.jpg",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "title": "",
+            "description": "",
+            "flex_align": "align--middle-center",
+            "text_color": "text-light",
+            "transparent": true,
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
           }
         }
       },
@@ -23,299 +47,231 @@
         "slideshow-1"
       ],
       "settings": {
-        "height": "screen-height-two-thirds",
+        "height": "image-height",
         "transition": "slide",
         "arrows_style": false,
         "dots_style": "line",
-        "autoplay": false
+        "autoplay": false,
+        "autoplay_speed": 8
       }
     },
-    "image-with-text": {
-      "type": "section-custom-content",
+    "16429553979cf60113": {
+      "type": "section-collections-list",
       "blocks": {
-        "image": {
-          "type": "image",
-          "settings": {
-            "bg_position": "center-center",
-            "overlay_opacity": 0,
-            "overlay_color": "#000",
-            "title": "",
-            "description": "",
-            "flex_align": "align--middle-left",
-            "text_color": "text-light",
-            "transparent": true,
-            "link_text": "",
-            "link": "\/collections\/all",
-            "button_color": "btn--white",
-            "button_style": "hero__btn btn btn--large btn--outline caps"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "subheading": "サブ見出し",
-            "title": "ここに見出しが入ります。",
-            "text": "<p>ここに説明が入ります。<\/p>",
-            "text_size": 2,
-            "text_columns": 1,
-            "align_text": "text-left",
-            "text_color": "text-dark",
-            "bg_color": "#ffffff",
-            "button_text": "",
-            "button_url": "",
-            "button_color": "btn--neutral",
-            "button_style": "hero__btn btn btn--large btn--outline caps"
-          }
-        }
-      },
-      "block_order": [
-        "image",
-        "text"
-      ],
-      "settings": {
-        "height": "screen-height-one-half",
-        "padding": true,
-        "borders": false,
-        "wrapper": false
-      }
-    },
-    "product-with-image": {
-      "type": "section-custom-content",
-      "disabled": true,
-      "blocks": {
-        "product": {
-          "type": "product",
-          "settings": {
-            "title": "Sell with style",
-            "product": "",
-            "text_color": "text-dark",
-            "bg_color": "#ffffff"
-          }
-        },
-        "image": {
-          "type": "image",
-          "settings": {
-            "title": "Commerce first",
-            "description": "販売に特化した斬新なセクションで、製品にフォーカスする。",
-            "link_text": "",
-            "link": "\/collections\/all"
-          }
-        }
-      },
-      "block_order": [
-        "product",
-        "image"
-      ],
-      "settings": {
-        "padding": true
-      }
-    },
-    "tabs": {
-      "type": "section-tab-collections",
-      "blocks": {
-        "tabs-0": {
+        "16429553971a248004-0": {
           "type": "collection",
           "settings": {
+            "collection": "",
             "title": ""
           }
         },
-        "tabs-1": {
+        "16429553971a248004-1": {
           "type": "collection",
           "settings": {
+            "collection": "",
+            "title": ""
+          }
+        },
+        "16429553971a248004-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": ""
+          }
+        },
+        "16429553971a248004-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": ""
+          }
+        },
+        "aae35f4c-8a3e-475f-a36a-6328c35f4767": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": ""
+          }
+        },
+        "e3a469ab-a09c-4292-a2c3-7e0afed2496c": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": ""
+          }
+        },
+        "db1f2f6d-1a93-4661-8e94-879ffb9c5fef": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": ""
+          }
+        },
+        "e264513a-1ef6-42fe-afa4-b1eec48777c1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
             "title": ""
           }
         }
       },
       "block_order": [
-        "tabs-0",
-        "tabs-1"
+        "16429553971a248004-0",
+        "16429553971a248004-1",
+        "16429553971a248004-2",
+        "16429553971a248004-3",
+        "aae35f4c-8a3e-475f-a36a-6328c35f4767",
+        "e3a469ab-a09c-4292-a2c3-7e0afed2496c",
+        "db1f2f6d-1a93-4661-8e94-879ffb9c5fef",
+        "e264513a-1ef6-42fe-afa4-b1eec48777c1"
       ],
       "settings": {
-        "title": ""
+        "title": "コレクションリスト",
+        "description": "",
+        "layout": "grid",
+        "aspect_ratio": 1,
+        "enable_slider": false
       }
     },
-    "rich-text": {
-      "type": "section-rich-text",
-      "settings": {
-        "subheading": "サブ見出し",
-        "title": "見出し",
-        "text": "<p>ここに説明が入ります。<\/p>",
-        "text_size": 2,
-        "text_columns": 2,
-        "align_text": "text-left",
-        "button_text": "ボタン",
-        "button_color": "btn--neutral",
-        "button_style": "caps--large",
-        "height": "margin--medium",
-        "width": "wrapper",
-        "text_color": "text-dark",
-        "bg_color": "#ffffff"
-      }
-    },
-    "lookbook": {
-      "type": "section-look",
-      "blocks": {
-        "lookbook-0": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "position_x": 18,
-            "position_y": 50
-          }
-        },
-        "lookbook-1": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "position_x": 41,
-            "position_y": 7
-          }
-        }
-      },
-      "block_order": [
-        "lookbook-0",
-        "lookbook-1"
-      ],
-      "settings": {
-        "bg_position": "left-center",
-        "title": "Shop the look",
-        "section_bg": "#fafafa",
-        "dot_color": "#FFFFFF"
-      }
-    },
-    "featured-collection": {
+    "16429554554df2d39a": {
       "type": "section-collection",
       "settings": {
-        "heading": "特集コレクション",
+        "heading": "新着商品",
         "description": "",
         "text_alignment": "center",
+        "link_text": "すべての新着商品を見る",
+        "link_url": "",
+        "button_color": "btn--black",
+        "button_style": "hero__btn btn btn--input btn--outline caps",
+        "featured_collection": "",
         "grid": 4,
-        "rows": 2
+        "rows": 1,
+        "layout_mobile": "carousel"
       }
     },
-    "newsletter": {
-      "type": "section-newsletter",
+    "1642955528e153829b": {
+      "type": "section-collection",
       "settings": {
-        "title": "メール配信",
-        "richtext": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。<\/p>",
-        "enable_name": true,
-        "flex_align": "align--middle-stacked",
-        "height": "three-fifty-height-hero"
+        "heading": "セール商品",
+        "description": "",
+        "text_alignment": "center",
+        "link_text": "すべてのセール商品を見る",
+        "link_url": "",
+        "button_color": "btn--black",
+        "button_style": "hero__btn btn btn--input btn--outline caps",
+        "featured_collection": "",
+        "grid": 4,
+        "rows": 1,
+        "layout_mobile": "carousel"
       }
     },
-    "hero": {
+    "164295582500779323": {
       "type": "section-hero",
       "settings": {
         "bg_position": "center-center",
         "height": "screen-height-three-quarters",
         "overlay_opacity": 0,
-        "overlay_color": "#000",
-        "title": "見出し",
-        "description": "ここに説明が入ります。",
+        "overlay_color": "#000000",
+        "title": "オリジナルブランドの説明",
+        "description": "ここにはオリジナルブランドの説明が入ります。",
         "flex_align": "align--middle-left",
         "text_color": "text-dark",
         "transparent": false,
-        "link_text": "商品について",
-        "link": "",
-        "button_color": "btn--black",
-        "button_style": "hero__btn btn btn--input caps"
+        "link_text": "オリジナル商品を見る",
+        "link": "shopify:\/\/collections",
+        "button_color": "btn--secondary",
+        "button_style": "hero__btn btn btn--large btn--outline caps"
       }
     },
-    "logos": {
-      "type": "section-press",
+    "164303364231f347e9": {
+      "type": "apps",
       "blocks": {
-        "logos-0": {
-          "type": "logo-item",
+        "09aa4e28-f4e4-4fbe-9801-47b36a2d5e80": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "description": "<p>あなたの製品を愛用しているブランドからの簡単な引用を掲載する<\/p>",
-            "logo_width": 100
-          }
-        },
-        "logos-1": {
-          "type": "logo-item",
-          "settings": {
-            "description": "<p>あなたの製品を愛用しているブランドからの簡単な引用を掲載する<\/p>",
-            "logo_width": 100
-          }
-        },
-        "logos-2": {
-          "type": "logo-item",
-          "settings": {
-            "description": "<p>あなたの製品を愛用しているブランドからの簡単な引用を掲載する<\/p>",
-            "logo_width": 100
+            "heading_font": "helvetica_n4",
+            "heading_size": 20,
+            "feed_width": 100,
+            "html_area": "<h2 class=\"grid__heading text-center aos-init aos-animate\" data-aos=\"hero\" data-aos-anchor=\"#collection--template--15619235774723__16429554554df2d39a\" data-aos-order=\"1\" data-live-text-setting=\"section.template--15619235774723__16429554554df2d39a.heading\">Instagram<\/h2>"
           }
         }
       },
       "block_order": [
-        "logos-0",
-        "logos-1",
-        "logos-2"
+        "09aa4e28-f4e4-4fbe-9801-47b36a2d5e80"
       ],
       "settings": {
-        "title": "Press",
-        "logo_opacity": 60,
-        "text_color": "text-dark",
-        "bg_color": "#ffffff"
+        "include_margins": true
       }
     },
-    "icons": {
-      "type": "section-text-row",
+    "164295594229b0c645": {
+      "type": "section-blog",
+      "settings": {
+        "blog_name": "ブログ",
+        "title": "ブログ",
+        "grid": 3,
+        "rows": 1,
+        "aspect_ratio": 0.6,
+        "show_tags": false,
+        "show_author": false,
+        "show_date": true,
+        "show_button": false,
+        "show_comments": false
+      }
+    },
+    "164295601914e70c67": {
+      "type": "section-reviews",
       "blocks": {
-        "icon-0": {
-          "type": "text-item",
+        "16429560197be32e67-0": {
+          "type": "review",
           "settings": {
-            "icon_name": "icon-lock-card",
-            "icon_color": "#545454",
-            "title": "安全な取引",
-            "text": "取引は銀行レベルのセキュリティで処理される。"
+            "title": "山田 太郎",
+            "subheading": "30代 男性",
+            "review_text": "<p>このテキストは、お客様のレビューを紹介するために使用します。 優れたレビューは、正直で、顧客の悩みを代弁してくれます。<\/p>",
+            "review_url": "",
+            "review_link_name": ""
           }
         },
-        "icon-1": {
-          "type": "text-item",
+        "16429560197be32e67-1": {
+          "type": "review",
           "settings": {
-            "icon_name": "icon-basket-like",
-            "icon_color": "#545454",
-            "title": "簡単なチェックアウト",
-            "text": "安全なチェックアウトは、迅速かつ簡単にご利用いただけます。"
+            "title": "山田 花子",
+            "subheading": "30代 男性",
+            "review_text": "<p>このテキストは、お客様のレビューを紹介するために使用します。 優れたレビューは、正直で、顧客の悩みを代弁してくれます。<\/p>",
+            "review_url": "",
+            "review_link_name": ""
           }
         },
-        "icon-2": {
-          "type": "text-item",
+        "ea6a3eb6-5f6c-43e6-a428-eebf196493d9": {
+          "type": "review",
           "settings": {
-            "icon_name": "icon-chat",
-            "icon_color": "#545454",
-            "title": "お問い合わせはこちら",
-            "text": "ご質問はありませんか？いつでもご連絡ください。"
+            "title": "山田 太郎",
+            "subheading": "30代 男性",
+            "review_text": "<p>このテキストは、お客様のレビューを紹介するために使用します。 優れたレビューは、正直で、顧客の悩みを代弁してくれます。<\/p>",
+            "review_url": "",
+            "review_link_name": ""
           }
         }
       },
       "block_order": [
-        "icon-0",
-        "icon-1",
-        "icon-2"
+        "16429560197be32e67-0",
+        "16429560197be32e67-1",
+        "ea6a3eb6-5f6c-43e6-a428-eebf196493d9"
       ],
       "settings": {
-        "text_alignment": "left",
-        "icon_size": "icon--small",
-        "icon_alignment": "icon--top",
+        "text_align": "text-left",
         "text_color": "text-dark",
-        "heading_size": "h6",
-        "height": "margin--medium",
         "bg_color": "#fafafa"
       }
     }
   },
   "order": [
     "slideshow",
-    "image-with-text",
-    "product-with-image",
-    "tabs",
-    "rich-text",
-    "lookbook",
-    "featured-collection",
-    "newsletter",
-    "hero",
-    "logos",
-    "icons"
+    "16429553979cf60113",
+    "16429554554df2d39a",
+    "1642955528e153829b",
+    "164295582500779323",
+    "164303364231f347e9",
+    "164295594229b0c645",
+    "164295601914e70c67"
   ]
 }

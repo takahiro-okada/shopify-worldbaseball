@@ -28,7 +28,7 @@
       "post_error": "Sorry, looks like something went wrong. Please correct the following and submit again:"
     },
     "newsletter_form": {
-      "newsletter_email": "sample@gmail.com",
+      "newsletter_email": "email@newsletter.com",
       "first_name": "First name",
       "submit": "Join",
       "placeholder": "Email Address",

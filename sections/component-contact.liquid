@@ -1,0 +1,42 @@
+{{ 'component-contact.css' | asset_url | stylesheet_tag }}
+
+<div class="c-contact">
+  <div class="c-contact__inner wrapper">
+    <div class="c-contact__list">
+      <div class="c-contact__item">
+        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--tel">電話でお問い合わせ</span></div>
+        <div class="c-contact__main"><span class="c-contact__tel">0569-43-5558</span></div>
+      </div>
+      <div class="c-contact__item">
+        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--line">LINEで問い合わせる</span></div>
+        <div class="c-contact__main c-contact-line">
+          <span class="c-contact-line__qr">QRが入ります。</span>
+          <span class="c-contact-line__text">@line_id<br>https://lin.ee/0000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+</style>
+
+{% schema %}
+{
+  "name": "お問い合わせ",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "カスタムLiquid",
+      "info": "アプリのスニペットや他のリキッドコードを追加して、高度なカスタマイズを行うことができます"
+    }
+  ],
+  "presets": [
+    {
+      "name": "お問い合わせ",
+      "category": "テキスト"
+    }
+  ]
+}
+{% endschema %}

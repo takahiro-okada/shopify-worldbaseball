@@ -1,7 +1,7 @@
 <!-- /sections/main-page.liquid -->
 {%- assign animation_anchor = '#page--' | append: section.id -%}
 
-{% if section.settings.show_content or section.settings.subheading != blank or section.settings.show_title %}
+{% if section.settings.show_content or section.settings.subheading != blank or section.settings.show_title %}  
   <section class="index-page {{ section.settings.text_color }} {{ section.settings.height }}" id="page--{{ section.id }}" style="background-color: {{ section.settings.bg_color }};" data-section-id="{{ section.id }}" data-section-type="page">
     <div class="{{ section.settings.width }}">
       <div class="text__standard {{ section.settings.align_text }}">
@@ -37,29 +37,29 @@
 
 {% schema %}
 {
-  "name": "ページ",
+  "name": "Page",
   "settings": [
     {
       "type": "text",
       "id": "subheading",
-      "label": "サブ見出し"
+      "label": "Subheading"
     },
     {
       "type": "checkbox",
       "id": "show_title",
-      "label": "タイトルを表示する",
+      "label": "Show title",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "show_content",
-      "label": "コンテンツを表示する",
+      "label": "Show content",
       "default": true
     },
     {
       "type":  "range",
       "id":    "text_size",
-      "label": "文字のサイズ",
+      "label": "Text size",
       "min":    1,
       "max":    5,
       "step":   1,
@@ -68,53 +68,53 @@
     {
       "type": "select",
       "id": "align_text",
-      "label": "位置",
+      "label": "Text alignment",
       "default": "text-left",
       "options": [
-        {"value": "text-left","label": "左"},
-        {"value": "text-center","label": "中央"}
+        {"value": "text-left","label": "Left"},
+        {"value": "text-center","label": "Centered"}
       ]
     },
     {
       "type": "header",
-      "content": "スタイル"
+      "content": "Style"
     },
     {
       "type": "select",
       "id": "height",
-      "label": "高さ",
+      "label": "Height",
       "default": "margin--medium",
       "options": [
-        {"value": "margin--small", "label": "スモール"},
-        {"value": "margin--medium", "label": "ミディアム"},
-        {"value": "margin--large", "label": "ラージ"}
+        {"value": "margin--small", "label": "Small"},
+        {"value": "margin--medium", "label": "Medium"},
+        {"value": "margin--large", "label": "Large"}
       ]
     },
     {
       "type": "select",
       "id": "width",
-      "label": "幅",
+      "label": "Width",
       "default": "wrapper",
       "options": [
-        {"value": "wrapper", "label": "ノーマル"},
-        {"value": "wrapper--narrow", "label": "狭い"},
-        {"value": "wrapper--full", "label": "広い"}
+        {"value": "wrapper", "label": "Normal"},
+        {"value": "wrapper--narrow", "label": "Narrow"},
+        {"value": "wrapper--full", "label": "Wide"}
       ]
     },
     {
       "type": "select",
       "id": "text_color",
-      "label": "文字の色",
+      "label": "Text color",
       "default": "text-dark",
       "options": [
-        { "value": "text-light", "label": "白"},
-        { "value": "text-dark", "label": "ダーク"}
+        { "value": "text-light", "label": "White"},
+        { "value": "text-dark", "label": "Dark"}
       ]
     },
     {
       "type": "color",
       "id": "bg_color",
-      "label": "背景色",
+      "label": "Background",
       "default": "#ffffff"
     }
   ]

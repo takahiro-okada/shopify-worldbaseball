@@ -1,8 +1,9 @@
 {
   "sections": {
     "main": {
-      "type": "search",
-      "settings": {}
+      "type": "search-template-boost-pfs-filter",
+      "settings": {
+      }
     }
   },
   "order": [

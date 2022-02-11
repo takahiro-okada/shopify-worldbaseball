@@ -82,35 +82,35 @@
 
 {% schema %}
 {
-  "name": "タイトル付き画像",
+  "name": "Image with title",
   "templates": ["collection"],
   "settings": [
     {
       "type": "header",
-      "content": "タイトルと説明"
+      "content": "Title and Description"
     },
     {
       "type": "checkbox",
       "id": "show_title",
-      "label": "コレクションタイトルを表示する",
+      "label": "Show collection title",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "show_description",
-      "label": "コレクション説明を表示する",
+      "label": "Show collection description",
       "default": true
     },
     {
       "type": "select",
       "id": "text_color",
-      "label": "文字の色",
+      "label": "Text color",
       "default": "text-dark",
       "options": [
-        { "value": "text-light", "label": "白"},
-        { "value": "text-dark", "label": "ダーク"}
+        { "value": "text-light", "label": "White"},
+        { "value": "text-dark", "label": "Dark"}
       ],
-      "info": "コレクション画像の本文の色を指定しない場合、その色が使用されます。"
+      "info": "If no Collection image body text color will be used"
     },
     {
       "type": "select",
@@ -130,48 +130,48 @@
     {
       "type": "checkbox",
       "id": "transparent",
-      "label": "背景を透過する",
+      "label": "Transparent text background",
       "default": false
     },
     {
       "type": "header",
-      "content": "コレクション画像"
+      "content": "Collection image"
     },
     {
       "type": "checkbox",
       "id": "show_image",
-      "label": "コレクション画像を表示する",
+      "label": "Show collection image",
       "default": true
     },
     {
       "type": "select",
       "id": "banner_layout",
-      "label": "レイアウト",
+      "label": "Layout",
       "default": "overlay",
       "options": [
-        { "value": "inline", "label": "インライン" },
-        { "value": "overlay", "label": "オーバーレイ" }
+        { "value": "inline", "label": "Inline" },
+        { "value": "overlay", "label": "Overlay" }
       ]
     },
     {
       "type": "select",
       "id": "height",
-      "label": "高さ",
+      "label": "Height",
       "default": "screen-height-one-third",
       "options": [
-        { "value": "screen-height-one-half", "label": "画面の1/2"},
-        { "value": "screen-height-one-third", "label": "画面の1/3"},
+        { "value": "screen-height-one-half", "label": "1/2 of screen"},
+        { "value": "screen-height-one-third", "label": "1/3 of screen"},
         { "value": "five-fifty-height-hero ", "label": "550px" },
         { "value": "four-fifty-height-hero", "label": "450px" },
         { "value": "three-fifty-height-hero", "label": "350px" },
         { "value": "two-fifty-height-hero", "label": "250px" },
-        { "value": "image-height", "label": "オリジナル画像" }
+        { "value": "image-height", "label": "Image height" }
       ]
     },
     {
       "type": "range",
       "id": "overlay_opacity",
-      "label": "透過",
+      "label": "Opacity",
       "min": 0,
       "max": 100,
       "step": 5,
@@ -181,7 +181,7 @@
     {
       "type": "color",
       "id": "overlay_color",
-      "label": "オーバーレイの色",
+      "label": "Overlay color",
       "default": "#000"
     }
   ]

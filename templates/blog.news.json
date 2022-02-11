@@ -1,25 +1,23 @@
 {
   "sections": {
-    "featured": {
-      "type": "featured-posts",
-      "blocks": {
-        "feat": {
-          "type": "featured_post",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "feat"
-      ],
-      "settings": {}
-    },
     "main": {
       "type": "news",
-      "settings": {}
+      "settings": {
+        "show_title": true,
+        "show_rss": false,
+        "show_tag_nav": true,
+        "grid": 2,
+        "rows": 4,
+        "aspect_ratio": 1,
+        "show_tags": false,
+        "show_author": false,
+        "show_date": true,
+        "show_button": false,
+        "show_comments": false
+      }
     }
   },
   "order": [
-    "featured",
     "main"
   ]
 }

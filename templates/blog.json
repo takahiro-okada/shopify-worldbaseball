@@ -1,25 +1,24 @@
 {
   "sections": {
-    "featured": {
-      "type": "featured-posts",
-      "blocks": {
-        "feat": {
-          "type": "featured_post",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "feat"
-      ],
-      "settings": {}
-    },
     "main": {
       "type": "blog",
-      "settings": {}
+      "settings": {
+        "show_title": true,
+        "show_rss": false,
+        "show_tag_nav": true,
+        "grid": 3,
+        "rows": 2,
+        "aspect_ratio": 0.6,
+        "show_content": false,
+        "show_tags": true,
+        "show_author": false,
+        "show_date": true,
+        "show_button": false,
+        "show_comments": false
+      }
     }
   },
   "order": [
-    "featured",
     "main"
   ]
 }

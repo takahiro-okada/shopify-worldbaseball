@@ -2,7 +2,7 @@
 
 <section class="account">
 	<div class="just">
-      
+
 <aside class="account-sidebar">
   <span class="desktop"><b>{{ 'customer.account.title' | t }}</b></span>
   <span class="account-sidebar--mobile">{{ 'customer.account.title' | t }}</span>
@@ -10,24 +10,24 @@
     {%- assign needs_completion = true -%}
     {%- for block in section.blocks -%}
       {%- case block.type -%}
-      
+
         {%- when '@app' -%}
           {% render block %}
-      
+
         {%- when 'link' -%}
           <li {{ block.shopify_attributes }}><a href="{{ block.settings.link }}" rel="noopener" target="_blank">{{ block.settings.title }}</a></li>
-      
+
         {%- when 'email' -%}
           {% assign default_text = 'customer.account.contact_store' | t %}
           {% assign default_email = shop.email %}
           <li {{ block.shopify_attributes }}><a href="mailto:{{ block.settings.email | default: default_email }}" rel="noopener" target="_blank">{{ block.settings.title | default: default_text }}</a></li>
-        
+
         {%- when 'account' -%}
           {%- assign needs_completion = false -%}
           <li {% if template == 'customers/account' %} class="is-current"{% endif %}><a href="{{ routes.account_url }}">{{ 'customer.orders.title' | t }}</a></li>
           <li {% if template contains 'addresses' %} class="is-current"{% endif %}><a href="{{ routes.account_addresses_url }}">{{ 'customer.account.view_addresses' | t }}</a></li>
           <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
-        
+
       {%- endcase -%}
     {%- endfor -%}
 
@@ -48,7 +48,7 @@
 	              <thead>
 	                  <tr>
 	                      <th class="order-number">{{ 'customer.orders.order_number' | t }}</th>
-	                      <th class="date">{{ 'customer.orders.date' | t }}</th>
+	                      <th class="date">{{ 'customer.orders.date' | t  }}</th>
 	                      <th class="payment-status">{{ 'customer.orders.payment_status' | t }}</th>
 	                      <th class="fulfillment-status">{{ 'customer.orders.fulfillment_status' | t }}</th>
 	                      <th class="total">{{ 'customer.orders.total' | t }}</th>
@@ -61,12 +61,12 @@
 												<span>{{ order.name | link_to: order.customer_url }}</span>
 											</td>
                       <td class="date"><span class="note">
-												<span>{{ order.created_at | date: format: 'full_date' }}</span>
+												<span>{{ order.created_at |  date: '%Y年%-m月%d日' }}</span>
 											</td>
                       <td class="payment-status">
 												<span>{{ order.financial_status_label }}</span>
 												{% if order.cancelled %}
-													{% assign order_cancelled_at = order.cancelled_at | date: format: 'full_date_and_time' %}
+													{% assign order_cancelled_at = order.cancelled_at|  date: '%Y年 %-m月 %d日' %}
 													<p class="small highlight">
 														{{ 'customer.order.cancelled' | t: date: order_cancelled_at }}
 														<br>
@@ -119,7 +119,7 @@
             "type": "text",
             "id": "title",
             "label": "Email title",
-            "default": "Support"
+            "default": "ストアにメールする"
           },
 					{
 						"type": "text",

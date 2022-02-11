@@ -25,36 +25,42 @@
 
           {% when 'email' %}
             <div class="custom-form__block form-field" {{ block.shopify_attributes }}>
+              <span>{{ block.settings.heading_title }}</span>
               <label for="Form-{{ section.id }}-{{ forloop.index0 }}">{{ block.settings.title }}</label>
               <input type="email" class="contactFormEmail" id="Form-{{ section.id }}-{{ forloop.index0 }}" name="contact[email]" placeholder="{{ block.settings.title }}" autocorrect="off" autocapitalize="off" {{ required }}/>
             </div>
 
           {% when 'body' %}
             <div class="custom-form__block form-field" {{ block.shopify_attributes }}>
+              <span>{{ block.settings.heading_title }}</span>
               <label for="Form-{{ section.id }}-{{ forloop.index0 }}">{{ block.settings.title }}</label>
               <textarea rows="10" id="Form-{{ section.id }}-{{ forloop.index0 }}" class="contactFormMessage" name="contact[body]" placeholder="{{ block.settings.title }}" {{ required }}></textarea>
             </div>
 
           {% when 'text' %}
             <div class="custom-form__block form-field" {{ block.shopify_attributes }}>
+              <span>{{ block.settings.heading_title }}</span>
               <label for="Form-{{ section.id }}-{{ forloop.index0 }}">{{ block.settings.title }}</label>
               <input type="text" class="contactFormText" id="Form-{{ section.id }}-{{ forloop.index0 }}" name="contact[{{ block.settings.title | handleize | default: 'text' }}]" placeholder="{{ block.settings.title }}" autocapitalize="words" value="" {{ required }}/>
             </div>
 
           {% when 'textarea' %}
             <div class="custom-form__block form-field" {{ block.shopify_attributes }}>
+              <span>{{ block.settings.heading_title }}</span>
               <label for="Form-{{ section.id }}-{{ forloop.index0 }}">{{ block.settings.title }}</label>
               <textarea rows="10" id="Form-{{ section.id }}-{{ forloop.index0 }}" class="contactFormMessage" name="contact[{{ block.settings.title | handleize | default: 'textarea' }}]" placeholder="{{ block.settings.title }}" {{ required }}></textarea>
             </div>
 
           {% when 'telephone' %}
             <div class="custom-form__block form-field" {{ block.shopify_attributes }}>
+              <span>{{ block.settings.title }}</span>
               <label for="Form-{{ section.id }}-{{ forloop.index0 }}">{{ block.settings.title }}</label>
               <input type="tel" id="Form-{{ section.id }}-{{ forloop.index0 }}" class="contactFormPhone" name="contact[telephone]" placeholder="{{ block.settings.title }}" value="" {{ required }}/>
             </div>
 
           {% when 'name' %}
             <div class="custom-form__block form-field" {{ block.shopify_attributes }}>
+              <span>{{ block.settings.title }}</span>
               <label  for="Form-{{ section.id }}-{{ forloop.index0 }}" class="label--hidden">{{ block.settings.title }}</label>
               <input type="text" class="contactFormText" id="Form-{{ section.id }}-{{ forloop.index0 }}" name="contact[{{ block.settings.title | handleize | default: 'name' }}]" placeholder="{{ block.settings.title }}" autocapitalize="words" value="" {{ required }}/>
             </div>
@@ -176,7 +182,7 @@
       {% endunless  %}
 
       <div class="form-item">
-        <input type="submit" class="btn btn--large btn--full" value="{{ 'contact.form.send' | t }}">
+        <input type="submit" class="btn btn--large" value="{{ 'contact.form.send' | t }}">
       </div>
 
       {% if section.settings.terms %}
@@ -257,6 +263,12 @@
         "settings": [
           {
             "type": "text",
+            "id": "heading_title",
+            "label": "見出し",
+            "default": "メールアドレス"
+          },
+          {
+            "type": "text",
             "id": "title",
             "label": "ラベル",
             "default": "Email"
@@ -275,6 +287,12 @@
         "limit": 1,
         "settings": [
           {
+            "type": "text",
+            "id": "heading_title",
+            "label": "見出し",
+            "default": "お問い合わせ内容"
+          },
+          {
             "type": "textarea",
             "id": "title",
             "label": "ラベル",
@@ -292,6 +310,12 @@
         "type": "text",
         "name": "テキスト",
         "settings": [
+          {
+            "type": "text",
+            "id": "heading_title",
+            "label": "見出し",
+            "default": "お名前"
+          },
           {
             "type": "text",
             "id": "title",

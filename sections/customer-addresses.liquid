@@ -2,7 +2,7 @@
 
 <section class="account">
 	<div class="just">
-      
+
 <aside class="account-sidebar">
   <span class="desktop"><b>{{ 'customer.account.title' | t }}</b></span>
   <span class="account-sidebar--mobile">{{ 'customer.account.title' | t }}</span>
@@ -10,24 +10,24 @@
     {%- assign needs_completion = true -%}
     {%- for block in section.blocks -%}
       {%- case block.type -%}
-      
+
         {%- when '@app' -%}
           {% render block %}
-      
+
         {%- when 'link' -%}
           <li {{ block.shopify_attributes }}><a href="{{ block.settings.link }}" rel="noopener" target="_blank">{{ block.settings.title }}</a></li>
-      
+
         {%- when 'email' -%}
           {% assign default_text = 'customer.account.contact_store' | t %}
           {% assign default_email = shop.email %}
           <li {{ block.shopify_attributes }}><a href="mailto:{{ block.settings.email | default: default_email }}" rel="noopener" target="_blank">{{ block.settings.title | default: default_text }}</a></li>
-        
+
         {%- when 'account' -%}
           {%- assign needs_completion = false -%}
           <li {% if template == 'customers/account' %} class="is-current"{% endif %}><a href="{{ routes.account_url }}">{{ 'customer.orders.title' | t }}</a></li>
           <li {% if template contains 'addresses' %} class="is-current"{% endif %}><a href="{{ routes.account_addresses_url }}">{{ 'customer.account.view_addresses' | t }}</a></li>
           <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
-        
+
       {%- endcase -%}
     {%- endfor -%}
 
@@ -53,17 +53,16 @@
 				    <h2>{{ 'customer.addresses.add_new' | t }}</h2>
 
 				    <div class="grid grid--full">
+              <div class="grid__item medium-up--one-half">
+				        <div class="form-field">
+				          <label for="AddressLastNameNew">{{ 'customer.addresses.last_name' | t }}</label>
+				          <input placeholder="{{ 'customer.addresses.last_name' | t }}" type="text" name="address[last_name]" id="AddressLastNameNew" value="{{ form.last_name }}" autocapitalize="words">
+				        </div>
+							</div>
 				      <div class="grid__item medium-up--one-half">
 				        <div class="form-field form-padding--medium-up">
 				          <label for="AddressFirstNameNew">{{ 'customer.addresses.first_name' | t }}</label>
 				          <input placeholder="{{ 'customer.addresses.first_name' | t }}" type="text" name="address[first_name]" id="AddressFirstNameNew" value="{{ form.first_name }}" autocapitalize="words">
-				        </div>
-							</div>
-							
-				      <div class="grid__item medium-up--one-half">
-				        <div class="form-field">
-				          <label for="AddressLastNameNew">{{ 'customer.addresses.last_name' | t }}</label>
-				          <input placeholder="{{ 'customer.addresses.last_name' | t }}" type="text" name="address[last_name]" id="AddressLastNameNew" value="{{ form.last_name }}" autocapitalize="words">
 				        </div>
 							</div>
 						</div>
@@ -76,47 +75,8 @@
 								</div>
 							</div>
 						</div>
-						
-				    <div class="grid grid--full">
-				      <div class="grid__item medium-up--one-half">
-				        <div class="form-field form-padding--medium-up">
-				          <label for="AddressAddress1New">{{ 'customer.addresses.address1' | t }}</label>
-				          <input placeholder="{{ 'customer.addresses.address1' | t }}" type="text" name="address[address1]" id="AddressAddress1New" value="{{ form.address1 }}" autocapitalize="words">
-				        </div>
-							</div>
-							
-				      <div class="grid__item medium-up--one-half">
-				        <div class="form-field">
-				          <label for="AddressAddress2New">{{ 'customer.addresses.address2' | t }}</label>
-				          <input placeholder="{{ 'customer.addresses.address2' | t }}" type="text" name="address[address2]" id="AddressAddress2New" value="{{ form.address2 }}" autocapitalize="words">
-				        </div>
-							</div>
-						</div>
-						
-				    <div class="grid grid--full">
-							<div class="grid__item medium-up--one-third">
-				        <div class="form-field form-padding--medium-up">
-				          <label for="AddressCityNew">{{ 'customer.addresses.city' | t }}</label>
-				          <input placeholder="{{ 'customer.addresses.city' | t }}" type="text" name="address[city]" id="AddressCityNew" value="{{ form.city }}" autocapitalize="words">
-				        </div>
-							</div>
-							
-				      <div class="grid__item medium-up--one-third">
-				        <div class="form-field form-padding--medium-up">
-				          <label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
-				          <select name="address[country]" id="AddressCountryNew" data-default="{{ form.country }}">{{ country_option_tags }}</select>
-				        </div>
-							</div>
-							
-							<div class="grid__item medium-up--one-third" id="AddressProvinceContainerNew" style="display: none">
-				        <div class="form-field">
-									<label for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
-									<select name="address[province]" id="AddressProvinceNew" data-default="{{ form.province }}"></select>
-				        </div>
-				      </div>
-						</div>
-						
-				    <div class="grid grid--full">
+
+            <div class="grid grid--full">
 							<div class="grid__item medium-up--one-half">
 								<div class="form-field form-padding--medium-up">
 									<label for="AddressZipNew">{{ 'customer.addresses.zip' | t }}</label>
@@ -131,6 +91,48 @@
 				        </div>
 				      </div>
 				    </div>
+
+            <div class="grid grid--full">
+              <div class="grid__item medium-up--one-third" style="display: none;">
+                <div class="form-field form-padding--medium-up">
+                  <label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
+                  <select name="address[country]" id="AddressCountryNew" data-default="{{ form.country }}">
+                    {{ country_option_tags  | replace: '[&quot;Aichi&quot;,&quot;愛知県&quot;],[&quot;Akita&quot;,&quot;秋田県&quot;],[&quot;Aomori&quot;,&quot;青森県&quot;],[&quot;Chiba&quot;,&quot;千葉県&quot;],[&quot;Ehime&quot;,&quot;愛媛県&quot;],[&quot;Fukui&quot;,&quot;福井県&quot;],[&quot;Fukuoka&quot;,&quot;福岡県&quot;],[&quot;Fukushima&quot;,&quot;福島県&quot;],[&quot;Gifu&quot;,&quot;岐阜県&quot;],[&quot;Gunma&quot;,&quot;群馬県&quot;],[&quot;Hiroshima&quot;,&quot;広島県&quot;],[&quot;Hokkaidō&quot;,&quot;北海道&quot;],[&quot;Hyōgo&quot;,&quot;兵庫県&quot;],[&quot;Ibaraki&quot;,&quot;茨城県&quot;],[&quot;Ishikawa&quot;,&quot;石川県&quot;],[&quot;Iwate&quot;,&quot;岩手県&quot;],[&quot;Kagawa&quot;,&quot;香川県&quot;],[&quot;Kagoshima&quot;,&quot;鹿児島県&quot;],[&quot;Kanagawa&quot;,&quot;神奈川県&quot;],[&quot;Kumamoto&quot;,&quot;熊本県&quot;],[&quot;Kyōto&quot;,&quot;京都府&quot;],[&quot;Kōchi&quot;,&quot;高知県&quot;],[&quot;Mie&quot;,&quot;三重県&quot;],[&quot;Miyagi&quot;,&quot;宮城県&quot;],[&quot;Miyazaki&quot;,&quot;宮崎県&quot;],[&quot;Nagano&quot;,&quot;長野県&quot;],[&quot;Nagasaki&quot;,&quot;長崎県&quot;],[&quot;Nara&quot;,&quot;奈良県&quot;],[&quot;Niigata&quot;,&quot;新潟県&quot;],[&quot;Okayama&quot;,&quot;岡山県&quot;],[&quot;Okinawa&quot;,&quot;沖縄県&quot;],[&quot;Saga&quot;,&quot;佐賀県&quot;],[&quot;Saitama&quot;,&quot;埼玉県&quot;],[&quot;Shiga&quot;,&quot;滋賀県&quot;],[&quot;Shimane&quot;,&quot;島根県&quot;],[&quot;Shizuoka&quot;,&quot;静岡県&quot;],[&quot;Tochigi&quot;,&quot;栃木県&quot;],[&quot;Tokushima&quot;,&quot;徳島県&quot;],[&quot;Tottori&quot;,&quot;鳥取県&quot;],[&quot;Toyama&quot;,&quot;富山県&quot;],[&quot;Tōkyō&quot;,&quot;東京都&quot;],[&quot;Wakayama&quot;,&quot;和歌山県&quot;],[&quot;Yamagata&quot;,&quot;山形県&quot;],[&quot;Yamaguchi&quot;,&quot;山口県&quot;],[&quot;Yamanashi&quot;,&quot;山梨県&quot;],[&quot;Ōita&quot;,&quot;大分県&quot;],[&quot;Ōsaka&quot;,&quot;大阪府&quot;]', '[&quot;Hokkaidō&quot;,&quot;北海道&quot;],[&quot;Aomori&quot;,&quot;青森県&quot;],[&quot;Iwate&quot;,&quot;岩手県&quot;],[&quot;Miyagi&quot;,&quot;宮城県&quot;],[&quot;Akita&quot;,&quot;秋田県&quot;],[&quot;Yamagata&quot;,&quot;山形県&quot;],[&quot;Fukushima&quot;,&quot;福島県&quot;],[&quot;Ibaraki&quot;,&quot;茨城県&quot;],[&quot;Tochigi&quot;,&quot;栃木県&quot;],[&quot;Gunma&quot;,&quot;群馬県&quot;],[&quot;Saitama&quot;,&quot;埼玉県&quot;],[&quot;Chiba&quot;,&quot;千葉県&quot;],[&quot;Tōkyō&quot;,&quot;東京都&quot;],[&quot;Kanagawa&quot;,&quot;神奈川県&quot;],[&quot;Niigata&quot;,&quot;新潟県&quot;],[&quot;Toyama&quot;,&quot;富山県&quot;],[&quot;Ishikawa&quot;,&quot;石川県&quot;],[&quot;Fukui&quot;,&quot;福井県&quot;],[&quot;Yamanashi&quot;,&quot;山梨県&quot;],[&quot;Nagano&quot;,&quot;長野県&quot;],[&quot;Gifu&quot;,&quot;岐阜県&quot;],[&quot;Shizuoka&quot;,&quot;静岡県&quot;],[&quot;Aichi&quot;,&quot;愛知県&quot;],[&quot;Mie&quot;,&quot;三重県&quot;],[&quot;Shiga&quot;,&quot;滋賀県&quot;],[&quot;Kyōto&quot;,&quot;京都府&quot;],[&quot;Ōsaka&quot;,&quot;大阪府&quot;],[&quot;Hyōgo&quot;,&quot;兵庫県&quot;],[&quot;Nara&quot;,&quot;奈良県&quot;],[&quot;Wakayama&quot;,&quot;和歌山県&quot;],[&quot;Tottori&quot;,&quot;鳥取県&quot;],[&quot;Shimane&quot;,&quot;島根県&quot;],[&quot;Okayama&quot;,&quot;岡山県&quot;],[&quot;Hiroshima&quot;,&quot;広島県&quot;],[&quot;Yamaguchi&quot;,&quot;山口県&quot;],[&quot;Tokushima&quot;,&quot;徳島県&quot;],[&quot;Kagawa&quot;,&quot;香川県&quot;],[&quot;Ehime&quot;,&quot;愛媛県&quot;],[&quot;Kōchi&quot;,&quot;高知県&quot;],[&quot;Fukuoka&quot;,&quot;福岡県&quot;],[&quot;Saga&quot;,&quot;佐賀県&quot;],[&quot;Nagasaki&quot;,&quot;長崎県&quot;],[&quot;Kumamoto&quot;,&quot;熊本県&quot;],[&quot;Ōita&quot;,&quot;大分県&quot;],[&quot;Miyazaki&quot;,&quot;宮崎県&quot;],[&quot;Kagoshima&quot;,&quot;鹿児島県&quot;],[&quot;Okinawa&quot;,&quot;沖縄県&quot;]'}}
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid__item medium-up--one-half" id="AddressProvinceContainerNew" style="display: none">
+                <div class="form-field">
+                  <label for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
+                  <select name="address[province]" id="AddressProvinceNew" data-default="{{ form.province }}"></select>
+                </div>
+              </div>
+							<div class="grid__item medium-up--one-half">
+				        <div class="form-field form-padding--medium-up">
+				          <label for="AddressCityNew">{{ 'customer.addresses.city' | t }}</label>
+				          <input placeholder="{{ 'customer.addresses.city' | t }}" type="text" name="address[city]" id="AddressCityNew" value="{{ form.city }}" autocapitalize="words">
+				        </div>
+							</div>
+
+						</div>
+
+				    <div class="grid grid--full">
+				      <div class="grid__item medium-up--one-half">
+				        <div class="form-field form-padding--medium-up">
+				          <label for="AddressAddress1New">{{ 'customer.addresses.address1' | t }}</label>
+				          <input placeholder="{{ 'customer.addresses.address1' | t }}" type="text" name="address[address1]" id="AddressAddress1New" value="{{ form.address1 }}" autocapitalize="words">
+				        </div>
+							</div>
+
+				      <div class="grid__item medium-up--one-half">
+				        <div class="form-field">
+				          <label for="AddressAddress2New">{{ 'customer.addresses.address2' | t }}</label>
+				          <input placeholder="{{ 'customer.addresses.address2' | t }}" type="text" name="address[address2]" id="AddressAddress2New" value="{{ form.address2 }}" autocapitalize="words">
+				        </div>
+							</div>
+						</div>
+
 				    <p>
 				    {{ form.set_as_default_checkbox }}
 				    <label for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>
@@ -152,7 +154,14 @@
 				    {% if address == customer.default_address %}
 				      <p><strong>{{ 'customer.addresses.default' | t }}</strong></p>
 				    {% endif %}
-				    {{ address | format_address }}
+
+            <p>
+              {{ address.last_name }} {{ address.first_name }}<br>
+              {% if address.zip.size > 1 %}
+              〒{{ address.zip }}<br>
+              {% endif %}
+              {{ address.province }} {{ address.city }} {{ address.street }}<br>
+            </p>
 
 				    <button type="button" class="btn btn--neutral btn--small address-edit-toggle" data-form-id="{{ address.id }}">
 				      {{ 'customer.addresses.edit' | t }}
@@ -167,6 +176,15 @@
 				        <h4 class="h4--body">{{ 'customer.addresses.edit_address' | t }}</h2>
 
 				        <div class="grid grid--full">
+
+                  <div class="grid__item medium-up--one-half">
+                    <div class="form-field">
+                      <label for="AddressLastName_{{ form.id }}">
+                        {{ 'customer.addresses.last_name' | t }}
+                      </label>
+                      <input placeholder="{{ 'customer.addresses.last_name' | t }}" type="text" name="address[last_name]" id="AddressLastName_{{ form.id }}" value="{{ form.last_name }}" autocapitalize="words">
+                    </div>
+                  </div>
 				          <div class="grid__item medium-up--one-half">
 				            <div class="form-field form-padding--medium-up">
 				              <label for="AddressFirstName_{{ form.id }}">
@@ -175,17 +193,8 @@
 				              <input placeholder="{{ 'customer.addresses.first_name' | t }}" type="text" name="address[first_name]" id="AddressFirstName_{{ form.id }}" value="{{ form.first_name }}" autocapitalize="words">
 				            </div>
 									</div>
-									
-				          <div class="grid__item medium-up--one-half">
-				            <div class="form-field">
-				              <label for="AddressLastName_{{ form.id }}">
-				                {{ 'customer.addresses.last_name' | t }}
-				              </label>
-				              <input placeholder="{{ 'customer.addresses.last_name' | t }}" type="text" name="address[last_name]" id="AddressLastName_{{ form.id }}" value="{{ form.last_name }}" autocapitalize="words">
-				            </div>
-									</div>
 								</div>
-								
+
 								<div class="grid grid--full">
 									<div class="grid__item">
 				            <div class="form-field">
@@ -194,7 +203,48 @@
 				            </div>
 				          </div>
 								</div>
-								
+
+                <div class="grid grid--full">
+									<div class="grid__item medium-up--one-half">
+				            <div class="form-field form-padding--medium-up">
+				              <label for="AddressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
+				              <input placeholder="{{ 'customer.addresses.zip' | t }}" type="text" name="address[zip]" id="AddressZip_{{ form.id }}" value="{{ form.zip }}" autocapitalize="characters">
+				            </div>
+									</div>
+
+				          <div class="grid__item medium-up--one-half">
+				            <div class="form-field">
+				              <label for="AddressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
+				              <input placeholder="{{ 'customer.addresses.phone' | t }}" type="tel" name="address[phone]" id="AddressPhone_{{ form.id }}" value="{{ form.phone }}">
+				            </div>
+				          </div>
+				        </div>
+
+                <div class="grid grid--full">
+                  <div class="grid__item medium-up--one-third" style="display: none;">
+				            <div class="form-field form-padding--medium-up">
+											<label for="AddressCountry_{{ form.id }}">{{ 'customer.addresses.country' | t }}</label>
+				              <select name="address[country]" id="AddressCountry_{{ form.id }}" class="address-country-option" data-form-id="{{ form.id }}" data-default="{{ form.country }}">
+                        {{ country_option_tags  | replace: '[&quot;Aichi&quot;,&quot;愛知県&quot;],[&quot;Akita&quot;,&quot;秋田県&quot;],[&quot;Aomori&quot;,&quot;青森県&quot;],[&quot;Chiba&quot;,&quot;千葉県&quot;],[&quot;Ehime&quot;,&quot;愛媛県&quot;],[&quot;Fukui&quot;,&quot;福井県&quot;],[&quot;Fukuoka&quot;,&quot;福岡県&quot;],[&quot;Fukushima&quot;,&quot;福島県&quot;],[&quot;Gifu&quot;,&quot;岐阜県&quot;],[&quot;Gunma&quot;,&quot;群馬県&quot;],[&quot;Hiroshima&quot;,&quot;広島県&quot;],[&quot;Hokkaidō&quot;,&quot;北海道&quot;],[&quot;Hyōgo&quot;,&quot;兵庫県&quot;],[&quot;Ibaraki&quot;,&quot;茨城県&quot;],[&quot;Ishikawa&quot;,&quot;石川県&quot;],[&quot;Iwate&quot;,&quot;岩手県&quot;],[&quot;Kagawa&quot;,&quot;香川県&quot;],[&quot;Kagoshima&quot;,&quot;鹿児島県&quot;],[&quot;Kanagawa&quot;,&quot;神奈川県&quot;],[&quot;Kumamoto&quot;,&quot;熊本県&quot;],[&quot;Kyōto&quot;,&quot;京都府&quot;],[&quot;Kōchi&quot;,&quot;高知県&quot;],[&quot;Mie&quot;,&quot;三重県&quot;],[&quot;Miyagi&quot;,&quot;宮城県&quot;],[&quot;Miyazaki&quot;,&quot;宮崎県&quot;],[&quot;Nagano&quot;,&quot;長野県&quot;],[&quot;Nagasaki&quot;,&quot;長崎県&quot;],[&quot;Nara&quot;,&quot;奈良県&quot;],[&quot;Niigata&quot;,&quot;新潟県&quot;],[&quot;Okayama&quot;,&quot;岡山県&quot;],[&quot;Okinawa&quot;,&quot;沖縄県&quot;],[&quot;Saga&quot;,&quot;佐賀県&quot;],[&quot;Saitama&quot;,&quot;埼玉県&quot;],[&quot;Shiga&quot;,&quot;滋賀県&quot;],[&quot;Shimane&quot;,&quot;島根県&quot;],[&quot;Shizuoka&quot;,&quot;静岡県&quot;],[&quot;Tochigi&quot;,&quot;栃木県&quot;],[&quot;Tokushima&quot;,&quot;徳島県&quot;],[&quot;Tottori&quot;,&quot;鳥取県&quot;],[&quot;Toyama&quot;,&quot;富山県&quot;],[&quot;Tōkyō&quot;,&quot;東京都&quot;],[&quot;Wakayama&quot;,&quot;和歌山県&quot;],[&quot;Yamagata&quot;,&quot;山形県&quot;],[&quot;Yamaguchi&quot;,&quot;山口県&quot;],[&quot;Yamanashi&quot;,&quot;山梨県&quot;],[&quot;Ōita&quot;,&quot;大分県&quot;],[&quot;Ōsaka&quot;,&quot;大阪府&quot;]', '[&quot;Hokkaidō&quot;,&quot;北海道&quot;],[&quot;Aomori&quot;,&quot;青森県&quot;],[&quot;Iwate&quot;,&quot;岩手県&quot;],[&quot;Miyagi&quot;,&quot;宮城県&quot;],[&quot;Akita&quot;,&quot;秋田県&quot;],[&quot;Yamagata&quot;,&quot;山形県&quot;],[&quot;Fukushima&quot;,&quot;福島県&quot;],[&quot;Ibaraki&quot;,&quot;茨城県&quot;],[&quot;Tochigi&quot;,&quot;栃木県&quot;],[&quot;Gunma&quot;,&quot;群馬県&quot;],[&quot;Saitama&quot;,&quot;埼玉県&quot;],[&quot;Chiba&quot;,&quot;千葉県&quot;],[&quot;Tōkyō&quot;,&quot;東京都&quot;],[&quot;Kanagawa&quot;,&quot;神奈川県&quot;],[&quot;Niigata&quot;,&quot;新潟県&quot;],[&quot;Toyama&quot;,&quot;富山県&quot;],[&quot;Ishikawa&quot;,&quot;石川県&quot;],[&quot;Fukui&quot;,&quot;福井県&quot;],[&quot;Yamanashi&quot;,&quot;山梨県&quot;],[&quot;Nagano&quot;,&quot;長野県&quot;],[&quot;Gifu&quot;,&quot;岐阜県&quot;],[&quot;Shizuoka&quot;,&quot;静岡県&quot;],[&quot;Aichi&quot;,&quot;愛知県&quot;],[&quot;Mie&quot;,&quot;三重県&quot;],[&quot;Shiga&quot;,&quot;滋賀県&quot;],[&quot;Kyōto&quot;,&quot;京都府&quot;],[&quot;Ōsaka&quot;,&quot;大阪府&quot;],[&quot;Hyōgo&quot;,&quot;兵庫県&quot;],[&quot;Nara&quot;,&quot;奈良県&quot;],[&quot;Wakayama&quot;,&quot;和歌山県&quot;],[&quot;Tottori&quot;,&quot;鳥取県&quot;],[&quot;Shimane&quot;,&quot;島根県&quot;],[&quot;Okayama&quot;,&quot;岡山県&quot;],[&quot;Hiroshima&quot;,&quot;広島県&quot;],[&quot;Yamaguchi&quot;,&quot;山口県&quot;],[&quot;Tokushima&quot;,&quot;徳島県&quot;],[&quot;Kagawa&quot;,&quot;香川県&quot;],[&quot;Ehime&quot;,&quot;愛媛県&quot;],[&quot;Kōchi&quot;,&quot;高知県&quot;],[&quot;Fukuoka&quot;,&quot;福岡県&quot;],[&quot;Saga&quot;,&quot;佐賀県&quot;],[&quot;Nagasaki&quot;,&quot;長崎県&quot;],[&quot;Kumamoto&quot;,&quot;熊本県&quot;],[&quot;Ōita&quot;,&quot;大分県&quot;],[&quot;Miyazaki&quot;,&quot;宮崎県&quot;],[&quot;Kagoshima&quot;,&quot;鹿児島県&quot;],[&quot;Okinawa&quot;,&quot;沖縄県&quot;]'}}
+				              </select>
+				            </div>
+									</div>
+
+                  <div class="grid__item medium-up--one-half" id="AddressProvinceContainer_{{ form.id }}" style="display: none">
+				            <div class="form-field">
+											<label for="AddressProvince_{{ form.id }}">{{ 'customer.addresses.province' | t }}</label>
+											<select name="address[province]" id="AddressProvince_{{ form.id }}" data-default="{{ form.province }}"></select>
+				            </div>
+									</div>
+
+									<div class="grid__item medium-up--one-half">
+				            <div class="form-field form-padding--medium-up">
+				              <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
+				              <input placeholder="{{ 'customer.addresses.city' | t }}" type="text" name="address[city]" id="AddressCity_{{ form.id }}" value="{{ form.city }}" autocapitalize="words">
+				            </div>
+									</div>
+								</div>
+
 				        <div class="grid grid--full">
 				          <div class="grid__item medium-up--one-half">
 				            <div class="form-field form-padding--medium-up">
@@ -204,55 +254,14 @@
 				              <input placeholder="{{ 'customer.addresses.address1' | t }}" type="text" name="address[address1]" id="AddressAddress1_{{ form.id }}" value="{{ form.address1 }}" autocapitalize="words">
 				            </div>
 									</div>
-									
+
 				          <div class="grid__item medium-up--one-half">
 				            <div class="form-field">
 				              <label for="AddressAddress2_{{ form.id }}">{{ 'customer.addresses.address2' | t }}</label>
 				              <input placeholder="{{ 'customer.addresses.address2' | t }}" type="text" name="address[address2]" id="AddressAddress2_{{ form.id }}" value="{{ form.address2 }}" autocapitalize="words">
 				            </div>
-									</div>          
-								</div>
-								
-				        <div class="grid grid--full">
-									<div class="grid__item medium-up--one-third">
-				            <div class="form-field form-padding--medium-up">
-				              <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
-				              <input placeholder="{{ 'customer.addresses.city' | t }}" type="text" name="address[city]" id="AddressCity_{{ form.id }}" value="{{ form.city }}" autocapitalize="words">
-				            </div>
-									</div>
-									
-				          <div class="grid__item medium-up--one-third">
-				            <div class="form-field form-padding--medium-up">
-											<label for="AddressCountry_{{ form.id }}">{{ 'customer.addresses.country' | t }}</label>
-				              <select name="address[country]" id="AddressCountry_{{ form.id }}" class="address-country-option" data-form-id="{{ form.id }}" data-default="{{ form.country }}">
-				                {{ country_option_tags }}
-				              </select>
-				            </div>
-									</div>
-									
-				          <div class="grid__item medium-up--one-third" id="AddressProvinceContainer_{{ form.id }}" style="display: none">
-				            <div class="form-field">
-											<label for="AddressProvince_{{ form.id }}">{{ 'customer.addresses.province' | t }}</label>
-											<select name="address[province]" id="AddressProvince_{{ form.id }}" data-default="{{ form.province }}"></select>
-				            </div>
 									</div>
 								</div>
-								
-				        <div class="grid grid--full">
-									<div class="grid__item medium-up--one-half">
-				            <div class="form-field form-padding--medium-up">
-				              <label for="AddressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
-				              <input placeholder="{{ 'customer.addresses.zip' | t }}" type="text" name="address[zip]" id="AddressZip_{{ form.id }}" value="{{ form.zip }}" autocapitalize="characters">
-				            </div>
-									</div>
-									
-				          <div class="grid__item medium-up--one-half">
-				            <div class="form-field">
-				              <label for="AddressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
-				              <input placeholder="{{ 'customer.addresses.phone' | t }}" type="tel" name="address[phone]" id="AddressPhone_{{ form.id }}" value="{{ form.phone }}">
-				            </div>
-				          </div>
-				        </div>
 
 				        <p>
 				          {{ form.set_as_default_checkbox }}
@@ -298,7 +307,7 @@
             "type": "text",
             "id": "title",
             "label": "Email title",
-            "default": "Support"
+            "default": "ストアにメールする"
           },
 					{
 						"type": "text",

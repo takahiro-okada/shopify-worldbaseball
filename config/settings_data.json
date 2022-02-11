@@ -29,8 +29,10 @@
     "type_heading_size": 100,
     "type_base_font": "neuzeit_office_n4",
     "type_body_size": 100,
+    "parallax_enable": false,
     "product_grid_outline": false,
     "show_scroll_top_button": true,
+    "instagram_link": "https:\/\/www.instagram.com\/baseballshopworld\/",
     "product_grid_aspect_ratio": 0.9,
     "sale_bg_color": "#f9dee5",
     "sale_text_color": "#af7b88",
@@ -104,28 +106,36 @@
             "type": "linklist",
             "settings": {
               "linklist": "main-menu",
-              "title": ""
+              "title": "SHOP"
             }
           },
-          "footer-1": {
+          "0f6b7607-f218-4778-a71b-b647959995d3": {
+            "type": "linklist",
+            "settings": {
+              "linklist": "footer",
+              "title": "カテゴリー"
+            }
+          },
+          "86225f1a-266a-4f93-9d7a-aaafd5c02663": {
+            "type": "linklist",
+            "settings": {
+              "linklist": "footer",
+              "title": "サポート"
+            }
+          },
+          "b9fa7095-859b-4884-81cb-b6126745202c": {
             "type": "social",
             "settings": {
               "title": "SNS",
-              "richtext": "<p>SNSで最新情報をお届けします。<\/p>"
-            }
-          },
-          "footer-2": {
-            "type": "newsletter",
-            "settings": {
-              "richtext": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。<\/p>",
-              "enable_name": false
+              "richtext": ""
             }
           }
         },
         "block_order": [
           "footer-0",
-          "footer-1",
-          "footer-2"
+          "0f6b7607-f218-4778-a71b-b647959995d3",
+          "86225f1a-266a-4f93-9d7a-aaafd5c02663",
+          "b9fa7095-859b-4884-81cb-b6126745202c"
         ],
         "settings": {
           "logo_image_width": 150,
@@ -153,10 +163,13 @@
         "block_order": [
           "popups-0"
         ],
-        "settings": {}
+        "settings": {
+        }
       }
     },
-    "content_for_index": []
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Clean": {
@@ -243,14 +256,14 @@
             "footer-1": {
               "type": "social",
               "settings": {
-                "title": "SNS",
-                "richtext": "<p>SNSで最新情報をお届けします。<\/p>"
+                "title": "Social",
+                "richtext": "<p>Stay current with updates from our social channels.<\/p>"
               }
             },
             "footer-2": {
               "type": "newsletter",
               "settings": {
-                "richtext": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。<\/p>",
+                "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
                 "enable_name": false
               }
             }
@@ -286,7 +299,8 @@
           "block_order": [
             "popups-0"
           ],
-          "settings": {}
+          "settings": {
+          }
         }
       }
     },
@@ -371,14 +385,14 @@
             "footer-1": {
               "type": "social",
               "settings": {
-                "title": "SNS",
-                "richtext": "<p>SNSで最新情報をお届けします。<\/p>"
+                "title": "Social",
+                "richtext": "<p>Stay current with updates from our social channels.<\/p>"
               }
             },
             "footer-2": {
               "type": "newsletter",
               "settings": {
-                "richtext": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。<\/p>",
+                "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
                 "enable_name": false
               }
             }
@@ -414,7 +428,8 @@
           "block_order": [
             "popups-0"
           ],
-          "settings": {}
+          "settings": {
+          }
         }
       }
     },
@@ -494,14 +509,14 @@
             "footer-1": {
               "type": "social",
               "settings": {
-                "title": "SNS",
-                "richtext": "<p>SNSで最新情報をお届けします。<\/p>"
+                "title": "Social",
+                "richtext": "<p>Stay current with updates from our social channels.<\/p>"
               }
             },
             "footer-2": {
               "type": "newsletter",
               "settings": {
-                "richtext": "<p>購読すると、スペシャルオファー、無料プレゼント、一期一会のお得な情報を得ることができます。<\/p>",
+                "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
                 "enable_name": false
               }
             }
@@ -537,7 +552,8 @@
           "block_order": [
             "popups-0"
           ],
-          "settings": {}
+          "settings": {
+          }
         }
       }
     }

@@ -2,7 +2,26 @@
   "sections": {
     "main": {
       "type": "list-collections",
-      "settings": {}
+      "blocks": {
+        "c4a13aae-4d22-4adc-a73a-646a7a45e346": {
+          "type": "collection",
+          "settings": {
+            "collection": "wear",
+            "collection_name": "",
+            "bg_position": "center-center"
+          }
+        }
+      },
+      "block_order": [
+        "c4a13aae-4d22-4adc-a73a-646a7a45e346"
+      ],
+      "settings": {
+        "display_type": "selected",
+        "title": "Collections",
+        "grid": 4,
+        "rows": 1,
+        "layout_mobile": "carousel"
+      }
     }
   },
   "order": [

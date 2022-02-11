@@ -1,119 +1,254 @@
 {
   "sections": {
-    "custom-content-1": {
-      "type": "section-custom-content",
-      "blocks": {
-        "image-1-1": {
-          "type": "image",
-          "settings": {
-            "title": "About Us",
-            "description": "",
-            "link_text": ""
-          }
-        }
-      },
-      "block_order": [
-        "image-1-1"
-      ],
-      "settings": {}
-    },
     "main": {
       "type": "main-page",
-      "settings": {}
+      "settings": {
+        "subheading": "",
+        "show_title": true,
+        "show_content": true,
+        "text_size": 2,
+        "align_text": "text-center",
+        "height": "margin--medium",
+        "width": "wrapper",
+        "text_color": "text-dark",
+        "bg_color": "#ffffff"
+      }
     },
     "custom-content-2": {
       "type": "section-custom-content",
       "blocks": {
-        "image-2-1": {
-          "type": "image",
-          "settings": {}
-        },
         "text-2-1": {
           "type": "text",
-          "settings": {}
+          "settings": {
+            "subheading": "",
+            "title": "代表者あいさつ",
+            "text": "<p>ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。ご挨拶が入ります。<\/p>",
+            "text_size": 2,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "text_color": "text-dark",
+            "bg_color": "#ffffff",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
+          }
+        },
+        "image-2-1": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "title": "テキスト付き画像",
+            "description": "画像でブランドのストーリーを伝える。",
+            "flex_align": "align--middle-center",
+            "text_color": "text-light",
+            "transparent": true,
+            "link_text": "View products",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
+          }
         }
       },
       "block_order": [
-        "image-2-1",
-        "text-2-1"
+        "text-2-1",
+        "image-2-1"
       ],
-      "settings": {}
+      "settings": {
+        "height": "screen-height-one-half",
+        "padding": true,
+        "borders": false,
+        "wrapper": false
+      }
     },
     "custom-content-3": {
       "type": "section-custom-content",
       "blocks": {
-        "text-3-1": {
-          "type": "text",
-          "settings": {}
-        },
         "image-3-1": {
           "type": "image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "text-3-1",
-        "image-3-1"
-      ],
-      "settings": {}
-    },
-    "custom-content-4": {
-      "type": "section-custom-content",
-      "blocks": {
-        "text-4-1": {
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "title": "テキスト付き画像",
+            "description": "画像でブランドのストーリーを伝える。",
+            "flex_align": "align--middle-center",
+            "text_color": "text-light",
+            "transparent": true,
+            "link_text": "View products",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
+          }
+        },
+        "text-3-1": {
           "type": "text",
-          "settings": {}
+          "settings": {
+            "subheading": "",
+            "title": "",
+            "text": "<p><strong>営業時間：10:00〜20:00<\/strong><\/p><p><strong>定休日：毎週水曜日・第3火曜日(祝日営業)<\/strong><\/p><p><strong>住所：〒478-0037 　愛知県知多市新舞子東町1-2-6<\/strong><\/p><p><strong>TEL：0569-43-5558<\/strong><\/p><p><strong>FAX：0569-43-6002<\/strong><\/p><p><strong>メールアドレス：yukio@ma.medias.co.jp<\/strong><\/p><p><strong>ネットショップ：http:\/\/world89.net\/<\/strong><\/p>",
+            "text_size": 2,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "text_color": "text-dark",
+            "bg_color": "#ffffff",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
+          }
         }
       },
       "block_order": [
-        "text-4-1"
+        "image-3-1",
+        "text-3-1"
       ],
-      "settings": {}
+      "settings": {
+        "height": "screen-height-one-half",
+        "padding": true,
+        "borders": false,
+        "wrapper": false
+      }
     },
-    "custom-content-5": {
+    "1643700990505a1044": {
       "type": "section-custom-content",
       "blocks": {
-        "image-5-1": {
-          "type": "image",
-          "settings": {}
+        "1643700990e9e05d27-1": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "title": "オリジナルブランドの説明",
+            "text": "<p>オリジナルブランドの説明が入ります。オリジナルブランドの説明が入ります。オリジナルブランドの説明が入ります。オリジナルブランドの説明が入ります。オリジナルブランドの説明が入ります。オリジナルブランドの説明が入ります。オリジナルブランドの説明が入ります。<\/p>",
+            "text_size": 2,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "text_color": "text-dark",
+            "bg_color": "#ffffff",
+            "button_text": "Learn more",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
+          }
         },
-        "image-5-2": {
+        "1643700990e9e05d27-0": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "title": "テキスト付き画像",
+            "description": "画像でブランドのストーリーを伝える。",
+            "flex_align": "align--middle-center",
+            "text_color": "text-light",
+            "transparent": true,
+            "link_text": "View products",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
+          }
         }
       },
       "block_order": [
-        "image-5-1",
-        "image-5-2"
+        "1643700990e9e05d27-1",
+        "1643700990e9e05d27-0"
       ],
-      "settings": {}
+      "settings": {
+        "height": "screen-height-one-half",
+        "padding": true,
+        "borders": false,
+        "wrapper": false
+      }
     },
-    "custom-content-6": {
-      "type": "section-custom-content",
+    "164370184893408a5a": {
+      "type": "section-staff",
       "blocks": {
-        "product-6-1": {
-          "type": "product",
-          "settings": {}
+        "16437018486331dddd-0": {
+          "type": "logo-item",
+          "settings": {
+            "logo_width": 180,
+            "link": "",
+            "staff_name": "スタッフの名前",
+            "staff_comment": "どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。"
+          }
         },
-        "review-6-1": {
-          "type": "review",
-          "settings": {}
+        "16437018486331dddd-1": {
+          "type": "logo-item",
+          "settings": {
+            "logo_width": 180,
+            "link": "",
+            "staff_name": "",
+            "staff_comment": ""
+          }
+        },
+        "16437018486331dddd-2": {
+          "type": "logo-item",
+          "settings": {
+            "logo_width": 180,
+            "link": "",
+            "staff_name": "",
+            "staff_comment": ""
+          }
+        },
+        "fd144125-0b24-446d-a6bb-2de6faf280c9": {
+          "type": "logo-item",
+          "settings": {
+            "logo_width": 180,
+            "link": "",
+            "staff_name": "",
+            "staff_comment": ""
+          }
+        },
+        "9a6e40a9-fff7-4a27-87ae-c792033457a4": {
+          "type": "logo-item",
+          "settings": {
+            "logo_width": 180,
+            "link": "",
+            "staff_name": "",
+            "staff_comment": ""
+          }
         }
       },
       "block_order": [
-        "product-6-1",
-        "review-6-1"
+        "16437018486331dddd-0",
+        "16437018486331dddd-1",
+        "16437018486331dddd-2",
+        "fd144125-0b24-446d-a6bb-2de6faf280c9",
+        "9a6e40a9-fff7-4a27-87ae-c792033457a4"
       ],
-      "settings": {}
+      "settings": {
+        "title": "スタッフ",
+        "text_color": "text-dark",
+        "bg_color": "#fafafa"
+      }
+    },
+    "1643701373613ae269": {
+      "type": "section-map",
+      "settings": {
+        "height": "screen-height-one-half",
+        "title": "",
+        "address": "<p><strong>愛知県知多市新舞子東町1-2-6<\/strong><\/p><p>Mon - Fri, 10am - 9pm<br\/>Weekends, 11am - 4pm<\/p>",
+        "button": "Directions",
+        "text_color": "text-dark",
+        "bg_color": "#fbfbfb",
+        "api_key": "",
+        "map_address": "404 Beach Avenue, Vancouver, BC",
+        "zoom": 11,
+        "style": "light",
+        "bg_position": "center-center",
+        "enable_latlong": false,
+        "lat": "",
+        "long": ""
+      }
     }
   },
   "order": [
-    "custom-content-1",
     "main",
     "custom-content-2",
     "custom-content-3",
-    "custom-content-4",
-    "custom-content-5",
-    "custom-content-6"
+    "1643700990505a1044",
+    "164370184893408a5a",
+    "1643701373613ae269"
   ]
 }

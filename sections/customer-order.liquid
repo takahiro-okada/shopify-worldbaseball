@@ -2,7 +2,7 @@
 
 <section class="account">
   <div class="just">
-    
+
 <aside class="account-sidebar">
   <span class="desktop"><b>{{ 'customer.account.title' | t }}</b></span>
   <span class="account-sidebar--mobile">{{ 'customer.account.title' | t }}</span>
@@ -10,24 +10,24 @@
     {%- assign needs_completion = true -%}
     {%- for block in section.blocks -%}
       {%- case block.type -%}
-      
+
         {%- when '@app' -%}
           {% render block %}
-      
+
         {%- when 'link' -%}
           <li {{ block.shopify_attributes }}><a href="{{ block.settings.link }}" rel="noopener" target="_blank">{{ block.settings.title }}</a></li>
-      
+
         {%- when 'email' -%}
           {% assign default_text = 'customer.account.contact_store' | t %}
           {% assign default_email = shop.email %}
           <li {{ block.shopify_attributes }}><a href="mailto:{{ block.settings.email | default: default_email }}" rel="noopener" target="_blank">{{ block.settings.title | default: default_text }}</a></li>
-        
+
         {%- when 'account' -%}
           {%- assign needs_completion = false -%}
           <li {% if template == 'customers/account' %} class="is-current"{% endif %}><a href="{{ routes.account_url }}">{{ 'customer.orders.title' | t }}</a></li>
           <li {% if template contains 'addresses' %} class="is-current"{% endif %}><a href="{{ routes.account_addresses_url }}">{{ 'customer.account.view_addresses' | t }}</a></li>
           <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
-        
+
       {%- endcase -%}
     {%- endfor -%}
 
@@ -41,11 +41,11 @@
 </aside>
 
     <div class="account-main">
-      <h2 class="theme">{{ 'customer.order.title' | t: name: order.name }}</h2>
+      <h2 class="theme h3">{{ 'customer.order.title' | t: name: order.name }}</h2>
 
       {% if order.cancelled %}
       <div id="OrderCancelled" class="form-errors">
-        {% assign order_cancelled_at = order.cancelled_at | date: format: 'full_date_and_time' %}
+        {% assign order_cancelled_at = order.cancelled_at | date: "%Y年%m月%d日 %H:%M" %}
         <h4>{{ 'customer.order.cancelled' | t: date: order_cancelled_at }}</h4>
         <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason }}</p>
       </div>
@@ -53,22 +53,30 @@
 
       <div id="OrderAddress" class="order-address">
         <div id="OrderInfo" class="order-info">
-          {% assign order_created_at = order.created_at | date: format: 'full_date_and_time' %}
+          {% assign order_created_at = order.created_at | date: "%Y年%m月%d日 %H:%M" %}
           <p>{{ 'customer.order.date' | t: date: order_created_at }}</p>
           <p class="order-status"><span class="note">{{ 'customer.order.payment_status' | t }}:</span> <span class="status">{{ order.financial_status_label }}</span></p>
           <p class="order-status"><span class="note">{{ 'customer.order.fulfillment_status' | t }}:</span> <span class="status">{{ order.fulfillment_status_label }}</span></p>
         </div>
         <div id="OrderPayment" class="col">
-          <p class="h5">{{ 'customer.order.billing_address' | t }}</p>
+          <p class="h6">{{ 'customer.order.billing_address' | t }}</p>
           <div class="address note">
-            {{ order.billing_address | format_address }}
+            {{ order.billing_address.last_name }} {{ order.billing_address.first_name }}<br>
+            {% if order.billing_address.zip.size > 1 %}
+              〒{{ order.billing_address.zip }}<br>
+            {% endif %}
+            {{ order.billing_address.province }} {{ order.billing_address.city }} {{ order.billing_address.street }}<br>
           </div>
         </div>
         {% if order.shipping_address %}
         <div id="OrderShipping" class="col">
-          <p class="h5">{{ 'customer.order.shipping_address' | t }}</p>
+          <p class="h6">{{ 'customer.order.shipping_address' | t }}</p>
           <div class="address note">
-            {{ order.shipping_address | format_address }}
+            {{ order.shipping_address.last_name }} {{ order.shipping_address.first_name }}<br>
+            {% if order.shipping_address.zip.size > 1 %}
+              〒{{ order.shipping_address.zip }}<br>
+            {% endif %}
+            {{ order.shipping_address.province }} {{ order.shipping_address.city }} {{ order.shipping_address.street }}<br>
           </div>
         </div>
         {% endif %}
@@ -209,7 +217,7 @@
           <tr class="order_summary order_total">
             <td class="label" colspan="4">{{ 'customer.order.details.total' | t }}:</td>
             <td class="total money">
-              {% if order.total_price == 0 %}{{ 'general.money.free' | t }}{% else %}{{ order.total_price | money }}{% endif %} {{ order.currency }}
+              {% if order.total_price == 0 %}{{ 'general.money.free' | t }}{% else %}{{ order.total_price | money }}{% endif %}
             </td>
           </tr>
         </tfoot>
@@ -224,12 +232,12 @@
                 <td>
                   {%- assign img_url = line_item.product.featured_media.preview_image | img_url: '1x1' | replace: '_1x1', '_{width}x' -%}
 
-                  <img 
+                  <img
                     class="lazyload"
                     data-widths="[110, 220, 330, 440, 550, 660, 770]"
                     data-sizes="auto"
                     data-src="{{ img_url }}"
-                    data-aspectratio="{{ line_item.product.featured_media.preview_image.aspect_ratio }}" 
+                    data-aspectratio="{{ line_item.product.featured_media.preview_image.aspect_ratio }}"
                     alt="{{ line_item.title | strip_html | escape }}" />
                 </td>
                 <td>
@@ -316,7 +324,7 @@
             "type": "text",
             "id": "title",
             "label": "Email title",
-            "default": "Support"
+            "default": "ストアにメールする"
           },
 					{
 						"type": "text",

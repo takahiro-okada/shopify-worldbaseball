@@ -4,18 +4,18 @@
   <section class="col">
     <div class="customer-register">
         <h2 class="theme">{{ 'customer.register.title' | t }}</h2>
-        <p>{{ 'customer.register.sign_in_prompt' | t }} <span class="text-link"><a href="{{ routes.account_login_url }}">{{ 'customer.register.sign_in_cta' | t }}</a></span>.</p>
+        <p>{{ 'customer.register.sign_in_prompt' | t }} <span class="text-link"><br><a href="{{ routes.account_login_url }}">{{ 'customer.register.sign_in_cta' | t }}</a></span>.</p>
         {% form 'create_customer' %}
       	<div class="form-field">
         {{ form.errors | default_errors }}
       	</div>
         <div class="form-field">
-            <label for="first_name">{{ 'customer.register.first_name' | t }}</label>
-            <input type="text" value="{{ form.first_name }}" name="customer[first_name]" id="first_name" class="large" size="30" placeholder="{{ 'customer.register.first_name' | t }}"/>
-        </div>
-        <div class="form-field">
             <label for="last_name">{{ 'customer.register.last_name' | t }}</label>
             <input type="text" value="{{ form.last_name }}" name="customer[last_name]" id="last_name" class="large{% if form.errors contains 'last_name' %} error{% endif %}" placeholder="{{ 'customer.register.last_name' | t }}"/>
+        </div>
+        <div class="form-field">
+            <label for="first_name">{{ 'customer.register.first_name' | t }}</label>
+            <input type="text" value="{{ form.first_name }}" name="customer[first_name]" id="first_name" class="large" size="30" placeholder="{{ 'customer.register.first_name' | t }}"/>
         </div>
         <div class="form-field">
             <label for="email">{{ 'customer.register.email' | t }}</label>
