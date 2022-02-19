@@ -35,6 +35,8 @@
   assign icon_string_account = icon_string | append: '-account'
   assign icon_string_cart = icon_string | append: '-cart'
   assign icon_string_search = icon_string | append: '-search'
+  assign icon_string_line = icon_string | append: '-line'
+  assign icon_string_baseball = icon_string | append: '-baseball'
 -%}
 
 {%- style -%}
@@ -115,7 +117,6 @@
 
 {% capture minimal %}
     <div class="header__mobile__left">
-
       <div class="header__mobile__button">
         <button class="header__mobile__hamburger"
           data-drawer-toggle="hamburger"
@@ -124,29 +125,33 @@
           aria-expanded="false"
           aria-controls="header-menu">
 
-          <div class="hamburger__lines">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          {% render 'header-icon', filename: icon_string_baseball %}
+          <span class="header-icon__title">CATEGORY</span>
         </button>
       </div>
-      {% if section.settings.enable_search %}
-        <div class="header__mobile__button">
-          <a href="{{ routes.search_url }}" class="navlink" data-popdown-toggle="search-popdown" data-focus-element>
-            {% render 'header-icon', filename: icon_string_search %}
-            <span class="visually-hidden">{{ 'general.search.submit' | t }}</span>
-          </a>
-        </div>
-      {% endif %}
     </div>
     {{ logos }}
+
     <div class="header__mobile__right">
+      <div class="header__mobile__button">
+        <a href="https://line.me/ti/p/%40731qtpzw" class="navlink">
+          {% render 'header-icon', filename: icon_string_line %}
+          <span class="header-icon__title">LINE</span>
+        </a>
+      </div>
       {% if section.settings.enable_account and shop.customer_accounts_enabled %}
         <div class="header__mobile__button">
           <a href="{{ routes.account_url }}" class="navlink">
             {% render 'header-icon', filename: icon_string_account %}
-            <span class="visually-hidden">{{ 'customer.account.title' | t }}</span>
+            <span class="header-icon__title">LOGIN</span>
+          </a>
+        </div>
+      {% endif %}
+      {% if section.settings.enable_search %}
+        <div class="header__mobile__button">
+          <a href="{{ routes.search_url }}" class="navlink" data-popdown-toggle="search-popdown" data-focus-element>
+            {% render 'header-icon', filename: icon_string_search %}
+            <span class="header-icon__title">SEARCH</span>
           </a>
         </div>
       {% endif %}
@@ -155,13 +160,14 @@
           <div class="cart__icon__content">
             {{ cart_status }}
             {% render 'header-icon', filename: icon_string_cart %}
-            <span class="visually-hidden">{{ 'cart.general.title' | t }}</span>
           </div>
+          <span class="header-icon__title">CART</span>
         </a>
       </div>
 
     </div>
 {% endcapture %}
+
 
 
 {% capture cart_content %}

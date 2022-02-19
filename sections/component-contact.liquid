@@ -1,19 +1,33 @@
 {{ 'component-contact.css' | asset_url | stylesheet_tag }}
 
-<div class="c-contact">
+<div class="c-contact" style="background-color: {{ section.settings.bg_color }};">
   <div class="c-contact__inner wrapper">
     <div class="c-contact__list">
       <div class="c-contact__item">
-        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--tel">電話でお問い合わせ</span></div>
+        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--tel"><span class="c-contact__icon"><img src="{{ "contact-icon-tel.svg" | asset_url }}" alt="TELLのアイコン"></span>電話で問い合わせる</span></div>
         <div class="c-contact__main"><span class="c-contact__tel">0569-43-5558</span></div>
       </div>
       <div class="c-contact__item">
-        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--line">LINEで問い合わせる</span></div>
+        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--line"><span class="c-contact__icon"><img src="{{ "contact-icon-line.svg" | asset_url }}" alt="LINEのアイコン"></span>LINEで問い合わせる</span></div>
         <div class="c-contact__main c-contact-line">
-          <span class="c-contact-line__qr">QRが入ります。</span>
+          <span class="c-contact__qrimage"><img src="{{ "qr-line.png" | asset_url }}" alt="LINEのQRコード"></span>
           <span class="c-contact-line__text">@line_id<br>https://lin.ee/0000</span>
         </div>
       </div>
+      <div class="c-contact__item">
+        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--instagram"><span class="c-contact__icon"><img src="{{ "contact-icon-instagram.svg" | asset_url }}" alt="INSTAGRAMのアイコン"></span>Instagramで問い合わせる</span></div>
+        <div class="c-contact__main c-contact-line">
+          <span class="c-contact__qrimage"><img src="{{ "qr-insta.png" | asset_url }}" alt="INSTAGRAMのQRコード"></span>
+          <span class="c-contact-line__text">@baseballshopworld</span>
+        </div>
+      </div>
+      <div class="c-contact__item">
+        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--mail"><span class="c-contact__icon"><img src="{{ "contact-icon-mail.svg" | asset_url }}" alt="メールのアイコン"></span>メールで問い合わせる</span></div>
+        <div class="c-contact__main c-contact-line">
+          <span class="c-contact-line__text">world89_net@yahoo.co.jp</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -24,12 +38,19 @@
 {% schema %}
 {
   "name": "お問い合わせ",
+  "class":"l-component",
   "settings": [
     {
       "type": "liquid",
       "id": "custom_liquid",
       "label": "カスタムLiquid",
       "info": "アプリのスニペットや他のリキッドコードを追加して、高度なカスタマイズを行うことができます"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景の色",
+      "default": "#fafafa"
     }
   ],
   "presets": [

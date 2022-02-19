@@ -39,12 +39,15 @@
   </div>
 {% else %}
   <div class="collection-item {{ grid_strings }} {{ border_class }} {{ alignment_class }}" {{ additional_attributes }} {{ block.shopify_attributes }}>
+    <h3 class="collection-item__maintitle">
+      {{ collection.title }}
+    </h3>
       <a aria-label="{{ collection.title | strip_html | escape }}" href="{{ collection.url }}" class="collection-item__image">
-        <div class="collection-item__bg" 
+        <div class="collection-item__bg"
           data-aos="img-in"
           data-aos-anchor="{{ animation_anchor }}"
-          data-aos-delay="{{ animation_delay | times: 150 }}" 
-          data-aos-duration="{{ animation_delay | times: 100 | plus: 800 }}" 
+          data-aos-delay="{{ animation_delay | times: 150 }}"
+          data-aos-duration="{{ animation_delay | times: 100 | plus: 800 }}"
           data-aos-easing="ease-out-quart">
           {% if collection.image %}
               {%- assign img_object = collection.image -%}
@@ -59,11 +62,36 @@
       data-aos-anchor="{{ animation_anchor }}"
       data-aos-delay="{{ animation_delay | times: 150 }}"
       data-aos-duration="{{ animation_delay | times: 50 | plus: 800 }}">
-      <a tabindex="-1" href="{{ product.url | within: collection }}">
-        <p>
-          {{ collection_title | default: collection.title }}
-        </p>
+      <a tabindex="-1" href="{{ product.url | within: collection }}" class="collectino-item__maintitle-en">
+          {% if collection_title != blank %}{{ collection_title }}{% else %} {{ collection_title | default: collection.title }}{% endif %}
       </a>
     </div>
   </div>
 {%- endif -%}
+
+<style>
+  .collectino-item__maintitle-en::before{
+    position: absolute;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    content: '';
+    display: inline-block;
+    background: url("{{ 'collection-arrow.png' | asset_url }}");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .collection-item:hover .collectino-item__maintitle-en::before{
+    right: 5px;
+  }
+  @media only screen and (min-width:750px) {
+    .collection-item:hover .collectino-item__maintitle-en::before{
+      right: 15px;
+    }
+    .collectino-item__maintitle-en::before{
+      right: 20px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+</style>

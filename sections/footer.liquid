@@ -208,15 +208,6 @@
             {%- assign powered_by_link_html = powered_by_link_html | replace: '<a ', '<a rel="noopener" ' -%}
           {%- endif -%}
           {%- assign powered_by_link = powered_by_link_html -%}
-
-
-
-          <!-- Remove the following line to delete 'Powered by Shopify' from your footer -->
-          <li data-powered-link>{{ powered_by_link }}</li>
-          <!-- Do not delete below this line -->
-
-
-
         </ul>
       </div>
       {% if section.settings.footer_payment_enable %}

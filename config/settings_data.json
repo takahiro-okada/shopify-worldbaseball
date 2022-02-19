@@ -6,8 +6,9 @@
     "accent_bright": "#ab8c52",
     "accent_secondary": "#8191a4",
     "site_border_color": "#f0f0f0",
-    "link_color": "#212121",
-    "link_hover_color": "#bcb2a8",
+    "link_color": "#004ea2",
+    "link_hover_color": "#ecb400",
+    "high_contrast": false,
     "header_bg": "#ffffff",
     "header_link": "#212121",
     "header_link_hover": "#AB8C52",
@@ -30,7 +31,7 @@
     "type_base_font": "neuzeit_office_n4",
     "type_body_size": 100,
     "parallax_enable": false,
-    "product_grid_outline": false,
+    "product_grid_outline": true,
     "show_scroll_top_button": true,
     "instagram_link": "https:\/\/www.instagram.com\/baseballshopworld\/",
     "product_grid_aspect_ratio": 0.9,
@@ -59,9 +60,10 @@
       "header": {
         "type": "header",
         "settings": {
-          "header_style": "logo_beside",
-          "icon_family": "clean",
-          "logo_max_limit": 120,
+          "header_style": "drawer",
+          "icon_family": "bold",
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo_max_limit": 300,
           "main_menu_linklist": "",
           "enable_search": true,
           "enable_account": true,
@@ -78,8 +80,8 @@
           "38e76b45-d08a-42c9-8032-5e384fb8408c": {
             "type": "message",
             "settings": {
-              "show_wheel": true,
-              "message": "Spend ||amount|| more for free shipping.",
+              "show_wheel": false,
+              "message": "10,000円以上の購入で送料無料",
               "target_url_enabled": false,
               "target_url": "",
               "target_referrer_enabled": false,
@@ -93,8 +95,8 @@
           "38e76b45-d08a-42c9-8032-5e384fb8408c"
         ],
         "settings": {
-          "bg_color": "#f7f7f7",
-          "color": "#545454",
+          "bg_color": "#004ea2",
+          "color": "#ffffff",
           "layout": "slider",
           "speed": 7
         }
@@ -154,9 +156,10 @@
         "blocks": {
           "popups-0": {
             "type": "cookie",
+            "disabled": true,
             "settings": {
               "position": "popup-cookies--left",
-              "show_cookies_popup": true
+              "show_cookies_popup": false
             }
           }
         },
@@ -164,6 +167,59 @@
           "popups-0"
         ],
         "settings": {
+        }
+      },
+      "section-text-row": {
+        "type": "section-text-row",
+        "blocks": {
+          "a5d8684b-70b1-4b98-b799-1d389cb4faad": {
+            "type": "text-item",
+            "settings": {
+              "icon_name": "icon-award",
+              "icon_color": "#545454",
+              "title": "■送料について",
+              "text": "<div class=\"text-row-delivery\">\n  <div class=\"text-row-delivery__image\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0613\/6040\/6787\/files\/icon-delivery.png\">\n  <\/div>\n  <div class=\"text-row-delivery__text\">\n    10,000円以上お買い上げで<br>\n    <span class=\"text-row-delivery__text--emphasis\">送料無料<\/span>\n  <\/div>\n<\/div>"
+            }
+          },
+          "5d2aebfc-3971-4263-814d-c07fd4d0257b": {
+            "type": "text-item",
+            "settings": {
+              "icon_name": "icon-award",
+              "icon_color": "#545454",
+              "title": "■ご質問・ご相談はこちら",
+              "text": "<div class=\"tel-wrap\">\n  <div>\n    <p class=\"telnum\">TEL<a href=\"tel:0569-43-5558\"><span>0569-43-5558<\/span><\/a><\/p>\n    <p class=\"opentime\"><span>平日 11:00-20:00 土日10:00-20:00<\/span><br>定休日 毎週水曜日・第3火曜日(祝日営業)<\/p>\n  <\/div>\n<\/div>"
+            }
+          },
+          "8fa11a40-3e15-4fd0-b38b-020b8d930b01": {
+            "type": "text-item",
+            "settings": {
+              "icon_name": "icon-award",
+              "icon_color": "#545454",
+              "title": "■返品・返却について",
+              "text": "不良品や、ご注文と異なる商品が届いた場合は、迅速に新しい商品とご交換いたします。<br>\n「ご注文を受け付けました」のメール案内が届く前でしたら、キャンセル対応させていただきます。<br>\n詳しくは<a href=\"\/pages\/faq\">よくあるご質問<\/a>をご確認ください。"
+            }
+          }
+        },
+        "block_order": [
+          "a5d8684b-70b1-4b98-b799-1d389cb4faad",
+          "5d2aebfc-3971-4263-814d-c07fd4d0257b",
+          "8fa11a40-3e15-4fd0-b38b-020b8d930b01"
+        ],
+        "settings": {
+          "text_alignment": "left",
+          "icon_size": "icon--small",
+          "icon_alignment": "icon--top",
+          "text_color": "text-dark",
+          "heading_size": "h6",
+          "height": "margin--medium",
+          "bg_color": "#ffffff"
+        }
+      },
+      "component-contact": {
+        "type": "component-contact",
+        "settings": {
+          "custom_liquid": "",
+          "bg_color": "#f0f0f0"
         }
       }
     },

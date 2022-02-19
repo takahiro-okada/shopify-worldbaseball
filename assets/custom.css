@@ -1,0 +1,104 @@
+.common__inner{
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.collection-item__info{
+  background-image:linear-gradient(60deg, #E0E0E0 50%, #004EA2 50%);
+  padding:10px 20px;
+  position: relative;
+  min-height: 68px;
+  display: flex;
+  align-self: center;
+}
+.collection-item__info::before{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  content: '';
+  background-image:linear-gradient(60deg, transparent 50%, #004EA2 50%,#004EA2 51%,transparent 51%);
+  background-position: -10px;
+}
+.collection-item__maintitle{
+  font-size: 20px;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  width: 90%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.collectino-item__maintitle-en{
+  font-family: "Anton";
+  font-size: 24px;
+  line-height: 1;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width:750px) {
+  .collection-item__maintitle{
+    font-size: 28px;
+  }
+  .collection-item__info{
+    background-image:linear-gradient(45deg, #E0E0E0 50%, #004EA2 50%);
+    padding:10px 20px;
+    min-height: 87px;
+  }
+  .collection-item__info::before{
+    background-image:linear-gradient(45deg, transparent 50%, #004EA2 50%,#004EA2 51%,transparent 51%);
+    background-position: -10px;
+  }
+  .collectino-item__maintitle-en{
+    font-size: 32px;
+  }
+}
+
+/* Insta */
+#shopify-section-template--15728943661315__164303364231f347e9{
+  background-color: #fafafa;
+  padding-bottom: 80px;
+}
+/* shame css */
+#shopify-section-template--15716996841731__164303364231f347e9{
+  background-color: #fafafa;
+  padding-bottom: 80px;
+}
+
+.text-row-delivery{
+  display: flex;
+}
+.text-row-delivery__image{
+  width: 30%;
+}
+.text-row-delivery__image img{
+  width: 100%;
+}
+.text-row-delivery__text{
+  width: calc(70% - 30px);
+  margin-left: 30px;
+}
+.text-row-delivery__text--emphasis{
+  font-size: 40px;
+  color: #FF0000;
+  font-weight: bold;
+}
+.opentime{
+  background-color: #bcbdbd;
+  width: fit-content;
+  font-weight: bold;
+  padding: 5px;
+}
+.icon__column__text .telnum{
+  font-size: 32px;
+}
+.opentime span{
+  font-size: 16px;
+  font-weight: bold;
+}

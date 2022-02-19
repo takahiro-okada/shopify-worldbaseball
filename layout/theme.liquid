@@ -15,7 +15,7 @@
   <link rel="preload" href="{{ 'lazysizes.js' | asset_url }}" as="script">
   <link rel="preload" href="{{ 'vendor.js' | asset_url }}" as="script">
   <link rel="preload" href="{{ 'theme.js' | asset_url }}" as="script">
-  <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style"> 
+  <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
 
   {% if settings.favicon %}
     <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
@@ -54,7 +54,10 @@
 
   {% render 'css-variables' %}
 
+  <!-- WebFont読み込み -->
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   {{ 'theme.css' | asset_url | stylesheet_tag }}
+  {{ 'custom.css' | asset_url | stylesheet_tag }}
 
   <script>
     if (window.navigator.userAgent.indexOf('MSIE ') > 0 || window.navigator.userAgent.indexOf('Trident/') > 0) {
@@ -147,10 +150,12 @@
   <!-- Shopify app scripts =========================================================== -->
 
   {{ content_for_header }}
+{% render 'usf' %}
 
-<!--begin-boost-pfs-filter-css-->
-  {% render 'boost-pfs-style' %}
-<!--end-boost-pfs-filter-css-->
+
+
+
+
 
 
 </head>
@@ -169,6 +174,10 @@
 
     </main>
   </div>
+
+  {% section 'component-contact' %}
+
+  {% section 'section-text-row' %}
 
   {% section 'footer' %}
 
@@ -221,8 +230,8 @@
 
   <!-- And above this comment line ================================================== -->
 
-<!--begin-boost-pfs-js-->
-  {% render 'boost-pfs' %}
-<!--end-boost-pfs-js-->
+
+
+
 </body>
 </html>

@@ -4,16 +4,11 @@
       "type": "news",
       "settings": {
         "show_title": true,
+        "show_date": true,
         "show_rss": false,
         "show_tag_nav": true,
         "grid": 2,
-        "rows": 4,
-        "aspect_ratio": 1,
-        "show_tags": false,
-        "show_author": false,
-        "show_date": true,
-        "show_button": false,
-        "show_comments": false
+        "rows": 4
       }
     }
   },

@@ -10,7 +10,7 @@
   {% when 3 %}
     {% assign grid_strings = 'one-third small--one-whole' %}
   {% else %}
-    {% assign grid_strings = 'one-quarter small--one-whole' %}
+    {% assign grid_strings = 'one-third small--one-half' %}
 {% endcase %}
 
 {%- assign mobile_slider = "product-grid--vertical" -%}
@@ -57,7 +57,7 @@
       </div>
     {% endif %}
 
-    <div class="container">
+    <div class="container common__inner">
       <div class="product-grid-outer collection-list-outer">
         <div class="collection-list product-grid {{ mobile_slider }} {{ layout_grid }}{% unless settings.product_grid_outline %} product-grid--borderless{% endunless %}" {{ layout_grid_attributes }} {{ block_scroll_attr }}>
           {% if section.blocks.size > 0 %}
@@ -138,7 +138,7 @@
     {
       "type": "collection",
       "name": "コレクション",
-      "limit": 8,
+      "limit":16,
       "settings": [
         {
           "label": "コレクション",
@@ -148,7 +148,7 @@
         {
           "label": "見出し",
           "id": "title",
-          "type": "text"
+          "type": "html"
         }
       ]
     }

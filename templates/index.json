@@ -7,8 +7,8 @@
           "type": "image",
           "settings": {
             "bg_position": "center-center",
-            "image": "shopify:\/\/shop_images\/sample-mv1-pc.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/sample-mv1-sp.jpg",
+            "image": "shopify:\/\/shop_images\/2d05343588d0d2ba6ce50b8fca310e40.png",
+            "mobile_image": "shopify:\/\/shop_images\/Mask_Group.png",
             "overlay_opacity": 0,
             "overlay_color": "#000000",
             "title": "",
@@ -26,8 +26,8 @@
           "type": "image",
           "settings": {
             "bg_position": "center-center",
-            "image": "shopify:\/\/shop_images\/sample-mv2-pc.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/sample-mv2-sp.jpg",
+            "image": "shopify:\/\/shop_images\/2d05343588d0d2ba6ce50b8fca310e40.png",
+            "mobile_image": "shopify:\/\/shop_images\/Mask_Group.png",
             "overlay_opacity": 0,
             "overlay_color": "#000000",
             "title": "",
@@ -61,57 +61,64 @@
         "16429553971a248004-0": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": ""
+            "collection": "glove-mitt",
+            "title": "BASEBALL<br>\nGLOBE"
           }
         },
         "16429553971a248004-1": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": ""
+            "collection": "bat",
+            "title": "BAT"
           }
         },
         "16429553971a248004-2": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": ""
+            "collection": "shoes",
+            "title": "SHOES"
           }
         },
         "16429553971a248004-3": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": ""
+            "collection": "wear",
+            "title": "TRAINING<br>\nWEAR"
           }
         },
         "aae35f4c-8a3e-475f-a36a-6328c35f4767": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": ""
+            "collection": "belt",
+            "title": "BELT"
           }
         },
         "e3a469ab-a09c-4292-a2c3-7e0afed2496c": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": ""
+            "collection": "gloves",
+            "title": "GLOBE"
           }
         },
         "db1f2f6d-1a93-4661-8e94-879ffb9c5fef": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": ""
+            "collection": "ボール",
+            "title": "BALL"
           }
         },
         "e264513a-1ef6-42fe-afa4-b1eec48777c1": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": ""
+            "collection": "キャッチャー用品",
+            "title": "CATCHER"
+          }
+        },
+        "e7d98c38-c5de-4344-ac83-5040cebc59dc": {
+          "type": "collection",
+          "settings": {
+            "collection": "トレーニング用品",
+            "title": "TRAINING"
           }
         }
       },
@@ -123,11 +130,12 @@
         "aae35f4c-8a3e-475f-a36a-6328c35f4767",
         "e3a469ab-a09c-4292-a2c3-7e0afed2496c",
         "db1f2f6d-1a93-4661-8e94-879ffb9c5fef",
-        "e264513a-1ef6-42fe-afa4-b1eec48777c1"
+        "e264513a-1ef6-42fe-afa4-b1eec48777c1",
+        "e7d98c38-c5de-4344-ac83-5040cebc59dc"
       ],
       "settings": {
-        "title": "コレクションリスト",
-        "description": "",
+        "title": "Category",
+        "description": "<p>カテゴリー<\/p>",
         "layout": "grid",
         "aspect_ratio": 1,
         "enable_slider": false
@@ -136,51 +144,81 @@
     "16429554554df2d39a": {
       "type": "section-collection",
       "settings": {
-        "heading": "新着商品",
-        "description": "",
+        "heading": "NEW ITEM",
+        "description": "<p>新着商品<\/p>",
         "text_alignment": "center",
         "link_text": "すべての新着商品を見る",
         "link_url": "",
-        "button_color": "btn--black",
-        "button_style": "hero__btn btn btn--input btn--outline caps",
-        "featured_collection": "",
+        "button_color": "btn--link",
+        "button_style": "hero__btn btn btn--large caps",
+        "featured_collection": "new-product",
         "grid": 4,
         "rows": 1,
-        "layout_mobile": "carousel"
+        "layout_mobile": "carousel",
+        "desk_space": 50,
+        "mobile_space": 50,
+        "bg_color": "#fafafa"
       }
     },
     "1642955528e153829b": {
       "type": "section-collection",
       "settings": {
-        "heading": "セール商品",
-        "description": "",
+        "heading": "SALE ITEM",
+        "description": "<p>セール商品<\/p>",
         "text_alignment": "center",
         "link_text": "すべてのセール商品を見る",
         "link_url": "",
-        "button_color": "btn--black",
-        "button_style": "hero__btn btn btn--input btn--outline caps",
-        "featured_collection": "",
+        "button_color": "btn--link",
+        "button_style": "hero__btn btn btn--large caps",
+        "featured_collection": "sale",
         "grid": 4,
         "rows": 1,
-        "layout_mobile": "carousel"
+        "layout_mobile": "carousel",
+        "desk_space": 50,
+        "mobile_space": 50,
+        "bg_color": "#fafafa"
       }
     },
     "164295582500779323": {
       "type": "section-hero",
       "settings": {
+        "image": "shopify:\/\/shop_images\/index-concept.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/index-concept-sp.jpg",
         "bg_position": "center-center",
-        "height": "screen-height-three-quarters",
+        "height": "image-height",
         "overlay_opacity": 0,
         "overlay_color": "#000000",
-        "title": "オリジナルブランドの説明",
-        "description": "ここにはオリジナルブランドの説明が入ります。",
+        "title": "ワールドオリジナルブランド誕生",
+        "description": "子供たちに野球を通して成長することの喜びや楽しさを感じてもらうことで、より豊かな人生になるようにサポートがしたい。<br>\nさらに大きく成長することへの願いを込めて2003年に「野球道場Major」を立ち上げた。<br>\n<br>\n「野球道場Major」では数多くの野球選手と関わり、成長していくことの喜びを共有してきた。<br>\n希望ある未来へと羽ばたいていく姿を想像しながら・・・<br>\n<br>\n重要という意味を持つ「Major」でそれぞれのポジションでの活躍を願うグラブが誕生した。",
         "flex_align": "align--middle-left",
-        "text_color": "text-dark",
-        "transparent": false,
-        "link_text": "オリジナル商品を見る",
+        "text_color": "text-light",
+        "transparent": true,
+        "link_text": "Majorオリジナル商品を見る",
         "link": "shopify:\/\/collections",
-        "button_color": "btn--secondary",
-        "button_style": "hero__btn btn btn--large btn--outline caps"
+        "button_color": "btn--link",
+        "button_style": "hero__btn btn btn--large caps"
+      }
+    },
+    "16446326991276f9ac": {
+      "type": "section-blog",
+      "settings": {
+        "blog_name": "ブログ",
+        "title": "BLOG",
+        "description": "<p>ブログ<\/p>",
+        "grid": 3,
+        "rows": 1,
+        "aspect_ratio": 0.6,
+        "show_content": false,
+        "show_tags": true,
+        "show_author": false,
+        "show_date": true,
+        "show_button": false,
+        "show_comments": false,
+        "button_text": "ブログ一覧を見る",
+        "button_url": "shopify:\/\/blogs\/ブログ",
+        "button_color": "btn--link",
+        "button_style": "hero__btn btn btn--large caps",
+        "bg_color": "#fafafa"
       }
     },
     "164303364231f347e9": {
@@ -201,21 +239,6 @@
       ],
       "settings": {
         "include_margins": true
-      }
-    },
-    "164295594229b0c645": {
-      "type": "section-blog",
-      "settings": {
-        "blog_name": "ブログ",
-        "title": "ブログ",
-        "grid": 3,
-        "rows": 1,
-        "aspect_ratio": 0.6,
-        "show_tags": false,
-        "show_author": false,
-        "show_date": true,
-        "show_button": false,
-        "show_comments": false
       }
     },
     "164295601914e70c67": {
@@ -258,9 +281,11 @@
         "ea6a3eb6-5f6c-43e6-a428-eebf196493d9"
       ],
       "settings": {
+        "title": "CUSTOMER REVIEWS",
+        "description": "<p>お客様の声<\/p>",
         "text_align": "text-left",
         "text_color": "text-dark",
-        "bg_color": "#fafafa"
+        "bg_color": "#ffffff"
       }
     }
   },
@@ -270,8 +295,8 @@
     "16429554554df2d39a",
     "1642955528e153829b",
     "164295582500779323",
+    "16446326991276f9ac",
     "164303364231f347e9",
-    "164295594229b0c645",
     "164295601914e70c67"
   ]
 }

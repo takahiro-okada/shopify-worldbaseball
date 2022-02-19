@@ -1,56 +1,3 @@
-
-<!-- BEGIN USF -->
-{%- assign grid_strings = 'large-up--one-quarter medium--one-half small--one-half' -%}
-
-<section class="page search-page" data-section-type="search" data-section-id="{{ section.id }}">
-
-    <div class="search-outer">
-      <form action="{{ routes.search_url }}" class="search-form">
-        <input type="hidden" name="type" value="product"/>
-        <input
-        type="text"
-        name="q"
-        class="search-box"
-        aria-label="{{ 'general.search.placeholder' | t }}"
-        placeholder="{{ 'general.search.title' | t }}"
-        value="{{ search.terms }}"/>
-        <button type="submit" class="btn search-submit">{{ 'general.search.submit' | t }}</button>
-      </form>
-    </div>
-	<style>#usf_container{width: 100%;padding: 0 20px;}</style>
-    {% assign border_class = '' -%}
-    {%- if settings.product_grid_outline == false -%}
-      {% assign border_class = 'product-item--borderless' -%}
-    {%- endif -%}
-	{% assign alignment_class = '' -%}
-    {%- if settings.product_grid_center == true -%}
-      {% assign alignment_class = 'product-item--centered' -%}
-    {%- endif -%}
-    <script>
-      window._usfGlobalSettings = {
-        product_grid_outline: {{ settings.product_grid_outline | json }},
-        quickview_enable: {{ settings.quickview_enable | json }},
-        image_hover_enable: {{ settings.image_hover_enable | json }},
-        color_swatches: {{ settings.color_swatches | json }},
-      };
-      window._usf_grid_strings = 'large-up--one-quarter medium--one-half small--one-half';
-      window._usf_border_class = {{ border_class | json }};
-      window._usf_alignment_class = {{ alignment_class | json }};
-      window._usfPreorderText = {{ 'products.product.pre_order' | t | json }};
-      window._usfSaleText = {{ 'products.product.on_sale' | t | json }};
-      window._usfQuickViewText = {{ 'products.general.quick_view' | t | json }};
-      window._usfQuickViewAdd = {{ 'products.general.quick_view_added' | t | json }};
-      window._usfSoldOutText = {{ 'products.product.sold_out' | t | json }};
-      window._usfFromText = `<small>{{ 'products.general.from' | t }}</small>`;
-      window._usf_swatch_translation = {{ 'general.swatches.color' | t | json }};
-      window._usfSeeAllText = {{ 'products.general.see_all' | t | json}};
-    </script>
-  
-  <div id="usf_container"></div>
-</section>
-<!-- END USF -->
-
-{% comment %}USF
 {%- assign grid_strings = 'large-up--one-quarter medium--one-half small--one-half' -%}
 
 {%- liquid
@@ -219,4 +166,3 @@
     ]
   }
 {% endschema %}
-USF{% endcomment %}

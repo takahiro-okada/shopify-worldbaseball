@@ -31,7 +31,7 @@
   {%- assign layout_grid_attributes = '' -%}
   {%- assign limit_products = section.settings.grid | times: section.settings.rows -%}
   {%- assign limit_onboarding = limit_products -%}
-  
+
   {% case section.settings.grid %}
     {% when 2 %}
       {% assign grid_strings = 'one-half medium--one-half ' | append: mobile_class %}
@@ -49,7 +49,9 @@
 <section class="index-products{% if section.settings.text_alignment == 'left' %} layout--slider{% else %} layout--grid{% endif %}"
   id="collection--{{ section.id }}"
   data-section-id="{{ section.id }}"
-  data-section-type="product-grid">
+  data-section-type="product-grid"
+  style="background-color: {{ section.settings.bg_color }};"
+  >
 
   <div class="grid-container">
     {%- if section.settings.heading != blank or section.settings.description != blank -%}
@@ -78,21 +80,9 @@
             {{ section.settings.description }}
           </div>
         {%- endif -%}
-
-        {%- if section.settings.link_text != blank -%}
-          <div class = "grid__btn-wrapper {{ text_alignment_class }} {{ btn_modifier }}">
-            <a class="{{ section.settings.button_style }} {{ section.settings.button_color }}"
-              href="{% if section.settings.link_url != blank %}{{ section.settings.link_url }}{% else %}{{ featured_collection.url }}{% endif %}"
-              data-aos="hero"
-              data-aos-anchor="{{ animation_anchor }}"
-              data-aos-order="3">
-              {{ section.settings.link_text | escape }}
-            </a>
-          </div>
-        {%- endif -%}
       </div>
     {%- endif -%}
-    
+
     <div class="product-grid-outer">
       <div class="product-grid {{ mobile_slider }} {{ layout_grid_classes }} {% unless settings.product_grid_outline %} product-grid--borderless{% endunless %}" {{ layout_grid_attributes }}>
         {%- if featured_collection != blank and featured_collection.products.size > 0 -%}
@@ -109,9 +99,22 @@
           {%- for i in (1..limit_onboarding) -%}
             {%- assign layout_slide_attributes = 'data-slide="' | append: forloop.index0 | append: '" data-slide-index="' | append: forloop.index0 | append: '"' -%}
             {%- render 'onboarding-product-grid-item', grid_strings: grid_strings, additional_attributes: layout_slide_attributes, index: forloop.index, placeholder_root: 'product-' -%}
-          {%- endfor -%} 
+          {%- endfor -%}
         {%- endif -%}
       </div>
     </div>
+
+    {%- if section.settings.link_text != blank -%}
+      <div class = "product-grid__button grid__btn-wrapper {{ text_alignment_class }} {{ btn_modifier }}">
+        <a class="{{ section.settings.button_style }} {{ section.settings.button_color }}"
+          href="{% if section.settings.link_url != blank %}{{ section.settings.link_url }}{% else %}{{ featured_collection.url }}{% endif %}"
+          data-aos="hero"
+          data-aos-anchor="{{ animation_anchor }}"
+          data-aos-order="3">
+          {{ section.settings.link_text | escape }}
+        </a>
+      </div>
+    {%- endif -%}
+
   </div>
 </section>
