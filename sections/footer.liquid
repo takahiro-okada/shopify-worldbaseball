@@ -26,7 +26,40 @@
         id="footerLogoImg-{{ section.id }}"/>
     </a>
     {% endif %}
-    <div class="grid grid--uniform">
+    <div class="site-footer__main site-footer-main">
+      <div class="site-footer-main__image"><a  href="{{ routes.root_url }}"><img src="{{ "logo.png" | asset_url }}" alt="Baseball Worldのロゴ"></a></div>
+      <div class="site-footer-main__info">
+        <table>
+          <tr>
+            <td>電話番号</td>
+            <td>0569-43-5558</td>
+          </tr>
+          <tr>
+            <td>住所</td>
+            <td>〒478-0037<br/>愛知県知多市新舞子東町1-2-6</td>
+          </tr>
+          <tr>
+            <td>営業時間</td>
+            <td>平日11:00~20:00<br/>土日10:00~20:00</td>
+          </tr>
+          <tr>
+            <td>定休日</td>
+            <td>毎週水曜日・第3火曜日(祝日営業)</td>
+          </tr>
+          <tr>
+            <td>メールアドレス</td>
+            <td>world89_net@yahoo.co.jp</td>
+          </tr>
+        </table>
+      </div>
+      <div class="site-footer-main__sns site-footer-main-sns">
+        <ul class="site-footer-main-sns__list">
+          <li><a href="https://www.instagram.com/baseballshopworld" class="site-footer-main-sns__link" target="_blank"><img src="{{ "icon-instagram-color.svg" | asset_url }}" alt="Instagramのロゴ"></a></li>
+          <li><a href="https://page.line.me/731qtpzw" class="site-footer-main-sns__link" target="_blank"><img src="{{ "icon-line-color.svg" | asset_url }}" alt="LINEのロゴ"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__sub grid grid--uniform">
 
       {% case section.blocks.size %}
         {% when 1 %}
@@ -34,7 +67,7 @@
         {% when 2 %}
           {% assign footer_column_width = 'medium-up--one-half' %}
         {% when 3 %}
-          {% assign footer_column_width = 'large-up--one-third' %}
+          {% assign footer_column_width = 'large-up--one-third medium--one-half' %}
         {% when 4 %}
           {% assign footer_column_width = 'large-up--one-quarter medium--one-half' %}
       {% endcase %}
@@ -109,38 +142,39 @@
       {% endfor %}
     </div>
 
-    <div class="grid">
-      <div class="footer__secondary grid__item {% if section.settings.footer_payment_enable %}medium-up--two-thirds{% endif %}">
+  </div>
+  <div class="site-footer">
+    <div class="footer__secondary grid__item {% if section.settings.footer_payment_enable %}medium-up--two-thirds{% endif %}">
 
-        <!-- /partials/cross-border.liquid -->
+      <!-- /partials/cross-border.liquid -->
 {%- form 'localization', class: 'popout--footer' -%}
-  {%- if section.settings.show_locale_selector and shop.published_locales.size > 1 -%}
-    <div>
-      <h2 class="visually-hidden" id="lang-heading">
-        {{ 'layout.footer.language' | t }}
-      </h2>
+{%- if section.settings.show_locale_selector and shop.published_locales.size > 1 -%}
+  <div>
+    <h2 class="visually-hidden" id="lang-heading">
+      {{ 'layout.footer.language' | t }}
+    </h2>
 
-      <div class="popout" data-popout>
-        <button type="button" class="popout__toggle" aria-expanded="false" aria-controls="lang-list" aria-describedby="lang-heading" data-popout-toggle>
-          {{ localization.language.endonym_name }}
-        </button>
+    <div class="popout" data-popout>
+      <button type="button" class="popout__toggle" aria-expanded="false" aria-controls="lang-list" aria-describedby="lang-heading" data-popout-toggle>
+        {{ localization.language.endonym_name }}
+      </button>
 
-        <ul id="lang-list" class="popout-list" data-popout-list>
-          {% for language in localization.available_languages %}
-            <li class="popout-list__item {% if language == localization.language %}popout-list__item--current{% endif %}">
-              <a class="popout-list__option" href="#" lang="{{ locale.iso_code }}" {% if language == localization.language %}aria-current="true"{% endif %} data-value="{{ language.iso_code }}" data-popout-option>
-                <span>{{ language.endonym_name }}</span>
-              </a>
-            </li>
-          {%- endfor -%}
-        </ul>
+      <ul id="lang-list" class="popout-list" data-popout-list>
+        {% for language in localization.available_languages %}
+          <li class="popout-list__item {% if language == localization.language %}popout-list__item--current{% endif %}">
+            <a class="popout-list__option" href="#" lang="{{ locale.iso_code }}" {% if language == localization.language %}aria-current="true"{% endif %} data-value="{{ language.iso_code }}" data-popout-option>
+              <span>{{ language.endonym_name }}</span>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
 
-        <input type="hidden" name="language_code" id="LocaleSelector" value="{{ form.current_locale.iso_code }}" data-popout-input/>
-      </div>
+      <input type="hidden" name="language_code" id="LocaleSelector" value="{{ form.current_locale.iso_code }}" data-popout-input/>
     </div>
-  {%- endif -%}
+  </div>
+{%- endif -%}
 
-  {%- if section.settings.show_currency_selector and shop.enabled_currencies.size > 1 -%}
+{%- if section.settings.show_currency_selector and shop.enabled_currencies.size > 1 -%}
     <div>
       <h2 class="visually-hidden" id="currency-heading">
         {{ 'layout.footer.currency' | t }}
@@ -188,39 +222,38 @@
 {%- endform -%}
 
 
-        <ul class="footer__copyright inline-list unstyled">
-          <li>
-            <a href="{{ shop.secure_url }}">&copy; {{ shop.name }} {{ 'now' | date: "%Y" }}</a>
-          </li>
-          {% for link in linklists[section.settings.footer_secondary_linklist].links %}
-            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
+      <ul class="footer__copyright inline-list unstyled">
+        <li>
+          <a href="{{ shop.secure_url }}">&copy; {{ shop.name }} {{ 'now' | date: "%Y" }}</a>
+        </li>
+        {% for link in linklists[section.settings.footer_secondary_linklist].links %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
 
-          <!-- The following lines fix Lighthouse security warnings on the Shopify link.-->
-          {%- assign powered_by_link_html = powered_by_link -%}
-          {%- if powered_by_link_html contains 'rel="' -%}
-            {%- assign powered_link_rel_text = powered_by_link_html | split: 'rel="' -%}
-            {%- assign powered_link_rel_text = powered_link_rel_text[1] | split: '"' | first -%}
-            {%- assign powered_link_rel = 'rel="' | append: powered_link_rel_text | append: '"' -%}
-            {%- assign powered_by_link_html = powered_by_link_html | replace_first: powered_link_rel, '' -%}
-          {%- endif -%}
-          {%- if powered_by_link_html contains '<a ' -%}
-            {%- assign powered_by_link_html = powered_by_link_html | replace: '<a ', '<a rel="noopener" ' -%}
-          {%- endif -%}
-          {%- assign powered_by_link = powered_by_link_html -%}
-        </ul>
-      </div>
-      {% if section.settings.footer_payment_enable %}
-        {% unless shop.enabled_payment_types == empty %}
-          <ul class="footer__payment payment-icons grid__item inline-list grid__item medium-up--one-third">
-            {% for type in shop.enabled_payment_types %}
-              <li>{{ type | payment_type_svg_tag: class:'payment-icon' }}</li>
-            {% endfor %}
-          </ul>
-        {% endunless %}
-      {% endif %}
-
+        <!-- The following lines fix Lighthouse security warnings on the Shopify link.-->
+        {%- assign powered_by_link_html = powered_by_link -%}
+        {%- if powered_by_link_html contains 'rel="' -%}
+          {%- assign powered_link_rel_text = powered_by_link_html | split: 'rel="' -%}
+          {%- assign powered_link_rel_text = powered_link_rel_text[1] | split: '"' | first -%}
+          {%- assign powered_link_rel = 'rel="' | append: powered_link_rel_text | append: '"' -%}
+          {%- assign powered_by_link_html = powered_by_link_html | replace_first: powered_link_rel, '' -%}
+        {%- endif -%}
+        {%- if powered_by_link_html contains '<a ' -%}
+          {%- assign powered_by_link_html = powered_by_link_html | replace: '<a ', '<a rel="noopener" ' -%}
+        {%- endif -%}
+        {%- assign powered_by_link = powered_by_link_html -%}
+      </ul>
     </div>
+    {% if section.settings.footer_payment_enable %}
+      {% unless shop.enabled_payment_types == empty %}
+        <ul class="footer__payment payment-icons grid__item inline-list grid__item medium-up--one-third">
+          {% for type in shop.enabled_payment_types %}
+            <li>{{ type | payment_type_svg_tag: class:'payment-icon' }}</li>
+          {% endfor %}
+        </ul>
+      {% endunless %}
+    {% endif %}
+
   </div>
 
   {% if section.settings.image %}

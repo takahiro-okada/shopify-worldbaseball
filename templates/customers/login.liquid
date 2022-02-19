@@ -9,7 +9,7 @@
 <section data-account-form id="Login" class="account account--login {% if shop.checkout.guest_login %} just{% endif %}">
 	<section class="col">
       <div data-login-form class="animates login{% if shop.checkout.guest_login %} align-left{% endif %}">
-          <h2 class="theme">{{ 'customer.login.title' | t }}</h2>
+          <h2 class="theme common-subtitle">{{ 'customer.login.title' | t }}</h2>
           <p>{{ 'customer.login.create_account_prompt' | t }} <span class="text-link"><br><a href="{{ routes.account_register_url }}">{{ 'customer.login.create_account_cta' | t }}</a></span>.</p>
           {% form 'customer_login' %}
           <div class="form-field">
@@ -46,7 +46,7 @@
       </div>
 
       <div class="animates is-hidden" data-recover-password>
-          <h2 class="theme">{{ 'customer.recover_password.title' | t }}</h2>
+          <h2 class="theme ">{{ 'customer.recover_password.title' | t }}</h2>
           <p>{{ 'customer.recover_password.subtext' | t }}</p>
           {% form 'recover_customer_password' %}
           {{ form.errors | default_errors }}

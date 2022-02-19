@@ -17,7 +17,7 @@
 {%- assign animation_anchor = '#text-row--' | append: section.id -%}
 
 <div class="text-row {{ section.settings.text_color }} {{ section.settings.height }}" id="text-row--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="text-row" data-text-alignment="{{ text_alignment }}" style="background-color: {{ bg_color }};">
-  <div class="wrapper--columns {{ section.settings.icon_alignment }} {{ section.settings.icon_size }}">
+  <div class="common__inner wrapper--columns {{ section.settings.icon_alignment }} {{ section.settings.icon_size }}">
     <div class="grid grid--uniform">
 
       {%- if section.blocks.size -%}

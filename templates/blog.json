@@ -5,7 +5,7 @@
       "settings": {
         "show_title": true,
         "show_rss": false,
-        "show_tag_nav": true,
+        "show_tag_nav": false,
         "grid": 3,
         "rows": 2,
         "aspect_ratio": 0.6,

@@ -2,29 +2,127 @@
   "sections": {
     "main": {
       "type": "list-collections",
+      "settings": {
+        "display_type": "selected",
+        "title": "カテゴリー",
+        "grid": 4,
+        "rows": 1,
+        "layout_mobile": "2"
+      }
+    },
+    "164525696668939545": {
+      "type": "section-collections-list",
       "blocks": {
-        "c4a13aae-4d22-4adc-a73a-646a7a45e346": {
+        "16452569666f857d3a-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "glove-mitt",
+            "title": "BASEBALL<br>\nGLOBE"
+          }
+        },
+        "16452569666f857d3a-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "bat",
+            "title": "BAT"
+          }
+        },
+        "16452569666f857d3a-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "shoes",
+            "title": "SHOES"
+          }
+        },
+        "16452569666f857d3a-3": {
           "type": "collection",
           "settings": {
             "collection": "wear",
-            "collection_name": "",
-            "bg_position": "center-center"
+            "title": "TRAINING<br>\nWEAR"
+          }
+        },
+        "41d6fa7f-0518-4860-94b8-5fd06ac45850": {
+          "type": "collection",
+          "settings": {
+            "collection": "belt",
+            "title": "BELT"
+          }
+        },
+        "a3ecbcd1-d67d-43a2-833b-ebcd620465c2": {
+          "type": "collection",
+          "settings": {
+            "collection": "gloves",
+            "title": "GLOBE"
+          }
+        },
+        "252ad08f-750e-4547-95a4-cf6adcaef9cc": {
+          "type": "collection",
+          "settings": {
+            "collection": "cold-protection",
+            "title": "WINTER<br>\nWEAR"
+          }
+        },
+        "79339293-64b8-4b04-bef6-8362495163ec": {
+          "type": "collection",
+          "settings": {
+            "collection": "バック-ケース",
+            "title": "BAG"
+          }
+        },
+        "546d97b4-2d81-426b-87b6-02681157b7b7": {
+          "type": "collection",
+          "settings": {
+            "collection": "エルボー-フットガード",
+            "title": "PROTECTOR"
+          }
+        },
+        "559348e1-add0-42ad-bee6-e4a97214a14f": {
+          "type": "collection",
+          "settings": {
+            "collection": "ボール",
+            "title": "BALL"
+          }
+        },
+        "18fd3b7c-ce2d-4a0b-a7a9-a9b7f00d503c": {
+          "type": "collection",
+          "settings": {
+            "collection": "キャッチャー用品",
+            "title": "CATHER"
+          }
+        },
+        "95009434-c496-4bf6-8b0f-8b7183b8cf0c": {
+          "type": "collection",
+          "settings": {
+            "collection": "トレーニング用品",
+            "title": "TRAINING"
           }
         }
       },
       "block_order": [
-        "c4a13aae-4d22-4adc-a73a-646a7a45e346"
+        "16452569666f857d3a-0",
+        "16452569666f857d3a-1",
+        "16452569666f857d3a-2",
+        "16452569666f857d3a-3",
+        "41d6fa7f-0518-4860-94b8-5fd06ac45850",
+        "a3ecbcd1-d67d-43a2-833b-ebcd620465c2",
+        "252ad08f-750e-4547-95a4-cf6adcaef9cc",
+        "79339293-64b8-4b04-bef6-8362495163ec",
+        "546d97b4-2d81-426b-87b6-02681157b7b7",
+        "559348e1-add0-42ad-bee6-e4a97214a14f",
+        "18fd3b7c-ce2d-4a0b-a7a9-a9b7f00d503c",
+        "95009434-c496-4bf6-8b0f-8b7183b8cf0c"
       ],
       "settings": {
-        "display_type": "selected",
-        "title": "Collections",
-        "grid": 4,
-        "rows": 1,
-        "layout_mobile": "carousel"
+        "title": "",
+        "description": "",
+        "layout": "grid",
+        "aspect_ratio": 1,
+        "enable_slider": true
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "164525696668939545"
   ]
 }

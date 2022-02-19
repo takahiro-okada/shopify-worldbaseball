@@ -1,0 +1,178 @@
+<section clss="section-map-original">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838564.2710319301!2d135.32820132474956!3d34.81495557419235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f1.1!3m3!1m2!1s0x60048734fea6ba9d%3A0xe9ef58de5da5fcd0!2zQkFTRUJBTEwgU0hPUOODr-ODvOODq-ODiQ!5e0!3m2!1sja!2sjp!4v1645252889513!5m2!1sja!2sjp" style="border:0;" width="100%" height="300px" loading="lazy"></iframe>
+</section>
+
+<style>
+.section-map-original{
+
+}
+.section-map-original iframe{
+  width: 100%;
+  height: 450px;
+}
+@media only screen and (min-width:750px) {
+  .section-map-original iframe{
+    height: 600px;
+  }
+}
+@media only screen and (min-width:1280px) {
+  .section-map-original iframe{
+    height: 600px;
+  }
+}
+</style>
+
+{% schema %}
+  {
+    "name": "地図(GoogleMap)",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "select",
+        "id": "height",
+        "label": "高さ",
+        "default": "screen-height-one-half",
+        "options": [
+          { "value": "screen-height-full", "label": "画面いっぱい"},
+          { "value": "screen-height-three-quarters", "label": "画面の3/4"},
+          { "value": "screen-height-two-thirds", "label": "画面の2/3"},
+          { "value": "screen-height-one-half", "label": "画面の1/2"},
+          { "value": "screen-height-one-third", "label": "画面の1/3"},
+          { "value": "seven-fifty-height-hero", "label": "750px" },
+          { "value": "sixty-fifty-height-hero", "label": "650px" },
+          { "value": "five-fifty-height-hero ", "label": "550px" },
+          { "value": "four-fifty-height-hero", "label": "450px" },
+          { "value": "image-height", "label": "オリジナル画像" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "住所情報"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "見出し",
+        "default": "Map"
+      },
+      {
+        "type": "richtext",
+        "id": "address",
+        "label": "住所と営業時間",
+        "default": "<p>123 Fake St.<br>Vancouver, Canada</p><p>Mon - Fri, 10am - 9pm<br>Weekends, 11am - 4pm</p>"
+      },
+      {
+        "type": "text",
+        "id": "button",
+        "label": "地図のリンク",
+        "default": "Directions"
+      },
+      {
+        "type": "select",
+        "id": "text_color",
+        "label": "テキストの色",
+        "default": "text-dark",
+        "options": [
+          { "value": "text-light", "label": "白"},
+          { "value": "text-dark", "label": "ダーク"}
+        ]
+      },
+      {
+        "id": "bg_color",
+        "type": "color",
+        "label": "背景色",
+        "default": "#FBFBFB"
+      },
+      {
+        "type": "header",
+        "content": "地図"
+      },
+      {
+        "id": "api_key",
+        "type": "text",
+        "label": "Google Maps API key",
+        "info": "[Google Maps API Key](https://help.shopify.com/manual/using-themes/troubleshooting/map-section-api-key)を登録する必要があります。"
+      },
+      {
+        "id": "map_address",
+        "type": "text",
+        "label": "地図の住所",
+        "info": "Googleマップはこの住所から緯度・経度を取得します",
+        "default": "404 Beach Avenue, Vancouver, BC"
+      },
+      {
+        "type": "range",
+        "id": "zoom",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "label": "ズーム",
+        "info":"低レベルは広い範囲をカバーし、高レベルは狭い範囲をカバーします",
+        "default": 11
+      },
+      {
+        "type": "select",
+        "id": "style",
+        "label": "マップスタイル",
+        "default": "light",
+        "options": [
+          { "value": "default", "label": "デフォルト" },
+          { "value": "light", "label": "ミニマル"},
+          { "value": "white_label", "label": "ライト"},
+          { "value": "dark_label", "label": "ダーク"}
+        ]
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "画像",
+        "info": "地図が読み込まれていない場合に表示される"
+      },
+      {
+        "type": "select",
+        "id": "bg_position",
+        "label": "位置",
+        "default": "center-center",
+        "options": [
+          { "label": "上", "value": "center-top" },
+          { "label": "右", "value": "right-center" },
+          { "label": "中央", "value": "center-center" },
+          { "label": "左", "value": "left-center" },
+          { "label": "下", "value": "center-bottom" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "位置補正"
+      },
+      {
+        "type": "paragraph",
+        "content": "Googleが住所の位置を正しく表示していない場合、ピンポジションを修正します"
+      },
+      {
+          "type": "checkbox",
+          "id": "enable_latlong",
+          "label": "位置補正を有効にする",
+          "default": false
+      },
+      {
+        "type": "text",
+        "id": "lat",
+        "label": "緯度",
+        "info": "例: 49.281670"
+      },
+      {
+        "type": "text",
+        "id": "long",
+        "label": "経度",
+        "info": "例: -123.139640"
+      }
+    ],
+    "presets": [
+      {
+        "name": "地図(GoogleMap)",
+        "category": "画像"
+      }
+    ]
+  }
+{% endschema %}

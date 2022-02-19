@@ -21,7 +21,7 @@
     {%- endif -%}
   </div>
 
-  <div class="reviews__slider {% if section.blocks.size == 1 %}reviews__slider--with-only-one-slide{% endif %} reviews__slider--{{ section.id }}">
+  <div class="common__inner reviews__slider {% if section.blocks.size == 1 %}reviews__slider--with-only-one-slide{% endif %} reviews__slider--{{ section.id }}">
     {% if section.blocks.size > 0 %}
       {% for block in section.blocks %}
         {% assign customer_name = block.settings.title %}

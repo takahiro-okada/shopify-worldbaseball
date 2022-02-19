@@ -11,7 +11,7 @@
         "height": "margin--small",
         "width": "wrapper",
         "text_color": "text-dark",
-        "bg_color": "#f7f7f7"
+        "bg_color": "#ffffff"
       }
     },
     "1645000033a81a978f": {
@@ -34,7 +34,7 @@
           "type": "question",
           "settings": {
             "title": "注文をキャンセルしたいです・・・",
-            "content": "<p>【銀行振込以外の決済方法の場合】<br\/>「ご注文を受け付けました」のメール案内が届く前でしたら、キャンセル対応させていただきます。<\/p><p>※出荷後のキャンセルは、基本的にお受けできかねます。お早めのご連絡をお願い申し上げます。<br\/><br\/>【銀行振込でご注文をされた方】<br\/>ご入金前の場合に限り、キャンセル対応させていただきます。<\/p><p>やむを得ずキャンセルの場合は、早急にお電話・LINEでご連絡くださいませ。<\/p><p>電話0569-43-5558　平日11:00~20:00　土日10:00~20:00<\/p><p>LINEリンク<\/p><p>&lt;p&gt;hoge&lt;\/p&gt;<br\/><\/p>"
+            "content": "<p>【銀行振込以外の決済方法の場合】<br\/>「ご注文を受け付けました」のメール案内が届く前でしたら、キャンセル対応させていただきます。<\/p><p>※出荷後のキャンセルは、基本的にお受けできかねます。お早めのご連絡をお願い申し上げます。<br\/><br\/>【銀行振込でご注文をされた方】<br\/>ご入金前の場合に限り、キャンセル対応させていただきます。<\/p><p>やむを得ずキャンセルの場合は、早急にお電話・LINEでご連絡くださいませ。<\/p><p>電話0569-43-5558　平日11:00~20:00　土日10:00~20:00<\/p><p><a href=\"https:\/\/page.line.me\/731qtpzw\" target=\"_blank\" title=\"https:\/\/page.line.me\/731qtpzw\">LINEで問い合わせる<\/a><br\/><\/p>"
           }
         },
         "1645000033c53b8447-3": {
@@ -55,7 +55,7 @@
           "type": "question",
           "settings": {
             "title": "海外から注文はできますか？",
-            "content": "<p>申し訳ございませんが、対応できません。日本国内への発送でしたら対応させていただきます。<br\/>まずはご相談くださいませ。<\/p><p>LINE<\/p>"
+            "content": "<p>申し訳ございませんが、対応できません。日本国内への発送でしたら対応させていただきます。<br\/>まずはご相談くださいませ。<\/p><p><a href=\"https:\/\/page.line.me\/731qtpzw\" target=\"_blank\" title=\"https:\/\/page.line.me\/731qtpzw\">LINEで問い合わせる<\/a><\/p>"
           }
         }
       },
@@ -68,7 +68,7 @@
         "5aa42f9b-5c91-496d-94cb-ded3c3329ae8"
       ],
       "settings": {
-        "width": "wrapper--full",
+        "width": "wrapper",
         "height": "margin--small",
         "text_color": "text-dark",
         "bg_color": "#ffffff"
@@ -108,7 +108,7 @@
           "type": "question",
           "settings": {
             "title": "領収書や請求書は発行可能ですか？",
-            "content": "<p>可能です。ご要望のある方は、LINEまたはお電話にてお問い合わせください。<\/p><p>※LINEと電話リンク<\/p>"
+            "content": "<p>可能です。ご要望のある方は、LINEまたはお電話にてお問い合わせください。<\/p><p><a href=\"https:\/\/page.line.me\/731qtpzw\" target=\"_blank\" title=\"https:\/\/page.line.me\/731qtpzw\">LINEで問い合わせる<\/a><\/p><p><a href=\"tel:0569-43-5558\" target=\"_blank\" title=\"tel:0569-43-5558\">電話で問い合わせる<\/a><\/p>"
           }
         },
         "2dc6e808-db2a-4b0d-b6b8-d49638521f5b": {
@@ -136,7 +136,7 @@
           "type": "question",
           "settings": {
             "title": "送料はいくらですか？",
-            "content": "<p>10,000円以上の商品のお買い上げで送料無料となっております。<br\/><br\/>画像を入れる<\/p>"
+            "content": "<p>10,000円以上の商品のお買い上げで送料無料となっております。<br\/>送料は、配送エリアによって異なりますのでこちらをご確認ください。<br\/><a href=\"\/policies\/shipping-policy\" target=\"_blank\" title=\"Shipping Policy\">配送料を確認する<\/a><\/p>"
           }
         }
       },
@@ -152,7 +152,7 @@
         "92600478-e606-4e31-a274-1dee4a67cf16"
       ],
       "settings": {
-        "width": "wrapper--full",
+        "width": "wrapper",
         "height": "margin--small",
         "text_color": "text-dark",
         "bg_color": "#ffffff"
@@ -185,14 +185,14 @@
           "type": "question",
           "settings": {
             "title": "実物の商品を見れますか？",
-            "content": "<p>実店舗にて展示しております。<\/p><p>ご来店いただく際には、一度LINEがお電話にてお問い合わせください。※LINEと電話リンク<\/p>"
+            "content": "<p>実店舗にて展示しております。<\/p><p>ご来店いただく際には、一度LINEがお電話にてお問い合わせください。<\/p><p><a href=\"https:\/\/page.line.me\/731qtpzw\" target=\"_blank\" title=\"https:\/\/page.line.me\/731qtpzw\">LINEで問い合わせる<\/a><br\/><a href=\"tel:0569-43-5558\" target=\"_blank\" title=\"tel:0569-43-5558\">電話で問い合わせる<\/a><\/p>"
           }
         },
         "2c4e2614-8f6c-41e4-8412-091b67d7cb71": {
           "type": "question",
           "settings": {
             "title": "他の写真も見たいです。",
-            "content": "<p>LINEにて指定の商品情報と一緒にお問い合わせください。<\/p><p>※LINEリンク<\/p>"
+            "content": "<p>LINEにて指定の商品情報と一緒にお問い合わせください。<\/p><p><a href=\"https:\/\/page.line.me\/731qtpzw\" target=\"_blank\" title=\"https:\/\/page.line.me\/731qtpzw\">LINEで問い合わせる<\/a><\/p>"
           }
         }
       },
@@ -204,7 +204,7 @@
         "2c4e2614-8f6c-41e4-8412-091b67d7cb71"
       ],
       "settings": {
-        "width": "wrapper--full",
+        "width": "wrapper",
         "height": "margin--small",
         "text_color": "text-dark",
         "bg_color": "#ffffff"
@@ -250,7 +250,7 @@
         "faq-2"
       ],
       "settings": {
-        "width": "wrapper--full",
+        "width": "wrapper",
         "height": "margin--small",
         "text_color": "text-dark",
         "bg_color": "#ffffff"
@@ -278,7 +278,7 @@
         "question-2"
       ],
       "settings": {
-        "width": "wrapper--full",
+        "width": "wrapper",
         "height": "margin--small",
         "text_color": "text-dark",
         "bg_color": "#ffffff"
@@ -297,7 +297,7 @@
           "type": "question",
           "settings": {
             "title": "店舗に来店してもいいですか？",
-            "content": "<p>ぜひご来店ください。<\/p><p>商品も手にとってご確認いただけます。<\/p><p>ご指定の商品がある場合、事前にLINEかお電話にてお問い合わせください。<\/p><p>※LINEと電話リンク<\/p>"
+            "content": "<p>ぜひご来店ください。<\/p><p>商品も手にとってご確認いただけます。<\/p><p>ご指定の商品がある場合、事前にLINEかお電話にてお問い合わせください。<\/p><p><a href=\"https:\/\/page.line.me\/731qtpzw\" target=\"_blank\" title=\"https:\/\/page.line.me\/731qtpzw\">LINEで問い合わせる<\/a><\/p><p><a href=\"tel:0569-43-5558\" target=\"_blank\" title=\"tel:0569-43-5558\">電話で問い合わせる<\/a><\/p>"
           }
         },
         "1645000591ae41d72e-2": {
@@ -322,7 +322,7 @@
         "1645000591ae41d72e-3"
       ],
       "settings": {
-        "width": "wrapper--full",
+        "width": "wrapper",
         "height": "margin--small",
         "text_color": "text-dark",
         "bg_color": "#ffffff"

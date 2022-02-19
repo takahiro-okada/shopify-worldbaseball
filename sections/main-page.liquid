@@ -1,7 +1,7 @@
 <!-- /sections/main-page.liquid -->
 {%- assign animation_anchor = '#page--' | append: section.id -%}
 
-{% if section.settings.show_content or section.settings.subheading != blank or section.settings.show_title %}  
+{% if section.settings.show_content or section.settings.subheading != blank or section.settings.show_title %}
   <section class="index-page {{ section.settings.text_color }} {{ section.settings.height }}" id="page--{{ section.id }}" style="background-color: {{ section.settings.bg_color }};" data-section-id="{{ section.id }}" data-section-type="page">
     <div class="{{ section.settings.width }}">
       <div class="text__standard {{ section.settings.align_text }}">
@@ -14,7 +14,7 @@
           </p>
         {% endif %}
         {% if section.settings.show_title %}
-          <h2 class="h4 standard__heading"
+          <h2 class="h4 common-subtitle standard__heading"
             data-aos="hero"
             data-aos-anchor="{{ animation_anchor }}"
             data-aos-order="2">

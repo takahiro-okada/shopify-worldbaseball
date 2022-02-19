@@ -28,9 +28,9 @@
   justify-content: center;
   padding: 1rem 0;
   background-color: #fff;
+  border-top: 0;
   border-right: 1px solid #004EA2;
   border-left: 1px solid #004EA2;
-  border-top: 1px solid #004EA2;
   border-bottom: 1px solid #004EA2;
   width: 100%;
   max-height: 90px;
@@ -43,18 +43,12 @@
   }
   .c-contact__textbox{
     width: 100%;
-    border-right: 10px solid #FABE00;
-    border-bottom: none;
   }
   .c-contact__main{
     width: 100%;
   }
 }
-@media screen and (min-width: 1280px) {
-  .c-contact__list{
-    display: flex;
-    flex-wrap: wrap;
-  }
+@media screen and (min-width: 900px) {
   .c-contact__item{
     display: flex;
     width: calc(50% - 30px * 1 / 2 );
@@ -64,9 +58,13 @@
   }
   .c-contact__textbox{
     width: 50%;
+    border-top: 1px solid #004EA2;
+    border-right: 10px solid #FABE00;
+    border-bottom: none;
   }
   .c-contact__main{
     width: 50%;
+    border-top: 1px solid #004EA2;
     border-left: none;
   }
 }

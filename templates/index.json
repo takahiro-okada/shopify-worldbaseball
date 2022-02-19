@@ -221,6 +221,24 @@
         "bg_color": "#fafafa"
       }
     },
+    "164529133020e283f0": {
+      "type": "section-news",
+      "settings": {
+        "blog_name": "ニュース",
+        "title": "NEWS",
+        "description": "<p>ニュース<\/p>",
+        "grid": 3,
+        "rows": 1,
+        "show_tags": false,
+        "show_date": true,
+        "show_button": false,
+        "button_text": "ニュース一覧を見る",
+        "button_url": "",
+        "button_color": "btn--neutral",
+        "button_style": "hero__btn btn btn--large caps",
+        "bg_color": "#ffffff"
+      }
+    },
     "164303364231f347e9": {
       "type": "apps",
       "blocks": {
@@ -230,7 +248,7 @@
             "heading_font": "helvetica_n4",
             "heading_size": 20,
             "feed_width": 100,
-            "html_area": "<h2 class=\"grid__heading text-center aos-init aos-animate\" data-aos=\"hero\" data-aos-anchor=\"#collection--template--15619235774723__16429554554df2d39a\" data-aos-order=\"1\" data-live-text-setting=\"section.template--15619235774723__16429554554df2d39a.heading\">Instagram<\/h2>"
+            "html_area": "<div class=\"grid__heading-holder\">\n  <h2 class=\"grid__heading text-center\" data-aos=\"hero\" data-aos-order=\"1\">Instagram<\/h2>\n\n  <div class=\"grid__description\">\n    インスタグラム\n  <\/div>\n<\/div>"
           }
         }
       },
@@ -296,6 +314,7 @@
     "1642955528e153829b",
     "164295582500779323",
     "16446326991276f9ac",
+    "164529133020e283f0",
     "164303364231f347e9",
     "164295601914e70c67"
   ]
