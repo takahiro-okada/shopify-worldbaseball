@@ -168,7 +168,13 @@
     {% section 'header' %}
 
     <!-- CONTENT -->
-    <main role="main" id="MainContent" class="main-content">
+    <main
+    role="main"
+    id="MainContent"
+    class="main-content
+    {% if page.handle ==  "shop" %} main-content--shop {% endif %}
+    "
+    >
 
       {{ content_for_layout }}
 

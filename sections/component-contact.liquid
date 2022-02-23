@@ -3,31 +3,42 @@
 <div class="c-contact" style="background-color: {{ section.settings.bg_color }};">
   <div class="c-contact__inner wrapper common__inner">
     <div class="c-contact__list">
-      <div class="c-contact__item">
-        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--tel"><span class="c-contact__icon"><img src="{{ "contact-icon-tel.svg" | asset_url }}" alt="TELLのアイコン"></span>電話で問い合わせる</span></div>
-        <div class="c-contact__main"><span class="c-contact__tel"><a href="tel:0569-43-5558">0569-43-5558</a></span></div>
-      </div>
-      <div class="c-contact__item">
-        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--line"><span class="c-contact__icon"><img src="{{ "contact-icon-line.svg" | asset_url }}" alt="LINEのアイコン"></span>LINEで問い合わせる</span></div>
-        <div class="c-contact__main c-contact-line">
-          <span class="c-contact__qrimage"><img src="{{ "qr-line.png" | asset_url }}" alt="LINEのQRコード"></span>
-          <span class="c-contact-line__text"><a href="https://page.line.me/731qtpzw?openQrModal=true">@lineのIDがはいります</a></span>
-        </div>
-      </div>
-      <div class="c-contact__item">
-        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--instagram"><span class="c-contact__icon"><img src="{{ "contact-icon-instagram.svg" | asset_url }}" alt="INSTAGRAMのアイコン"></span>Instagramで問い合わせる</span></div>
-        <div class="c-contact__main c-contact-line">
-          <span class="c-contact__qrimage"><img src="{{ "qr-insta.png" | asset_url }}" alt="INSTAGRAMのQRコード"></span>
-          <span class="c-contact-line__text"><a href="https://www.instagram.com/baseballshopworld/?hl=ja">@baseballshopworld</a></span>
-        </div>
-      </div>
-      <div class="c-contact__item">
-        <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--mail"><span class="c-contact__icon"><img src="{{ "contact-icon-mail.svg" | asset_url }}" alt="メールのアイコン"></span>メールで問い合わせる</span></div>
-        <div class="c-contact__main c-contact-line">
-          <span class="c-contact-line__text">world89_net@yahoo.co.jp</span>
-        </div>
-      </div>
-
+      {% for block in section.blocks %}
+        {% case block.type %}
+        {% when condition %}
+          {% when "tel" %}
+          <div class="c-contact__item">
+            <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--tel"><span class="c-contact__icon"><img src="{{ "contact-icon-tel.svg" | asset_url }}" alt="TELLのアイコン"></span>電話で問い合わせる</span></div>
+            <div class="c-contact__main c-contact-tel">
+                <span class="c-contact__tel"><a href="tel:0569-43-5558">0569-43-5558</a></span>
+                <span class="c-contact__tel-desc">平日11:00~20:00　土日10:00~20:00</span>
+            </div>
+          </div>
+          {% when "line" %}
+          <div class="c-contact__item">
+            <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--line"><span class="c-contact__icon"><img src="{{ "contact-icon-line.svg" | asset_url }}" alt="LINEのアイコン"></span>LINEで問い合わせる</span></div>
+            <div class="c-contact__main c-contact-line">
+              <span class="c-contact__qrimage"><img src="{{ "qr-line.png" | asset_url }}" alt="LINEのQRコード"></span>
+              <span class="c-contact-line__text"><a href="https://page.line.me/731qtpzw?openQrModal=true">@lineのIDがはいります</a></span>
+            </div>
+          </div>
+          {% when "insta" %}
+          <div class="c-contact__item">
+            <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--instagram"><span class="c-contact__icon"><img src="{{ "contact-icon-instagram.svg" | asset_url }}" alt="INSTAGRAMのアイコン"></span>Instagramで問い合わせる</span></div>
+            <div class="c-contact__main c-contact-line">
+              <span class="c-contact__qrimage"><img src="{{ "qr-insta.png" | asset_url }}" alt="INSTAGRAMのQRコード"></span>
+              <span class="c-contact-line__text"><a href="https://www.instagram.com/baseballshopworld/?hl=ja">@baseballshopworld</a></span>
+            </div>
+          </div>
+          {% when "mail" %}
+          <div class="c-contact__item">
+            <div class="c-contact__textbox"><span class="c-contact__text c-contact__text--mail"><span class="c-contact__icon"><img src="{{ "contact-icon-mail.svg" | asset_url }}" alt="メールのアイコン"></span>メールで問い合わせる</span></div>
+            <div class="c-contact__main c-contact-line">
+              <span class="c-contact-line__text">world89_net@yahoo.co.jp</span>
+            </div>
+          </div>
+        {% endcase %}
+      {% endfor %}
     </div>
   </div>
 </div>
@@ -51,6 +62,24 @@
       "id": "bg_color",
       "label": "背景の色",
       "default": "#fafafa"
+    }
+  ],
+  "blocks": [
+    {
+      "type":"insta",
+      "name":"インスタグラム"
+    },
+    {
+      "type":"line",
+      "name":"LINE"
+    },
+    {
+      "type":"tel",
+      "name":"電話"
+    },
+    {
+      "type":"mail",
+      "name":"メール"
     }
   ],
   "presets": [

@@ -23,8 +23,25 @@
     },
     "1643425308b49a70ab": {
       "type": "component-contact",
+      "blocks": {
+        "fcd332c4-c1bb-42ae-97ea-62450698139e": {
+          "type": "tel",
+          "settings": {
+          }
+        },
+        "8dc63f0c-5837-453e-b499-6448856e643b": {
+          "type": "line",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "fcd332c4-c1bb-42ae-97ea-62450698139e",
+        "8dc63f0c-5837-453e-b499-6448856e643b"
+      ],
       "settings": {
-        "custom_liquid": ""
+        "custom_liquid": "",
+        "bg_color": "#ffffff"
       }
     },
     "contact": {
@@ -33,6 +50,7 @@
         "Name": {
           "type": "text",
           "settings": {
+            "heading_title": "お名前",
             "title": "山田　太郎",
             "required": true
           }
@@ -40,6 +58,7 @@
         "Email": {
           "type": "email",
           "settings": {
+            "heading_title": "メールアドレス",
             "title": "メールアドレス",
             "required": true
           }
@@ -47,6 +66,7 @@
         "Message": {
           "type": "body",
           "settings": {
+            "heading_title": "お問い合わせ内容",
             "title": "お問い合わせ内容を入力ください。",
             "required": true
           }

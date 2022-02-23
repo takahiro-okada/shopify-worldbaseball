@@ -170,37 +170,56 @@
         "16437018486331dddd-1": {
           "type": "logo-item",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/toda.jpg",
             "logo_width": 180,
             "link": "",
-            "staff_name": "",
-            "staff_comment": ""
+            "staff_roll": "株式会社ワールド社長",
+            "staff_name": "戸田 幸男",
+            "staff_comment": "<p>幸せな男と書いて幸男。野球人生にピリオドはない。<\/p>"
           }
         },
         "16437018486331dddd-2": {
           "type": "logo-item",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/toda-1.jpg",
             "logo_width": 180,
             "link": "",
-            "staff_name": "",
-            "staff_comment": ""
+            "staff_roll": "昭和のアイドル",
+            "staff_name": "戸田 郁子",
+            "staff_comment": "<p>人生の半分以上を野球用品の販売に捧げている、昭和のアイドル。<\/p>"
           }
         },
         "fd144125-0b24-446d-a6bb-2de6faf280c9": {
           "type": "logo-item",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/hattori-1.jpg",
             "logo_width": 180,
             "link": "",
-            "staff_name": "",
-            "staff_comment": ""
+            "staff_roll": "敏腕マネージャー",
+            "staff_name": "服部 利加",
+            "staff_comment": "<p>敏腕女子マネージャー。その名はりかちゃん。半端ない握力を隠し持つ小さな巨人。<\/p>"
           }
         },
         "9a6e40a9-fff7-4a27-87ae-c792033457a4": {
           "type": "logo-item",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/hattori.jpg",
             "logo_width": 180,
             "link": "",
-            "staff_name": "",
-            "staff_comment": ""
+            "staff_roll": "若きエース",
+            "staff_name": "服部 大也",
+            "staff_comment": "<p>イニシャルはＤＨ。僕はあなたの指名打者。レジより暗算が早い生きる電卓。<\/p>"
+          }
+        },
+        "30b6d15a-f5ce-4ed7-9b6d-4ce678e85732": {
+          "type": "logo-item",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/tanimoto.jpg",
+            "logo_width": 180,
+            "link": "",
+            "staff_roll": "グラブ研究所長",
+            "staff_name": "谷本 裕樹",
+            "staff_comment": "<p>甲子園球児の実家はカレー屋さん。<br\/>Myホームを捨て知多にやって来た平成のガン。<\/p>"
           }
         }
       },
@@ -208,7 +227,8 @@
         "16437018486331dddd-1",
         "16437018486331dddd-2",
         "fd144125-0b24-446d-a6bb-2de6faf280c9",
-        "9a6e40a9-fff7-4a27-87ae-c792033457a4"
+        "9a6e40a9-fff7-4a27-87ae-c792033457a4",
+        "30b6d15a-f5ce-4ed7-9b6d-4ce678e85732"
       ],
       "settings": {
         "title": "スタッフ",
@@ -224,7 +244,7 @@
         "address": "<p>123 Fake St.<br\/>Vancouver, Canada<\/p><p>Mon - Fri, 10am - 9pm<br\/>Weekends, 11am - 4pm<\/p>",
         "button": "Directions",
         "text_color": "text-dark",
-        "bg_color": "#FBFBFB",
+        "bg_color": "#fbfbfb",
         "api_key": "",
         "map_address": "404 Beach Avenue, Vancouver, BC",
         "zoom": 11,

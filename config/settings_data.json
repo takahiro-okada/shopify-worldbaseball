@@ -3,7 +3,7 @@
     "text_color": "#162e45",
     "bg_color": "#ffffff",
     "secondary_bg_color": "#F7F7F7",
-    "accent_bright": "#ecb400",
+    "accent_bright": "#004ea2",
     "accent_secondary": "#8191a4",
     "site_border_color": "#f0f0f0",
     "link_color": "#004ea2",
@@ -11,15 +11,15 @@
     "high_contrast": false,
     "header_bg": "#ffffff",
     "header_link": "#212121",
-    "header_link_hover": "#AB8C52",
+    "header_link_hover": "#ecb400",
     "show_logo_bg": false,
     "menu_bg_color": "#ffffff",
     "menu_border_color": "#ffffff",
     "menu_link_color": "#212121",
-    "menu_link_hover_color": "#AB8C52",
+    "menu_link_hover_color": "#ecb400",
     "submenu_bg_color": "#ffffff",
     "submenu_link_color": "#212121",
-    "submenu_link_hover_color": "#AB8C52",
+    "submenu_link_hover_color": "#ecb400",
     "menu_transparent_color": "#ffffff",
     "footer_bg": "#ffffff",
     "footer_border": "#ffffff",
@@ -39,7 +39,10 @@
     "sale_text_color": "#af7b88",
     "badge_bg_color": "#ffffff",
     "badge_text_color": "#212121",
-    "show_free_shipping_message": true,
+    "enable_cart_dropdown": false,
+    "enable_order_notes": false,
+    "enable_estimate_shipping": false,
+    "show_free_shipping_message": false,
     "message": "Spend ||amount|| for free shipping",
     "free_shipping_limit": "200",
     "checkout_logo_position": "left",
@@ -209,6 +212,34 @@
       },
       "component-contact": {
         "type": "component-contact",
+        "blocks": {
+          "d6d2ec81-386b-4b50-80ea-9cca664d2053": {
+            "type": "insta",
+            "settings": {
+            }
+          },
+          "41f754f9-b7b5-4b04-8aa8-fd28eb12aa1d": {
+            "type": "line",
+            "settings": {
+            }
+          },
+          "c9d250ed-de1e-4401-b91e-4fec50279c14": {
+            "type": "mail",
+            "settings": {
+            }
+          },
+          "a4dda48e-5c5a-48ac-9d11-ab32ee35d4be": {
+            "type": "tel",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "d6d2ec81-386b-4b50-80ea-9cca664d2053",
+          "41f754f9-b7b5-4b04-8aa8-fd28eb12aa1d",
+          "c9d250ed-de1e-4401-b91e-4fec50279c14",
+          "a4dda48e-5c5a-48ac-9d11-ab32ee35d4be"
+        ],
         "settings": {
           "custom_liquid": "",
           "bg_color": "#f0f0f0"

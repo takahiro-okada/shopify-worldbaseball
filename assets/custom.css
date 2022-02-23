@@ -149,3 +149,31 @@
   display: inline-block;
   padding: 1rem;
 }
+
+/* staffページ */
+.staff__list{
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:30px;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width:750px) {
+  .staff__list{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.staff__item{
+}
+.staff__roll{
+  font-size: 14px;
+  text-align: center;
+}
+.staff__name{
+  font-size: 18px;
+  text-align: center;
+}
+.staff__comment{
+  font-size: 16px;
+}
