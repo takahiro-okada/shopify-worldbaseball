@@ -117,7 +117,7 @@
                 {%- when '@app' -%}
                   {% render block %}
                 {%- when 'price_and_title' -%}
-                  
+
 {%- case block.settings.subheading_option -%}
   {%- when 'vendor' -%}
     {%- if product.vendor -%}
@@ -151,13 +151,13 @@
       <button type="button" class="product__badge-link" data-scroll-to="#reviews-{{ product.id }}">
         <div class="rating-container product__rating">
           {% liquid
-          assign rating_decimal = 0 
-          assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1 
+          assign rating_decimal = 0
+          assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
           if decimal >= 0.3 and decimal <= 0.7
             assign rating_decimal = 0.5
           elsif decimal > 0.7
             assign rating_decimal = 1
-          endif 
+          endif
           %}
           {%- if block.settings.enable_star_rating -%}
             <div class="rating" role="img" aria-label="{{ 'general.accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
@@ -203,7 +203,7 @@
           assign has_units = true
         else
           assign has_units = false
-        endif 
+        endif
       %}
       {% if has_units %}
         {% capture show_units %}
@@ -299,6 +299,16 @@
                       </div>
                     {%- endif -%}
                   {%- endif -%}
+
+                {%- when 'laser' -%}
+                {% for collection in collections %}
+                  {% if collection.handle ==  "glove-mitt" %}
+                        <div class="product-laser">
+                          <img style="width:100%; margin:10px auto;" src="https://cdn.shopify.com/s/files/1/0613/6040/6787/files/laser_pitchersetumei.png?v=1645650194" alt="刺繍について">
+                        </div>
+                  {% endif %}
+                {% endfor %}
+
                 {%- when 'upsell' -%}
                   <div {{ block.shopify_attributes }}>
                     {%- if template.name == 'product' -%}
@@ -330,7 +340,7 @@
   {%- if request.design_mode -%}
     {%- assign upsell_error = false -%}
   {%- endif -%}
-  
+
   {%- unless upsell_error -%}
     {%- if request.design_mode and upsell_product.title == '' or upsell_variant == nil -%}
       {%- assign upsell_error = true -%}
@@ -340,10 +350,10 @@
       <h2 class="product-upsell-holder__title small">{{ 'products.general.upsell_title' | t }}</h2>
 
       <div data-cart-errors-container class="product-upsell__errors small"></div>
-    
+
       <div class="product-upsell">
         {%- assign upsell_variant_image = upsell_variant.featured_media | default: upsell_product.media[0] -%}
-    
+
         <div class="product-upsell__image">
           {%- if upsell_error -%}
             <div class="product-upsell__image-inner" style="background-image: url({{ 'blank.svg' | asset_url }});"></div>
@@ -358,27 +368,27 @@
               {%- else -%}
                 <div class="product-upsell__image-inner" aria-label="{{ upsell_product.title | strip_html | escape }}" role="img" style="background-image: url({{ 'blank.svg' | asset_url }});">
                   <noscript>
-                    <img src="{{ 'blank.svg' | asset_url }}" width="300" height="300" alt="{{ upsell_product.title | strip_html | escape }}">        
+                    <img src="{{ 'blank.svg' | asset_url }}" width="300" height="300" alt="{{ upsell_product.title | strip_html | escape }}">
                   </noscript>
-                </div>      
+                </div>
               {%- endif -%}
             </a>
           {%- endif -%}
         </div>
-    
+
         <div class="product-upsell__content">
           {%- if upsell_error -%}
             <h3 class="product-upsell__title small">{{ 'products.general.upsell_error_title' | t }}</h3>
-    
-            <h4 class="product-upsell__variant-title small">{{ 'products.general.upsell_error_info' | t }}</h4> 
-          {%- else -%}  
+
+            <h4 class="product-upsell__variant-title small">{{ 'products.general.upsell_error_info' | t }}</h4>
+          {%- else -%}
             <a href="{{ upsell_product.url }}">
               <h3 class="product-upsell__title small">{{ upsell_product.title | strip_html }}</h3>
-    
+
               {%- unless upsell_product.has_only_default_variant -%}
-                <h4 class="product-upsell__variant-title small">{{ upsell_variant.title | replace: '/', '<span>&nbsp;</span>' }}</h4> 
+                <h4 class="product-upsell__variant-title small">{{ upsell_variant.title | replace: '/', '<span>&nbsp;</span>' }}</h4>
               {%- endunless -%}
-    
+
               <p class="product-upsell__price small {% if upsell_variant.compare_at_price > upsell_variant.price %} sale{% endif %}">
                 <span class="new-price">
                   {%- if upsell_variant.price == 0 -%}
@@ -386,56 +396,56 @@
                   {%- else -%}
                     {{ upsell_variant.price | money }}
                   {%- endif -%}
-                </span>  
-                
+                </span>
+
                 {%- if upsell_variant.compare_at_price > upsell_variant.price -%}
                   <span class="old-price">{{ upsell_variant.compare_at_price | money }}</span>
                 {%- endif -%}
-                
+
                 {%- if upsell_variant.unit_price -%}
                   {%- capture unit_price_separator -%}
                     <span aria-hidden="true">/</span>
                     <span class="visually-hidden">{{ 'general.accessibility.unit_price_separator' | t }}&nbsp;</span>
                   {%- endcapture -%}
-    
+
                   {%- capture unit_price_base_unit -%}
                     {%- if upsell_variant.unit_price_measurement.reference_value != 1 -%}
                       {{ upsell_variant.unit_price_measurement.reference_value }}
                     {%- endif -%}
                     {{ upsell_variant.unit_price_measurement.reference_unit }}
                   {%- endcapture -%}
-                  
+
                 <br />
-  
+
                 <span class="visually-hidden visually-hidden--inline">{{ 'products.product.unit_price_label' | t }}</span>
-  
+
                 <span class="unit">{{ upsell_variant.unit_price | money }}{{ unit_price_separator }}{{ unit_price_base_unit }}</span>
               {% endif -%}
-            </p>  
+            </p>
           </a>
-          
+
           {%- form 'product', upsell_product -%}
             <input type="hidden" name="id" value="{{ upsell_variant.id }}">
-  
+
             <button type="submit" name="add" data-add-to-cart
             data-focus-element data-upsell-btn class="product-upsell__btn {% unless upsell_variant.available %} is-hidden {% endunless %}">
               <span class="product-upsell__btn-hidden" data-upsell-btn-text>{{ 'products.general.upsell_add_to_cart' | t }}</span>
-  
+
               <span class="product-upsell__btn-text">{{ 'products.general.upsell_add_to_cart' | t }}</span>
-  
+
               <span class="product-upsell__btn-plus" aria-label="+">
                 <svg width="10px" height="10px" viewBox="0 0 10 10" class="product-upsell__icon-plus">
                   <path d="M5,0.5 C5.27614237,0.5 5.5,0.723857625 5.5,1 L5.5,5 L9.5,5 C9.77614237,5 10,5.22385763 10,5.5 C10,5.77614237 9.77614237,6 9.5,6 L5.5,6 L5.5,10 C5.5,10.2761424 5.27614237,10.5 5,10.5 C4.72385763,10.5 4.5,10.2761424 4.5,10 L4.5,6 L0.5,6 C0.223857625,6 3.38176876e-17,5.77614237 0,5.5 C-3.38176876e-17,5.22385763 0.223857625,5 0.5,5 L4.5,5 L4.5,1 C4.5,0.723857625 4.72385763,0.5 5,0.5 Z" fill-rule="nonzero"></path>
                 </svg>
               </span>
-  
+
               <span class="product-upsell__btn-progress">
                 <svg height="18" width="18" class="svg-loader">
                   <circle r="7" cx="9" cy="9" />
                   <circle stroke-dasharray="87.96459430051421 87.96459430051421" r="7" cx="9" cy="9" />
                 </svg>
               </span>
-  
+
               <span class="product-upsell__btn-check">&nbsp;</span>
             </button>
 
@@ -461,7 +471,7 @@
                   </div>
                 {%- when 'pickup' -%}
                   <div class="product__pickup" data-store-availability-container {{ block.shopify_attributes }}></div>
-                {% when 'liquid' %} 
+                {% when 'liquid' %}
                   {{ block.settings.custom_liquid }}
                 {%- when 'text' -%}
                   <div class="product__subheading" {{ block.shopify_attributes }}>
@@ -864,6 +874,11 @@
             "label": "Tab text"
           }
         ]
+      },
+      {
+        "type":"laser",
+        "name":"刺繍",
+        "limit":1
       },
       {
         "type": "upsell",

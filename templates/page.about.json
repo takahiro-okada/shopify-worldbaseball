@@ -171,7 +171,6 @@
           "type": "logo-item",
           "settings": {
             "logo": "shopify:\/\/shop_images\/toda.jpg",
-            "logo_width": 180,
             "link": "",
             "staff_roll": "株式会社ワールド社長",
             "staff_name": "戸田 幸男",
@@ -182,7 +181,6 @@
           "type": "logo-item",
           "settings": {
             "logo": "shopify:\/\/shop_images\/toda-1.jpg",
-            "logo_width": 180,
             "link": "",
             "staff_roll": "昭和のアイドル",
             "staff_name": "戸田 郁子",
@@ -193,7 +191,6 @@
           "type": "logo-item",
           "settings": {
             "logo": "shopify:\/\/shop_images\/hattori-1.jpg",
-            "logo_width": 180,
             "link": "",
             "staff_roll": "敏腕マネージャー",
             "staff_name": "服部 利加",
@@ -204,7 +201,6 @@
           "type": "logo-item",
           "settings": {
             "logo": "shopify:\/\/shop_images\/hattori.jpg",
-            "logo_width": 180,
             "link": "",
             "staff_roll": "若きエース",
             "staff_name": "服部 大也",
@@ -215,7 +211,6 @@
           "type": "logo-item",
           "settings": {
             "logo": "shopify:\/\/shop_images\/tanimoto.jpg",
-            "logo_width": 180,
             "link": "",
             "staff_roll": "グラブ研究所長",
             "staff_name": "谷本 裕樹",

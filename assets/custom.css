@@ -177,3 +177,26 @@
 .staff__comment{
   font-size: 16px;
 }
+
+/* Product Options(刺繍) */
+#infiniteoptions-container{
+  padding: 20px 10px;
+}
+#infiniteoptions-container .spb-label-tooltip{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#infiniteoptions-container > div{
+  margin-bottom: 10px;
+}
+#infiniteoptions-container label{
+}
+#infiniteoptions-container input{
+  display: inline-block;
+  margin: 0 10px 2px;
+}
+#infiniteoptions-container textarea{
+  width: 100%;
+  resize: vertical;
+}

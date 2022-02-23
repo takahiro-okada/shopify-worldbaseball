@@ -39,6 +39,7 @@
     "sale_text_color": "#af7b88",
     "badge_bg_color": "#ffffff",
     "badge_text_color": "#212121",
+    "product_grid_show_rating": true,
     "enable_cart_dropdown": false,
     "enable_order_notes": false,
     "enable_estimate_shipping": false,

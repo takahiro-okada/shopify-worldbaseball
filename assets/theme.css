@@ -7313,7 +7313,7 @@ button+.text-link {
 input,
 select,
 textarea {
-  border: 1px solid var(---color-border);
+  border: 1px solid #162E45;
   font-size: var(---font-size-base);
   border-radius: var(---radius-sm);
   max-width: 100%;
