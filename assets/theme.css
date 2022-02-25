@@ -2313,6 +2313,7 @@ body.is-focused .deferred-media__poster:focus .deferred-media__poster-button {
 .left a{
   background-color: var(---color-primary);
   padding:10px 10px;
+  color:#fff;
 }
 
 .right {
@@ -2323,6 +2324,13 @@ body.is-focused .deferred-media__poster:focus .deferred-media__poster-button {
 .right a{
   background-color: var(---color-primary);
   padding:10px 10px;
+  color:#fff;
+}
+
+.right a:hover,
+.left a:hover{
+  color:#fff;
+  opacity: 0.7;
 }
 
 .center {
@@ -8174,6 +8182,10 @@ form .errors {
   font-size: 20px;
 }
 
+.header-icon__title--category{
+  margin-top: 5px;
+}
+
 .header__mobile__button .header__mobile__hamburger {
   margin-right: 11px
 }
@@ -9959,8 +9971,15 @@ html:not(.js) .announcement__scale.ticker--unloaded {
   place-items: center;
 }
 
-.header__mobile__hamburger:hover .hamburger__lines span {
-  background-color: var(--link-hover)
+.header__mobile__hamburger path,
+.header__mobile__hamburger span {
+  transition: .25s ease-in-out !important;
+}
+
+.header__mobile__hamburger:hover path,
+.header__mobile__hamburger:hover span {
+  color: var(--link-hover);
+  fill: var(--link-hover);
 }
 
 .hamburger__lines {
@@ -18604,7 +18623,8 @@ body .shopify-email-marketing-confirmation__container a {
 .article__title {
   font-size: calc(var(--font-4)*var(---font-adjust-heading));
   line-height: 1.25;
-  margin-bottom: 8px
+  margin-bottom: 8px;
+  color: var(--text);
 }
 
 .article__title a {
@@ -18956,6 +18976,7 @@ body .shopify-email-marketing-confirmation__container a {
 
 .article__content h2{
   background-color: var(---color-primary);
+  color:#fff;
   padding:5px 10px;
 }
 
@@ -19177,6 +19198,7 @@ body .shopify-email-marketing-confirmation__container a {
 }
 
 .news-article__date{
+  color: var(--text);
   width: 160px;
   font-size: calc(var(--font-4)*var(---font-adjust-heading));
   line-height: 1.25;
@@ -21097,7 +21119,14 @@ body.is-focused .sidebar__item input:focus~label {
   left: 0;
   content: '';
   background-image:linear-gradient(20deg, transparent 28.5%, #004EA2 28.5%,#004EA2 29%,transparent 29%);
-  background-position: -10px;
+}
+@media only screen and (min-width:990px) {
+  .site-footer-wrapper {
+    background-image:linear-gradient(20deg, #E0E0E0 30%, #004EA2 30%);
+  }
+  .site-footer-wrapper::before{
+    background-image:linear-gradient(20deg, transparent 28.5%, #004EA2 28.5%,#004EA2 29%,transparent 29%);
+  }
 }
 @media only screen and (min-width:1280px) {
   .site-footer-wrapper {
@@ -21105,6 +21134,29 @@ body.is-focused .sidebar__item input:focus~label {
   }
   .site-footer-wrapper::before{
     background-image:linear-gradient(60deg, transparent 33.5%, #004EA2 33.5%,#004EA2 34%,transparent 34%);
+    background-position: -10px;
+  }
+}
+.site-footer-main__info{
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.site-footer-main__sns{
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media only screen and (min-width:1280px) {
+  .site-footer-main__info{
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  .site-footer-main__sns{
+    margin-right: auto;
+    margin-left: 0;
   }
 }
 .site-footer-wrapper a {

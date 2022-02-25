@@ -40,7 +40,11 @@
 {% else %}
   <div class="collection-item {{ grid_strings }} {{ border_class }} {{ alignment_class }}" {{ additional_attributes }} {{ block.shopify_attributes }}>
     <h3 class="collection-item__maintitle">
-      {{ collection.title }}
+      {% if collection.metafields.global.title.value != blank %}
+        {{ collection.metafields.global.title.value }}
+      {%- else -%}
+        {{ collection.title }}
+      {% endif %}
     </h3>
       <a aria-label="{{ collection.title | strip_html | escape }}" href="{{ collection.url }}" class="collection-item__image">
         <div class="collection-item__bg"

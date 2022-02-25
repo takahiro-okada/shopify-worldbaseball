@@ -174,7 +174,7 @@
               "icon_name": "icon-award",
               "icon_color": "#545454",
               "title": "■送料について",
-              "text": "<div class=\"text-row-delivery\">\n  <div class=\"text-row-delivery__image\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0613\/6040\/6787\/files\/icon-delivery.png\">\n  <\/div>\n  <div class=\"text-row-delivery__text\">\n    10,000円以上お買い上げで<br>\n    <span class=\"text-row-delivery__text--emphasis\">送料無料<\/span>\n  <\/div>\n<\/div>"
+              "text": "<div class=\"text-row-delivery\">\n  <div class=\"text-row-delivery__image\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0613\/6040\/6787\/files\/icon-delivery.png\">\n  <\/div>\n  <div class=\"text-row-delivery__text\">\n    10,000円以上お買い上げで<br>\n    <span class=\"text-row-delivery__text--emphasis\">送料無料<\/span><br>\n    送料は、配送エリアによって異なりますのでこちらをご確認ください。<br>\n    <a href=\"\/policies\/shipping-policy\">配送料を確認する<\/a>\n  <\/div>\n<\/div>"
             }
           },
           "5d2aebfc-3971-4263-814d-c07fd4d0257b": {

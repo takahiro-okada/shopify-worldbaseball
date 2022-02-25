@@ -112,15 +112,47 @@
 .c-contact__icon img{
   vertical-align: bottom;
 }
-.c-contact-line{
-
+.c-contact-main__link{
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  text-decoration:none;
+  transition: .3s all;
+}
+.c-contact-main__link:hover{
+  color:#fff !important;
+  opacity: 0.7;
+  transition: .3s all;
+}
+.c-contact-main__link--line{
+  background-color: #00c300;
+  color: #fff;
+}
+.c-contact-main__link--instagram{
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  color: #fff;
+}
+.c-contact-main__link--instagram::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;/*全体を覆う*/
+  height: 100%;/*全体を覆う*/
+  background: -webkit-linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+  background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+}
+.c-contact-main__link--instagram span{
+  display:inline-block;
+  position: relative;
+  transition: .5s
 }
 .c-contact__qrimage{
   width: 80px;
 }
 .c-contact__qrimage img{
   width: 100%;
-}
-.c-contact-line__text{
-
 }
