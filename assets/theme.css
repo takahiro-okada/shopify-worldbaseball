@@ -9627,6 +9627,21 @@ html:not(.js) .announcement__scale.ticker--unloaded {
   justify-content: center
 }
 
+.drawer__banners{
+  margin: 30px calc(var(--outer)/2) 0;
+  width: calc(100% - var(--outer));
+  padding: 0 calc(var(--outer)/2);
+}
+.drawer__banner{
+  margin-top: 0;
+}
+.drawer__banner:last-child{
+  margin-top: 20px;
+}
+.drawer__banner img{
+  width: 100%;
+}
+
 .drawer__menu[data-sliderule-pane="0"] {
   transform: translateX(0);
   position: relative;

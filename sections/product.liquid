@@ -301,13 +301,9 @@
                   {%- endif -%}
 
                 {%- when 'laser' -%}
-                {% for collection in collections %}
-                  {% if collection.handle ==  "glove-mitt" %}
-                        <div class="product-laser">
-                          <img style="width:100%; margin:10px auto;" src="https://cdn.shopify.com/s/files/1/0613/6040/6787/files/laser_pitchersetumei.png?v=1645650194" alt="刺繍について">
-                        </div>
+                  {% if collection.metafields.global.embroidery.value != blank %}
+                    {{ collection.metafields.global.embroidery.value }}
                   {% endif %}
-                {% endfor %}
 
                 {%- when 'upsell' -%}
                   <div {{ block.shopify_attributes }}>

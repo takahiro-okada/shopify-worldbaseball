@@ -233,6 +233,17 @@
             {% endfor %}
           {% endunless %}
         </div>
+        <div class="drawer__banners">
+          {% if section.settings.drawer_banner1 != blank %}
+            <div class="drawer__banner"><a href="{{ section.settings.drawer_banner_link1}}" target="_blank"><img src="{{ section.settings.drawer_banner1 | img_url: "master" }}" alt="{{ section.settings.drawer_banner1.alt }}"></a></div>
+          {% endif %}
+          {% if section.settings.drawer_banner2 != blank %}
+            <div class="drawer__banner"><a href="{{ section.settings.drawer_banner_link2 }}" target="_blank"><img src="{{ section.settings.drawer_banner2 | img_url: "master" }}" alt="{{ section.settings.drawer_banner2.alt }}"></a></div>
+          {% endif %}
+          {% if section.settings.drawer_banner3s != blank %}
+            <div class="drawer__banner"><a href="{{ section.settings.drawer_banner_link3 }}" target="_blank"><img src="{{ section.settings.drawer_banner3 | img_url: "master" }}" alt="{{ section.settings.drawer_banner3.alt }}"></a></div>
+          {% endif %}
+      </div>
       </div>
       {% liquid
         if shop.published_locales.size > 1
@@ -529,6 +540,36 @@
       "type": "link_list",
       "id": "secondary_menu_linklist",
       "label": "サブメニュー"
+    },
+    {
+      "type": "image_picker",
+      "id": "drawer_banner1",
+      "label": "ドロワー内バナー画像1"
+    },
+    {
+      "type": "url",
+      "id": "drawer_banner_link1",
+      "label": "ドロワー内バナーリンク1"
+    },
+    {
+      "type": "image_picker",
+      "id": "drawer_banner2",
+      "label": "ドロワー内バナー画像2"
+    },
+    {
+      "type": "url",
+      "id": "drawer_banner_link2",
+      "label": "ドロワー内バナーリンク2"
+    },
+    {
+      "type": "image_picker",
+      "id": "drawer_banner3",
+      "label": "ドロワー内バナー画像3"
+    },
+    {
+      "type": "url",
+      "id": "drawer_banner_link3",
+      "label": "ドロワー内バナーリンク3"
     }
   ],
   "blocks": [

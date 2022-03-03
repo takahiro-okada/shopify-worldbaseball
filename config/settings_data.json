@@ -63,6 +63,23 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "27a893cf-2e97-47bc-8607-76ccbc4898ee": {
+            "type": "image",
+            "settings": {
+              "position": "1",
+              "aspect_ratio": 0.5,
+              "wide_image": true,
+              "bg_position": "center-center",
+              "title": "",
+              "link_text": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "27a893cf-2e97-47bc-8607-76ccbc4898ee"
+        ],
         "settings": {
           "header_style": "drawer",
           "icon_family": "bold",
@@ -71,11 +88,15 @@
           "main_menu_linklist": "",
           "enable_search": true,
           "enable_account": true,
-          "header_sticky": "static",
+          "header_sticky": "sticky",
           "transparent_home": false,
           "transparent_collection": false,
           "transparent_article": false,
-          "secondary_menu_linklist": ""
+          "secondary_menu_linklist": "",
+          "drawer_banner1": "shopify:\/\/shop_images\/banner1.png",
+          "drawer_banner_link1": "https:\/\/page.line.me\/731qtpzw?openQrModal=true\" target=\"_blank\"",
+          "drawer_banner_link2": "",
+          "drawer_banner_link3": ""
         }
       },
       "announcement": {

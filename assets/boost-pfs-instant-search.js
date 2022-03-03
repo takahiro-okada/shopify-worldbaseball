@@ -1,3 +1,4 @@
+/** VERSION: 1.0.0 Please do not delete this line. Thank you! **/
 // Override Settings
 var boostPFSInstantSearchConfig = {
 	search: {

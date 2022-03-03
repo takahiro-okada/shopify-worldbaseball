@@ -7,8 +7,8 @@
           "type": "image",
           "settings": {
             "bg_position": "center-center",
-            "image": "shopify:\/\/shop_images\/2d05343588d0d2ba6ce50b8fca310e40.png",
-            "mobile_image": "shopify:\/\/shop_images\/Mask_Group.png",
+            "image": "shopify:\/\/shop_images\/mv1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mv1_sp.jpg",
             "overlay_opacity": 0,
             "overlay_color": "#000000",
             "title": "",
@@ -26,8 +26,8 @@
           "type": "image",
           "settings": {
             "bg_position": "center-center",
-            "image": "shopify:\/\/shop_images\/2d05343588d0d2ba6ce50b8fca310e40.png",
-            "mobile_image": "shopify:\/\/shop_images\/Mask_Group.png",
+            "image": "shopify:\/\/shop_images\/mv2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mv2_e55246a1-12fe-40a7-9e30-2dd9b9778fc2.jpg",
             "overlay_opacity": 0,
             "overlay_color": "#000000",
             "title": "",
@@ -81,6 +81,7 @@
         },
         "16429553971a248004-3": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "wear",
             "title": "TRAINING<br>\nWEAR"
@@ -88,6 +89,7 @@
         },
         "aae35f4c-8a3e-475f-a36a-6328c35f4767": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "belt",
             "title": "BELT"
@@ -95,6 +97,7 @@
         },
         "e3a469ab-a09c-4292-a2c3-7e0afed2496c": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "gloves",
             "title": "GLOBE"
@@ -102,6 +105,7 @@
         },
         "db1f2f6d-1a93-4661-8e94-879ffb9c5fef": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "ボール",
             "title": "BALL"
@@ -109,6 +113,7 @@
         },
         "e264513a-1ef6-42fe-afa4-b1eec48777c1": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "キャッチャー用品",
             "title": "CATCHER"
@@ -116,6 +121,7 @@
         },
         "e7d98c38-c5de-4344-ac83-5040cebc59dc": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "トレーニング用品",
             "title": "TRAINING"
@@ -258,53 +264,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "164295601914e70c67": {
-      "type": "section-reviews",
-      "blocks": {
-        "16429560197be32e67-0": {
-          "type": "review",
-          "settings": {
-            "title": "山田 太郎",
-            "subheading": "30代 男性",
-            "review_text": "<p>このテキストは、お客様のレビューを紹介するために使用します。 優れたレビューは、正直で、顧客の悩みを代弁してくれます。<\/p>",
-            "review_url": "",
-            "review_link_name": ""
-          }
-        },
-        "16429560197be32e67-1": {
-          "type": "review",
-          "settings": {
-            "title": "山田 花子",
-            "subheading": "30代 男性",
-            "review_text": "<p>このテキストは、お客様のレビューを紹介するために使用します。 優れたレビューは、正直で、顧客の悩みを代弁してくれます。<\/p>",
-            "review_url": "",
-            "review_link_name": ""
-          }
-        },
-        "ea6a3eb6-5f6c-43e6-a428-eebf196493d9": {
-          "type": "review",
-          "settings": {
-            "title": "山田 太郎",
-            "subheading": "30代 男性",
-            "review_text": "<p>このテキストは、お客様のレビューを紹介するために使用します。 優れたレビューは、正直で、顧客の悩みを代弁してくれます。<\/p>",
-            "review_url": "",
-            "review_link_name": ""
-          }
-        }
-      },
-      "block_order": [
-        "16429560197be32e67-0",
-        "16429560197be32e67-1",
-        "ea6a3eb6-5f6c-43e6-a428-eebf196493d9"
-      ],
-      "settings": {
-        "title": "CUSTOMER REVIEWS",
-        "description": "<p>お客様の声<\/p>",
-        "text_align": "text-left",
-        "text_color": "text-dark",
-        "bg_color": "#ffffff"
-      }
     }
   },
   "order": [
@@ -315,7 +274,6 @@
     "164295582500779323",
     "16446326991276f9ac",
     "164529133020e283f0",
-    "164303364231f347e9",
-    "164295601914e70c67"
+    "164303364231f347e9"
   ]
 }

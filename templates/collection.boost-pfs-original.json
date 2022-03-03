@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "hero": {
+      "type": "collection-image-with-title",
+      "settings": {
+        "show_title": true,
+        "show_description": true,
+        "text_color": "text-dark",
+        "flex_align": "align--middle-center",
+        "transparent": false,
+        "show_image": false,
+        "banner_layout": "overlay",
+        "height": "screen-height-one-third",
+        "overlay_opacity": 0,
+        "overlay_color": "#162e45"
+      }
+    },
+    "subcollections": {
+      "type": "subcollections",
+      "settings": {
+        "subcollection_layout": "grid",
+        "subcollection_description": false,
+        "select_image": "collection"
+      }
+    },
+    "main": {
+      "type": "collection",
+      "blocks": {
+        "9ca83c0d-1f46-4fee-bfa8-d0acb4e84eee": {
+          "type": "featured_image",
+          "settings": {
+            "featured_image_bg_position": "center-center",
+            "featured_heading": "Featured link",
+            "featured_text": "<p>Promote products or collections<\/p><p><\/p>",
+            "featured_button_text": "Learn more",
+            "featured_button_link": "",
+            "featured_color_text": "#ffffff",
+            "featured_color_overlay": "#222222",
+            "featured_overlay_opacity": 10
+          }
+        }
+      },
+      "block_order": [
+        "9ca83c0d-1f46-4fee-bfa8-d0acb4e84eee"
+      ],
+      "settings": {
+        "enable_sort": true,
+        "enable_filters": true,
+        "filter_layout": "inline-open",
+        "grid": 4,
+        "grid_mobile": "2",
+        "product_limit": 36
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "subcollections",
+    "main"
+  ]
+}
