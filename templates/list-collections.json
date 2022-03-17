@@ -36,6 +36,7 @@
         },
         "16452569666f857d3a-3": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "wear",
             "title": "TRAINING<br>\nWEAR"
@@ -43,6 +44,7 @@
         },
         "41d6fa7f-0518-4860-94b8-5fd06ac45850": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "belt",
             "title": "BELT"
@@ -50,6 +52,7 @@
         },
         "a3ecbcd1-d67d-43a2-833b-ebcd620465c2": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "gloves",
             "title": "GLOBE"
@@ -57,6 +60,7 @@
         },
         "252ad08f-750e-4547-95a4-cf6adcaef9cc": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "cold-protection",
             "title": "WINTER<br>\nWEAR"
@@ -64,6 +68,7 @@
         },
         "79339293-64b8-4b04-bef6-8362495163ec": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "バック-ケース",
             "title": "BAG"
@@ -71,6 +76,7 @@
         },
         "546d97b4-2d81-426b-87b6-02681157b7b7": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "エルボー-フットガード",
             "title": "PROTECTOR"
@@ -78,6 +84,7 @@
         },
         "559348e1-add0-42ad-bee6-e4a97214a14f": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "ボール",
             "title": "BALL"
@@ -85,6 +92,7 @@
         },
         "18fd3b7c-ce2d-4a0b-a7a9-a9b7f00d503c": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "キャッチャー用品",
             "title": "CATHER"
@@ -92,6 +100,7 @@
         },
         "95009434-c496-4bf6-8b0f-8b7183b8cf0c": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "トレーニング用品",
             "title": "TRAINING"
