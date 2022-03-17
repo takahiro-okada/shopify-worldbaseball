@@ -26,8 +26,8 @@
           "type": "image",
           "settings": {
             "bg_position": "center-center",
-            "image": "shopify:\/\/shop_images\/mv2.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/mv2_e55246a1-12fe-40a7-9e30-2dd9b9778fc2.jpg",
+            "image": "shopify:\/\/shop_images\/Frame_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Frame_2.jpg",
             "overlay_opacity": 0,
             "overlay_color": "#000000",
             "title": "",
@@ -200,7 +200,7 @@
         "text_color": "text-light",
         "transparent": true,
         "link_text": "Majorオリジナル商品を見る",
-        "link": "shopify:\/\/collections",
+        "link": "shopify:\/\/collections\/baseball-shop-world",
         "button_color": "btn--link",
         "button_style": "hero__btn btn btn--large caps"
       }

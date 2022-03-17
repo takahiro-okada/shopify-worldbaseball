@@ -16,7 +16,7 @@
     endfor
   endif
 
-  if link.levels > 0 or block_count > 0
+  if link.levels > 0
     assign expands = true
     assign key = link.url | append: link.title | append: link.levels | append: index | md5
   endif

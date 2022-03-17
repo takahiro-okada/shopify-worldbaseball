@@ -232,18 +232,18 @@
               {% render 'nav-item-mobile', link: link, section: section, index: forloop.index, secondary_menu: true %}
             {% endfor %}
           {% endunless %}
+          <div class="drawer__banners">
+            {% if section.settings.drawer_banner1 != blank %}
+              <div class="drawer__banner"><a href="{{ section.settings.drawer_banner_link1}}" target="_blank"><img src="{{ section.settings.drawer_banner1 | img_url: "master" }}" alt="{{ section.settings.drawer_banner1.alt }}"></a></div>
+            {% endif %}
+            {% if section.settings.drawer_banner2 != blank %}
+              <div class="drawer__banner"><a href="{{ section.settings.drawer_banner_link2 }}" target="_blank"><img src="{{ section.settings.drawer_banner2 | img_url: "master" }}" alt="{{ section.settings.drawer_banner2.alt }}"></a></div>
+            {% endif %}
+            {% if section.settings.drawer_banner3s != blank %}
+              <div class="drawer__banner"><a href="{{ section.settings.drawer_banner_link3 }}" target="_blank"><img src="{{ section.settings.drawer_banner3 | img_url: "master" }}" alt="{{ section.settings.drawer_banner3.alt }}"></a></div>
+            {% endif %}
+          </div>
         </div>
-        <div class="drawer__banners">
-          {% if section.settings.drawer_banner1 != blank %}
-            <div class="drawer__banner"><a href="{{ section.settings.drawer_banner_link1}}" target="_blank"><img src="{{ section.settings.drawer_banner1 | img_url: "master" }}" alt="{{ section.settings.drawer_banner1.alt }}"></a></div>
-          {% endif %}
-          {% if section.settings.drawer_banner2 != blank %}
-            <div class="drawer__banner"><a href="{{ section.settings.drawer_banner_link2 }}" target="_blank"><img src="{{ section.settings.drawer_banner2 | img_url: "master" }}" alt="{{ section.settings.drawer_banner2.alt }}"></a></div>
-          {% endif %}
-          {% if section.settings.drawer_banner3s != blank %}
-            <div class="drawer__banner"><a href="{{ section.settings.drawer_banner_link3 }}" target="_blank"><img src="{{ section.settings.drawer_banner3 | img_url: "master" }}" alt="{{ section.settings.drawer_banner3.alt }}"></a></div>
-          {% endif %}
-      </div>
       </div>
       {% liquid
         if shop.published_locales.size > 1
