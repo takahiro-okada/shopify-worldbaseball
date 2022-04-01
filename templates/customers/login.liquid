@@ -10,7 +10,7 @@
 	<section class="col">
       <div data-login-form class="animates login{% if shop.checkout.guest_login %} align-left{% endif %}">
           <h2 class="theme common-subtitle">{{ 'customer.login.title' | t }}</h2>
-          <p>{{ 'customer.login.create_account_prompt' | t }} <span class="text-link"><br><a href="{{ routes.account_register_url }}">{{ 'customer.login.create_account_cta' | t }}</a></span>.</p>
+          <p>{{ 'customer.login.create_account_prompt' | t }} <span class="text-link"><br><a href="{{ routes.account_register_url }}">{{ 'customer.login.create_account_cta' | t }}</a></span></p>
           {% form 'customer_login' %}
           <div class="form-field">
           {{ form.errors | default_errors }}

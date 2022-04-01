@@ -139,6 +139,10 @@
 .site-footer-main__info td{
   border:none;
 }
+.site-footer-main__info tr,
+.site-footer-main__info td{
+  padding: 10px 10px 10px 0;
+}
 .site-footer-main-sns__list{
   list-style: none;
   display: flex;

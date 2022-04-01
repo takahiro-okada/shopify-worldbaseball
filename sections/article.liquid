@@ -32,7 +32,7 @@
               {%- if section.settings.tags -%}
                 <div class="article__tags">
                   {%- for tag in article.tags -%}
-                    <a class="article__tag" href="{{ blog.url }}/tagged/{{ tag | handleize }}" title="{{ blog.title | strip_html | escape }} tagged {{ tag | strip_html | escape }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
+                    <a class="article__tag" href="{{ blog.url }}/tagged/{{ tag | handleize }}" title="{{ blog.title | strip_html | escape }} tagged {{ tag | strip_html | escape }}">{{ tag }}</a>{% unless forloop.last %}{% endunless %}
                   {%- endfor -%}
                 </div>
               {%- endif -%}

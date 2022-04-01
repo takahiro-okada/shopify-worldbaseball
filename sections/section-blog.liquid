@@ -161,9 +161,8 @@
 
               {% if showDate or showAuthor or showComments %}
                 <h3 class="article__meta">
-                    {% assign published_at = article.published_at | date: format: 'full_date' %}
                     <div class="article__time">
-                      <time datetime="{{ published_at }}">{{ published_at |  date: '%Y年 %-m月 %d日' }}</time>
+                      <time datetime="{{  article.published_at }}">{{  article.published_at |  date: '%Y年 %-m月 %-d日' }}</time>
                     </div>
                   {{ tags }}
                 </h3>

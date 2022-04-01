@@ -134,13 +134,12 @@
           data-slide-index="{{ forloop.index0 }}">
           <a class="news-article__text-wrapper" href="{{ article.url }}" title="{{ article.title | strip_html | escape }}">
             {% if showDate %}
-              {% assign published_at = article.published_at | date: format: 'full_date' %}
               <div class="news-article__date">
-                <time datetime="{{ published_at }}">{{ published_at | date: '%Y年 %-m月 %d日'}}</time>
+                <time datetime="{{  article.published_at }}">{{  article.published_at | date: '%Y年 %-m月 %-d日'}}</time>
               </div>
             {% endif %}
 
-            <h2 class="article__title">
+            <h2 class="news-article__title">
               {{ article.title }}
             </h2>
           </a>

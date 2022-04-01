@@ -259,7 +259,7 @@
         "show_date": true,
         "show_button": false,
         "button_text": "ニュース一覧を見る",
-        "button_url": "",
+        "button_url": "shopify:\/\/blogs\/ニュース",
         "button_color": "btn--link",
         "button_style": "hero__btn btn btn--large caps",
         "bg_color": "#ffffff"

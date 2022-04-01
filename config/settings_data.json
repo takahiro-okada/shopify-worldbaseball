@@ -107,7 +107,7 @@
             "type": "message",
             "settings": {
               "show_wheel": false,
-              "message": "10,000円以上の購入で送料無料",
+              "message": "税込み11,000円以上の購入で送料無料",
               "target_url_enabled": false,
               "target_url": "",
               "target_referrer_enabled": false,
