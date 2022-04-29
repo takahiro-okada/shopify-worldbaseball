@@ -116,7 +116,7 @@
       "cart_notes_label": "注文メモを追加する",
       "pair_products": "ご一緒にいかがですか？",
       "estimate_shipping_label": "送料の見積もり",
-      "gift_notes_label": "ギフトラッピング・メッセージカード無料で承ります。備考欄にご記入ください",
+      "gift_notes_label": "ギフトラッピング・メッセージカード無料で承ります。備考欄にご記入ください。複数商品がある場合はラッピング希望の商品型式とメッセージをご記入ください。",
       "gift_note_attribute": "ギフトメモ",
       "update": "カートを更新する",
       "checkout": "決済する",

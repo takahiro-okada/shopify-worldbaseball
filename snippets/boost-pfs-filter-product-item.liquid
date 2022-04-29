@@ -193,23 +193,23 @@
 	swatchType: color;
 	swatchShape: {{ swatch_by_color_shape }};
   optionOriginalName: {{ swatch_by_color_apply_name }};
-	|
+	=>
 	optionName: {{ swatch_by_img_apply }};
 	swatchType: img;
 	swatchShape: {{ swatch_by_img_shape }};
   optionOriginalName: {{ swatch_by_img_apply_name }};
-	|
+	=>
 	optionName: {{ swatch_by_pro_img_apply }};
 	swatchType: pro_img;
 	swatchShape: {{ swatch_by_pro_img_shape }};
   optionOriginalName: {{ swatch_by_pro_img_apply_name }};
-	|
+	=>
 	optionName: {{ swatch_by_text_apply }};
 	swatchType: text;
 	swatchShape: {{ swatch_by_text_shape }};
   optionOriginalName: {{ swatch_by_text_apply_name }};
 {%- endcapture -%}
-{%- assign boostProductOptions = boostProductOptionSwatch | split:'|' -%}
+{%- assign boostProductOptions = boostProductOptionSwatch | split:'=>' -%}
 
 {%- capture product_swatch -%}
 {%- for boostProductOptionsItem in boostProductOptions -%}

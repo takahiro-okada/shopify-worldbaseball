@@ -430,7 +430,7 @@ function buildProductOptionSwatches(data) {
                   if(boostPFSThemeConfig.custom.show_swatch_tooltip){
                     swatchesProductOptionHtml += '<div class="boost-pfs-product-item-tooltip">' + swatchName + '</div>';
                   }
-                  swatchesProductOptionHtml += '<span tabindex="0" aria-label="' + optionName + ': ' + swatchName + '" ' + 'style="background-color: ' + swatchName + '; ';
+                  swatchesProductOptionHtml += '<span tabindex="0" aria-label="' + optionName + ': ' + swatchName + '" ' + 'style="background-color: ' + optionName + '; ';
                   if (bgImageSrc != '') {
                       swatchesProductOptionHtml += 'background-image: url(' + bgImageSrc + ');" ';
                   } else {

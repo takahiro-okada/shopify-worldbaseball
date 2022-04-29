@@ -167,10 +167,16 @@
 
 
  <!--begin-boost-pfs-filter-css-->
-   {% render 'boost-pfs-style' %}
+   
  <!--end-boost-pfs-filter-css-->
 
 
+
+ <!--begin-boost-pfs-filter-css-->
+   {% render 'boost-pfs-style' %}
+ <!--end-boost-pfs-filter-css-->
+
+ 
 </head>
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}{% if customer %} customer-logged-in{% endif %}{% if settings.show_button_animation %} show-button-animation{% endif %}{% if settings.animations_enable %} aos-initialized{% endif %}" data-animations="{{ settings.animations_enable }}">
 
@@ -257,6 +263,10 @@
 
 
 
+
+ <!--begin-boost-pfs-js-->
+   
+ <!--end-boost-pfs-js-->
 
  <!--begin-boost-pfs-js-->
    {% render 'boost-pfs' %}

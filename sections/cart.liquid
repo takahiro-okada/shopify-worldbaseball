@@ -189,7 +189,7 @@
           {% if settings.enable_gift_notes %}
             <div class="cart__widget" data-cart-widget>
               <a href="#gift-notes" data-expand-button>
-                {{- 'cart.general.gift_notes_label' | t -}}
+                ギフトラッピング・メッセージカード無料で承ります。備考欄にご記入ください。<br>複数商品がある場合はラッピング希望の商品型式とメッセージをご記入ください。
               </a>
               <span><img src="{{ "gift-message.jpg" | asset_url }}" alt="" style="width:100%"></span>
               <div class="cart__widget-content" id="gift-notes">
@@ -200,6 +200,11 @@
             </div>
           {% endif %}
 
+          <span>
+            <a href="{{ section.settings.line_url }}" target="_blank">
+              <img src="{{ section.settings.image_picker | img_url: "master" }}" alt="" style="width:100%;margin-top:20px">
+            </a>
+          </span>
           {%- if settings.enable_estimate_shipping -%}
             <div class="cart__widget js" data-cart-widget>
               <a href="#estimate-shipping-calculator" data-expand-button>
@@ -322,6 +327,22 @@
   "blocks": [
     {
       "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_picker",
+      "label": {
+        "ja": "画像"
+      }
+    },
+    {
+      "type": "url",
+      "id": "line_url",
+      "label": {
+        "ja": "バナーリンク先"
+      }
     }
   ]
 }

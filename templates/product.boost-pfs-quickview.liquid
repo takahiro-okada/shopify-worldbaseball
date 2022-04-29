@@ -1,9 +1,10 @@
 {% layout none %}
-{% assign bc_settings = shop.metafields.bc-sf-filter.settings %}
+  {% assign bc_settings = shop.metafields.bc-sf-filter.settings %}
   {% assign active_vendor = true %}
   {% assign active_description = true %}
   {% assign active_cart_form = true %}
   {% assign active_price = true %}{% assign file_extension = 'png' %}
+  {% assign locale = request.locale.iso_code  %}
   {% assign view_full_label = 'product_filter_search_quickview.view_full' | t %}
   {% if view_full_label contains 'translation missing'  %}
     {% assign view_full_label = 'View full details' %}
@@ -27,16 +28,16 @@
 
   {% comment %} Translation {% endcomment %}
   {% assign view_full_label = 'View Full Details' %}
-  {% if bc_settings contains 'qvViewFullDetails' %}
-  {% assign view_full_label = bc_settings | split: 'qvViewFullDetails":' | last | split: ',' | first | replace: '"', '' | replace: '}', '' | strip | escape %}
+  {% if bc_settings contains 'qvViewFullDetails' and shop.metafields.boostpfs-settings.labelTranslations[locale] != nil and shop.metafields.boostpfs-settings.labelTranslations[locale].action_list.qvViewFullDetails != blank %}
+  {% assign view_full_label = shop.metafields.boostpfs-settings.labelTranslations[locale].action_list.qvViewFullDetails %}
   {% endif %}
   {% assign quantity_label = 'Quantity' %}
-  {% if bc_settings contains 'qvQuantity' %}
-  {% assign quantity_label = bc_settings | split: 'qvQuantity":' | last | split: ',' | first | replace: '"', '' | replace: '}', '' | strip | escape %}
+  {% if bc_settings contains 'qvQuantity' and shop.metafields.boostpfs-settings.labelTranslations[locale] != nil and shop.metafields.boostpfs-settings.labelTranslations[locale].action_list.qvQuantity != blank %}
+  {% assign view_full_label = shop.metafields.boostpfs-settings.labelTranslations[locale].action_list.qvQuantity %}
   {% endif %}
   {% assign add_to_cart_btn_label = 'Add To Cart' %}
-  {% if bc_settings contains 'qvAddToCartBtnLabel' %}
-  {% assign add_to_cart_btn_label = bc_settings | split: 'qvAddToCartBtnLabel":' | last | split: ',' | first | replace: '"', '' | replace: '}', '' | strip | escape %}
+  {% if bc_settings contains 'qvAddToCartBtnLabel' and shop.metafields.boostpfs-settings.labelTranslations[locale] != nil and shop.metafields.boostpfs-settings.labelTranslations[locale].action_list.qvAddToCartBtnLabel != blank %}
+  {% assign add_to_cart_btn_label = shop.metafields.boostpfs-settings.labelTranslations[locale].action_list.qvAddToCartBtnLabel %}
   {% endif %}
   {% assign sold_out_btn_label = 'Sold Out' %}
   {% if bc_settings contains 'qvSoldOutLabel' %}
@@ -57,18 +58,6 @@
     {% assign bc_al_qv_notify_form_enable = bc_settings | split: 'qvNotifyMeFormEnable:' | last | split: ',' | first | replace: '"', '' | replace: '}', '' | strip %}
   {% endif %}
   {% comment %} Translation {% endcomment %}
-  {% assign view_full_label = 'View Full Details' %}
-  {% if bc_settings contains 'qvViewFullDetails' %}
-  {% assign view_full_label = bc_settings | split: 'qvViewFullDetails":' | last | split: ',' | first | replace: '"', '' | replace: '}', '' | strip | escape %}
-  {% endif %}
-  {% assign quantity_label = 'Quantity' %}
-  {% if bc_settings contains 'qvQuantity' %}
-  {% assign quantity_label = bc_settings | split: 'qvQuantity":' | last | split: ',' | first | replace: '"', '' | replace: '}', '' | strip | escape %}
-  {% endif %}
-  {% assign add_to_cart_btn_label = 'Add To Cart' %}
-  {% if bc_settings contains 'qvAddToCartBtnLabel' %}
-  {% assign add_to_cart_btn_label = bc_settings | split: 'qvAddToCartBtnLabel":' | last | split: ',' | first | replace: '"', '' | replace: '}', '' | strip | escape %}
-  {% endif %}
   {% assign sold_out_btn_label = 'Sold Out' %}
   {% if bc_settings contains 'qvSoldOutLabel' %}
   {% assign sold_out_btn_label = bc_settings | split: 'qvSoldOutLabel":' | last | split: ',' | first | replace: '"', '' | replace: '}', '' | strip | escape %}
@@ -181,7 +170,8 @@
                 "option1": {{ variant.option1 | json }},
                 "option2": {{ variant.option2 | json }},
                 "option3": {{ variant.option3 | json }},
-                "available": {{ variant.available | json }}
+                "available": {{ variant.available | json }},
+                "image": {{ variant | image_url | json }}
               }{%- if forloop.last != true -%},{%- endif -%}
             {% endfor %}
             ]

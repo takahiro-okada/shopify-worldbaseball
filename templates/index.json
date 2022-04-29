@@ -269,7 +269,7 @@
       "type": "apps",
       "blocks": {
         "09aa4e28-f4e4-4fbe-9801-47b36a2d5e80": {
-          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
             "heading_font": "helvetica_n4",
             "heading_size": 20,
