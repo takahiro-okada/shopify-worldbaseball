@@ -1,0 +1,67 @@
+<!-- /sections/custom-html.liquid -->
+{%- assign html = section.settings.html -%}
+{%- assign title = section.settings.title -%}
+{%- assign show_padding = section.settings.show_padding -%}
+
+<section class="product-link {% if show_padding %}wrapper custom-html-section--padding {% endif %}" data-section-id="{{ section.id }}" data-section-type="custom-html">
+  <h3>{{ section.settings.title }}</h3>
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when '@app' -%}
+      <a href="#">投手/一般</a>
+
+      {%- when '@app' -%}
+      <p>見出し</p>
+      {% endcase %}
+  {%- endfor -%}
+</section>
+
+{% schema %}
+{
+  "name": "商品リンク集",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "タイトル"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_padding",
+      "label": "余白を表示する",
+      "default": true
+    }
+  ],
+  "blocks":[
+    {
+      "type": "html",
+      "name": "カスタムHTML",
+      "settings": [
+        {
+          "type": "text",
+          "id": "sub_title",
+          "label": "サブタイトル",
+          "default": "見出し"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "リンクテキスト",
+          "default": "テキスト"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Text",
+      "name": "商品リンク集"
+    }
+  ]
+}
+{% endschema %}

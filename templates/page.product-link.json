@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "subheading": "",
+        "show_title": true,
+        "show_content": true,
+        "text_size": 2,
+        "align_text": "text-left",
+        "height": "margin--medium",
+        "width": "wrapper",
+        "text_color": "text-dark",
+        "bg_color": "#ffffff"
+      }
+    },
+    "165126659277941f02": {
+      "type": "products-link",
+      "settings": {
+        "title": "硬式グローブ",
+        "show_padding": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165126659277941f02"
+  ]
+}
