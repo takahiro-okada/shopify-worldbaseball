@@ -7,11 +7,10 @@
   <h3>{{ section.settings.title }}</h3>
   {%- for block in section.blocks -%}
     {%- case block.type -%}
-      {%- when '@app' -%}
-      <a href="#">投手/一般</a>
-
-      {%- when '@app' -%}
-      <p>見出し</p>
+      {%- when 'title' -%}
+      <p>{{ block.settings.sub_title }}</p>
+      {%- when 'link' -%}
+      <a href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
       {% endcase %}
   {%- endfor -%}
 </section>
@@ -34,15 +33,21 @@
   ],
   "blocks":[
     {
-      "type": "html",
-      "name": "カスタムHTML",
+      "type": "title",
+      "name": "見出し",
       "settings": [
         {
           "type": "text",
           "id": "sub_title",
           "label": "サブタイトル",
           "default": "見出し"
-        },
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "name": "リンク先",
+      "settings": [
         {
           "type": "text",
           "id": "link_text",

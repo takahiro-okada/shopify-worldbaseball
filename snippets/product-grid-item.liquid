@@ -84,7 +84,7 @@
     {%- assign on_sale = false -%}
     {%- assign sold_out = false -%}
     {%- assign badge = '' -%}
-  
+
     {%- if product_tags contains '_badge_' -%}
       {%- assign badge = product_tags | split: '_badge_' -%}
       {%- assign badge = badge[1] | split: ',' | first | replace: '_', ' ' -%}
@@ -109,7 +109,7 @@
     {%- elsif on_sale and sold_out == false -%}
       <span class="sale-box">{{ 'products.product.on_sale' | t }}</span>
     {%- endif -%}
-    
+
     {%- if settings.quickview_enable and current_variant -%}
       <button type="button" class="quick-add-button" tabindex="-1" data-button-quick-add-mobile{% if product.has_only_default_variant %} data-quick-add-button{% endif %}>
         <span class="visually-hidden">{{ 'products.general.quick_view' | t }}</span>
@@ -124,7 +124,7 @@
         <button type="button" class="caps is-disable" data-focus-element data-quick-add-label="{{ product.handle }}" data-collection-handle="{{ collection.handle | default: 'primary' }}" {% if product.has_only_default_variant %} data-quick-add-button{% endif %} tabindex="0">
           <span>
             <small>{{ 'products.general.quick_view' | t }}</small>
-            
+
             <small>{{ 'products.product.pre_order' | t }}</small>
           </span>
 
@@ -145,6 +145,13 @@
 
   <div class="product-item__image{% if double_img %} double__image{% endif %}" data-product-image>
     <a class="product-link" href="{{ product_url }}" aria-label="{{ product.title | strip_html | escape }}" data-grid-link>
+      {% for tag in product.tags %}
+      {%- if tag contains 'pfs:label-' -%}
+        <div class="card--tag">
+        {{ tag | split: 'pfs:label-' | limit:1 }}
+        </div>
+      {%- endif -%}
+      {% endfor %}
       {% if product.media.size > 0 %}
         <div class="product-item__bg lazyload"
           data-grid-slide

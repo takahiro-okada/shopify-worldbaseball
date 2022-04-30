@@ -220,7 +220,7 @@
         "text_color": "text-light",
         "transparent": true,
         "link_text": "Majorオリジナル商品を見る",
-        "link": "shopify:\/\/collections\/baseball-shop-world",
+        "link": "shopify:\/\/collections\/major-world",
         "button_color": "btn--link",
         "button_style": "hero__btn btn btn--large caps"
       }
