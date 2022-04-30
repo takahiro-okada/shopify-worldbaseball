@@ -8,7 +8,7 @@
         "show_content": true,
         "text_size": 2,
         "align_text": "text-center",
-        "height": "margin--medium",
+        "height": "margin--small",
         "width": "wrapper",
         "text_color": "text-dark",
         "bg_color": "#ffffff"

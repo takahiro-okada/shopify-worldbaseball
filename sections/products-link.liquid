@@ -1,18 +1,24 @@
 <!-- /sections/custom-html.liquid -->
 {%- assign html = section.settings.html -%}
 {%- assign title = section.settings.title -%}
-{%- assign show_padding = section.settings.show_padding -%}
 
-<section class="product-link {% if show_padding %}wrapper custom-html-section--padding {% endif %}" data-section-id="{{ section.id }}" data-section-type="custom-html">
-  <h3>{{ section.settings.title }}</h3>
-  {%- for block in section.blocks -%}
-    {%- case block.type -%}
-      {%- when 'title' -%}
-      <p>{{ block.settings.sub_title }}</p>
-      {%- when 'link' -%}
-      <a href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
-      {% endcase %}
-  {%- endfor -%}
+<section class="product-link wrapper" data-section-id="{{ section.id }}" data-section-type="custom-html">
+  <h3 class="product-link__title">{{ section.settings.title }}</h3>
+  <div class="product-link__contents">
+    <div class="product-link__image">
+      <img src="{{ section.settings.image | img_url: "master" }}">
+    </div>
+    <div class="product-link__box">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'title' -%}
+          <p class="product-link__subtitle">{{ block.settings.sub_title }}</p>
+          {%- when 'link' -%}
+          <a class="product-link__link" href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+          {% endcase %}
+      {%- endfor -%}
+    </div>
+  </div>
 </section>
 
 {% schema %}
@@ -25,10 +31,9 @@
       "label": "タイトル"
     },
     {
-      "type": "checkbox",
-      "id": "show_padding",
-      "label": "余白を表示する",
-      "default": true
+      "type": "image_picker",
+      "id": "image",
+      "label": "画像"
     }
   ],
   "blocks":[
@@ -70,3 +75,50 @@
   ]
 }
 {% endschema %}
+
+<style>
+.product-link{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.product-link__title{
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px dotted #333;
+}
+.product-link__subtitle{
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.product-link__link{
+  padding: 10px 30px 10px 0;
+  display: inline-block;
+}
+.product-link__image{
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+  width: 250px;
+  height: fit-content;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left:auto
+}
+.product-link__image img{
+  width: 100%;
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .product-link__contents{
+    margin-top: 30px;
+    display: flex;
+  }
+  .product-link__image{
+
+  }
+  .product-link__box{
+    margin-left: 60px;
+    width: calc(100% - (250px + 60px));
+  }
+}
+</style>

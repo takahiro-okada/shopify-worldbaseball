@@ -8,7 +8,7 @@
         "show_content": true,
         "text_size": 2,
         "align_text": "text-left",
-        "height": "margin--medium",
+        "height": "margin--small",
         "width": "wrapper",
         "text_color": "text-dark",
         "bg_color": "#ffffff"
@@ -16,14 +16,394 @@
     },
     "165126659277941f02": {
       "type": "products-link",
+      "blocks": {
+        "65594394-4c3a-4aa1-8e14-48aac2d0c68a": {
+          "type": "title",
+          "settings": {
+            "sub_title": "硬式から選ぶ"
+          }
+        },
+        "1eec59d2-91d3-4c41-b7af-cfe28cd6d749": {
+          "type": "link",
+          "settings": {
+            "link_text": "投手\/一般",
+            "link": ""
+          }
+        },
+        "9d25031f-4c7b-40cb-bfca-5722d0d6a922": {
+          "type": "link",
+          "settings": {
+            "link_text": "捕手\/一般",
+            "link": ""
+          }
+        },
+        "19c794e5-a799-400a-bc61-353379791406": {
+          "type": "link",
+          "settings": {
+            "link_text": "一塁手\/一般",
+            "link": ""
+          }
+        },
+        "8d7599ce-cba0-4bfb-943d-87dc3db8d4d9": {
+          "type": "link",
+          "settings": {
+            "link_text": "内野手\/一般",
+            "link": ""
+          }
+        },
+        "a76ec0e0-d65c-40a3-a79d-9e8206333f99": {
+          "type": "link",
+          "settings": {
+            "link_text": "外野手\/一般",
+            "link": ""
+          }
+        },
+        "44f6542a-356c-4ad4-9ee0-7281aeb3e47b": {
+          "type": "title",
+          "settings": {
+            "sub_title": "軟式から選ぶ"
+          }
+        },
+        "8b2aa252-633c-4acc-a75c-867d7b5adab8": {
+          "type": "link",
+          "settings": {
+            "link_text": "投手\/一般",
+            "link": ""
+          }
+        },
+        "e6142062-dc68-45d6-9202-78122ab59211": {
+          "type": "link",
+          "settings": {
+            "link_text": "捕手\/一般",
+            "link": ""
+          }
+        },
+        "e5e3430b-3c9d-4ac3-ba86-b31f0e6c1da5": {
+          "type": "link",
+          "settings": {
+            "link_text": "一塁手\/一般",
+            "link": ""
+          }
+        },
+        "c513761f-3af2-49f8-8f22-8a058abe6464": {
+          "type": "link",
+          "settings": {
+            "link_text": "内野手\/一般",
+            "link": ""
+          }
+        },
+        "e0d15567-9bd5-49be-8582-6d1bc36c4782": {
+          "type": "link",
+          "settings": {
+            "link_text": "外野手\/一般",
+            "link": ""
+          }
+        },
+        "f11ffa49-456c-4d3f-8b44-9a72a142fdaa": {
+          "type": "link",
+          "settings": {
+            "link_text": "オールラウンド\/一般",
+            "link": ""
+          }
+        },
+        "dbf27647-1106-484a-8eeb-a08d7ba44790": {
+          "type": "link",
+          "settings": {
+            "link_text": "少年用",
+            "link": ""
+          }
+        },
+        "e580ae9b-c9b7-49f1-a418-67c915ca21e7": {
+          "type": "title",
+          "settings": {
+            "sub_title": "トレーニンググラブ"
+          }
+        },
+        "ac481a6c-ed48-4b3d-a91e-cc18bd448f0d": {
+          "type": "link",
+          "settings": {
+            "link_text": "一覧を見る",
+            "link": ""
+          }
+        },
+        "dc64f787-8fea-4bd0-9d1d-d60802947f36": {
+          "type": "title",
+          "settings": {
+            "sub_title": "メンテナンス用品"
+          }
+        },
+        "cedf9b17-d8eb-4d09-a96d-08905da01e51": {
+          "type": "link",
+          "settings": {
+            "link_text": "一覧を見る",
+            "link": ""
+          }
+        },
+        "7b5b1cf9-52df-4996-ba04-4d783f3d8caf": {
+          "type": "title",
+          "settings": {
+            "sub_title": "ブランドから選ぶ"
+          }
+        },
+        "a269c952-5f56-488e-b52b-bad8ac7c5f8a": {
+          "type": "link",
+          "settings": {
+            "link_text": "一覧を見る",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "65594394-4c3a-4aa1-8e14-48aac2d0c68a",
+        "1eec59d2-91d3-4c41-b7af-cfe28cd6d749",
+        "9d25031f-4c7b-40cb-bfca-5722d0d6a922",
+        "19c794e5-a799-400a-bc61-353379791406",
+        "8d7599ce-cba0-4bfb-943d-87dc3db8d4d9",
+        "a76ec0e0-d65c-40a3-a79d-9e8206333f99",
+        "44f6542a-356c-4ad4-9ee0-7281aeb3e47b",
+        "8b2aa252-633c-4acc-a75c-867d7b5adab8",
+        "e6142062-dc68-45d6-9202-78122ab59211",
+        "e5e3430b-3c9d-4ac3-ba86-b31f0e6c1da5",
+        "c513761f-3af2-49f8-8f22-8a058abe6464",
+        "e0d15567-9bd5-49be-8582-6d1bc36c4782",
+        "f11ffa49-456c-4d3f-8b44-9a72a142fdaa",
+        "dbf27647-1106-484a-8eeb-a08d7ba44790",
+        "e580ae9b-c9b7-49f1-a418-67c915ca21e7",
+        "ac481a6c-ed48-4b3d-a91e-cc18bd448f0d",
+        "dc64f787-8fea-4bd0-9d1d-d60802947f36",
+        "cedf9b17-d8eb-4d09-a96d-08905da01e51",
+        "7b5b1cf9-52df-4996-ba04-4d783f3d8caf",
+        "a269c952-5f56-488e-b52b-bad8ac7c5f8a"
+      ],
       "settings": {
-        "title": "硬式グローブ",
-        "show_padding": true
+        "title": "グローブ",
+        "image": "shopify:\/\/shop_images\/A.png"
+      }
+    },
+    "165134056113e51e47": {
+      "type": "products-link",
+      "blocks": {
+        "ce9f652d-9f79-483a-9f58-f89eb3b2e5b6": {
+          "type": "title",
+          "settings": {
+            "sub_title": "硬式から選ぶ"
+          }
+        },
+        "e8e817d7-145e-48a3-a919-2ac46c075afe": {
+          "type": "link",
+          "settings": {
+            "link_text": "中学",
+            "link": ""
+          }
+        },
+        "aab0015f-2bb3-481b-afef-da40b22020e4": {
+          "type": "link",
+          "settings": {
+            "link_text": "一般",
+            "link": ""
+          }
+        },
+        "66c73c74-4423-47bd-b9f5-291d7b071747": {
+          "type": "title",
+          "settings": {
+            "sub_title": "軟式から選ぶ"
+          }
+        },
+        "1b33b7c8-e5ba-465b-b8ea-b73dbcbb3e69": {
+          "type": "link",
+          "settings": {
+            "link_text": "少年",
+            "link": ""
+          }
+        },
+        "9a0e59ba-3fc5-441c-a432-bd33646b0db7": {
+          "type": "link",
+          "settings": {
+            "link_text": "一般",
+            "link": ""
+          }
+        },
+        "0c4d36ff-bafd-430c-b306-861231ec6e45": {
+          "type": "title",
+          "settings": {
+            "sub_title": "トレーニングバット"
+          }
+        },
+        "898c6f74-ba1d-43dd-ace7-b452454adf1d": {
+          "type": "link",
+          "settings": {
+            "link_text": "一覧を見る",
+            "link": ""
+          }
+        },
+        "2d7030a4-644f-4eb2-a3a3-f050a8e8502f": {
+          "type": "title",
+          "settings": {
+            "sub_title": "ノックバット"
+          }
+        },
+        "2292d463-1853-4d66-8a01-3f443fa9a04d": {
+          "type": "link",
+          "settings": {
+            "link_text": "一覧を見る",
+            "link": ""
+          }
+        },
+        "f63032c7-9762-4342-a2be-ca25ecd6c4a0": {
+          "type": "title",
+          "settings": {
+            "sub_title": "メンテナンス用品"
+          }
+        },
+        "39694faf-c65d-4973-a482-0906d4093611": {
+          "type": "link",
+          "settings": {
+            "link_text": "一覧を見る",
+            "link": ""
+          }
+        },
+        "5e4beb0c-5fbe-424e-8639-9e947e751f63": {
+          "type": "title",
+          "settings": {
+            "sub_title": "ブランドから選ぶ"
+          }
+        },
+        "73dd3441-d1ca-428f-967d-087d0bee764c": {
+          "type": "link",
+          "settings": {
+            "link_text": "ブランド一覧",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "ce9f652d-9f79-483a-9f58-f89eb3b2e5b6",
+        "e8e817d7-145e-48a3-a919-2ac46c075afe",
+        "aab0015f-2bb3-481b-afef-da40b22020e4",
+        "66c73c74-4423-47bd-b9f5-291d7b071747",
+        "1b33b7c8-e5ba-465b-b8ea-b73dbcbb3e69",
+        "9a0e59ba-3fc5-441c-a432-bd33646b0db7",
+        "0c4d36ff-bafd-430c-b306-861231ec6e45",
+        "898c6f74-ba1d-43dd-ace7-b452454adf1d",
+        "2d7030a4-644f-4eb2-a3a3-f050a8e8502f",
+        "2292d463-1853-4d66-8a01-3f443fa9a04d",
+        "f63032c7-9762-4342-a2be-ca25ecd6c4a0",
+        "39694faf-c65d-4973-a482-0906d4093611",
+        "5e4beb0c-5fbe-424e-8639-9e947e751f63",
+        "73dd3441-d1ca-428f-967d-087d0bee764c"
+      ],
+      "settings": {
+        "title": "バット",
+        "image": "shopify:\/\/shop_images\/B.png"
+      }
+    },
+    "165134083959718351": {
+      "type": "products-link",
+      "blocks": {
+        "6cf7564a-b363-48e8-88ab-7d09ee230dd5": {
+          "type": "title",
+          "settings": {
+            "sub_title": "スパイク"
+          }
+        },
+        "0f8a5c82-942a-474d-afcf-7477210fa02f": {
+          "type": "link",
+          "settings": {
+            "link_text": "金具スパイク",
+            "link": ""
+          }
+        },
+        "4fbf34eb-6680-4e59-a873-9feeea9aa456": {
+          "type": "link",
+          "settings": {
+            "link_text": "ポイントスパイク",
+            "link": ""
+          }
+        },
+        "220cd1b1-8ea7-4f0d-bea3-19aca397caca": {
+          "type": "title",
+          "settings": {
+            "sub_title": "シューズ"
+          }
+        },
+        "d6d730fa-2eb7-43d4-8ee9-48f5c123d938": {
+          "type": "link",
+          "settings": {
+            "link_text": "トレーニングシューズ",
+            "link": ""
+          }
+        },
+        "dcb677c1-ade4-421d-8846-512126b20e7e": {
+          "type": "link",
+          "settings": {
+            "link_text": "ランニングシューズ",
+            "link": ""
+          }
+        },
+        "243260d1-77de-4e5b-abbd-1d9b87bef7a8": {
+          "type": "title",
+          "settings": {
+            "sub_title": "サンダル等その他"
+          }
+        },
+        "98fd615a-5b06-4501-af2e-a2d9930a4451": {
+          "type": "link",
+          "settings": {
+            "link_text": "一覧を見る",
+            "link": ""
+          }
+        },
+        "2859a655-a44f-4743-89bd-68b9ff0b56d1": {
+          "type": "title",
+          "settings": {
+            "sub_title": "メンテナンス用品"
+          }
+        },
+        "082062fb-ae89-4e24-9653-78cbbbe7ae8d": {
+          "type": "link",
+          "settings": {
+            "link_text": "一覧を見る",
+            "link": ""
+          }
+        },
+        "f6adb5d3-3137-4ce1-86aa-11eda4a94521": {
+          "type": "title",
+          "settings": {
+            "sub_title": "ブランドから選ぶ"
+          }
+        },
+        "d3320b31-2af6-4bed-89de-f204255c0187": {
+          "type": "link",
+          "settings": {
+            "link_text": "ブランド一覧",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "6cf7564a-b363-48e8-88ab-7d09ee230dd5",
+        "0f8a5c82-942a-474d-afcf-7477210fa02f",
+        "4fbf34eb-6680-4e59-a873-9feeea9aa456",
+        "220cd1b1-8ea7-4f0d-bea3-19aca397caca",
+        "d6d730fa-2eb7-43d4-8ee9-48f5c123d938",
+        "dcb677c1-ade4-421d-8846-512126b20e7e",
+        "243260d1-77de-4e5b-abbd-1d9b87bef7a8",
+        "98fd615a-5b06-4501-af2e-a2d9930a4451",
+        "2859a655-a44f-4743-89bd-68b9ff0b56d1",
+        "082062fb-ae89-4e24-9653-78cbbbe7ae8d",
+        "f6adb5d3-3137-4ce1-86aa-11eda4a94521",
+        "d3320b31-2af6-4bed-89de-f204255c0187"
+      ],
+      "settings": {
+        "title": "スパイク",
+        "image": "shopify:\/\/shop_images\/C.png"
       }
     }
   },
   "order": [
     "main",
-    "165126659277941f02"
+    "165126659277941f02",
+    "165134056113e51e47",
+    "165134083959718351"
   ]
 }
