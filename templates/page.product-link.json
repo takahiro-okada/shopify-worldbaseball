@@ -27,35 +27,35 @@
           "type": "link",
           "settings": {
             "link_text": "投手\/一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E7%A1%AC%E5%BC%8F%20%E6%8A%95%E6%89%8B"
           }
         },
         "9d25031f-4c7b-40cb-bfca-5722d0d6a922": {
           "type": "link",
           "settings": {
             "link_text": "捕手\/一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E7%A1%AC%E5%BC%8F%20%E6%8D%95%E6%89%8B"
           }
         },
         "19c794e5-a799-400a-bc61-353379791406": {
           "type": "link",
           "settings": {
             "link_text": "一塁手\/一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E7%A1%AC%E5%BC%8F%20%E4%B8%80%E5%A1%81%E6%89%8B"
           }
         },
         "8d7599ce-cba0-4bfb-943d-87dc3db8d4d9": {
           "type": "link",
           "settings": {
             "link_text": "内野手\/一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E7%A1%AC%E5%BC%8F%20%E5%86%85%E9%87%8E%E6%89%8B"
           }
         },
         "a76ec0e0-d65c-40a3-a79d-9e8206333f99": {
           "type": "link",
           "settings": {
             "link_text": "外野手\/一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E7%A1%AC%E5%BC%8F%20%E5%A4%96%E9%87%8E%E6%89%8B"
           }
         },
         "44f6542a-356c-4ad4-9ee0-7281aeb3e47b": {
@@ -68,49 +68,49 @@
           "type": "link",
           "settings": {
             "link_text": "投手\/一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E8%BB%9F%E5%BC%8F%20%E6%8A%95%E6%89%8B"
           }
         },
         "e6142062-dc68-45d6-9202-78122ab59211": {
           "type": "link",
           "settings": {
             "link_text": "捕手\/一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E8%BB%9F%E5%BC%8F%20%E6%8D%95%E6%89%8B"
           }
         },
         "e5e3430b-3c9d-4ac3-ba86-b31f0e6c1da5": {
           "type": "link",
           "settings": {
             "link_text": "一塁手\/一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E8%BB%9F%E5%BC%8F%20%E4%B8%80%E5%A1%81%E6%89%8B"
           }
         },
         "c513761f-3af2-49f8-8f22-8a058abe6464": {
           "type": "link",
           "settings": {
             "link_text": "内野手\/一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E8%BB%9F%E5%BC%8F%20%E5%86%85%E9%87%8E%E6%89%8B"
           }
         },
         "e0d15567-9bd5-49be-8582-6d1bc36c4782": {
           "type": "link",
           "settings": {
             "link_text": "外野手\/一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E8%BB%9F%E5%BC%8F%20%E5%A4%96%E9%87%8E%E6%89%8B"
           }
         },
         "f11ffa49-456c-4d3f-8b44-9a72a142fdaa": {
           "type": "link",
           "settings": {
             "link_text": "オールラウンド\/一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E8%BB%9F%E5%BC%8F%20%E3%82%AA%E3%83%BC%E3%83%AB%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89"
           }
         },
         "dbf27647-1106-484a-8eeb-a08d7ba44790": {
           "type": "link",
           "settings": {
             "link_text": "少年用",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E8%BB%9F%E5%BC%8F%20%E5%B0%91%E5%B9%B4"
           }
         },
         "e580ae9b-c9b7-49f1-a418-67c915ca21e7": {
@@ -123,7 +123,7 @@
           "type": "link",
           "settings": {
             "link_text": "一覧を見る",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%96"
           }
         },
         "dc64f787-8fea-4bd0-9d1d-d60802947f36": {
@@ -136,17 +136,19 @@
           "type": "link",
           "settings": {
             "link_text": "一覧を見る",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%82%B0%E3%83%A9%E3%83%96%20%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9"
           }
         },
         "7b5b1cf9-52df-4996-ba04-4d783f3d8caf": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "sub_title": "ブランドから選ぶ"
           }
         },
         "a269c952-5f56-488e-b52b-bad8ac7c5f8a": {
           "type": "link",
+          "disabled": true,
           "settings": {
             "link_text": "一覧を見る",
             "link": ""
@@ -193,14 +195,14 @@
           "type": "link",
           "settings": {
             "link_text": "中学",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%83%90%E3%83%83%E3%83%88%20%E7%A1%AC%E5%BC%8F%20%E4%B8%AD%E5%AD%A6"
           }
         },
         "aab0015f-2bb3-481b-afef-da40b22020e4": {
           "type": "link",
           "settings": {
             "link_text": "一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%83%90%E3%83%83%E3%83%88%20%E7%A1%AC%E5%BC%8F%20%E4%B8%80%E8%88%AC"
           }
         },
         "66c73c74-4423-47bd-b9f5-291d7b071747": {
@@ -213,14 +215,14 @@
           "type": "link",
           "settings": {
             "link_text": "少年",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%83%90%E3%83%83%E3%83%88%20%E8%BB%9F%E5%BC%8F%20%E5%B0%91%E5%B9%B4"
           }
         },
         "9a0e59ba-3fc5-441c-a432-bd33646b0db7": {
           "type": "link",
           "settings": {
             "link_text": "一般",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%83%90%E3%83%83%E3%83%88%20%E8%BB%9F%E5%BC%8F%20%E4%B8%80%E8%88%AC"
           }
         },
         "0c4d36ff-bafd-430c-b306-861231ec6e45": {
@@ -233,7 +235,7 @@
           "type": "link",
           "settings": {
             "link_text": "一覧を見る",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%83%90%E3%83%83%E3%83%88"
           }
         },
         "2d7030a4-644f-4eb2-a3a3-f050a8e8502f": {
@@ -246,7 +248,7 @@
           "type": "link",
           "settings": {
             "link_text": "一覧を見る",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%83%8E%E3%83%83%E3%82%AF%E3%83%90%E3%83%83%E3%83%88"
           }
         },
         "f63032c7-9762-4342-a2be-ca25ecd6c4a0": {
@@ -259,17 +261,19 @@
           "type": "link",
           "settings": {
             "link_text": "一覧を見る",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%83%90%E3%83%83%E3%83%88%20%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9"
           }
         },
         "5e4beb0c-5fbe-424e-8639-9e947e751f63": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "sub_title": "ブランドから選ぶ"
           }
         },
         "73dd3441-d1ca-428f-967d-087d0bee764c": {
           "type": "link",
+          "disabled": true,
           "settings": {
             "link_text": "ブランド一覧",
             "link": ""
@@ -310,14 +314,14 @@
           "type": "link",
           "settings": {
             "link_text": "金具スパイク",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E9%87%91%E5%85%B7%E3%82%B9%E3%83%91%E3%82%A4%E3%82%AF"
           }
         },
         "4fbf34eb-6680-4e59-a873-9feeea9aa456": {
           "type": "link",
           "settings": {
             "link_text": "ポイントスパイク",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%82%B9%E3%83%91%E3%82%A4%E3%82%AF"
           }
         },
         "220cd1b1-8ea7-4f0d-bea3-19aca397caca": {
@@ -330,14 +334,14 @@
           "type": "link",
           "settings": {
             "link_text": "トレーニングシューズ",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA"
           }
         },
         "dcb677c1-ade4-421d-8846-512126b20e7e": {
           "type": "link",
           "settings": {
             "link_text": "ランニングシューズ",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%83%A9%E3%83%B3%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%BA"
           }
         },
         "243260d1-77de-4e5b-abbd-1d9b87bef7a8": {
@@ -350,7 +354,7 @@
           "type": "link",
           "settings": {
             "link_text": "一覧を見る",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%82%B5%E3%83%B3%E3%83%80%E3%83%AB"
           }
         },
         "2859a655-a44f-4743-89bd-68b9ff0b56d1": {
@@ -363,17 +367,19 @@
           "type": "link",
           "settings": {
             "link_text": "一覧を見る",
-            "link": ""
+            "link": "https:\/\/world89.net\/search?q=%E3%82%B9%E3%83%91%E3%82%A4%E3%82%AF%20%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9"
           }
         },
         "f6adb5d3-3137-4ce1-86aa-11eda4a94521": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "sub_title": "ブランドから選ぶ"
           }
         },
         "d3320b31-2af6-4bed-89de-f204255c0187": {
           "type": "link",
+          "disabled": true,
           "settings": {
             "link_text": "ブランド一覧",
             "link": ""

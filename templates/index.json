@@ -9,7 +9,7 @@
             "bg_position": "center-center",
             "image": "shopify:\/\/shop_images\/mvpc.jpg",
             "mobile_image": "shopify:\/\/shop_images\/mvsp.jpg",
-            "overlay_opacity": 0,
+            "overlay_opacity": 15,
             "overlay_color": "#000000",
             "title": "",
             "description": "",
@@ -17,7 +17,7 @@
             "text_color": "text-light",
             "transparent": true,
             "link_text": "",
-            "link": "",
+            "link": "https:\/\/world89.net\/collections\/all?pf_v_burando=%E3%83%A1%E3%82%B8%E3%83%A3%E3%83%BC%2FMAJOR",
             "button_color": "btn--white",
             "button_style": "hero__btn btn btn--large btn--outline caps"
           }
@@ -28,7 +28,7 @@
             "bg_position": "center-center",
             "image": "shopify:\/\/shop_images\/Frame_1.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Frame_2.jpg",
-            "overlay_opacity": 0,
+            "overlay_opacity": 5,
             "overlay_color": "#000000",
             "title": "",
             "description": "",
@@ -36,7 +36,7 @@
             "text_color": "text-light",
             "transparent": true,
             "link_text": "",
-            "link": "",
+            "link": "https:\/\/world89.net\/collections\/all",
             "button_color": "btn--white",
             "button_style": "hero__btn btn btn--large btn--outline caps"
           }
@@ -55,7 +55,7 @@
             "text_color": "text-light",
             "transparent": true,
             "link_text": "",
-            "link": "",
+            "link": "https:\/\/line.me\/ti\/p\/%40731qtpzw",
             "button_color": "btn--white",
             "button_style": "hero__btn btn btn--large btn--outline caps"
           }
