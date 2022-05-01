@@ -169,6 +169,7 @@
     },
     "16429554554df2d39a": {
       "type": "section-collection",
+      "disabled": true,
       "settings": {
         "heading": "NEW ITEM",
         "description": "<p>新着商品<\/p>",
@@ -249,6 +250,7 @@
     },
     "164529133020e283f0": {
       "type": "section-news",
+      "disabled": true,
       "settings": {
         "blog_name": "ニュース",
         "title": "NEWS",
