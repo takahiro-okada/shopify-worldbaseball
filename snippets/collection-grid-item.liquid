@@ -15,6 +15,7 @@
 
 {% assign collection = collections[block.settings.collection] %}
 {% assign collection_title = block.settings.title %}
+{% assign link_url = block.settings.link_url %}
 {%- assign additional_attributes = additional_attributes | default: '' -%}
 
 {% assign border_class = '' -%}
@@ -46,7 +47,7 @@
         {{ collection.title }}
       {% endif %}
     </h3>
-      <a aria-label="{{ collection.title | strip_html | escape }}" href="{{ collection.url }}" class="collection-item__image">
+      <a aria-label="{{ collection.title | strip_html | escape }}" href="{{ link_url }}" class="collection-item__image">
         <div class="collection-item__bg"
           data-aos="img-in"
           data-aos-anchor="{{ animation_anchor }}"

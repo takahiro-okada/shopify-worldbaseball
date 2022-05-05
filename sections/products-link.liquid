@@ -1,8 +1,9 @@
 <!-- /sections/custom-html.liquid -->
 {%- assign html = section.settings.html -%}
 {%- assign title = section.settings.title -%}
+{%- assign anchor_id = section.settings.anchor_id -%}
 
-<section class="product-link wrapper" data-section-id="{{ section.id }}" data-section-type="custom-html">
+<section class="product-link wrapper" data-section-id="{{ section.id }}" data-section-type="custom-html" id="{{ anchor_id }}">
   <h3 class="product-link__title">{{ section.settings.title }}</h3>
   <div class="product-link__contents">
     <div class="product-link__image">
@@ -34,6 +35,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "画像"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "アンカー用ID"
     }
   ],
   "blocks":[

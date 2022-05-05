@@ -186,6 +186,18 @@
             </div>
           {% endif %}
 
+          <div class="cart__foot-inner cart__foot-inner--alt">
+            <button type="submit" name="update" class="btn btn--full btn--large btn--outline cart__checkout no-js">
+              {{- 'cart.general.update' | t -}}
+            </button>
+
+            <button type="submit" name="checkout" class="btn btn--full btn--large cart__checkout">
+              {{- 'cart.general.checkout' | t -}}
+            </button>
+
+            <em>{{- 'cart.general.subtotal_note' | t -}}</em>
+          </div>
+
           {% if settings.enable_gift_notes %}
             <div class="cart__widget" data-cart-widget>
               <a href="#gift-notes" data-expand-button>
@@ -287,18 +299,6 @@
               </div>
             </div>
           {%- endif -%}
-
-          <div class="cart__foot-inner cart__foot-inner--alt">
-            <button type="submit" name="update" class="btn btn--full btn--large btn--outline cart__checkout no-js">
-              {{- 'cart.general.update' | t -}}
-            </button>
-
-            <button type="submit" name="checkout" class="btn btn--full btn--large cart__checkout">
-              {{- 'cart.general.checkout' | t -}}
-            </button>
-
-            <em>{{- 'cart.general.subtotal_note' | t -}}</em>
-          </div>
 
           {%- if settings.enable_additional_buttons and additional_checkout_buttons -%}
             <span class="cart__or">&mdash; {{ 'cart.general.or' | t }} &mdash;</span>

@@ -82,21 +82,24 @@
           "type": "collection",
           "settings": {
             "collection": "glove-mitt",
-            "title": "BASEBALL<br>\nGLOBE"
+            "title": "BASEBALL<br>\nGLOBE",
+            "link_url": "shopify:\/\/pages\/looking-for"
           }
         },
         "16429553971a248004-1": {
           "type": "collection",
           "settings": {
             "collection": "bat",
-            "title": "BAT"
+            "title": "BAT",
+            "link_url": "shopify:\/\/pages\/looking-for"
           }
         },
         "16429553971a248004-2": {
           "type": "collection",
           "settings": {
             "collection": "shoes",
-            "title": "SHOES"
+            "title": "SHOES",
+            "link_url": "shopify:\/\/pages\/looking-for"
           }
         },
         "16429553971a248004-3": {
@@ -104,7 +107,8 @@
           "disabled": true,
           "settings": {
             "collection": "wear",
-            "title": "TRAINING<br>\nWEAR"
+            "title": "TRAINING<br>\nWEAR",
+            "link_url": ""
           }
         },
         "aae35f4c-8a3e-475f-a36a-6328c35f4767": {
@@ -112,7 +116,8 @@
           "disabled": true,
           "settings": {
             "collection": "belt",
-            "title": "BELT"
+            "title": "BELT",
+            "link_url": ""
           }
         },
         "e3a469ab-a09c-4292-a2c3-7e0afed2496c": {
@@ -120,7 +125,8 @@
           "disabled": true,
           "settings": {
             "collection": "gloves",
-            "title": "GLOBE"
+            "title": "GLOBE",
+            "link_url": ""
           }
         },
         "db1f2f6d-1a93-4661-8e94-879ffb9c5fef": {
@@ -128,7 +134,8 @@
           "disabled": true,
           "settings": {
             "collection": "ボール",
-            "title": "BALL"
+            "title": "BALL",
+            "link_url": ""
           }
         },
         "e264513a-1ef6-42fe-afa4-b1eec48777c1": {
@@ -136,7 +143,8 @@
           "disabled": true,
           "settings": {
             "collection": "キャッチャー用品",
-            "title": "CATCHER"
+            "title": "CATCHER",
+            "link_url": ""
           }
         },
         "e7d98c38-c5de-4344-ac83-5040cebc59dc": {
@@ -144,7 +152,8 @@
           "disabled": true,
           "settings": {
             "collection": "トレーニング用品",
-            "title": "TRAINING"
+            "title": "TRAINING",
+            "link_url": ""
           }
         }
       },

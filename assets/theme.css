@@ -8930,7 +8930,23 @@ form .errors {
     transform: translate3d(-100%, 0, 0)
   }
 }
-
+@media screen and (max-width: 768px) {
+  .announcement__bar-outer{
+    position: relative;
+  }
+  .announcement__bar-outer:before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff url(https://cdn.shopify.com/s/files/1/0613/6040/6787/t/12/assets/logo.png) no-repeat center center/contain;
+    z-index: 100;
+  }
+}
 .announcement__bar-outer .flickity-button {
   display: none
 }

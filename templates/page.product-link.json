@@ -179,7 +179,8 @@
       ],
       "settings": {
         "title": "グローブ",
-        "image": "shopify:\/\/shop_images\/A.png"
+        "image": "shopify:\/\/shop_images\/A.png",
+        "anchor_id": "globe"
       }
     },
     "165134056113e51e47": {
@@ -298,7 +299,8 @@
       ],
       "settings": {
         "title": "バット",
-        "image": "shopify:\/\/shop_images\/B.png"
+        "image": "shopify:\/\/shop_images\/B.png",
+        "anchor_id": "bat"
       }
     },
     "165134083959718351": {
@@ -402,7 +404,8 @@
       ],
       "settings": {
         "title": "スパイク",
-        "image": "shopify:\/\/shop_images\/C.png"
+        "image": "shopify:\/\/shop_images\/C.png",
+        "anchor_id": "spike"
       }
     }
   },
